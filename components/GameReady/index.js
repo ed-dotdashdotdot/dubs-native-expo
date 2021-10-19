@@ -29,7 +29,7 @@ const GameReady = () => {
           Game ready content
         </Text>
 
-        <Text style={[
+        {/* <Text style={[
           globalStyles.fontFamilyCourier,
           styles.bodyText,
         ]}>
@@ -52,7 +52,7 @@ const GameReady = () => {
           styles.bodyText,
         ]}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui lectus, tristique eget euismod in, sagittis eu magna. Aenean lobortis arcu ac elit aliquet, dapibus scelerisque eros blandit. Praesent tincidunt, turpis non facilisis mattis, nulla ligula tincidunt ex, ac accumsan tellus magna sed risus. Fusce eget consequat mi, quis vehicula elit. Mauris volutpat mi augue, nec cursus mauris scelerisque eu. Cras tristique at nisi bibendum vulputate. Fusce id efficitur neque. Vivamus ullamcorper tortor a porta viverra.
-        </Text>
+        </Text> */}
 
       </View>
     </ScrollView>
