@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
     paddingLeft: 24,
   },
-  infoHeading: {
-    color: 'white',
-    // fontFamily: 'Courier New',
-    fontSize: 40,
-    fontWeight: 'bold',
-  },
+  // infoHeading: {
+  //   color: 'white',
+  //   // fontFamily: 'Courier New',
+  //   fontSize: 40,
+  //   fontWeight: 'bold',
+  // },
   bodyText: {
     color: 'white',
     // fontFamily: 'Courier New',
