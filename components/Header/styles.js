@@ -4,10 +4,6 @@ const styles = StyleSheet.create({
   header: {
     alignItems: "center",
     backgroundColor: '#000',
-    borderColor: '#fff',
-    borderRadius: 12,
-    borderStyle: 'solid',
-    borderWidth: 2,
     flexDirection: 'row',
     height: 64,
     justifyContent: 'center',
@@ -24,8 +20,6 @@ const styles = StyleSheet.create({
     borderRightWidth: 0,
     borderStyle: 'solid',
     borderTopWidth: 2,
-    // color: 'white',
-    // fontFamily: 'Courier New',
     fontSize: 32,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -33,8 +27,6 @@ const styles = StyleSheet.create({
   },
   headerU: {
     alignSelf: 'center',
-    // color: 'white',
-    // fontFamily: 'Courier New',
     fontSize: 32,
     fontWeight: 'bold',
     justifyContent: 'center',
@@ -43,8 +35,6 @@ const styles = StyleSheet.create({
   },
   headerB: {
     alignContent: 'center',
-    color: 'white',
-    // fontFamily: 'Courier New',
     fontSize: 32,
     fontWeight: 'bold',
     flex: 1,
@@ -54,8 +44,6 @@ const styles = StyleSheet.create({
   },
   headerS: {
     alignItems: 'center',
-    color: 'white',
-    // fontFamily: 'Courier New',
     fontSize: 32,
     fontWeight: 'bold',
     flex: 1,

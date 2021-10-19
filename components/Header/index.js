@@ -6,7 +6,11 @@ import styles from './styles.js';
 
 const Header = () => {
   return (
-    <View style={styles.header}>
+    <View style={[
+      globalStyles.border,
+      globalStyles.borderRadius12,
+      styles.header,
+    ]}>
       <Text style={[
         globalStyles.colorWhite,
         globalStyles.fontFamilyCourier,

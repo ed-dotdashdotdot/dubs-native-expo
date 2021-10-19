@@ -2,9 +2,9 @@ import { StyleSheet } from 'react-native';
 
 const globalStyles = StyleSheet.create({
   border: {
-    borderWidth: 2,
     borderColor: 'white',
     borderStyle: 'solid',
+    borderWidth: 2,
   },
   borderRadius8: {
     borderRadius: 8,
@@ -14,10 +14,9 @@ const globalStyles = StyleSheet.create({
   },
   fontFamilyCourier: {
     fontFamily: 'Courier New',
-    color: 'green',
   },
   colorWhite: {
-    color: 'red',
+    color: 'white',
   }
 });
 
