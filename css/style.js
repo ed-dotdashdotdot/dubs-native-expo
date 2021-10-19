@@ -17,6 +17,12 @@ const globalStyles = StyleSheet.create({
   },
   colorWhite: {
     color: 'white',
+  },
+  padding8: {
+    padding: 8,
+  },
+  padding12: {
+    padding: 12,
   }
 });
 
