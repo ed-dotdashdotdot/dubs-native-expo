@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import NewGameButtons from '../shared/NewGameButtons';
+import Translate from '../Translate';
 
 // import { setGameStatus } from '../../actions';
 
@@ -29,6 +30,7 @@ const Info = () => {
   // }, []);
   return (
     <View style={styles.info}>
+      <Translate textKey='easy' />
       <ScrollView>
         <View style={styles.infoInner}>
           <Text style={[styles.bodyText, styles.infoHeading]}>Open up App.js to start working on your app!</Text>
