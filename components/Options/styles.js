@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   options: {
     display: 'flex',
     flexDirection: 'row',
-    // height: 48,
+    height: 48,
     // lineHeight: 48,
     width: '100%',
     backgroundColor: 'black',
