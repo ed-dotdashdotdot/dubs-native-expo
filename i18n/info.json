@@ -1,0 +1,386 @@
+{
+  "easy": {
+    "DE": "Einfach",
+    "EN": "Easy",
+    "ES": "Fácil",
+    "FR": "Facile",
+    "IT": "Facile",
+    "PT": "Fácil"
+  },
+  "hard": {
+    "DE": "Schwer",
+    "EN": "Hard",
+    "ES": "Duro",
+    "FR": "Dur",
+    "IT": "Duro",
+    "PT": "Duro"
+  },
+  "normal": {
+    "DE": "Normal",
+    "EN": "Normal",
+    "ES": "Normal",
+    "FR": "Normal",
+    "IT": "Normale",
+    "PT": "Normal"
+  },
+  "easyGame": {
+    "DE": "Einfaches Spiel",
+    "EN": "Easy game",
+    "ES": "Juego fácil",
+    "FR": "Jeu facile",
+    "IT": "Gioco facile",
+    "PT": "Jogo fácil"
+  },
+  "hardGame": {
+    "DE": "Hartes Spiel",
+    "EN": "Hard game",
+    "ES": "Juego difícil",
+    "FR": "Jeu difficile",
+    "IT": "Gioco difficile",
+    "PT": "Jogo duro"
+  },
+  "normalGame": {
+    "DE": "Normales Spiel",
+    "EN": "Normal game",
+    "ES": "Juego normal",
+    "FR": "Jeu normal",
+    "IT": "Gioco normale",
+    "PT": "Jogo normal"
+  },
+  "back": {
+    "DE": "Zurück",
+    "EN": "Back",
+    "ES": "Atrás",
+    "FR": "Arrière",
+    "IT": "Di ritorno",
+    "PT": "Voltar"
+  },
+  "backToHome": {
+    "DE": "Zurück nach Hause",
+    "EN": "Back to home",
+    "ES": "De vuelta a casa",
+    "FR": "De retour à la maison",
+    "IT": "Tornare a casa",
+    "PT": "De volta para casa"
+  },
+  "chooseAnImageToPlayWith": {
+    "DE": "Wählen Sie ein Bild zum Spielen aus",
+    "EN": "Choose an image to play with",
+    "ES": "Elige una imagen para jugar",
+    "FR": "Choisissez une image pour jouer avec",
+    "IT": "Scegli un'immagine con cui giocare",
+    "PT": "Escolha uma imagem para brincar"
+  },
+  "changeImage": {
+    "DE": "Bild ändern",
+    "EN": "Change image",
+    "ES": "Cambiar imagen",
+    "FR": "Changer l'image",
+    "IT": "Cambia immagine",
+    "PT": "Mudar a imagem"
+  },
+  "easyLevel": {
+    "DE": "Einfaches Niveau",
+    "EN": "Easy level",
+    "ES": "Nivel fácil",
+    "FR": "Niveau facile",
+    "IT": "Livello facile",
+    "PT": "Nível fácil"
+  },
+  "normalLevel": {
+    "DE": "Normales Niveau",
+    "EN": "Normal level",
+    "ES": "Nivel normal",
+    "FR": "Niveau normal",
+    "IT": "Livello normale",
+    "PT": "Nível normal"
+  },
+  "hardLevel": {
+    "DE": "Schweres Niveau",
+    "EN": "Hard level",
+    "ES": "Nivel dificil",
+    "FR": "Niveau difficile",
+    "IT": "Livello difficile",
+    "PT": "Nível difícil"
+  },
+  "howToPlay": {
+    "DE": "Wählen Sie den Schwierigkeitsgrad, finden Sie die\u00A0Doppel...",
+    "EN": "Select the difficulty, find the\u00A0doubles...",
+    "ES": "Selecciona la dificultad, encuentra los dobles\u00A0...",
+    "FR": "Sélectionnez la difficulté, trouvez les\u00A0doubles...",
+    "IT": "Seleziona la difficoltà, trova i\u00A0doppi...",
+    "PT": "Selecione a dificuldade, encontre as duplas\u00A0..."
+  },
+  "bossMode": {
+    "DE": "Boss-Modus",
+    "EN": "Boss mode",
+    "ES": "Modo jefe",
+    "FR": "Mode patron",
+    "IT": "Modalità Boss",
+    "PT": "Modo de chefe"
+  },
+  "turnBossModeOn": {
+    "DE": "Boss-Modus aktivieren",
+    "EN": "Turn boss mode on",
+    "ES": "Activa el modo jefe",
+    "FR": "Activer le mode boss",
+    "IT": "Attiva la modalità boss",
+    "PT": "Ative o modo chefe"
+  },
+  "turnBossModeOff": {
+    "DE": "Boss-Modus ausschalten",
+    "EN": "Turn boss mode off",
+    "ES": "Desactiva el modo jefe",
+    "FR": "Désactiver le mode boss",
+    "IT": "Disattiva la modalità boss",
+    "PT": "Desligue o modo chefe"
+  },
+  "gameOver": {
+    "DE": "Spiel ist\u00A0aus",
+    "EN": "Game over",
+    "ES": "Juego terminado",
+    "FR": "Jeu terminé",
+    "IT": "Game Over",
+    "PT": "Game over"
+  },
+  "gamePaused": {
+    "DE": "Spiel pausiert",
+    "EN": "Game paused",
+    "ES": "Juego pausado",
+    "FR": "Jeu en pause",
+    "IT": "Gioco in pausa",
+    "PT": "Jogo pausado"
+  },
+  "whatIsBossMode": {
+    "DE": "Was ist der Boss\u2011Modus?",
+    "EN": "What is boss\u00A0mode?",
+    "ES": "¿Qué es el modo jefe?",
+    "FR": "Qu'est-ce que le mode boss\u2009?",
+    "IT": "Che cos'è la modalità boss?",
+    "PT": "O que é o modo chefe?"
+  },
+  "whatIsBossMode_title_normal_mode": {
+    "DE": "Normal Modus",
+    "EN": "Regular mode",
+    "ES": "Modo normal",
+    "FR": "Mode normal",
+    "IT": "Modalità normale",
+    "PT": "Modo regular"
+  },
+  "whatIsBossMode_title_boss_mode": {
+    "DE": "Boss-Modus",
+    "EN": "Boss mode",
+    "ES": "Modo jefe",
+    "FR": "Mode Boss",
+    "IT": "Modalità Boss",
+    "PT": "Modo de chefe"
+  },
+  "whatIsBossMode_description_normal_mode": {
+    "DE": "Im regulären Modus suchen Sie nach einer genauen Übereinstimmung",
+    "EN": "In regular mode you are looking for an exact match",
+    "ES": "En el modo normal, busca una coincidencia exacta",
+    "FR": "En mode normal, vous recherchez une correspondance exacte",
+    "IT": "In modalità normale stai cercando una corrispondenza esatta",
+    "PT": "No modo normal, você está procurando uma correspondência exata"
+  },
+  "whatIsBossMode_description_boss_mode": {
+    "DE": "Im Boss-Modus steht das Match auf dem Kopf",
+    "EN": "In boss mode the match is upside down",
+    "ES": "En el modo jefe, la partida está patas arriba.",
+    "FR": "En mode boss, le match est à l'envers",
+    "IT": "In modalità boss la partita è capovolta",
+    "PT": "No modo chefe, a partida está de cabeça para baixo"
+  },
+  "startEasyGame": {
+    "DE": "Einfaches Spiel starten",
+    "EN": "Start easy game",
+    "ES": "Empieza un juego fácil",
+    "FR": "Commencer le jeu facile",
+    "IT": "Inizia il gioco facile",
+    "PT": "Comece o jogo fácil"
+  },
+  "startNormalGame": {
+    "DE": "Normales Spiel starten",
+    "EN": "Start normal game",
+    "ES": "Iniciar juego normal",
+    "FR": "Démarrer le jeu normal",
+    "IT": "Inizia il gioco normale",
+    "PT": "Comece o jogo normal"
+  },
+  "startHardGame": {
+    "DE": "Schweres Spiel starten",
+    "EN": "Start hard game",
+    "ES": "Empieza el juego difícil",
+    "FR": "Démarrer un jeu difficile",
+    "IT": "Inizia il gioco duro",
+    "PT": "Comece um jogo difícil"
+  },
+  "start": {
+    "DE": "Start",
+    "EN": "Start",
+    "ES": "Comienzo",
+    "FR": "Début",
+    "IT": "Cominciare",
+    "PT": "Começar"
+  },
+  "startWithRandomImage": {
+    "DE": "Beginnen Sie mit einem zufälligen Bild",
+    "EN": "Start with random image",
+    "ES": "Comience con una imagen aleatoria",
+    "FR": "Commencer avec une image aléatoire",
+    "IT": "Inizia con un'immagine casuale",
+    "PT": "Comece com uma imagem aleatória"
+  },
+  "useThisImage": {
+    "DE": "Verwenden Sie dieses Bild",
+    "EN": "Use this image",
+    "ES": "Usa esta imagen",
+    "FR": "Utiliser cette image",
+    "IT": "Usa questa immagine",
+    "PT": "Use esta imagem"
+  },
+  "whatIsBossMode_ally": {
+    "DE": "Was ist der Boss-Modus?",
+    "EN": "What is boss mode?",
+    "ES": "¿Qué es el modo jefe?",
+    "FR": "Qu'est-ce que le mode boss ?",
+    "IT": "Che cos'è la modalità boss?",
+    "PT": "O que é o modo chefe?"
+  },
+  "withBossMode": {
+    "DE": "Mit Boss-Modus",
+    "EN": "With boss mode",
+    "ES": "Con modo jefe",
+    "FR": "Avec le mode patron",
+    "IT": "Con la modalità boss",
+    "PT": "Com modo de chefe"
+  },
+  "wowThatTookAReallyLongTime": {
+    "DE": "Wow, das hat echt lange gedauert!",
+    "EN": "Wow, that took a really long time!",
+    "ES": "¡Vaya, eso tomó mucho tiempo!",
+    "FR": "Wow, ça a pris beaucoup de temps\u2009!",
+    "IT": "Wow, ci è voluto davvero tanto tempo!",
+    "PT": "Uau, isso demorou muito!"
+  },
+  "playThisGameAgain": {
+    "DE": "Spiele dieses Spiel noch einmal",
+    "EN": "Play this game again",
+    "ES": "Juega este juego de nuevo",
+    "FR": "Rejouer à ce jeu",
+    "IT": "Gioca di nuovo a questo gioco",
+    "PT": "Jogue este jogo novamente"
+  },
+  "found": {
+    "DE": "Gefunden",
+    "EN": "Found",
+    "ES": "Encontrada",
+    "FR": "Trouvée",
+    "IT": "Fondare",
+    "PT": "Encontrada"
+  },
+  "chooseACategory": {
+    "DE": "DE - Choose a category",
+    "EN": "Choose a category",
+    "ES": "ES - Choose a category",
+    "FR": "FR - Choose a category",
+    "IT": "IT - Choose a category",
+    "PT": "PT - Choose a category",
+    "recentlyPlayed": {
+      "DE": "Kürzlich gespielt",
+      "EN": "Recently played",
+      "ES": "Recientemente jugado",
+      "FR": "Joué récemment",
+      "IT": "Giocato recentemente",
+      "PT": "Tocado recentemente"
+    },
+    "topRated": {
+      "DE": "Bestbewertet",
+      "EN": "Top rated",
+      "ES": "Los más valorados",
+      "FR": "Les mieux notés",
+      "IT": "Più votati",
+      "PT": "Mais votado"
+    },
+    "consideredDifficult": {
+      "DE": "Gilt als schwierig",
+      "EN": "Considered difficult",
+      "ES": "Considerada dificil",
+      "FR": "Considéré comme difficile",
+      "IT": "Considerato difficile",
+      "PT": "Considerado difícil"
+    },
+    "difficult": {
+      "DE": "Schwierig",
+      "EN": "Difficult",
+      "ES": "Difícil",
+      "FR": "Difficile",
+      "IT": "Difficile",
+      "PT": "Difícil"
+    },
+    "architecture": {
+      "DE": "Die Architektur",
+      "EN": "Architecture",
+      "ES": "Arquitectura",
+      "FR": "Architecture",
+      "IT": "Architettura",
+      "PT": "Arquitetura"
+    },
+    "nature": {
+      "DE": "Natur",
+      "EN": "Nature",
+      "ES": "Naturaleza",
+      "FR": "La nature",
+      "IT": "Natura",
+      "PT": "Natureza"
+    },
+    "patterns": {
+      "DE": "Muster",
+      "EN": "Patterns",
+      "ES": "Patronas",
+      "FR": "Motifs",
+      "IT": "Modelli",
+      "PT": "Padrões"
+    },
+    "technology": {
+      "DE": "Technologie",
+      "EN": "Technology",
+      "ES": "Tecnología",
+      "FR": "La technologie",
+      "IT": "Tecnologia",
+      "PT": "Tecnologia"
+    },
+    "typography": {
+      "DE": "Typografie",
+      "EN": "Typography",
+      "ES": "Tipografía",
+      "FR": "Typographie",
+      "IT": "Tipografia",
+      "PT": "Tipografia"
+    }
+  },
+  "anErrorHasOccured": {
+    "DE": "Ein Fehler ist aufgetreten",
+    "EN": "An error has occurred",
+    "ES": "Se ha producido un error",
+    "FR": "Une erreur est survenue",
+    "IT": "C'è stato un errore",
+    "PT": "ocorreu um erro"
+  },
+  "pauseGame": {
+    "DE": "Spiel pausieren",
+    "EN": "Pause game",
+    "ES": "Pausar juego",
+    "FR": "Suspendre le jeu",
+    "IT": "Metti in pausa il gioco",
+    "PT": "Pausar o jogo"
+  },
+  "continueGame": {
+    "DE": "Weiterspielen",
+    "EN": "Continue game",
+    "ES": "Continua el juego",
+    "FR": "Continuer le jeu",
+    "IT": "Continua il gioco",
+    "PT": "Continuar o jogo"
+  }
+}

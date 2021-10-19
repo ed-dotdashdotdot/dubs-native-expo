@@ -1,0 +1,52 @@
+{
+  "language": {
+    "de": {
+      "DE": "Deutsche",
+      "EN": "Deutsche",
+      "ES": "Deutsche",
+      "FR": "Deutsche",
+      "IT": "Deutsche",
+      "PT": "Deutsche"
+    },
+    "en": {
+      "DE": "English",
+      "EN": "English",
+      "ES": "English",
+      "FR": "English",
+      "IT": "English",
+      "PT": "English"
+    },
+    "es": {
+      "DE": "Español",
+      "EN": "Español",
+      "ES": "Español",
+      "FR": "Español",
+      "IT": "Español",
+      "PT": "Español"
+    },
+    "fr": {
+      "DE": "Française",
+      "EN": "Française",
+      "ES": "Française",
+      "FR": "Française",
+      "IT": "Française",
+      "PT": "Française"
+    },
+    "it": {
+      "DE": "Italiano",
+      "EN": "Italiano",
+      "ES": "Italiano",
+      "FR": "Italiano",
+      "IT": "Italiano",
+      "PT": "Italiano"
+    },
+    "pt": {
+      "DE": "Português",
+      "EN": "Português",
+      "ES": "Português",
+      "FR": "Português",
+      "IT": "Português",
+      "PT": "Português"
+    }
+  }
+}
