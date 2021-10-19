@@ -16,12 +16,20 @@ import allActions from '../../../actions';
 // import NewGameButtonsStyled from './styles';
 // import './css/index.scss';
 
+import Polyglot from 'node-polyglot';
+import i18n from '../../../i18n';
+
 import styles from './styles.js';
 
 const NewGameButtons = props => {
   const {
     section
   } = { ...props };
+  const language = useSelector(state => state.language);
+  const polyglot = new Polyglot();
+  polyglot.extend(i18n());
+  const lang = language.selected || 'en';
+
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   // const { gameActions, imagesActions, timerActions } = { ...allActions };
@@ -65,9 +73,10 @@ const NewGameButtons = props => {
             dispatch(gameActions.setGameLevel('easy'));
             dispatch(gameActions.setGameStatus('game-ready'));
           }}
-          title="Start easy game"
+          title={polyglot.t(`startEasyGame.${lang.toUpperCase()}`)}
           type="button"
         >
+          {/* {polyglot.t(`${textKey}.${lang.toUpperCase()}`)} */}
           {/* <Translate textKey="startEasyGame" /> */}
         </Button>
       </View>
@@ -80,7 +89,7 @@ const NewGameButtons = props => {
             dispatch(gameActions.setGameLevel('normal'));
             dispatch(gameActions.setGameStatus('game-ready'));
           }}
-          title='Start normal game'
+          title={polyglot.t(`startNormalGame.${lang.toUpperCase()}`)}
           type="button"
         >
           {/* <Translate textKey="startNormalGame" /> */}
@@ -95,7 +104,7 @@ const NewGameButtons = props => {
             dispatch(gameActions.setGameLevel('hard'));
             dispatch(gameActions.setGameStatus('game-ready'));
           }}
-          title='Start hard game'
+          title={polyglot.t(`startHardGame.${lang.toUpperCase()}`)}
           type="button"
         >
           {/* <Translate textKey="startHardGame" /> */}
