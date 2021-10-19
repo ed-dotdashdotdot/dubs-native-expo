@@ -5,6 +5,10 @@ import globalStyles from '../../css/style.js';
 import styles from './styles.js';
 
 const Header = () => {
+  const sharedCss = [
+    globalStyles.colorWhite,
+    globalStyles.fontFamilyCourier,
+  ];
   return (
     <View style={[
       globalStyles.border,
@@ -12,23 +16,19 @@ const Header = () => {
       styles.header,
     ]}>
       <Text style={[
-        globalStyles.colorWhite,
-        globalStyles.fontFamilyCourier,
+        sharedCss,
         styles.headerD
       ]}>D</Text>
       <Text style={[
-        globalStyles.colorWhite,
-        globalStyles.fontFamilyCourier,
+        sharedCss,
         styles.headerU
       ]}>U</Text>
       <Text style={[
-        globalStyles.colorWhite,
-        globalStyles.fontFamilyCourier,
+        sharedCss,
         styles.headerB
       ]}>B</Text>
       <Text style={[
-        globalStyles.colorWhite,
-        globalStyles.fontFamilyCourier,
+        sharedCss,
         styles.headerS
       ]}>S</Text>
     </View>
