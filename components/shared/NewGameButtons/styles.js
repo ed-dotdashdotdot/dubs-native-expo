@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
     minWidth: 300,
   },
   newGameButtonsButton: {
-    borderWidth: 2,
-    borderColor: 'white',
-    borderStyle: 'solid',
-    borderRadius: 8,
+    // borderWidth: 2,
+    // borderColor: 'white',
+    // borderStyle: 'solid',
+    // borderRadius: 8,
     marginBottom: 12,
   },
   greenButton: {

@@ -3,13 +3,18 @@ import { Button, View, Image, TouchableOpacity, Text } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
+import globalStyles from '../../css/style.js';
 import styles from './styles.js';
 
 const Options = () => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   return (  
-    <View style={styles.options}>
+    <View style={[
+      globalStyles.border,
+      globalStyles.borderRadius8,
+      styles.options,
+    ]}>
       <Button
         accessibilityLabel="Back to home"
         // activeOpacity={0.5}

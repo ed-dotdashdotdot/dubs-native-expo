@@ -2,12 +2,8 @@ import { StyleSheet, Button, Text, View } from 'react-native';
 
 const styles = StyleSheet.create({
   info: {
-    backgroundColor: '#ccc',
-    color: '#f00',
-    borderColor: '#fff',
-    borderRadius: 12,
-    borderStyle: 'solid',
-    borderWidth: 2,
+    backgroundColor: '#666',
+    // color: '#f00',
     height: '100%',
     justifyContent: 'center',
     margin: 12,
@@ -22,13 +18,14 @@ const styles = StyleSheet.create({
     paddingLeft: 24,
   },
   infoHeading: {
-    fontFamily: 'Courier New',
+    color: 'white',
+    // fontFamily: 'Courier New',
     fontSize: 40,
     fontWeight: 'bold',
   },
   bodyText: {
     color: 'white',
-    fontFamily: 'Courier New',
+    // fontFamily: 'Courier New',
     fontSize: 20,
     marginBottom: 24,
   }

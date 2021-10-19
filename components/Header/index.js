@@ -1,15 +1,32 @@
 import React from 'react';
 import { StyleSheet, Button, Text, View } from 'react-native';
 
+import globalStyles from '../../css/style.js';
 import styles from './styles.js';
 
 const Header = () => {
   return (
     <View style={styles.header}>
-      <Text style={styles.headerD}>D</Text>
-      <Text style={styles.headerU}>U</Text>
-      <Text style={styles.headerB}>B</Text>
-      <Text style={styles.headerS}>S</Text>
+      <Text style={[
+        globalStyles.colorWhite,
+        globalStyles.fontFamilyCourier,
+        styles.headerD
+      ]}>D</Text>
+      <Text style={[
+        globalStyles.colorWhite,
+        globalStyles.fontFamilyCourier,
+        styles.headerU
+      ]}>U</Text>
+      <Text style={[
+        globalStyles.colorWhite,
+        globalStyles.fontFamilyCourier,
+        styles.headerB
+      ]}>B</Text>
+      <Text style={[
+        globalStyles.colorWhite,
+        globalStyles.fontFamilyCourier,
+        styles.headerS
+      ]}>S</Text>
     </View>
   );
 }

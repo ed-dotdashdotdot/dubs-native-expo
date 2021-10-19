@@ -19,6 +19,7 @@ import allActions from '../../../actions';
 import Polyglot from 'node-polyglot';
 import i18n from '../../../i18n';
 
+import globalStyles from '../../../css/style.js';
 import styles from './styles.js';
 
 const NewGameButtons = props => {
@@ -65,7 +66,12 @@ const NewGameButtons = props => {
       {/* {section === 'game-over' && <PlayThisGameAgainButton />} */}
       {/* {section === 'game-paused' && <ContinueGameButton />} */}
       <View
-        style={[styles.newGameButtonsButton, styles.greenButton]}
+        style={[
+          globalStyles.border,
+          globalStyles.borderRadius8,
+          styles.newGameButtonsButton, 
+          styles.greenButton,
+        ]}
       >
         <Button
           color='white'
@@ -81,7 +87,12 @@ const NewGameButtons = props => {
         </Button>
       </View>
       <View
-        style={[styles.newGameButtonsButton, styles.amberButton]}
+        style={[
+          globalStyles.border,
+          globalStyles.borderRadius8,
+          styles.newGameButtonsButton, 
+          styles.amberButton,
+        ]}
       >
         <Button
           color='white'
@@ -96,7 +107,12 @@ const NewGameButtons = props => {
         </Button>
       </View>
       <View
-        style={[styles.newGameButtonsButton, styles.redButton]}
+        style={[
+          globalStyles.border,
+          globalStyles.borderRadius8,
+          styles.newGameButtonsButton, 
+          styles.redButton,
+        ]}
       >
         <Button
           color='white'
