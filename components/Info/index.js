@@ -30,7 +30,6 @@ const Info = () => {
   // }, []);
   return (
     <View style={styles.info}>
-      <Translate textKey='easy' />
       <ScrollView>
         <View style={styles.infoInner}>
           <Text style={[styles.bodyText, styles.infoHeading]}>Open up App.js to start working on your app!</Text>
@@ -38,6 +37,7 @@ const Info = () => {
           {!!game.level && <Text>{game.level}</Text>}
           {!!game.status && <Text>{game.status}</Text>}
           {/* {!!game.status && !!game.level && <Text>BOTH</Text>} */}
+          <Text><Translate textKey='easy' /></Text>
           <Text>{language.selected}</Text>
           <Text style={styles.bodyText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui lectus, tristique eget euismod in, sagittis eu magna. Aenean lobortis arcu ac elit aliquet, dapibus scelerisque eros blandit. Praesent tincidunt, turpis non facilisis mattis, nulla ligula tincidunt ex, ac accumsan tellus magna sed risus. Fusce eget consequat mi, quis vehicula elit. Mauris volutpat mi augue, nec cursus mauris scelerisque eu. Cras tristique at nisi bibendum vulputate. Fusce id efficitur neque. Vivamus ullamcorper tortor a porta viverra.

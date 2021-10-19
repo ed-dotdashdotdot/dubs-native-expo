@@ -15,7 +15,7 @@ const Translate = props => {
   polyglot.extend(i18n());
   const lang = language.selected || 'EN';
 
-  return <Text>{polyglot.t(`${textKey}.${lang.toUpperCase()}`)}</Text>;
+  return polyglot.t(`${textKey}.${lang.toUpperCase()}`);
 };
 
 Translate.propTypes = {
