@@ -1,25 +1,36 @@
 import React from 'react';
-import { Button, View, Image, TouchableOpacity } from 'react-native';
+import { Button, View, Image, TouchableOpacity, Text } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import styles from './styles.js';
 
-const LanguageSelector = () => {
-  const { languageActions } = { ...allActions };
+const Options = () => {
+  const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   return (  
-    <View style={styles.languageSelector}>
-      <View style={styles.buttonContainer}>
+    <View style={styles.options}>
+      <Button
+        accessibilityLabel="Back to home"
+        // activeOpacity={0.5}
+        color={'white'}
+        title="Back to home"
+        onPress={() => {
+          dispatch(gameActions.setGameLevel(''));
+          dispatch(gameActions.setGameStatus('game-home'));
+        }}
+      >
+        {/* <View style={styles.options}> */}
+          <Text>Hello</Text>
+        {/* </View> */}
+      </Button>
+      {/* <View style={styles.buttonContainer}>
         <View style={styles.de}>
           <TouchableOpacity
             accessibilityLabel="Switch language to German"
             activeOpacity={0.5}
             color={'white'}
             title="German"
-            onPress={() => {
-              dispatch(languageActions.setChangeLanguage('de'));
-            }}
             >
             <Image
               style={styles.flag}
@@ -35,10 +46,7 @@ const LanguageSelector = () => {
             activeOpacity={0.5}
             color={'white'}
             title="English"
-            onPress={() => {
-              dispatch(languageActions.setChangeLanguage('en'));
-            }}
-          >
+            >
             <Image
               style={styles.flag}
               source={require('../../assets/flags/en.png')}
@@ -53,9 +61,6 @@ const LanguageSelector = () => {
             activeOpacity={0.5}
             color={'white'}
             title="Spanish"
-            onPress={() => {
-              dispatch(languageActions.setChangeLanguage('es'));
-            }}
           >
             <Image
               style={styles.flag}
@@ -71,9 +76,6 @@ const LanguageSelector = () => {
             activeOpacity={0.5}
             color={'white'}
             title="Italian"
-            onPress={() => {
-              dispatch(languageActions.setChangeLanguage('it'));
-            }}
           >
             <Image
               style={styles.flag}
@@ -89,9 +91,6 @@ const LanguageSelector = () => {
             activeOpacity={0.5}
             color={'white'}
             title="Portuguese"
-            onPress={() => {
-              dispatch(languageActions.setChangeLanguage('pt'));
-            }}
           >
             <Image
               style={styles.flag}
@@ -99,9 +98,9 @@ const LanguageSelector = () => {
             />
           </TouchableOpacity>
         </View>
-      </View>
+      </View> */}
     </View>
   );
 }
 
-export default LanguageSelector;
+export default Options;

@@ -1,17 +1,42 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, Button, Text, View, ScrollView } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
+import allActions from '../../actions';
 
 import NewGameButtons from '../shared/NewGameButtons';
+
+// import { setGameStatus } from '../../actions';
 
 import styles from './styles.js';
 
 const Info = () => {
+  const game = useSelector(state => state.game);
+  const language = useSelector(state => state.language);
+  // alert(game.status);
+  // const state = useSelector(state => state);
+  const { gameActions } = { ...allActions };
+  const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   // dispatch(timerActions.setTimerStart(new Date().getTime()));
+  //   // dispatch(timerActions.setTimerStart(timerStartDate(timer.paused)));
+  //   // dispatch(timerActions.setTimerEnd(''));
+  //   // dispatch(timerActions.setTimerPaused(0));
+  //   // dispatch(timerActions.setTimerSaved(0));
+  //   // dispatch(timerActions.setTimerStatus(''));
+  //   // dispatch(gameActions.setGameStatus('game-over'));
+  //   // dispatch(gameActions.setGameLevel('hard'));
+  // }, []);
   return (
     <View style={styles.info}>
       <ScrollView>
         <View style={styles.infoInner}>
           <Text style={[styles.bodyText, styles.infoHeading]}>Open up App.js to start working on your app!</Text>
           <NewGameButtons />
+          {!!game.level && <Text>{game.level}</Text>}
+          {!!game.status && <Text>{game.status}</Text>}
+          {/* {!!game.status && !!game.level && <Text>BOTH</Text>} */}
+          <Text>{language.selected}</Text>
           <Text style={styles.bodyText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui lectus, tristique eget euismod in, sagittis eu magna. Aenean lobortis arcu ac elit aliquet, dapibus scelerisque eros blandit. Praesent tincidunt, turpis non facilisis mattis, nulla ligula tincidunt ex, ac accumsan tellus magna sed risus. Fusce eget consequat mi, quis vehicula elit. Mauris volutpat mi augue, nec cursus mauris scelerisque eu. Cras tristique at nisi bibendum vulputate. Fusce id efficitur neque. Vivamus ullamcorper tortor a porta viverra.
           </Text>
@@ -24,7 +49,6 @@ const Info = () => {
           <Text style={styles.bodyText}>
             Pellentesque tristique eleifend dapibus. Aenean semper nisi quis nulla mattis, eget imperdiet lorem euismod. In et tellus nibh. Vivamus ac quam at diam ornare hendrerit. Curabitur semper ultricies sapien ac venenatis. Curabitur posuere maximus mattis. Vivamus vehicula finibus porttitor. Morbi et nibh non odio scelerisque condimentum. Donec nec nibh eget mauris tristique faucibus ultrices eu diam. Sed quam justo, suscipit quis ultrices vitae, tincidunt vitae elit. Nulla facilisi.
           </Text>
-          
         </View>
       </ScrollView>
     </View>

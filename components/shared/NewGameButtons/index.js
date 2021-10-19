@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Button, Text, View, ScrollView } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
+import allActions from '../../../actions';
 // import styles from '../../Container/styles';
 
 // import { useDispatch } from 'react-redux';
@@ -20,6 +22,8 @@ const NewGameButtons = props => {
   const {
     section
   } = { ...props };
+  const { gameActions } = { ...allActions };
+  const dispatch = useDispatch();
   // const { gameActions, imagesActions, timerActions } = { ...allActions };
   // const dispatch = useDispatch();
 
@@ -56,9 +60,13 @@ const NewGameButtons = props => {
         style={[styles.newGameButtonsButton, styles.greenButton]}
       >
         <Button
-          type="button"
-          title="Start easy game"
           color='white'
+          onPress={() => {
+            dispatch(gameActions.setGameLevel('easy'));
+            dispatch(gameActions.setGameStatus('game-ready'));
+          }}
+          title="Start easy game"
+          type="button"
         >
           {/* <Translate textKey="startEasyGame" /> */}
         </Button>
@@ -67,9 +75,13 @@ const NewGameButtons = props => {
         style={[styles.newGameButtonsButton, styles.amberButton]}
       >
         <Button
-          type="button"
-          title='Start normal game'
           color='white'
+          onPress={() => {
+            dispatch(gameActions.setGameLevel('normal'));
+            dispatch(gameActions.setGameStatus('game-ready'));
+          }}
+          title='Start normal game'
+          type="button"
         >
           {/* <Translate textKey="startNormalGame" /> */}
         </Button>
@@ -78,9 +90,13 @@ const NewGameButtons = props => {
         style={[styles.newGameButtonsButton, styles.redButton]}
       >
         <Button
-          type="button"
-          title='Start hard game'
           color='white'
+          onPress={() => {
+            dispatch(gameActions.setGameLevel('hard'));
+            dispatch(gameActions.setGameStatus('game-ready'));
+          }}
+          title='Start hard game'
+          type="button"
         >
           {/* <Translate textKey="startHardGame" /> */}
         </Button>

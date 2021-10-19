@@ -2,6 +2,7 @@ import { StyleSheet, Button, Text, View } from 'react-native';
 
 const styles = StyleSheet.create({
   info: {
+    backgroundColor: '#ccc',
     color: '#f00',
     borderColor: '#fff',
     borderRadius: 12,
