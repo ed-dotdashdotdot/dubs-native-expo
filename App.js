@@ -1,20 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Button, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './reducers';
 
 import Container from './components/Container';
-import Header from './components/Header';
-import Info from './components/Info';
-import LanguageSelector from './components/LanguageSelector';
 
 const App = () => {
+  const store = createStore(
+    rootReducer
+  );
+
   return (
-    <Container>
-      <Header />
-      <Info />
-      <LanguageSelector />
+    <Provider store={store}>
+      <Container />
       <StatusBar style="auto" />
-    </Container>
+    </Provider>
   );
 }
 
