@@ -1,33 +1,76 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, Button, Text, View, ScrollView } from 'react-native';
-// import { useSelector, useDispatch } from 'react-redux';
-// import allActions from '../../actions';
+import { useSelector, useDispatch } from 'react-redux';
+import allActions from '../../actions';
 
 import PageHeading from '../PageHeading';
 // import NewGameButtons from '../shared/NewGameButtons';
 import Translate from '../Translate';
+
+import Polyglot from 'node-polyglot';
+import i18n from '../../i18n';
+
+
 
 // import { setGameStatus } from '../../actions';
 
 import globalStyles from '../../css/style.js';
 import styles from './styles.js';
 
-const GameReady = () => {
-  // const game = useSelector(state => state.game);
-  // const language = useSelector(state => state.language);
-  // const { gameActions } = { ...allActions };
-  // const dispatch = useDispatch();
+const GameReady = props => {
+  const game = useSelector(state => state.game);
+  const language = useSelector(state => state.language);
+  const { gameActions } = { ...allActions };
+  const dispatch = useDispatch();
+
+  const polyglot = new Polyglot();
+  polyglot.extend(i18n());
+  const lang = language.selected || 'en';
+
+  const { level } = { ...props };
+
+  const whichLevelColour = level => {
+    if (level === 'easy') return 'green';
+    if (level === 'normal') return 'amber';
+    if (level === 'hard') return 'red';
+    return null;
+  }
 
   return (
     <ScrollView>
       <View style={styles.infoInner}>
-        <PageHeading text='Game ready' />
+        {/* <PageHeading text='Game ready' /> */}
+        <PageHeading 
+          colour={whichLevelColour(level)}
+          text={polyglot.t(`${level}Level.${lang.toUpperCase()}`)} 
+        />
+        {/* <Text>{level}</Text> */}
         <Text style={[
           globalStyles.fontFamilyCourier,
           styles.bodyText,
         ]}>
           Game ready content
+          {/* { level }
+          { level.toUpperCase() } */}
         </Text>
+
+        <Button
+          onPress={() => dispatch(gameActions.setGameBossMode(!game.bossMode))}
+          title={`Turn boss mode ${game.bossMode ? 'off' : 'on'}`}
+        />
+        <Button
+          onPress={() => dispatch(gameActions.setGameStatus('what-is-boss-mode'))}
+          title="What is boss mode"
+        />
+        <Button
+          onPress={() => dispatch(gameActions.setGameStatus('choose-image'))}
+          title="Choose an image to play with"
+        />
+        <Button 
+          onPress={() => dispatch(gameActions.setGameStatus('game-on'))}  
+          title="Start with random image" 
+        />
+        
 
         {/* <Text style={[
           globalStyles.fontFamilyCourier,
