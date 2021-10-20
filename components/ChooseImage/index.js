@@ -18,6 +18,8 @@ import globalStyles from '../../css/style.js';
 import styles from './styles.js';
 
 const ChooseImage = props => {
+  const { level } = { ...props };
+  
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
@@ -27,14 +29,11 @@ const ChooseImage = props => {
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
 
-  const { level } = { ...props };
 
   return (
     <ScrollView>
-      <View style={styles.infoInner}>
-        <PageHeading
-          text={polyglot.t(`chooseAnImageToPlayWith.${lang.toUpperCase()}`)}
-        />
+      <View style={globalStyles.infoInner}>
+        <PageHeading text={polyglot.t(`chooseAnImageToPlayWith.${lang.toUpperCase()}`)} />
         <Text style={[
           globalStyles.fontFamilyCourier,
           styles.bodyText,

@@ -15,19 +15,16 @@ const Container = () => {
   const game = useSelector(state => state.game);
   return (
     <View style={styles.container}>
-      {
-        game.status !== 'game-on' && <Header />
-      }
-      {
-        game.status === 'game-on' && (
-          <Text style={{
-            color: 'white',
-            fontFamily: 'Courier New',
-            fontSize: 24,
-          }}>
-            {game.level}
-          </Text>
-        )
+      {game.status === 'game-on' ? (
+        <Text style={{
+          color: 'white', 
+          fontFamily: 'Courier New', 
+          fontSize: 24
+        }}>
+          {game.level}
+        </Text>
+      ) : 
+        <Header />
       }
       <Info />
       {

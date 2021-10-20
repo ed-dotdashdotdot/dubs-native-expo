@@ -31,7 +31,7 @@ const WhatIsBossMode = props => {
 
   return (
     <ScrollView>
-      <View style={styles.infoInner}>
+      <View style={globalStyles.infoInner}>
         {/* <PageHeading text='Game ready' /> */}
         <PageHeading text={polyglot.t(`whatIsBossMode.${lang.toUpperCase()}`)} />
         <Text style={[

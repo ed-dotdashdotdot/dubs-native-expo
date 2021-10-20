@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, Button, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Button, Text, View, ScrollView, useWindowDimensions } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
@@ -26,6 +26,11 @@ const Info = () => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
 
+  const { height, width } = useWindowDimensions();
+  const isPortrait = () => {
+    return height >= width;
+  };
+
   // useEffect(() => {
   //   // dispatch(timerActions.setTimerStart(new Date().getTime()));
   //   // dispatch(timerActions.setTimerStart(timerStartDate(timer.paused)));
@@ -38,61 +43,81 @@ const Info = () => {
   // }, []);
   return (
     <View style={[
-      globalStyles.border,
-      globalStyles.borderRadius12,
-      styles.info,
+      styles.infoContainer,
     ]}>
-      {/* <ScrollView>
-        <View style={styles.infoInner}> */}
-          {/* <Text style={[
-            globalStyles.fontFamilyCourier,
-            styles.infoHeading
-          ]}>Open up App.js to start working on your app!</Text> */}
+      <View style={[
+        // globalStyles.border,
+        // globalStyles.borderRadius12,
+        // styles.info,
+      ],{
+        // left: 200,
+        // position: 'absolute',
+        backgroundColor: 'rgba(255,0,255, 0.33)',
+        width: width - (12 * 2),
+        height: height - 176,
+        // position: 'absolute',
+        // top:0,
+        // left: '50%',
+        // transform: 'translateX(-50%)',
+        // transform: [{ translateX: '-350%' }],
+        paddingBottom: 0,
+        borderColor: 'white',
+        borderStyle: 'solid',
+        borderWidth: 2,
+        borderRadius: 12,
+      }}>
+        {/* <ScrollView>
+          <View style={styles.infoInner}> */}
+            {/* <Text style={[
+              globalStyles.fontFamilyCourier,
+              styles.infoHeading
+            ]}>Open up App.js to start working on your app!</Text> */}
 
-          {(() => {
-            switch (game.status) {
-              // case 'image-detail':
-              //   return <ImageDetail image={imageDetail} level={level} />;
-              case 'choose-image':
-                return <ChooseImage />;
-              // case 'game-over':
-              //   return <GameOver />;
-              // case 'game-paused':
-              //   return <GamePaused />;
-              case 'game-ready':
-                return (
-                  <GameReady
-                    // bossMode={bossMode}
-                    // lang={lang}
-                    level={game.level}
-                    // gameImage={gameImage}
-                  />
-                );
-              case 'what-is-boss-mode':
-                return (
-                  <WhatIsBossMode
-                    bossMode={game.bossMode}
-                  />
-                );
-              case 'game-on':
-                return (
-                  <GameOn
-                    // bossMode={bossMode}
-                    // gameImage={gameImage}
-                    // invert={invert}
-                    // lang="en"
-                    // level="easy"
-                    // percentComplete={percentComplete}
-                    // status="game-on"
-                  />
-                );
-              default:
-                return <GameHome />;
-            }
-          })()}
+            {(() => {
+              switch (game.status) {
+                // case 'image-detail':
+                //   return <ImageDetail image={imageDetail} level={level} />;
+                case 'choose-image':
+                  return <ChooseImage />;
+                // case 'game-over':
+                //   return <GameOver />;
+                // case 'game-paused':
+                //   return <GamePaused />;
+                case 'game-ready':
+                  return (
+                    <GameReady
+                      // bossMode={bossMode}
+                      // lang={lang}
+                      level={game.level}
+                      // gameImage={gameImage}
+                    />
+                  );
+                case 'what-is-boss-mode':
+                  return (
+                    <WhatIsBossMode
+                      bossMode={game.bossMode}
+                    />
+                  );
+                case 'game-on':
+                  return (
+                    <GameOn
+                      // bossMode={bossMode}
+                      // gameImage={gameImage}
+                      // invert={invert}
+                      // lang="en"
+                      // level="easy"
+                      // percentComplete={percentComplete}
+                      // status="game-on"
+                    />
+                  );
+                default:
+                  return <GameHome />;
+              }
+            })()}
 
-        {/* </View>
-      </ScrollView> */}
+          {/* </View>
+        </ScrollView> */}
+      </View>
     </View>
   );
 }

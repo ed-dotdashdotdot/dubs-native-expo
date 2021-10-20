@@ -1,6 +1,17 @@
 import { StyleSheet, Button, Text, View } from 'react-native';
 
 const styles = StyleSheet.create({
+  languageSelectorContainer: {
+    // display: 'flex',
+    // flexDirection: 'row',
+    height: 52,
+    width: '100%',
+    position: 'absolute',
+    bottom: 24,
+    borderColor: 'blue',
+    borderStyle: 'solid',
+    borderWidth: 2,
+  },
   languageSelector: {
     display: 'flex',
     flexDirection: 'row',
@@ -19,6 +30,7 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     borderStyle: 'solid',
     borderWidth: 1,
+    // boxSizing: 'border-box',
     flex: 1,
   },
   en: {
@@ -58,8 +70,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   flag: {
-    width: 46,
     height: 46,
+    width: 46,
   },
 });
 

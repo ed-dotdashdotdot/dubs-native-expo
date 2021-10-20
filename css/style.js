@@ -32,7 +32,14 @@ const globalStyles = StyleSheet.create({
   },
   backgroundRed: {
     backgroundColor: 'red',
-  }
+  },
+  infoInner: {
+    // backgroundColor: 'magenta',
+    paddingTop: 24,
+    paddingRight: 24,
+    paddingBottom: 0,
+    paddingLeft: 24,
+  },
 });
 
 export default globalStyles;

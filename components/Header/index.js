@@ -11,26 +11,30 @@ const Header = () => {
   ];
   return (
     <View style={[
-      globalStyles.border,
-      globalStyles.borderRadius12,
-      styles.header,
+      styles.headerContainer,
     ]}>
-      <Text style={[
-        sharedCss,
-        styles.headerD
-      ]}>D</Text>
-      <Text style={[
-        sharedCss,
-        styles.headerU
-      ]}>U</Text>
-      <Text style={[
-        sharedCss,
-        styles.headerB
-      ]}>B</Text>
-      <Text style={[
-        sharedCss,
-        styles.headerS
-      ]}>S</Text>
+      <View style={[
+        globalStyles.border,
+        globalStyles.borderRadius12,
+        styles.header,
+      ]}>
+        <Text style={[
+          sharedCss,
+          styles.headerD
+        ]}>D</Text>
+        <Text style={[
+          sharedCss,
+          styles.headerU
+        ]}>U</Text>
+        <Text style={[
+          sharedCss,
+          styles.headerB
+        ]}>B</Text>
+        <Text style={[
+          sharedCss,
+          styles.headerS
+        ]}>S</Text>
+      </View>
     </View>
   );
 }

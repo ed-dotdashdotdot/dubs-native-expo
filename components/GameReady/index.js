@@ -38,7 +38,7 @@ const GameReady = props => {
 
   return (
     <ScrollView>
-      <View style={styles.infoInner}>
+      <View style={globalStyles.infoInner}>
         {/* <PageHeading text='Game ready' /> */}
         <PageHeading 
           colour={whichLevelColour(level)}

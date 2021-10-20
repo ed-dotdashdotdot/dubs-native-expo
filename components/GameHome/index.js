@@ -50,7 +50,7 @@ const GameHome = () => {
 
   return (
     <ScrollView>
-      <View style={styles.infoInner}>
+      <View style={globalStyles.infoInner}>
         {/* <PageHeading text='Game ready' />
         <Text style={[
           globalStyles.fontFamilyCourier,
@@ -168,7 +168,7 @@ const GameHome = () => {
             </ImageBackground>  
           </View> */}
 
-          <Text style={[
+          {/* <Text style={[
             globalStyles.fontFamilyCourier,
             styles.bodyText,
           ]}>
@@ -191,7 +191,7 @@ const GameHome = () => {
             styles.bodyText,
           ]}>
             Pellentesque tristique eleifend dapibus. Aenean semper nisi quis nulla mattis, eget imperdiet lorem euismod. In et tellus nibh. Vivamus ac quam at diam ornare hendrerit. Curabitur semper ultricies sapien ac venenatis. Curabitur posuere maximus mattis. Vivamus vehicula finibus porttitor. Morbi et nibh non odio scelerisque condimentum. Donec nec nibh eget mauris tristique faucibus ultrices eu diam. Sed quam justo, suscipit quis ultrices vitae, tincidunt vitae elit. Nulla facilisi.
-          </Text>
+          </Text> */}
 
       </View>
     </ScrollView>
