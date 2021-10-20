@@ -11,7 +11,7 @@ import globalStyles from '../../css/style.js';
 import styles from './styles.js';
 
 const PageHeading = props => {
-  const { text } = { ...props };
+  const { colour, text } = { ...props };
   // const game = useSelector(state => state.game);
   // const language = useSelector(state => state.language);
   // const { gameActions } = { ...allActions };
@@ -24,14 +24,20 @@ const PageHeading = props => {
       globalStyles.colorWhite,
       globalStyles.fontFamilyCourier,
       globalStyles.padding12,
+      colour === 'green' && globalStyles.backgroundGreen,
+      colour === 'amber' && globalStyles.backgroundAmber,
+      colour === 'red' && globalStyles.backgroundRed,
       styles.pageHeading,
     ]}>
       { text }
+      {/* Colour:
+      { colour } */}
     </Text>
   );
 };
 
 PageHeading.propTypes = {
+  colour: PropTypes.string,
   text: PropTypes.string.isRequired
 };
 
