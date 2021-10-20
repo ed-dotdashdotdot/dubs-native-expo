@@ -23,6 +23,15 @@ const globalStyles = StyleSheet.create({
   },
   padding12: {
     padding: 12,
+  },
+  backgroundAmber: {
+    backgroundColor: 'orange',
+  },
+  backgroundGreen: {
+    backgroundColor: 'green',
+  },
+  backgroundRed: {
+    backgroundColor: 'red',
   }
 });
 
