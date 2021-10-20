@@ -7,8 +7,11 @@ import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
 import Translate from '../Translate';
 
+import ChooseImage from '../ChooseImage';
 import GameHome from '../GameHome';
+import GameOn from '../GameOn';
 import GameReady from '../GameReady';
+import WhatIsBossMode from '../WhatIsBossMode';
 
 // import { setGameStatus } from '../../actions';
 
@@ -50,8 +53,8 @@ const Info = () => {
             switch (game.status) {
               // case 'image-detail':
               //   return <ImageDetail image={imageDetail} level={level} />;
-              // case 'choose-image':
-              //   return <ChooseImage />;
+              case 'choose-image':
+                return <ChooseImage />;
               // case 'game-over':
               //   return <GameOver />;
               // case 'game-paused':
@@ -61,28 +64,28 @@ const Info = () => {
                   <GameReady
                     // bossMode={bossMode}
                     // lang={lang}
-                    // level={level}
+                    level={game.level}
                     // gameImage={gameImage}
                   />
                 );
-              // case 'what-is-boss-mode':
-              //   return (
-              //     <WhatIsBossMode
-              //       bossMode={bossMode}
-              //     />
-              //   );
-              // case 'game-on':
-              //   return (
-              //     <Game
-              //       bossMode={bossMode}
-              //       gameImage={gameImage}
-              //       invert={invert}
-              //       lang="en"
-              //       level="easy"
-              //       percentComplete={percentComplete}
-              //       status="game-on"
-              //     />
-              //   );
+              case 'what-is-boss-mode':
+                return (
+                  <WhatIsBossMode
+                    bossMode={game.bossMode}
+                  />
+                );
+              case 'game-on':
+                return (
+                  <GameOn
+                    // bossMode={bossMode}
+                    // gameImage={gameImage}
+                    // invert={invert}
+                    // lang="en"
+                    // level="easy"
+                    // percentComplete={percentComplete}
+                    // status="game-on"
+                  />
+                );
               default:
                 return <GameHome />;
             }
