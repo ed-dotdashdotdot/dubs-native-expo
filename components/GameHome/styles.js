@@ -28,6 +28,33 @@ const styles = StyleSheet.create({
     // fontFamily: 'Courier New',
     fontSize: 20,
     marginBottom: 24,
+  },
+  container: {
+    width: 144,
+    height: 144,
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: 'red',
+    marginTop: 12,
+    marginBottom: 12,
+    overflow: 'hidden',
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center",
+    position: 'absolute',
+    // left: 12,
+    // top: 0,
+    // width: 144,
+    // height: 144,
+    // paddingVertical: 72,
+    // paddingHorizontal: 72,
+    resizeMode: "cover",
+    width: 144,
+    height: 72,
+    // backgroundRepeat: 'repeat',
+    // alignSelf: "flex-start"
+    top: undefined,
   }
 });
 

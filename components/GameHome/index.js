@@ -1,7 +1,17 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, Button, Text, View, ScrollView } from 'react-native';
+import {
+  StyleSheet,
+  Button,
+  Text,
+  View,
+  ScrollView,
+  Image,
+  ImageBackground,
+  useWindowDimensions
+} from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
+// import { useWindowDimensions } from 'react-native';
 
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
@@ -26,6 +36,18 @@ const GameHome = () => {
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
 
+  const bgImage = { uri: "../../assets/game-images/2.jpg" };
+
+  // const windowWidth = Dimensions.get('window').width;
+  // const windowHeight = Dimensions.get('window').height;
+  // const window = useWindowDimensions();
+  const { height, width } = useWindowDimensions();
+  const isPortrait = () => {
+    return height >= width;
+  };
+  // save this info in redux
+
+
   return (
     <ScrollView>
       <View style={styles.infoInner}>
@@ -38,12 +60,114 @@ const GameHome = () => {
         </Text> */}
 
           <PageHeading text={polyglot.t(`howToPlay.${lang.toUpperCase()}`)} />
+
+          {/* <Text>
+            {'windowWidth:'}
+            {windowWidth}
+          </Text>
+          <Text>
+            {'windowHeight:'}
+            {windowHeight}
+          </Text> */}
+          <View style={{marginBottom: 24}}>
+            <Text style={{fontSize: 24, fontWeight: 'bold'}}>
+            {`height: ${height}`}
+            </Text>
+            <Text style={{fontSize: 24, fontWeight: 'bold'}}>
+              {`width: ${width}`}
+            </Text>
+            <Text style={{fontSize: 24, fontWeight: 'bold'}}>
+              {`isPortrait: ${isPortrait()}`}
+            </Text>
+          </View>
+
           <NewGameButtons />
           {!!game.level && <Text>{game.level}</Text>}
           {!!game.status && <Text>{game.status}</Text>}
           {/* {!!game.status && !!game.level && <Text>BOTH</Text>} */}
           <Text><Translate textKey='easy' /> (Translated)</Text>
           <Text>{language.selected}</Text>
+
+          <View>
+            <Image
+              source={require('../../assets/game-images/2.jpg')}
+            />
+          </View>
+
+          <View style={{ 
+            width: 72, 
+            height: 72, 
+            overflow: 'hidden',
+            borderWidth: 0,
+            borderStyle: 'solid',
+            borderColor: 'red',
+            marginTop: 24,
+            marginBottom: 12,
+          }}>
+            <Image
+              source={require('../../assets/game-images/2-grid.jpg')}
+              style={{
+                top: -36,
+                left: -36,
+              }}
+            />
+          </View>
+          <View style={{ 
+            width: 72, 
+            height: 72, 
+            overflow: 'hidden',
+            borderWidth: 0,
+            borderStyle: 'solid',
+            borderColor: 'red',
+            marginTop: 0,
+            marginBottom: 48,
+          }}>
+            <Image
+              source={require('../../assets/game-images/2-grid.jpg')}
+              style={{
+                top: -0,
+                left: -72,
+              }}
+            />
+          </View>
+          <View style={{ 
+            position: 'relative',
+            top: 0,
+            left: 0,
+            width: 240, 
+            height: 360, 
+            overflow: 'hidden',
+            borderWidth: 2,
+            borderStyle: 'solid',
+            borderColor: 'red',
+            marginTop: 0,
+            marginBottom: 48,
+            // transform: [{ scale: 0.5 }]
+          }}>
+            <Image
+              source={require('../../assets/game-images/grid-numbered-easy-portrait.png')}
+              style={{
+                top: 0,
+                left: 0,
+                height: '100%',
+                width: '100%',
+                // aspectRatio: 1,
+              }}
+              resizeMode='cover'
+            />
+          </View>
+
+          {/* <View style={styles.container}>
+            <ImageBackground
+              resizeMode="cover"
+              // source={bgImage}
+              source={require('../../assets/game-images/2.jpg')}
+              style={styles.image}
+            >
+              <Text style={styles.text}>Inside</Text>
+            </ImageBackground>  
+          </View> */}
+
           <Text style={[
             globalStyles.fontFamilyCourier,
             styles.bodyText,
