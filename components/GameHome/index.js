@@ -12,6 +12,29 @@ import {
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 // import { useWindowDimensions } from 'react-native';
+// import DeviceInfo from 'react-native-device-info';
+// import { getDeviceLocale, getDeviceCountry, getManufacturer } from 'react-native-device-info';
+// import { getManufacturer } from 'react-native-device-info';
+// import {
+//   getManufacturer,
+//   getManufacturerSync,
+//   syncUniqueId,
+//   useBatteryLevel,
+//   useBatteryLevelIsLow,
+//   usePowerState,
+//   useFirstInstallTime,
+//   useDeviceName,
+//   useManufacturer,
+//   useHasSystemFeature,
+//   useIsEmulator,
+//   useIsHeadphonesConnected,
+// } from 'react-native-device-info';
+
+// DeviceInfo.getApiLevel().then((apiLevel) => {
+//   // iOS: ?
+//   // Android: 25
+//   // Windows: ?
+// });
 
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
@@ -26,6 +49,17 @@ import globalStyles from '../../css/style.js';
 import styles from './styles.js';
 
 const GameHome = () => {
+  // const getUniqueId = DeviceInfo.then(s => {
+    // alert(DeviceInfo.getManufacturer());
+  // })
+  // alert(DeviceInfo?.getUniqueId());
+
+  // let appName = DeviceInfo.getApplicationName();
+  // alert(appName);
+
+  // let brand = '123';
+  // alert(brand);
+
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
@@ -79,6 +113,18 @@ const GameHome = () => {
             <Text style={{fontSize: 24, fontWeight: 'bold'}}>
               {`isPortrait: ${isPortrait()}`}
             </Text>
+          </View>
+          
+          <View style={{marginBottom: 24}}>
+            {/* <Text style={{fontSize: 24, fontWeight: 'bold'}}>
+              {`DeviceInfo.getDeviceCountry(): ${DeviceInfo.getDeviceCountry()}`}
+            </Text>
+            <Text style={{fontSize: 24, fontWeight: 'bold'}}>
+              {`DeviceInfo.getDeviceLocale() : ${DeviceInfo.getDeviceLocale()}`}
+            </Text> */}
+            {/* <Text style={{fontSize: 24, fontWeight: 'bold'}}>
+              {`DeviceInfo.getManufacturer() : ${DeviceInfo.getManufacturer()}`}
+            </Text> */}
           </View>
 
           <NewGameButtons />
