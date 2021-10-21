@@ -5,6 +5,7 @@ import allActions from '../../actions';
 
 import PageHeading from '../PageHeading';
 // import NewGameButtons from '../shared/NewGameButtons';
+import GameBoard from '../GameBoard';
 import Translate from '../Translate';
 
 import Polyglot from 'node-polyglot';
@@ -38,6 +39,7 @@ const GameOn = props => {
     <ScrollView>
       <View style={styles.infoInner}>
         <Text>Game grid goes here</Text>
+        <GameBoard />
       </View>
     </ScrollView>
     
