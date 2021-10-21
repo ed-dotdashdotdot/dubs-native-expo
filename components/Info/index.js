@@ -108,6 +108,7 @@ const Info = () => {
                       // level="easy"
                       // percentComplete={percentComplete}
                       // status="game-on"
+                      level={game.level}
                     />
                   );
                 default:
