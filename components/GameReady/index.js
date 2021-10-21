@@ -10,7 +10,7 @@ import Translate from '../Translate';
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
-
+import whichLevelColour from '../../js/helpers/whichLevelColour';
 
 // import { setGameStatus } from '../../actions';
 
@@ -18,6 +18,7 @@ import globalStyles from '../../css/style.js';
 import styles from './styles.js';
 
 const GameReady = props => {
+  const { level } = { ...props };
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
@@ -26,15 +27,6 @@ const GameReady = props => {
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
-
-  const { level } = { ...props };
-
-  const whichLevelColour = level => {
-    if (level === 'easy') return 'green';
-    if (level === 'normal') return 'amber';
-    if (level === 'hard') return 'red';
-    return null;
-  }
 
   return (
     <ScrollView>
