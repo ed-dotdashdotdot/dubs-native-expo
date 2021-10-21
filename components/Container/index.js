@@ -5,9 +5,12 @@ import { useSelector, useDispatch } from 'react-redux';
 
 // import Container from './components/Container';
 import Header from '../Header';
+import GameOnHeader from '../GameOnHeader';
 import Info from '../Info';
 import LanguageSelector from '../LanguageSelector';
 import Options from '../Options';
+
+import ucFirst from '../../js/helpers/ucFirst';
 
 import styles from './styles.js';
 
@@ -16,13 +19,7 @@ const Container = () => {
   return (
     <View style={styles.container}>
       {game.status === 'game-on' ? (
-        <Text style={{
-          color: 'white', 
-          fontFamily: 'Courier New', 
-          fontSize: 24
-        }}>
-          {game.level}
-        </Text>
+        <GameOnHeader level={game.level} />
       ) : 
         <Header />
       }
