@@ -44,8 +44,13 @@ const GameBoard = props => {
 
   // const borderRadius = 100;
 
+  const imgSrc = isPortrait() 
+    ? require('../../assets/game-images/2-portrait.jpg') 
+    : require('../../assets/game-images/2-landscape.jpg')
+  ;
+
   return (
-    <View style={{ display: 'flex',}}>
+    <View style={{ display: 'flex' }}>
 
       {/* <View>
         <Image
@@ -57,58 +62,86 @@ const GameBoard = props => {
       </Text> */}
 
       <View style={{ 
-        display: 'flex',
-        flex: 1,
+        // display: 'flex',
+        // flex: 1,
         flexDirection: 'row',
-        position: 'relative',
-        top: 0,
-        left: 0,
+        flexWrap: 'wrap',
+        // left: 0,
+        // position: 'absolute',
+        // top: 0,
+        // marginBottom: 48,
+        // marginTop: 0,/
         // width: '100%', 
         // height: '100%', 
         // overflow: 'hidden',
         // borderWidth: 2,
         // borderStyle: 'solid',
         // borderColor: 'red',
-        marginTop: 0,
-        marginBottom: 48,
-        flexWrap: 'wrap',
       }}>
         {
-          squares.map((val, index) => (
-            <View
-              key={val}
-              style={{ 
-                backgroundColor: `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`,
-                borderBottomLeftRadius: index === getCorners(level, isPortrait()).bottomLeft && 10,
-                borderBottomRightRadius: index === squares.length - 1 && 10,
-                borderTopLeftRadius: index === 0 && 10,
-                borderTopRightRadius: index === getCorners(level, isPortrait()).topRight && 10,
-                height: gameGrid(level, gameHeight, gameWidth, isPortrait()).height,
-                left: 0,
-                position: 'relative',
-                top: 0,
-                width: gameGrid(level, gameHeight, gameWidth, isPortrait()).width,
-              }}
-            >
-              <TouchableOpacity 
-                style={{ 
-                  fontSize: 12,
-                  textAlign:'center',
-                  borderColor: 'red',
-                  borderStyle: 'solid',
-                  borderWidth: 0,
-                  width: '100%',
-                  height: '100%',
-                  textAlign: 'center',
-                  selfAlign: 'center',
-                  display: 'flex',
+          squares.map((val, index) => {
+            return (
+              <View
+                key={val}
+                style={{
+                  backgroundColor: `rgb(
+                  ${Math.floor(Math.random() * 255)}, 
+                  ${Math.floor(Math.random() * 255)}, 
+                  ${Math.floor(Math.random() * 255)}
+                )`,
+                  borderBottomLeftRadius: index === getCorners(level, isPortrait()).bottomLeft && 100,
+                  borderBottomRightRadius: index === squares.length - 1 && 100,
+                  borderTopLeftRadius: index === 0 && 100,
+                  borderTopRightRadius: index === getCorners(level, isPortrait()).topRight && 100,
+                  height: gameGrid(level, gameHeight, gameWidth, isPortrait()).height,
+                  left: 0,
+                  position: 'relative',
+                  top: 0,
+                  width: gameGrid(level, gameHeight, gameWidth, isPortrait()).width,
+                  // borderWidth: 8,
+                  // borderStyle: 'solid',
+                  // borderColor: 'red',
                 }}
-                // title={`${val} - ${index}`}
               >
-                <Text>{`${val} - ${index}`}</Text>
-              </TouchableOpacity>
-            </View>
-          ))
+                <TouchableOpacity
+                  style={{
+                    // fontSize: 12,
+                    // borderColor: 'red',
+                    // borderStyle: 'solid',
+                    // borderWidth: 2,
+                    // width: '100%',
+                    // height: '100%',
+                    // selfAlign: 'center',
+                    // textAlign: 'center',
+                    // display: 'flex',
+                  }}
+                  activeOpacity={0.75}
+                >
+                  {/* <Text>{`${val} - ${index}`}</Text> */}
+                  <View style={{
+                    width: '100%',
+                    height: '100%',
+                    overflow: 'hidden',
+                    // borderWidth: 0,
+                    // borderStyle: 'solid',
+                    // borderColor: 'red',
+                    // marginTop: 0,
+                    // marginBottom: 0,
+                  }}>
+                    <Image
+                      source={imgSrc}
+                      style={{
+                        top: 0,
+                        left: 0,
+                        opacity: 0.5,
+                        // width: 200,
+                      }} 
+                    />
+                  </View>
+                </TouchableOpacity>
+              </View>
+            );
+          })
         }
       </View>
 
