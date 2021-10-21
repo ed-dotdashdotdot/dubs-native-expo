@@ -3,12 +3,12 @@ import { Text } from 'react-native';
 
 import Translate from '../Translate';
 
-import styles from './styles.js';
+import gameOnHeaderStyles from './styles.js';
 
 const GameOnHeader = props => {
   const { level } = { ...props };
   return (
-    <Text style={styles.gameOnHeader}>
+    <Text style={gameOnHeaderStyles.header}>
       <Translate textKey={level} />
     </Text>
   );

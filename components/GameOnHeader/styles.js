@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-  gameOnHeader: {
+const gameOnHeaderStyles = StyleSheet.create({
+  header: {
     color: 'white',
     fontFamily: 'Courier New',
     fontSize: 24,
@@ -11,4 +11,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default styles;
+export default gameOnHeaderStyles;
