@@ -36,12 +36,12 @@ const GameOn = props => {
   // }
 
   return (
-    <ScrollView>
+    // <ScrollView>
       <View style={styles.infoInner}>
-        <Text>Game grid goes here</Text>
-        <GameBoard />
+        {/* <Text>Game grid goes here</Text> */}
+        <GameBoard level={level} />
       </View>
-    </ScrollView>
+    // </ScrollView>
     
   );
 }
