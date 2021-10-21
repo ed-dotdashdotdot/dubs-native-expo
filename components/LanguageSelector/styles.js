@@ -1,4 +1,4 @@
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   languageSelectorContainer: {
@@ -8,9 +8,9 @@ const styles = StyleSheet.create({
     width: '100%',
     position: 'absolute',
     bottom: 24,
-    borderColor: 'blue',
-    borderStyle: 'solid',
-    borderWidth: 2,
+    // borderColor: 'blue',
+    // borderStyle: 'solid',
+    // borderWidth: 2,
   },
   languageSelector: {
     display: 'flex',
@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     borderStyle: 'solid',
     borderWidth: 1,
-    // boxSizing: 'border-box',
     flex: 1,
   },
   en: {

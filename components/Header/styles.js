@@ -1,4 +1,4 @@
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   headerContainer: {

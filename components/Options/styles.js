@@ -1,13 +1,15 @@
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   options: {
-    display: 'flex',
-    flexDirection: 'row',
+    // display: 'flex',
+    // flexDirection: 'row',
     height: 48,
     // lineHeight: 48,
     width: '100%',
     backgroundColor: 'black',
+    position: 'absolute',
+    bottom: 24,
     // borderRadius: 8,
     // borderStyle: 'solid',
     // borderWidth: 2,
