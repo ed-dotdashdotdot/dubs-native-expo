@@ -85,10 +85,10 @@ const GameBoard = props => {
                 key={val}
                 style={{
                   backgroundColor: `rgb(
-                  ${Math.floor(Math.random() * 255)}, 
-                  ${Math.floor(Math.random() * 255)}, 
-                  ${Math.floor(Math.random() * 255)}
-                )`,
+                    ${Math.floor(Math.random() * 255)}, 
+                    ${Math.floor(Math.random() * 255)}, 
+                    ${Math.floor(Math.random() * 255)}
+                  )`,
                   borderBottomLeftRadius: index === getCorners(level, isPortrait()).bottomLeft && 100,
                   borderBottomRightRadius: index === squares.length - 1 && 100,
                   borderTopLeftRadius: index === 0 && 100,
