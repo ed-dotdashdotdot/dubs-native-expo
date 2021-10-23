@@ -70,7 +70,7 @@ const GameHome = () => {
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
 
-  const bgImage = { uri: "../../assets/game-images/2.jpg" };
+  const bgImage = { uri: "../../assets/game-images/2-small.jpg" };
 
   // const windowWidth = Dimensions.get('window').width;
   // const windowHeight = Dimensions.get('window').height;
@@ -136,7 +136,7 @@ const GameHome = () => {
 
           <View>
             <Image
-              source={require('../../assets/game-images/2.jpg')}
+              source={require('../../assets/game-images/2-small.jpg')}
             />
           </View>
 
@@ -207,7 +207,7 @@ const GameHome = () => {
             <ImageBackground
               resizeMode="cover"
               // source={bgImage}
-              source={require('../../assets/game-images/2.jpg')}
+              source={require('../../assets/game-images/2-small.jpg')}
               style={styles.image}
             >
               <Text style={styles.text}>Inside</Text>
