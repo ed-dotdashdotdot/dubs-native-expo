@@ -83,28 +83,28 @@ const GameHome = () => {
   };
   // save this info in redux
 
-  const level = 'easy';
+  // const level = 'easy';
 
-  const gameSpecs = {
-    width: isPortrait() ? 700 : 950,
-    height: isPortrait() ? 800 : 550,
-    total: level === 'hard' ? 96 : level === 'normal' ? 48 : 24,
-    cols: level === 'hard' 
-      ? isPortrait() ? 12 : 8 
-      : level === 'normal' 
-        ? isPortrait() ? 6 : 8
-        : isPortrait() ? 4 : 6,
-    rows123: 6,
-    rows: level === 'hard' 
-      ? isPortrait() ? 8 : 12 
-      : level === 'normal' 
-        ? isPortrait() ? 8 : 6
-        : isPortrait() ? 6 : 4,
-  };
-  let gameArray = [];
-  for (let i=0; i < gameSpecs.total; i++) {
-    gameArray.push(i);
-  }
+  // const gameSpecs = {
+  //   width: isPortrait() ? 700 : 950,
+  //   height: isPortrait() ? 800 : 550,
+  //   total: level === 'hard' ? 96 : level === 'normal' ? 48 : 24,
+  //   cols: level === 'hard' 
+  //     ? isPortrait() ? 12 : 8 
+  //     : level === 'normal' 
+  //       ? isPortrait() ? 6 : 8
+  //       : isPortrait() ? 4 : 6,
+  //   rows123: 6,
+  //   rows: level === 'hard' 
+  //     ? isPortrait() ? 8 : 12 
+  //     : level === 'normal' 
+  //       ? isPortrait() ? 8 : 6
+  //       : isPortrait() ? 6 : 4,
+  // };
+  // let gameArray = [];
+  // for (let i=0; i < gameSpecs.total; i++) {
+  //   gameArray.push(i);
+  // }
 
   return (
     <ScrollView>
@@ -147,7 +147,7 @@ const GameHome = () => {
 
           <NewGameButtons />
           
-          <View 
+          {/* <View 
             style={{
               display: 'flex',
               flexDirection: "row",
@@ -157,7 +157,6 @@ const GameHome = () => {
               borderColor: 'red',
               borderStyle: 'solid',
               borderWidth: 0,
-              // backgroundColor: 'green',
             }}
           >
             {
@@ -205,10 +204,6 @@ const GameHome = () => {
                               gameSpecs.cols
                             ).y
                           ),
-                          // left: 0,
-                          // borderColor: 'red',
-                          // borderStyle: 'solid',
-                          // borderWidth: 4,
                         }}
                       />
                     </TouchableOpacity>
@@ -216,89 +211,7 @@ const GameHome = () => {
                 )
               })
             }
-
-            {/* <View 
-              style={{
-                flex: 1,
-                width: 640 / 4,
-                height: 480 / 4,
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                resizeMode='stretch'
-                source={require('../../assets/game-images/2.jpg')}
-                style={{
-                  // width: 160 * 4,
-                  // height: 120 * 4,
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                }}
-              />
-            </View>
-            <View 
-              style={{
-                flex: 1,
-                width: 640 / 4,
-                height: 480 / 4,
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                resizeMode='stretch'
-                source={require('../../assets/game-images/2.jpg')}
-                style={{
-                  width: 160 * 4,
-                  height: 120 * 4,
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                }}
-              />
-            </View>
-            <View 
-              style={{
-                flex: 1,
-                width: 640 / 4,
-                height: 480 / 4,
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                resizeMode='stretch'
-                source={require('../../assets/game-images/2.jpg')}
-                style={{
-                  width: 160 * 4,
-                  height: 120 * 4,
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                }}
-              />
-            </View>
-            <View 
-              style={{
-                flex: 1,
-                width: 640 / 4,
-                height: 480 / 4,
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                resizeMode='stretch'
-                source={require('../../assets/game-images/2.jpg')}
-                style={{
-                  width: 160 * 4,
-                  height: 120 * 4,
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                }}
-              />
-            </View> */}
-
-          </View>
+          </View> */}
 
 
 
