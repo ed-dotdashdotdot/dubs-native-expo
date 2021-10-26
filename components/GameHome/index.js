@@ -81,6 +81,17 @@ const GameHome = () => {
   };
   // save this info in redux
 
+  const gameSpecs = {
+    width: 640,
+    height: 480,
+    total: 8,
+    cols: 4,
+    rows: 6,
+  };
+  let gameArray = [];
+  for (let i=0; i < gameSpecs.total; i++) {
+    gameArray.push(i);
+  }
 
   return (
     <ScrollView>
@@ -105,17 +116,11 @@ const GameHome = () => {
           </Text> */}
           <View style={{marginBottom: 24}}>
             <Text style={{fontSize: 24, fontWeight: 'bold'}}>
-            {`height: ${height}`}
-            </Text>
-            <Text style={{fontSize: 24, fontWeight: 'bold'}}>
-              {`width: ${width}`}
-            </Text>
-            <Text style={{fontSize: 24, fontWeight: 'bold'}}>
-              {`isPortrait: ${isPortrait()}`}
+            {`height: ${height},width: ${width}, isPortrait: ${isPortrait()}`}
             </Text>
           </View>
           
-          <View style={{marginBottom: 24}}>
+          {/* <View style={{marginBottom: 24}}> */}
             {/* <Text style={{fontSize: 24, fontWeight: 'bold'}}>
               {`DeviceInfo.getDeviceCountry(): ${DeviceInfo.getDeviceCountry()}`}
             </Text>
@@ -125,9 +130,153 @@ const GameHome = () => {
             {/* <Text style={{fontSize: 24, fontWeight: 'bold'}}>
               {`DeviceInfo.getManufacturer() : ${DeviceInfo.getManufacturer()}`}
             </Text> */}
-          </View>
+          {/* </View> */}
 
           <NewGameButtons />
+          
+
+          <View 
+            style={{
+              display: 'flex',
+              flexDirection: "row",
+              flexWrap: 'wrap',
+              width: gameSpecs.width,
+              height: gameSpecs.height,
+              borderColor: 'red',
+              borderStyle: 'solid',
+              borderWidth: 0,
+              backgroundColor: 'green',
+            }}
+          >
+
+            {/* {
+              gameArray.map(val => {
+                return (
+                  <Text>
+                    {val}
+                  </Text>
+                )
+              })
+            } */}
+
+            {
+              gameArray.map(val => {
+                return (
+                  <View 
+                    style={{
+                      // flex: 1,
+                      width: gameSpecs.width / gameSpecs.cols,
+                      height: gameSpecs.height / gameSpecs.rows,
+                      overflow: 'hidden',
+                      borderColor: 'red',
+                        borderStyle: 'solid',
+                        borderWidth: 4,
+                    }}
+                  >
+                    <Image
+                      resizeMode='stretch'
+                      source={require('../../assets/game-images/2.jpg')}
+                      style={{
+                        width: gameSpecs.width,
+                        height: gameSpecs.height,
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        // borderColor: 'red',
+                        // borderStyle: 'solid',
+                        // borderWidth: 4,
+                      }}
+                    />
+                  </View>
+                )
+              })
+            }
+
+            {/* <View 
+              style={{
+                flex: 1,
+                width: 640 / 4,
+                height: 480 / 4,
+                overflow: 'hidden',
+              }}
+            >
+              <Image
+                resizeMode='stretch'
+                source={require('../../assets/game-images/2.jpg')}
+                style={{
+                  // width: 160 * 4,
+                  // height: 120 * 4,
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                }}
+              />
+            </View>
+            <View 
+              style={{
+                flex: 1,
+                width: 640 / 4,
+                height: 480 / 4,
+                overflow: 'hidden',
+              }}
+            >
+              <Image
+                resizeMode='stretch'
+                source={require('../../assets/game-images/2.jpg')}
+                style={{
+                  width: 160 * 4,
+                  height: 120 * 4,
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                }}
+              />
+            </View>
+            <View 
+              style={{
+                flex: 1,
+                width: 640 / 4,
+                height: 480 / 4,
+                overflow: 'hidden',
+              }}
+            >
+              <Image
+                resizeMode='stretch'
+                source={require('../../assets/game-images/2.jpg')}
+                style={{
+                  width: 160 * 4,
+                  height: 120 * 4,
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                }}
+              />
+            </View>
+            <View 
+              style={{
+                flex: 1,
+                width: 640 / 4,
+                height: 480 / 4,
+                overflow: 'hidden',
+              }}
+            >
+              <Image
+                resizeMode='stretch'
+                source={require('../../assets/game-images/2.jpg')}
+                style={{
+                  width: 160 * 4,
+                  height: 120 * 4,
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                }}
+              />
+            </View> */}
+
+          </View>
+
+
+
           {!!game.level && <Text>{game.level}</Text>}
           {!!game.status && <Text>{game.status}</Text>}
           {/* {!!game.status && !!game.level && <Text>BOTH</Text>} */}
@@ -183,7 +332,7 @@ const GameHome = () => {
             width: 240, 
             height: 360, 
             overflow: 'hidden',
-            borderWidth: 2,
+            borderWidth: 8,
             borderStyle: 'solid',
             borderColor: 'red',
             marginTop: 0,
