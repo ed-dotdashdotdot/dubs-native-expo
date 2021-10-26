@@ -127,11 +127,11 @@ const GameHome = () => {
             {'windowHeight:'}
             {windowHeight}
           </Text> */}
-          <View style={{marginBottom: 24}}>
+          {/* <View style={{marginBottom: 24}}>
             <Text style={{fontSize: 24, fontWeight: 'bold'}}>
             {`height: ${height},width: ${width}, isPortrait: ${isPortrait()}`}
             </Text>
-          </View>
+          </View> */}
           
           {/* <View style={{marginBottom: 24}}> */}
             {/* <Text style={{fontSize: 24, fontWeight: 'bold'}}>
@@ -215,19 +215,19 @@ const GameHome = () => {
 
 
 
-          {!!game.level && <Text>{game.level}</Text>}
-          {!!game.status && <Text>{game.status}</Text>}
+          {/* {!!game.level && <Text>{game.level}</Text>}
+          {!!game.status && <Text>{game.status}</Text>} */}
           {/* {!!game.status && !!game.level && <Text>BOTH</Text>} */}
-          <Text><Translate textKey='easy' /> (Translated)</Text>
-          <Text>{language.selected}</Text>
+          {/* <Text><Translate textKey='easy' /> (Translated)</Text>
+          <Text>{language.selected}</Text> */}
 
-          <View>
+          {/* <View>
             <Image
               source={require('../../assets/game-images/2-small.jpg')}
             />
-          </View>
+          </View> */}
 
-          <View style={{ 
+          {/* <View style={{ 
             width: 72, 
             height: 72, 
             overflow: 'hidden',
@@ -288,7 +288,7 @@ const GameHome = () => {
               }}
               resizeMode='cover'
             />
-          </View>
+          </View> */}
 
           {/* <View style={styles.container}>
             <ImageBackground
