@@ -51,7 +51,7 @@ const GameBoard = props => {
   const gameSquares = gameArray(level);
   // gameSquares.sort(() => (Math.random() > 0.5) ? 1 : -1);
 
-  const imgSrc = require('../../assets/game-images/2-small.jpg');
+  const imgSrc = require('../../assets/game-images/2.jpg');
 
   return (
     <View 
