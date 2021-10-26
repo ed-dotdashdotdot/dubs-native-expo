@@ -7,6 +7,7 @@ import {
   ScrollView,
   Image,
   ImageBackground,
+  TouchableOpacity,
   useWindowDimensions
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
@@ -44,6 +45,7 @@ import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
 // import { setGameStatus } from '../../actions';
+import gameGridPositions from '../../js/helpers/gameGridPositions';
 
 import globalStyles from '../../css/style.js';
 import styles from './styles.js';
@@ -81,12 +83,23 @@ const GameHome = () => {
   };
   // save this info in redux
 
+  const level = 'easy';
+
   const gameSpecs = {
-    width: 640,
-    height: 480,
-    total: 8,
-    cols: 4,
-    rows: 6,
+    width: isPortrait() ? 700 : 950,
+    height: isPortrait() ? 800 : 550,
+    total: level === 'hard' ? 96 : level === 'normal' ? 48 : 24,
+    cols: level === 'hard' 
+      ? isPortrait() ? 12 : 8 
+      : level === 'normal' 
+        ? isPortrait() ? 6 : 8
+        : isPortrait() ? 4 : 6,
+    rows123: 6,
+    rows: level === 'hard' 
+      ? isPortrait() ? 8 : 12 
+      : level === 'normal' 
+        ? isPortrait() ? 8 : 6
+        : isPortrait() ? 6 : 4,
   };
   let gameArray = [];
   for (let i=0; i < gameSpecs.total; i++) {
@@ -134,7 +147,6 @@ const GameHome = () => {
 
           <NewGameButtons />
           
-
           <View 
             style={{
               display: 'flex',
@@ -145,48 +157,61 @@ const GameHome = () => {
               borderColor: 'red',
               borderStyle: 'solid',
               borderWidth: 0,
-              backgroundColor: 'green',
+              // backgroundColor: 'green',
             }}
           >
-
-            {/* {
-              gameArray.map(val => {
-                return (
-                  <Text>
-                    {val}
-                  </Text>
-                )
-              })
-            } */}
-
             {
               gameArray.map(val => {
                 return (
                   <View 
                     style={{
-                      // flex: 1,
-                      width: gameSpecs.width / gameSpecs.cols,
+                      borderColor: 'red',
+                      borderStyle: 'solid',
+                      borderWidth: 1,
                       height: gameSpecs.height / gameSpecs.rows,
                       overflow: 'hidden',
-                      borderColor: 'red',
-                        borderStyle: 'solid',
-                        borderWidth: 4,
+                      width: gameSpecs.width / gameSpecs.cols,
                     }}
                   >
-                    <Image
-                      resizeMode='stretch'
-                      source={require('../../assets/game-images/2.jpg')}
-                      style={{
-                        width: gameSpecs.width,
-                        height: gameSpecs.height,
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        // borderColor: 'red',
-                        // borderStyle: 'solid',
-                        // borderWidth: 4,
-                      }}
-                    />
+                    <TouchableOpacity
+                      activeOpacity={0.5}
+                    >
+                      <Image
+                        resizeMode='stretch'
+                        source={require('../../assets/game-images/2.jpg')}
+                        style={{
+                          width: gameSpecs.width,
+                          height: gameSpecs.height,
+                          position: 'absolute',
+                          left: (
+                            gameGridPositions(
+                              val, 
+                              'easy', 
+                              isPortrait(), 
+                              gameSpecs.width, 
+                              gameSpecs.height,
+                              gameSpecs.rows,
+                              gameSpecs.cols
+                            ).x
+                          ),
+                          top: (
+                            gameGridPositions(
+                              val, 
+                              'easy', 
+                              isPortrait(), 
+                              gameSpecs.width, 
+                              gameSpecs.height,
+                              gameSpecs.rows,
+                              gameSpecs.cols
+                            ).y
+                          ),
+                          // left: 0,
+                          // borderColor: 'red',
+                          // borderStyle: 'solid',
+                          // borderWidth: 4,
+                        }}
+                      />
+                    </TouchableOpacity>
                   </View>
                 )
               })
