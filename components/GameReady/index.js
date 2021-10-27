@@ -5,7 +5,7 @@ import allActions from '../../actions';
 
 import PageHeading from '../PageHeading';
 // import NewGameButtons from '../shared/NewGameButtons';
-import StartButton from '../StartButton';
+// import StartButton from '../StartButton';
 import Translate from '../Translate';
 
 import Polyglot from 'node-polyglot';
