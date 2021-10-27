@@ -10,6 +10,7 @@ import Translate from '../Translate';
 import ChooseImage from '../ChooseImage';
 import GameHome from '../GameHome';
 import GameOn from '../GameOn';
+import GameOver from '../GameOver';
 import GameReady from '../GameReady';
 import WhatIsBossMode from '../WhatIsBossMode';
 
@@ -79,8 +80,8 @@ const Info = () => {
                 //   return <ImageDetail image={imageDetail} level={level} />;
                 case 'choose-image':
                   return <ChooseImage />;
-                // case 'game-over':
-                //   return <GameOver />;
+                case 'game-over':
+                  return <GameOver />;
                 // case 'game-paused':
                 //   return <GamePaused />;
                 case 'game-ready':
