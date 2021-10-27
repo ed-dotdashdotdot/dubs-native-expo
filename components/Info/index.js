@@ -52,7 +52,7 @@ const Info = () => {
       ],{
         // left: 200,
         // position: 'absolute',
-        backgroundColor: 'rgba(255,255,255, 0.25)',
+        backgroundColor: 'rgba(0,0,0, 0.5)',
         width: width - (12 * 2),
         height: height - 176,
         // position: 'absolute',
