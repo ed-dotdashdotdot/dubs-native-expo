@@ -5,6 +5,7 @@ import allActions from '../../actions';
 
 import PageHeading from '../PageHeading';
 // import NewGameButtons from '../shared/NewGameButtons';
+import StartButton from '../StartButton';
 import Translate from '../Translate';
 
 import Polyglot from 'node-polyglot';
@@ -62,8 +63,9 @@ const GameReady = props => {
           onPress={() => dispatch(gameActions.setGameStatus('game-on'))}  
           title="Start with random image" 
         />
-        
 
+        {/* <StartButton /> */}
+        
         {/* <Text style={[
           globalStyles.fontFamilyCourier,
           styles.bodyText,
