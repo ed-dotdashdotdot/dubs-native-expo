@@ -103,8 +103,8 @@ const GameBoard = props => {
     console.log(`\n`);
   };
 
-  console.log(game.found);
-  console.log(game.found.length);
+  // console.log(game.found);
+  // console.log(game.found.length);
 
   return (
     <View 
@@ -123,13 +123,13 @@ const GameBoard = props => {
               key={`${val} - ${index}`}
               style={{
                 // backgroundColor: 'red',
+                // borderColor: 'green',
+                // borderStyle: 'solid',
+                // borderWidth: game.selected === val ? 0 : 0,
                 height: gameSpecs.height / gameSpecs.rows,
+                opacity: isButtonFound(val, game.found) ? 0.1: 1,
                 overflow: 'hidden',
                 width: gameSpecs.width / gameSpecs.cols,
-                borderColor: 'green',
-                borderStyle: 'solid',
-                borderWidth: game.selected === val ? 0 : 0,
-                opacity: isButtonFound(val, game.found) ? 0.1: 1,
               }}
             >
               <TouchableOpacity
