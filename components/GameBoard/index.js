@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   // StyleSheet,
   // Button,
-  // Text,
+  Text,
   View,
   // ScrollView,
   Image,
@@ -19,6 +19,7 @@ import allActions from '../../actions';
 import getGameArray from '../../js/helpers/getGameArray';
 import getGameGridPositions from '../../js/helpers/getGameGridPositions';
 import getGameSpecs from '../../js/helpers/getGameSpecs';
+import isButtonFound from '../../js/helpers/isButtonFound';
 import sliceValue from '../../js/helpers/sliceValue';
 
 const GameBoard = props => {
@@ -102,6 +103,9 @@ const GameBoard = props => {
     console.log(`\n`);
   };
 
+  console.log(game.found);
+  console.log(game.found.length);
+
   return (
     <View 
       style={{
@@ -113,52 +117,90 @@ const GameBoard = props => {
       }}
     >
       {
-        gameArray.map(val => {
+        gameArray.map((val, index) => {
           return (
             <View 
-              key={val}
+              key={`${val} - ${index}`}
               style={{
                 // backgroundColor: 'red',
                 height: gameSpecs.height / gameSpecs.rows,
                 overflow: 'hidden',
                 width: gameSpecs.width / gameSpecs.cols,
+                borderColor: 'green',
+                borderStyle: 'solid',
+                borderWidth: game.selected === val ? 0 : 0,
+                opacity: isButtonFound(val, game.found) ? 0.1: 1,
               }}
             >
               <TouchableOpacity
                 activeOpacity={0.25}
-                // onPress={() => alert(val)}
-                onPress={e => {
-                  makeSelection(val);
+                onPress={() => {
+                  if (isButtonFound(val, game.found)) {
+                    console.log(`${val} - FOUND`);
+                  } else {
+                    makeSelection(val);
+                  }
                 }}
+                disabled={isButtonFound(val, game.found) ? true: false}
               >
-                <Image
-                  resizeMode='stretch'
-                  source={imgSrc}
-                  style={{
-                    borderRadius: 10,
-                    height: gameSpecs.height,
-                    left: getGameGridPositions(
-                      val, 
-                      level, 
-                      isPortrait(), 
-                      gameSpecs.width, 
-                      gameSpecs.height,
-                      gameSpecs.rows,
-                      gameSpecs.cols
-                      ).x,
-                    position: 'absolute',
-                    top: getGameGridPositions(
-                      val, 
-                      level, 
-                      isPortrait(), 
-                      gameSpecs.width, 
-                      gameSpecs.height,
-                      gameSpecs.rows,
-                      gameSpecs.cols
-                    ).y,
-                    width: gameSpecs.width,
-                  }}
-                />
+                {!isButtonFound(val, game.found) &&
+                  <Image
+                    resizeMode='stretch'
+                    source={imgSrc}
+                    style={{
+                      borderRadius: 10,
+                      height: gameSpecs.height,
+                      left: getGameGridPositions(
+                        val, 
+                        level, 
+                        isPortrait(), 
+                        gameSpecs.width, 
+                        gameSpecs.height,
+                        gameSpecs.rows,
+                        gameSpecs.cols
+                        ).x,
+                      position: 'absolute',
+                      top: getGameGridPositions(
+                        val, 
+                        level, 
+                        isPortrait(), 
+                        gameSpecs.width, 
+                        gameSpecs.height,
+                        gameSpecs.rows,
+                        gameSpecs.cols
+                      ).y,
+                      width: gameSpecs.width,
+                    }}
+                  />
+                }
+                {game.selected === val && (
+                  <>
+                    <View
+                      style={{
+                        borderColor: 'white',
+                        borderStyle: 'solid',
+                        borderWidth: '2',
+                        height: gameSpecs.height / gameSpecs.rows,
+                        left: 0,
+                        position: 'absolute',
+                        top: 0,
+                        width: gameSpecs.width / gameSpecs.cols,
+                      }}
+                    />
+                    <View
+                      style={{
+                        borderColor: 'black',
+                        borderStyle: 'solid',
+                        borderWidth: '2',
+                        height: gameSpecs.height / gameSpecs.rows - 4,
+                        left: 2,
+                        position: 'absolute',
+                        top: 2,
+                        width: gameSpecs.width / gameSpecs.cols - 4,
+                      }}
+                    />
+                  </>
+                )}
               </TouchableOpacity>
             </View>
           )
