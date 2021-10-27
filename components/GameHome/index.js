@@ -45,7 +45,7 @@ import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
 // import { setGameStatus } from '../../actions';
-import gameGridPositions from '../../js/helpers/gameGridPositions';
+// import gameGridPositions from '../../js/helpers/gameGridPositions';
 
 import globalStyles from '../../css/style.js';
 import styles from './styles.js';
