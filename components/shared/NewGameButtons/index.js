@@ -26,33 +26,37 @@ const NewGameButtons = props => {
   const {
     section
   } = { ...props };
+  const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
 
-  const { gameActions } = { ...allActions };
+  // const { gameActions } = { ...allActions };
+  const { gameActions, imagesActions, timerActions } = { ...allActions };
   const dispatch = useDispatch();
-  // const { gameActions, imagesActions, timerActions } = { ...allActions };
   // const dispatch = useDispatch();
 
-  // const newGameDispatches = level => {
-  //   dispatch(gameActions.setGameClicks(0));
-  //   dispatch(gameActions.setGameStatus('game-ready'));
-  //   dispatch(gameActions.setGameLevel(level));
-  //   dispatch(gameActions.setGameBossMode(false));
-  //   dispatch(gameActions.injectGameFound([]));
-  //   dispatch(gameActions.setGameData([]));
-  //   dispatch(gameActions.setGameSelected(''));
-  //   dispatch(gameActions.setGameId(''));
-  //   // dispatch(gameActions.setGameInvert(false));
-  //   dispatch(imagesActions.setImagesSelected(''));
-  //   dispatch(timerActions.setTimerStart(''));
-  //   dispatch(timerActions.setTimerEnd(''));
-  //   dispatch(timerActions.setTimerSaved(0));
-  //   dispatch(timerActions.setTimerPaused(0));
-  //   dispatch(timerActions.setTimerStatus(''));
-  // };
+  const newGameDispatches = level => {
+    console.log(`level: ${level}`);
+    // console.log(`game: ${game}`);
+    console.log(game);
+    dispatch(gameActions.setGameClicks(0));
+    dispatch(gameActions.setGameStatus('game-ready'));
+    dispatch(gameActions.setGameLevel(level));
+    dispatch(gameActions.setGameBossMode(false));
+    dispatch(gameActions.injectGameFound([]));
+    dispatch(gameActions.setGameData([]));
+    dispatch(gameActions.setGameSelected(''));
+    dispatch(gameActions.setGameId(''));
+    // dispatch(gameActions.setGameInvert(false));
+    dispatch(imagesActions.setImagesSelected(''));
+    dispatch(timerActions.setTimerStart(''));
+    dispatch(timerActions.setTimerEnd(''));
+    dispatch(timerActions.setTimerSaved(0));
+    dispatch(timerActions.setTimerPaused(0));
+    dispatch(timerActions.setTimerStatus(''));
+  };
   return (
     <View
       style={styles.newGameButtons}
@@ -76,8 +80,9 @@ const NewGameButtons = props => {
         <Button
           color='white'
           onPress={() => {
-            dispatch(gameActions.setGameLevel('easy'));
-            dispatch(gameActions.setGameStatus('game-ready'));
+            // dispatch(gameActions.setGameLevel('easy'));
+            // dispatch(gameActions.setGameStatus('game-ready'));
+            newGameDispatches('easy');
           }}
           title={polyglot.t(`startEasyGame.${lang.toUpperCase()}`)}
           type="button"
@@ -97,8 +102,9 @@ const NewGameButtons = props => {
         <Button
           color='white'
           onPress={() => {
-            dispatch(gameActions.setGameLevel('normal'));
-            dispatch(gameActions.setGameStatus('game-ready'));
+            // dispatch(gameActions.setGameLevel('normal'));
+            // dispatch(gameActions.setGameStatus('game-ready'));
+            newGameDispatches('normal');
           }}
           title={polyglot.t(`startNormalGame.${lang.toUpperCase()}`)}
           type="button"
@@ -117,8 +123,9 @@ const NewGameButtons = props => {
         <Button
           color='white'
           onPress={() => {
-            dispatch(gameActions.setGameLevel('hard'));
-            dispatch(gameActions.setGameStatus('game-ready'));
+            // dispatch(gameActions.setGameLevel('hard'));
+            // dispatch(gameActions.setGameStatus('game-ready'));
+            newGameDispatches('hard');
           }}
           title={polyglot.t(`startHardGame.${lang.toUpperCase()}`)}
           type="button"
