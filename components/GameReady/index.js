@@ -5,7 +5,7 @@ import allActions from '../../actions';
 
 import PageHeading from '../PageHeading';
 // import NewGameButtons from '../shared/NewGameButtons';
-// import StartButton from '../StartButton';
+import StartButton from '../StartButton';
 import Translate from '../Translate';
 
 import Polyglot from 'node-polyglot';
@@ -28,6 +28,8 @@ const GameReady = props => {
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
+  // const startTextKey = gameImage ? 'start' : 'startWithRandomImage';
+  const startTextKey = 'startWithRandomImage';
 
   return (
     <ScrollView>
@@ -64,7 +66,9 @@ const GameReady = props => {
           title="Start with random image" 
         />
 
-        {/* <StartButton /> */}
+        <StartButton
+          startTextKey={startTextKey}
+        />
         
         {/* <Text style={[
           globalStyles.fontFamilyCourier,
