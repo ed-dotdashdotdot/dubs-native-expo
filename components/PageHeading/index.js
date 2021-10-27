@@ -30,8 +30,6 @@ const PageHeading = props => {
       styles.pageHeading,
     ]}>
       { text }
-      {/* Colour:
-      { colour } */}
     </Text>
   );
 };
