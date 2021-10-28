@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     // fontFamily: 'Courier New',
     fontSize: 32,
     fontWeight: 'bold',
-    marginBottom: 24,
+    // marginBottom: 24,
     // backgroundColor: 'red',
     textAlign: 'center',
     width: '100%',
