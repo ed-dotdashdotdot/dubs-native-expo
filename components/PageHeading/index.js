@@ -21,7 +21,7 @@ const PageHeading = props => {
     <View style={[
       {
         // backgroundColor: 'red',
-        borderRadius: 18,
+        borderRadius: 8,
         backgroundColor: colour === 'green' ? 'green' : colour === 'amber' ? 'orange' : colour === 'red' ? 'red' : 'transparent',
         // backgroundColor: colour === 'amber' && 'amber',
         // backgroundColor: colour === 'red' && 'red',
