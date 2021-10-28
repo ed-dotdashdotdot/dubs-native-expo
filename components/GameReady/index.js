@@ -11,6 +11,7 @@ import Translate from '../Translate';
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
+import getGameArray from '../../js/helpers/getGameArray';
 import whichLevelColour from '../../js/helpers/whichLevelColour';
 
 // import { setGameStatus } from '../../actions';
@@ -30,6 +31,8 @@ const GameReady = props => {
   const lang = language.selected || 'en';
   // const startTextKey = gameImage ? 'start' : 'startWithRandomImage';
   const startTextKey = 'startWithRandomImage';
+
+  const gameData = getGameArray(level);
 
   return (
     <ScrollView>
@@ -67,6 +70,7 @@ const GameReady = props => {
         />
 
         <StartButton
+          gameData={gameData}
           startTextKey={startTextKey}
         />
         
