@@ -43,6 +43,7 @@ const StartButton = props => {
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
+  const uid = 'TEMP-UID--IS-THIS-NEEDED?';
   return (
     <>
       {/* <StartButtonStyled
@@ -57,7 +58,8 @@ const StartButton = props => {
             // className={classnames('green')}
             onPress={() => {
               dispatch(gameActions.setGameData(gameData));
-              dispatch(gameActions.setGameId(uuidv4()));
+              // dispatch(gameActions.setGameId(uuidv4()));
+              dispatch(gameActions.setGameId(uid));
               dispatch(gameActions.setGameStatus('game-on'));
             }}
             // type="button"
