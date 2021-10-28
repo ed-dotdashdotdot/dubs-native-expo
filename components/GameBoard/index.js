@@ -150,7 +150,7 @@ const GameBoard = props => {
                     resizeMode='stretch'
                     source={imgSrc}
                     style={{
-                      borderRadius: 10,
+                      borderRadius: 24, // was 10
                       height: gameSpecs.height,
                       left: getGameGridPositions(
                         val, 
