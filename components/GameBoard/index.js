@@ -35,6 +35,8 @@ const GameBoard = props => {
     return height >= width;
   };
 
+  console.log(game);
+
   const gameWidth = width - 24 - 4;
   const gameHeight = height - 128 - 24 - 24 - 4;
 
