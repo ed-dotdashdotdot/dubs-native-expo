@@ -64,10 +64,10 @@ const GameReady = props => {
           onPress={() => dispatch(gameActions.setGameStatus('choose-image'))}
           title="Choose an image to play with"
         />
-        <Button 
+        {/* <Button 
           onPress={() => dispatch(gameActions.setGameStatus('game-on'))}  
           title="Start with random image" 
-        />
+        /> */}
 
         <StartButton
           gameData={gameData}
