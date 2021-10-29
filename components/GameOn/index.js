@@ -4,10 +4,13 @@ import { View } from 'react-native';
 import GameBoard from '../GameBoard';
 
 const GameOn = props => {
-  const { level } = { ...props };
+  const { dimensions, level } = { ...props };
   return (
     <View>
-      <GameBoard level={level} />
+      <GameBoard
+        dimensions={dimensions}
+        level={level}
+      />
     </View>
   );
 }

@@ -17,8 +17,7 @@ import isPortrait from '../../js/helpers/isPortrait';
 import sliceValue from '../../js/helpers/sliceValue';
 
 const GameBoard = props => {
-  const { level } = { ...props };
-
+  const { dimensions, level } = { ...props };
   const game = useSelector(state => state.game);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
@@ -26,8 +25,8 @@ const GameBoard = props => {
   const { height, width } = useWindowDimensions();
   const isDevicePortrait = isPortrait(height, width);
 
-  const gameWidth = width - 24 - 4;
-  const gameHeight = height - 128 - 24 - 24 - 4;
+  const gameWidth = dimensions.width - 4;
+  const gameHeight = dimensions.height - 4;
 
   const gameSpecs = getGameSpecs(level, isDevicePortrait, gameWidth, gameHeight);
   let gameArray = [];
