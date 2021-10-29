@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
     // borderStyle: 'solid',
     // borderWidth: 2,
     position: 'absolute',
-    top: 84,
+    top: 72,
+    flex: 1,
     // left: 0,
   },
   info: {
