@@ -4969,7 +4969,7 @@
   "resolved" "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-8.4.1.tgz"
   "version" "8.4.1"
 
-"react-native-safe-area-context@3.2.0":
+"react-native-safe-area-context@^3.2.0", "react-native-safe-area-context@3.2.0":
   "integrity" "sha512-k2Nty4PwSnrg9HwrYeeE+EYqViYJoOFwEy9LxL5RIRfoqxAq/uQXNGwpUg2/u4gnKpBbEPa9eRh15KKMe/VHkA=="
   "resolved" "https://registry.npmjs.org/react-native-safe-area-context/-/react-native-safe-area-context-3.2.0.tgz"
   "version" "3.2.0"
