@@ -1,45 +1,49 @@
 import React from 'react';
-import { Button, View, Image, TouchableOpacity, Text } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
+import { Text, TouchableOpacity } from 'react-native';
+import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
-import Polyglot from 'node-polyglot';
-import i18n from '../../i18n';
+import Translate from '../Translate';
 
 import globalStyles from '../../css/style.js';
 
 const Options = () => {
-  const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
 
-  const polyglot = new Polyglot();
-  polyglot.extend(i18n());
-  const lang = language.selected || 'en';
-
   return (  
-    <View style={[
-      {
-        backgroundColor: 'black',
-        bottom: 12,
-        height: 48,
-        justifyContent: 'center',
-        position: 'absolute',
-        width: '100%',
-      },
-      globalStyles.border,
-      globalStyles.borderRadius8,
-    ]}>
-      <Button
-        accessibilityLabel="Back to home"
-        color={'white'}
-        onPress={() => {
-          dispatch(gameActions.setGameLevel(''));
-          dispatch(gameActions.setGameStatus('game-home'));
-        }}
-        title={polyglot.t(`backToHome.${lang.toUpperCase()}`)}
-      />
-    </View>
+    <TouchableOpacity 
+      style={[
+        {
+          backgroundColor: 'black',
+          bottom: 12,
+          height: 48,
+          justifyContent: 'center',
+          position: 'absolute',
+          width: '100%',
+        },
+        globalStyles.border,
+        globalStyles.borderRadius8,
+      ]}
+      onPress={() => {
+        dispatch(gameActions.setGameLevel(''));
+        dispatch(gameActions.setGameStatus('game-home'));
+      }}
+    >
+      <Text
+        style={[
+          {
+            color: 'white',
+            fontSize: 20,
+            fontWeight: 'bold',
+            textAlign: 'center',
+          },
+          globalStyles.fontFamilyCourier,  
+        ]}
+      >
+        <Translate textKey='backToHome' />
+      </Text>
+    </TouchableOpacity>
   );
 }
 
