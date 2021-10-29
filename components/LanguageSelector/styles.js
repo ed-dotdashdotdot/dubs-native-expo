@@ -2,16 +2,10 @@ import { StyleSheet } from 'react-native';
 
 const languageSelectorStyles = StyleSheet.create({
   languageSelectorContainer: {
-    // display: 'flex',
-    // flexDirection: 'row',
-    height: 48,
-    width: '100%',
-    position: 'absolute',
     bottom: 12,
-    // borderColor: 'blue',
-    // borderStyle: 'solid',
-    // borderWidth: 2,
-    backgroundColor: 'red',
+    height: 48,
+    position: 'absolute',
+    width: '100%',
   },
   languageSelector: {
     display: 'flex',

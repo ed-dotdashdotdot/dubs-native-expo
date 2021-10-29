@@ -32,14 +32,11 @@ const NewGameButtons = props => {
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
 
-  // const { gameActions } = { ...allActions };
   const { gameActions, imagesActions, timerActions } = { ...allActions };
   const dispatch = useDispatch();
-  // const dispatch = useDispatch();
 
   const newGameDispatches = level => {
     console.log(`level: ${level}`);
-    // console.log(`game: ${game}`);
     console.log(game);
     dispatch(gameActions.setGameClicks(0));
     dispatch(gameActions.setGameStatus('game-ready'));
@@ -49,7 +46,6 @@ const NewGameButtons = props => {
     dispatch(gameActions.setGameData([]));
     dispatch(gameActions.setGameSelected(''));
     dispatch(gameActions.setGameId(''));
-    // dispatch(gameActions.setGameInvert(false));
     dispatch(imagesActions.setImagesSelected(''));
     dispatch(timerActions.setTimerStart(''));
     dispatch(timerActions.setTimerEnd(''));
@@ -60,12 +56,6 @@ const NewGameButtons = props => {
   return (
     <View
       style={styles.newGameButtons}
-      // className={
-      //   classnames(
-      //     'new-game-buttons',
-      //     section,
-      //   )
-      // }
     >
       {/* {section === 'game-over' && <PlayThisGameAgainButton />} */}
       {/* {section === 'game-paused' && <ContinueGameButton />} */}

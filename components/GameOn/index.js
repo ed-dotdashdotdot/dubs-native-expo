@@ -3,12 +3,10 @@ import { View } from 'react-native';
 
 import GameBoard from '../GameBoard';
 
-import styles from './styles.js';
-
 const GameOn = props => {
   const { level } = { ...props };
   return (
-    <View style={styles.infoInner}>
+    <View>
       <GameBoard level={level} />
     </View>
   );

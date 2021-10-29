@@ -2,12 +2,14 @@ import { StyleSheet } from 'react-native';
 
 const gameOnHeaderStyles = StyleSheet.create({
   header: {
-    color: 'white',
-    fontFamily: 'Courier New',
-    fontSize: 24,
-    fontWeight: 'bold',
     position: 'absolute',
-    top: 48,
+    top: 0,
+    height: 48,
+    top: 12,
+    width: '100%',
+    flex: 1,
+    justifyContent: 'center',
+    // backgroundColor: 'red',
   }
 });
 

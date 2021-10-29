@@ -1,46 +1,35 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  // StyleSheet,
-  // Button,
-  Text,
-  View,
-  // ScrollView,
   Image,
-  // ImageBackground,
+  Text,
   TouchableOpacity,
-  useWindowDimensions
+  useWindowDimensions,
+  View,
 } from 'react-native';
 import allActions from '../../actions';
 
-// import gameGrid from '../../js/helpers/gameGrid';
-// import getCorners from '../../js/helpers/getCorners';
-// import getSquares from '../../js/helpers/getSquares';
 import getGameArray from '../../js/helpers/getGameArray';
 import getGameGridPositions from '../../js/helpers/getGameGridPositions';
 import getGameSpecs from '../../js/helpers/getGameSpecs';
 import isButtonFound from '../../js/helpers/isButtonFound';
+import isPortrait from '../../js/helpers/isPortrait';
 import sliceValue from '../../js/helpers/sliceValue';
 
 const GameBoard = props => {
   const { level } = { ...props };
 
   const game = useSelector(state => state.game);
-  const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
 
   const { height, width } = useWindowDimensions();
-  const isPortrait = () => {
-    return height >= width;
-  };
-
-  console.log(game);
+  const isDevicePortrait = isPortrait(height, width);
 
   const gameWidth = width - 24 - 4;
   const gameHeight = height - 128 - 24 - 24 - 4;
 
-  const gameSpecs = getGameSpecs(level, isPortrait(), gameWidth, gameHeight);
+  const gameSpecs = getGameSpecs(level, isDevicePortrait, gameWidth, gameHeight);
   let gameArray = [];
   if (game.data.lenth === 0) {
     const gameArray = getGameArray(level);
@@ -52,25 +41,23 @@ const GameBoard = props => {
   const imgSrc = require('../../assets/game-images/2.jpg');
 
   const makeSelection = buttonId => {
-    // console.log(`buttonId: ${buttonId}`);
     dispatch(gameActions.setGameClicks(game.clicks + 1));
     dispatch(gameActions.setGameHighlight([]));
-    // console.log(game);
-    console.log(`game.selected: ${game.selected}`);
-    console.log(`buttonId:      ${buttonId}`);
+    // console.log(`game.selected: ${game.selected}`);
+    // console.log(`buttonId:      ${buttonId}`);
     
     if (game.selected) {
-      console.log(`YES - game.selected`);
+      // console.log(`YES - game.selected`);
       if (game.selected === buttonId) {
-        console.log(`YES - game.selected === buttonId`);
+        // console.log(`YES - game.selected === buttonId`);
         dispatch(gameActions.setGameSelected(''));
       } else {
-        console.log(`NOT - game.selected === buttonId`);
+        // console.log(`NOT - game.selected === buttonId`);
         // make comparison
         const clickedNumber = sliceValue(buttonId);
         const selectedNumber = sliceValue(game.selected);
-        console.log(`clickedNumber: ${clickedNumber}`);
-        console.log(`selectedNumber: ${selectedNumber}`);
+        // console.log(`clickedNumber: ${clickedNumber}`);
+        // console.log(`selectedNumber: ${selectedNumber}`);
         if (clickedNumber === selectedNumber) {
           // correct selection
           dispatch(gameActions.setGameFound([clickedNumber]));
@@ -105,9 +92,6 @@ const GameBoard = props => {
     console.log(`\n`);
   };
 
-  // console.log(game.found);
-  // console.log(game.found.length);
-
   return (
     <View 
       style={{
@@ -124,10 +108,6 @@ const GameBoard = props => {
             <View 
               key={`${val} - ${index}`}
               style={{
-                // backgroundColor: 'red',
-                // borderColor: 'green',
-                // borderStyle: 'solid',
-                // borderWidth: game.selected === val ? 0 : 0,
                 height: gameSpecs.height / gameSpecs.rows,
                 opacity: isButtonFound(val, game.found) ? 0.1: 1,
                 overflow: 'hidden',
@@ -155,7 +135,7 @@ const GameBoard = props => {
                       left: getGameGridPositions(
                         val, 
                         level, 
-                        isPortrait(), 
+                        isDevicePortrait, 
                         gameSpecs.width, 
                         gameSpecs.height,
                         gameSpecs.rows,
@@ -165,7 +145,7 @@ const GameBoard = props => {
                       top: getGameGridPositions(
                         val, 
                         level, 
-                        isPortrait(), 
+                        isDevicePortrait, 
                         gameSpecs.width, 
                         gameSpecs.height,
                         gameSpecs.rows,

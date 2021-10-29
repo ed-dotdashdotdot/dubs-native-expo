@@ -1,34 +1,20 @@
-import React, { useEffect } from 'react';
-import { StyleSheet, Button, Text, View, ScrollView } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
-import allActions from '../../actions';
+import React from 'react';
+import { ScrollView, Text, View } from 'react-native';
+import { useSelector } from 'react-redux';
 
 import PageHeading from '../PageHeading';
-// import NewGameButtons from '../shared/NewGameButtons';
-import Translate from '../Translate';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
-
-
-// import { setGameStatus } from '../../actions';
-
 import globalStyles from '../../css/style.js';
-import styles from './styles.js';
 
-const ChooseImage = props => {
-  const { level } = { ...props };
-  
-  const game = useSelector(state => state.game);
+const ChooseImage = () => {
   const language = useSelector(state => state.language);
-  const { gameActions } = { ...allActions };
-  const dispatch = useDispatch();
 
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
-
 
   return (
     <ScrollView>
@@ -36,50 +22,11 @@ const ChooseImage = props => {
         <PageHeading text={polyglot.t(`chooseAnImageToPlayWith.${lang.toUpperCase()}`)} />
         <Text style={[
           globalStyles.fontFamilyCourier,
-          styles.bodyText,
         ]}>
           Choose image content
         </Text>
-
-        {/* <Button
-          onPress={() => dispatch(gameActions.setGameBossMode(!game.bossMode))}
-          title={`Turn boss mode ${game.bossMode ? 'off' : 'on'}`}
-        />
-        <Button
-          onPress={() => dispatch(gameActions.setGameStatus('what-is-boss-mode'))}
-          title="What is boss mode"
-        />
-        <Button title="Choose an image to play with" />
-        <Button title="Start with random image" /> */}
-        
-        {/* <Text style={[
-          globalStyles.fontFamilyCourier,
-          styles.bodyText,
-        ]}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui lectus, tristique eget euismod in, sagittis eu magna. Aenean lobortis arcu ac elit aliquet, dapibus scelerisque eros blandit. Praesent tincidunt, turpis non facilisis mattis, nulla ligula tincidunt ex, ac accumsan tellus magna sed risus. Fusce eget consequat mi, quis vehicula elit. Mauris volutpat mi augue, nec cursus mauris scelerisque eu. Cras tristique at nisi bibendum vulputate. Fusce id efficitur neque. Vivamus ullamcorper tortor a porta viverra.
-        </Text>
-        <Text style={[
-          globalStyles.fontFamilyCourier,
-          styles.bodyText,
-        ]}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui lectus, tristique eget euismod in, sagittis eu magna. Aenean lobortis arcu ac elit aliquet, dapibus scelerisque eros blandit. Praesent tincidunt, turpis non facilisis mattis, nulla ligula tincidunt ex, ac accumsan tellus magna sed risus. Fusce eget consequat mi, quis vehicula elit. Mauris volutpat mi augue, nec cursus mauris scelerisque eu. Cras tristique at nisi bibendum vulputate. Fusce id efficitur neque. Vivamus ullamcorper tortor a porta viverra.
-        </Text>
-        <Text style={[
-          globalStyles.fontFamilyCourier,
-          styles.bodyText,
-        ]}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui lectus, tristique eget euismod in, sagittis eu magna. Aenean lobortis arcu ac elit aliquet, dapibus scelerisque eros blandit. Praesent tincidunt, turpis non facilisis mattis, nulla ligula tincidunt ex, ac accumsan tellus magna sed risus. Fusce eget consequat mi, quis vehicula elit. Mauris volutpat mi augue, nec cursus mauris scelerisque eu. Cras tristique at nisi bibendum vulputate. Fusce id efficitur neque. Vivamus ullamcorper tortor a porta viverra.
-        </Text>
-        <Text style={[
-          globalStyles.fontFamilyCourier,
-          styles.bodyText,
-        ]}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dui lectus, tristique eget euismod in, sagittis eu magna. Aenean lobortis arcu ac elit aliquet, dapibus scelerisque eros blandit. Praesent tincidunt, turpis non facilisis mattis, nulla ligula tincidunt ex, ac accumsan tellus magna sed risus. Fusce eget consequat mi, quis vehicula elit. Mauris volutpat mi augue, nec cursus mauris scelerisque eu. Cras tristique at nisi bibendum vulputate. Fusce id efficitur neque. Vivamus ullamcorper tortor a porta viverra.
-        </Text> */}
-
       </View>
     </ScrollView>
-    
   );
 }
 

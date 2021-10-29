@@ -7,14 +7,11 @@ import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
 const Translate = props => {
-  const {
-    textKey
-  } = props;
+  const { textKey } = props;
   const language = useSelector(state => state.language);
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'EN';
-
   return polyglot.t(`${textKey}.${lang.toUpperCase()}`);
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, View, Image, TouchableOpacity } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
+import { Image, TouchableOpacity, View } from 'react-native';
+import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import languageSelectorStyles from './styles.js';
@@ -21,11 +21,11 @@ const LanguageSelector = () => {
               onPress={() => {
                 dispatch(languageActions.setChangeLanguage('de'));
               }}
-              >
+            >
               <Image
                 style={languageSelectorStyles.flag}
                 source={require('../../assets/flags/de.png')}
-                />
+              />
             </TouchableOpacity>
           </View>
         </View>
