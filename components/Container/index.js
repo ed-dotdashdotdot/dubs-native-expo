@@ -29,6 +29,8 @@ const Container = () => {
         alignItems: 'center',
         backgroundColor: 'rgba(0,0,0, 0.33)',
         flex: 1,
+        paddingLeft: 12,
+        paddingRight: 12,
       }}
     >
       {game.status === 'game-on' ? (
