@@ -36,8 +36,6 @@ const NewGameButtons = props => {
   const dispatch = useDispatch();
 
   const newGameDispatches = level => {
-    // console.log(`level: ${level}`);
-    // console.log(game);
     dispatch(gameActions.setGameClicks(0));
     dispatch(gameActions.setGameStatus('game-ready'));
     dispatch(gameActions.setGameLevel(level));
