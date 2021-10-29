@@ -23,7 +23,7 @@ const Info = () => {
   return (
     <SafeAreaInsetsContext.Consumer>
       {(insets) => {
-        const infoHeight = height - 72 - 72 - insets.top - insets.bottom;
+        const infoHeight = height - 48 - 72 - insets.top - insets.bottom;
         const infoWidth = width - (12 * 2);
         return (
           <View 
@@ -32,7 +32,7 @@ const Info = () => {
               backgroundColor: 'purple',
               flex: 1,
               position: 'absolute',
-              top: 72,
+              top: 48,
             }}
           >
             <View 
