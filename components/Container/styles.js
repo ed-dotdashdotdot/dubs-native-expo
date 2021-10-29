@@ -1,20 +1,21 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+const containerStyles = StyleSheet.create({
   container: {
-    // borderWidth: 2,
-    // borderStyle: 'solid',
-    // borderColor: 'yellow',
     alignItems: 'center',
-    backgroundColor: 'rgba(128,0,0, 1)',
+    backgroundColor: 'rgba(0,0,0, 0.25)',
+    // borderColor: 'blue',
+    // borderStyle: 'solid',
+    // borderWidth: 2,
+    flex: 1,
     // flex: 1,
     // justifyContent: 'center',
     paddingBottom: 64,
     paddingLeft: 12,
     paddingRight: 12,
     paddingTop: 112,
-    height: '100%',
+    // height: '100%',
   },
 });
 
-export default styles;
+export default containerStyles;

@@ -1,6 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet, Button, Text, View, SafeAreaView } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
@@ -14,7 +14,7 @@ import Options from '../Options';
 import isGameOver from '../../js/helpers/isGameOver';
 import ucFirst from '../../js/helpers/ucFirst';
 
-import styles from './styles.js';
+import containerStyles from './styles.js';
 
 const Container = () => {
   const game = useSelector(state => state.game);
@@ -53,7 +53,7 @@ const Container = () => {
   }, [game.found.length]);
 
   return (
-    <View style={styles.container}>
+    <View style={containerStyles.container}>
       {game.status === 'game-on' ? (
         <GameOnHeader level={game.level} />
       ) : 
