@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+const infoStyles = StyleSheet.create({
   infoContainer: {
     // backgroundColor: '#666',
     // color: '#f00',
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   // }
 });
 
-export default styles;
+export default infoStyles;

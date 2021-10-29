@@ -17,7 +17,7 @@ import WhatIsBossMode from '../WhatIsBossMode';
 // import { setGameStatus } from '../../actions';
 
 import globalStyles from '../../css/style.js';
-import styles from './styles.js';
+import infoStyles from './styles.js';
 
 const Info = () => {
   const game = useSelector(state => state.game);
@@ -44,7 +44,7 @@ const Info = () => {
   // }, []);
   return (
     <View style={[
-      styles.infoContainer,
+      infoStyles.infoContainer,
     ]}>
       <View style={[
         // globalStyles.border,
