@@ -4,13 +4,14 @@ const languageSelectorStyles = StyleSheet.create({
   languageSelectorContainer: {
     // display: 'flex',
     // flexDirection: 'row',
-    height: 52,
+    height: 48,
     width: '100%',
     position: 'absolute',
-    bottom: 24,
+    bottom: 12,
     // borderColor: 'blue',
     // borderStyle: 'solid',
     // borderWidth: 2,
+    backgroundColor: 'red',
   },
   languageSelector: {
     display: 'flex',
