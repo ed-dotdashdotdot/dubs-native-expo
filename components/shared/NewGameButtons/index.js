@@ -46,7 +46,7 @@ const NewGameButtons = props => {
     dispatch(gameActions.setGameId(''));
     dispatch(imagesActions.setImagesSelected(''));
     dispatch(timerActions.setTimerStart('1635548563000'));
-    dispatch(timerActions.setTimerEnd('1655548593550'));
+    dispatch(timerActions.setTimerEnd('1635548593550'));
     dispatch(timerActions.setTimerSaved(0));
     dispatch(timerActions.setTimerPaused(0));
     dispatch(timerActions.setTimerStatus(''));
