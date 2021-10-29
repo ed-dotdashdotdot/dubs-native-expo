@@ -20,6 +20,22 @@ const Options = () => {
 
   return (  
     <View style={[
+      {
+        height: 48,
+        // lineHeight: 48,
+        width: '100%',
+        backgroundColor: 'black',
+        position: 'absolute',
+        bottom: 12,
+        // marginTop: 12,
+        // borderRadius: 8,
+        // borderStyle: 'solid',
+        // borderWidth: 2,
+        // borderColor: 'white',
+        // flex: 1,
+        // alignSelf: 'center',
+        justifyContent: 'center',
+      },
       globalStyles.border,
       globalStyles.borderRadius8,
       styles.options,
