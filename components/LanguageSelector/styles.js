@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+const languageSelectorStyles = StyleSheet.create({
   languageSelectorContainer: {
     // display: 'flex',
     // flexDirection: 'row',
@@ -74,4 +74,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default styles;
+export default languageSelectorStyles;
