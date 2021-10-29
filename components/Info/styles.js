@@ -13,9 +13,9 @@ const infoStyles = StyleSheet.create({
     // borderColor: 'green',
     // borderStyle: 'solid',
     // borderWidth: 2,
-    position: 'absolute',
-    top: 72,
-    flex: 1,
+    // position: 'absolute',
+    // top: 72,
+    // flex: 1,
     // left: 0,
   },
   info: {

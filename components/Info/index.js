@@ -19,6 +19,8 @@ import WhatIsBossMode from '../WhatIsBossMode';
 import globalStyles from '../../css/style.js';
 import infoStyles from './styles.js';
 
+// import { useWindowDimensions } from 'react-native';
+
 const Info = () => {
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
@@ -28,6 +30,7 @@ const Info = () => {
   const dispatch = useDispatch();
 
   const { height, width } = useWindowDimensions();
+  // alert(`height: ${height} - width: ${width}`);
   const isPortrait = () => {
     return height >= width;
   };
@@ -45,6 +48,12 @@ const Info = () => {
   return (
     <View style={[
       infoStyles.infoContainer,
+      {
+        backgroundColor: 'red',
+        top: 72,
+        flex: 1,
+        position: 'absolute',
+      }
     ]}>
       <View style={[
         // globalStyles.border,
