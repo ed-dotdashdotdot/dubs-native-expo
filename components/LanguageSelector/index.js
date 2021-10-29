@@ -12,7 +12,7 @@ const LanguageSelector = () => {
     <View style={languageSelectorStyles.languageSelectorContainer}>
       <View style={languageSelectorStyles.languageSelector}>
         <View style={languageSelectorStyles.buttonContainer}>
-          <View style={languageSelectorStyles.de}>
+          <View style={languageSelectorStyles.flag}>
             <TouchableOpacity
               accessibilityLabel="Switch language to German"
               activeOpacity={0.5}
@@ -23,14 +23,14 @@ const LanguageSelector = () => {
               }}
             >
               <Image
-                style={languageSelectorStyles.flag}
+                style={languageSelectorStyles.flagImage}
                 source={require('../../assets/flags/de.png')}
               />
             </TouchableOpacity>
           </View>
         </View>
         <View style={languageSelectorStyles.buttonContainer}>
-          <View style={languageSelectorStyles.en}>
+          <View style={languageSelectorStyles.flag}>
             <TouchableOpacity
               accessibilityLabel="Switch language to English"
               activeOpacity={0.5}
@@ -41,14 +41,14 @@ const LanguageSelector = () => {
               }}
             >
               <Image
-                style={languageSelectorStyles.flag}
+                style={languageSelectorStyles.flagImage}
                 source={require('../../assets/flags/en.png')}
               />
             </TouchableOpacity>
           </View>
         </View>
         <View style={languageSelectorStyles.buttonContainer}>
-          <View style={languageSelectorStyles.es}>
+          <View style={languageSelectorStyles.flag}>
             <TouchableOpacity
               accessibilityLabel="Switch language to Spanish"
               activeOpacity={0.5}
@@ -59,14 +59,14 @@ const LanguageSelector = () => {
               }}
             >
               <Image
-                style={languageSelectorStyles.flag}
+                style={languageSelectorStyles.flagImage}
                 source={require('../../assets/flags/es.png')}
               />
             </TouchableOpacity>
           </View>
         </View>
         <View style={languageSelectorStyles.buttonContainer}>
-          <View style={languageSelectorStyles.it}>
+          <View style={languageSelectorStyles.flag}>
             <TouchableOpacity
               accessibilityLabel="Switch language to Italian"
               activeOpacity={0.5}
@@ -77,14 +77,14 @@ const LanguageSelector = () => {
               }}
             >
               <Image
-                style={languageSelectorStyles.flag}
+                style={languageSelectorStyles.flagImage}
                 source={require('../../assets/flags/it.png')}
               />
             </TouchableOpacity>
           </View>
         </View>
         <View style={languageSelectorStyles.buttonContainer}>
-          <View style={languageSelectorStyles.pt}>
+          <View style={languageSelectorStyles.flag}>
             <TouchableOpacity
               accessibilityLabel="Switch language to Portuguese"
               activeOpacity={0.5}
@@ -95,7 +95,7 @@ const LanguageSelector = () => {
               }}
             >
               <Image
-                style={languageSelectorStyles.flag}
+                style={languageSelectorStyles.flagImage}
                 source={require('../../assets/flags/pt.png')}
               />
             </TouchableOpacity>
