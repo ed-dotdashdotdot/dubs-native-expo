@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Button, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../../actions';
 // import styles from '../../Container/styles';
@@ -10,8 +10,8 @@ import allActions from '../../../actions';
 
 // import Button from '../../../../ui.components/button';
 // import ContinueGameButton from '../../ContinueGameButton';
-// import PlayThisGameAgainButton from '../../PlayThisGameAgainButton';
-// import Translate from '../../../../Translate';
+import PlayThisGameAgainButton from '../../PlayThisGameAgainButton';
+import Translate from '../../Translate';
 
 // import NewGameButtonsStyled from './styles';
 // import './css/index.scss';
@@ -26,6 +26,8 @@ const NewGameButtons = props => {
   const {
     section
   } = { ...props };
+  console.log('section:');
+  console.log(section);
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
   const polyglot = new Polyglot();
@@ -55,7 +57,7 @@ const NewGameButtons = props => {
     <View
       style={styles.newGameButtons}
     >
-      {/* {section === 'game-over' && <PlayThisGameAgainButton />} */}
+      {section === 'game-over' && <PlayThisGameAgainButton />}
       {/* {section === 'game-paused' && <ContinueGameButton />} */}
       <View
         style={[
@@ -65,19 +67,35 @@ const NewGameButtons = props => {
           styles.greenButton,
         ]}
       >
-        <Button
+        <TouchableOpacity
           color='white'
           onPress={() => {
             // dispatch(gameActions.setGameLevel('easy'));
             // dispatch(gameActions.setGameStatus('game-ready'));
             newGameDispatches('easy');
           }}
+          style={[
+            {
+              padding: 12,
+            }
+          ]}
           title={polyglot.t(`startEasyGame.${lang.toUpperCase()}`)}
           type="button"
         >
-          {/* {polyglot.t(`${textKey}.${lang.toUpperCase()}`)} */}
-          {/* <Translate textKey="startEasyGame" /> */}
-        </Button>
+          <Text
+            style={[
+              {
+                color: 'white',
+                fontSize: 20,
+                fontWeight: 'bold',
+                textAlign: 'center',
+              },
+              globalStyles.fontFamilyCourier,  
+            ]}
+          >
+            <Translate textKey="startEasyGame" />
+          </Text>
+        </TouchableOpacity>
       </View>
       <View
         style={[
@@ -87,18 +105,35 @@ const NewGameButtons = props => {
           styles.amberButton,
         ]}
       >
-        <Button
+        <TouchableOpacity
           color='white'
           onPress={() => {
             // dispatch(gameActions.setGameLevel('normal'));
             // dispatch(gameActions.setGameStatus('game-ready'));
             newGameDispatches('normal');
           }}
+          style={[
+            {
+              padding: 12,
+            }
+          ]}
           title={polyglot.t(`startNormalGame.${lang.toUpperCase()}`)}
           type="button"
         >
-          {/* <Translate textKey="startNormalGame" /> */}
-        </Button>
+          <Text
+            style={[
+              {
+                color: 'white',
+                fontSize: 20,
+                fontWeight: 'bold',
+                textAlign: 'center',
+              },
+              globalStyles.fontFamilyCourier,  
+            ]}
+          >
+            <Translate textKey="startNormalGame" />
+          </Text>
+        </TouchableOpacity>
       </View>
       <View
         style={[
@@ -108,18 +143,35 @@ const NewGameButtons = props => {
           styles.redButton,
         ]}
       >
-        <Button
+        <TouchableOpacity
           color='white'
           onPress={() => {
             // dispatch(gameActions.setGameLevel('hard'));
             // dispatch(gameActions.setGameStatus('game-ready'));
             newGameDispatches('hard');
           }}
+          style={[
+            {
+              padding: 12,
+            }
+          ]}
           title={polyglot.t(`startHardGame.${lang.toUpperCase()}`)}
           type="button"
         >
-          {/* <Translate textKey="startHardGame" /> */}
-        </Button>
+          <Text
+            style={[
+              {
+                color: 'white',
+                fontSize: 20,
+                fontWeight: 'bold',
+                textAlign: 'center',
+              },
+              globalStyles.fontFamilyCourier,  
+            ]}
+          >
+            <Translate textKey="startHardGame" />
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
