@@ -64,7 +64,7 @@ const GameOver = () => {
             }
           </Text>
         </View>
-        <NewGameButtons />
+        <NewGameButtons section="game-over" />
       </View>
     </ScrollView>
   );
