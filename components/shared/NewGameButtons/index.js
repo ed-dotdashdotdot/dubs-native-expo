@@ -119,7 +119,7 @@ const NewGameButtons = props => {
             marginBottom: 12,
           },
           globalStyles.border,
-          globalStyles.borderRadius12,
+          globalStyles.borderRadius8,
         ]}
       >
         <Button
