@@ -20,7 +20,7 @@ import Polyglot from 'node-polyglot';
 import i18n from '../../../i18n';
 
 import globalStyles from '../../../css/style.js';
-import styles from './styles.js';
+// import styles from './styles.js';
 
 const NewGameButtons = props => {
   const {
@@ -53,16 +53,26 @@ const NewGameButtons = props => {
   };
   return (
     <View
-      style={styles.newGameButtons}
+      style={[
+        {
+          alignSelf: 'center',
+          display: 'flex',
+          maxWidth: 400,
+          minWidth: 300,
+          width: '50%',
+        },
+      ]}
     >
       {/* {section === 'game-over' && <PlayThisGameAgainButton />} */}
       {/* {section === 'game-paused' && <ContinueGameButton />} */}
       <View
         style={[
+          {
+            backgroundColor: 'green',
+            marginBottom: 12,
+          },
           globalStyles.border,
           globalStyles.borderRadius8,
-          styles.newGameButtonsButton, 
-          styles.greenButton,
         ]}
       >
         <Button
@@ -81,10 +91,12 @@ const NewGameButtons = props => {
       </View>
       <View
         style={[
+          {
+            backgroundColor: 'orange',
+            marginBottom: 12,
+          },
           globalStyles.border,
           globalStyles.borderRadius8,
-          styles.newGameButtonsButton, 
-          styles.amberButton,
         ]}
       >
         <Button
@@ -102,10 +114,12 @@ const NewGameButtons = props => {
       </View>
       <View
         style={[
+          {
+            backgroundColor: 'red',
+            marginBottom: 12,
+          },
           globalStyles.border,
-          globalStyles.borderRadius8,
-          styles.newGameButtonsButton, 
-          styles.redButton,
+          globalStyles.borderRadius12,
         ]}
       >
         <Button
