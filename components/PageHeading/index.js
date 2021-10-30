@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Text, View } from 'react-native';
 
 import globalStyles from '../../css/style.js';
-import styles from './styles.js';
 
 const PageHeading = props => {
   const { colour, text } = { ...props };
@@ -27,12 +26,15 @@ const PageHeading = props => {
       <Text
         style={[
           {
+            fontSize: 32,
+            fontWeight: 'bold',
             margin: 0,
             padding: 0,
+            textAlign: 'center',
+            width: '100%',
           },
           globalStyles.colorWhite,
           globalStyles.fontFamilyCourier,
-          styles.pageHeading,
         ]}
       >
         { text }
