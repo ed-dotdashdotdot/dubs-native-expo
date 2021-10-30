@@ -17,10 +17,10 @@ const LanguageSelector = () => {
               accessibilityLabel="Switch language to German"
               activeOpacity={0.5}
               color={'white'}
-              title="German"
               onPress={() => {
                 dispatch(languageActions.setChangeLanguage('de'));
               }}
+              title="German"
             >
               <Image
                 style={languageSelectorStyles.flagImage}
@@ -35,10 +35,10 @@ const LanguageSelector = () => {
               accessibilityLabel="Switch language to English"
               activeOpacity={0.5}
               color={'white'}
-              title="English"
               onPress={() => {
                 dispatch(languageActions.setChangeLanguage('en'));
               }}
+              title="English"
             >
               <Image
                 style={languageSelectorStyles.flagImage}
@@ -53,10 +53,10 @@ const LanguageSelector = () => {
               accessibilityLabel="Switch language to Spanish"
               activeOpacity={0.5}
               color={'white'}
-              title="Spanish"
               onPress={() => {
                 dispatch(languageActions.setChangeLanguage('es'));
               }}
+              title="Spanish"
             >
               <Image
                 style={languageSelectorStyles.flagImage}
@@ -71,14 +71,14 @@ const LanguageSelector = () => {
               accessibilityLabel="Switch language to Italian"
               activeOpacity={0.5}
               color={'white'}
-              title="Italian"
               onPress={() => {
                 dispatch(languageActions.setChangeLanguage('it'));
               }}
+              title="Italian"
             >
               <Image
-                style={languageSelectorStyles.flagImage}
                 source={require('../../assets/flags/it.png')}
+                style={languageSelectorStyles.flagImage}
               />
             </TouchableOpacity>
           </View>
@@ -89,10 +89,10 @@ const LanguageSelector = () => {
               accessibilityLabel="Switch language to Portuguese"
               activeOpacity={0.5}
               color={'white'}
-              title="Portuguese"
               onPress={() => {
                 dispatch(languageActions.setChangeLanguage('pt'));
               }}
+              title="Portuguese"
             >
               <Image
                 style={languageSelectorStyles.flagImage}
