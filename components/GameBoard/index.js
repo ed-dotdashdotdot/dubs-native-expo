@@ -44,7 +44,6 @@ const GameBoard = props => {
     dispatch(gameActions.setGameHighlight([]));
     // console.log(`game.selected: ${game.selected}`);
     // console.log(`buttonId:      ${buttonId}`);
-    
     if (game.selected) {
       // console.log(`YES - game.selected`);
       if (game.selected === buttonId) {
@@ -83,35 +82,39 @@ const GameBoard = props => {
         }
       }
     } else {
-      console.log(`NOT - game.selected`);
+      // console.log(`NOT - game.selected`);
       // add to selected
       dispatch(gameActions.setGameSelected(buttonId));
     }
-    console.log(game);
-    console.log(`\n`);
+    // console.log(game);
+    // console.log(`\n`);
   };
 
   return (
     <View 
-      style={{
-        display: 'flex',
-        flexDirection: "row",
-        flexWrap: 'wrap',
-        height: gameSpecs.height,
-        width: gameSpecs.width,
-      }}
+      style={[
+        {
+          display: 'flex',
+          flexDirection: "row",
+          flexWrap: 'wrap',
+          height: gameSpecs.height,
+          width: gameSpecs.width,
+        }
+      ]}
     >
       {
         gameArray.map((val, index) => {
           return (
             <View 
               key={`${val} - ${index}`}
-              style={{
-                height: gameSpecs.height / gameSpecs.rows,
-                opacity: isButtonFound(val, game.found) ? 0.1: 1,
-                overflow: 'hidden',
-                width: gameSpecs.width / gameSpecs.cols,
-              }}
+              style={[
+                {
+                  height: gameSpecs.height / gameSpecs.rows,
+                  opacity: isButtonFound(val, game.found) ? 0.1: 1,
+                  overflow: 'hidden',
+                  width: gameSpecs.width / gameSpecs.cols,
+                }
+              ]}
             >
               <TouchableOpacity
                 activeOpacity={0.25}
@@ -128,57 +131,63 @@ const GameBoard = props => {
                   <Image
                     resizeMode='stretch'
                     source={imgSrc}
-                    style={{
-                      borderRadius: 24, // was 10
-                      height: gameSpecs.height,
-                      left: getGameGridPositions(
-                        val, 
-                        level, 
-                        isDevicePortrait, 
-                        gameSpecs.width, 
-                        gameSpecs.height,
-                        gameSpecs.rows,
-                        gameSpecs.cols
-                        ).x,
-                      position: 'absolute',
-                      top: getGameGridPositions(
-                        val, 
-                        level, 
-                        isDevicePortrait, 
-                        gameSpecs.width, 
-                        gameSpecs.height,
-                        gameSpecs.rows,
-                        gameSpecs.cols
-                      ).y,
-                      width: gameSpecs.width,
-                    }}
+                    style={[
+                      {
+                        borderRadius: 24, // was 10
+                        height: gameSpecs.height,
+                        left: getGameGridPositions(
+                          val, 
+                          level, 
+                          isDevicePortrait, 
+                          gameSpecs.width, 
+                          gameSpecs.height,
+                          gameSpecs.rows,
+                          gameSpecs.cols
+                          ).x,
+                        position: 'absolute',
+                        top: getGameGridPositions(
+                          val, 
+                          level, 
+                          isDevicePortrait, 
+                          gameSpecs.width, 
+                          gameSpecs.height,
+                          gameSpecs.rows,
+                          gameSpecs.cols
+                        ).y,
+                        width: gameSpecs.width,
+                      }
+                    ]}
                   />
                 }
                 {game.selected === val && (
                   <>
                     <View
-                      style={{
-                        borderColor: 'white',
-                        borderStyle: 'solid',
-                        borderWidth: '2',
-                        height: gameSpecs.height / gameSpecs.rows,
-                        left: 0,
-                        position: 'absolute',
-                        top: 0,
-                        width: gameSpecs.width / gameSpecs.cols,
-                      }}
+                      style={[
+                        {
+                          borderColor: 'white',
+                          borderStyle: 'solid',
+                          borderWidth: '2',
+                          height: gameSpecs.height / gameSpecs.rows,
+                          left: 0,
+                          position: 'absolute',
+                          top: 0,
+                          width: gameSpecs.width / gameSpecs.cols,
+                        }
+                      ]}
                     />
                     <View
-                      style={{
-                        borderColor: 'black',
-                        borderStyle: 'solid',
-                        borderWidth: '2',
-                        height: gameSpecs.height / gameSpecs.rows - 4,
-                        left: 2,
-                        position: 'absolute',
-                        top: 2,
-                        width: gameSpecs.width / gameSpecs.cols - 4,
-                      }}
+                      style={[
+                        {
+                          borderColor: 'black',
+                          borderStyle: 'solid',
+                          borderWidth: '2',
+                          height: gameSpecs.height / gameSpecs.rows - 4,
+                          left: 2,
+                          position: 'absolute',
+                          top: 2,
+                          width: gameSpecs.width / gameSpecs.cols - 4,
+                        }
+                      ]}
                     />
                   </>
                 )}
