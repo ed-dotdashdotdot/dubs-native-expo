@@ -8,6 +8,7 @@ import GameHome from '../GameHome';
 import GameOn from '../GameOn';
 import GameOver from '../GameOver';
 import GameReady from '../GameReady';
+import ImageDetail from '../ImageDetail';
 import WhatIsBossMode from '../WhatIsBossMode';
 
 // import isPortrait from '../../js/helpers/isPortrait';
@@ -16,8 +17,12 @@ import globalStyles from '../../css/style.js';
 
 const Info = () => {
   const game = useSelector(state => state.game);
+  const images = useSelector(state => state.images);
 
-  const { height, width } = useWindowDimensions();
+  const { 
+    height, 
+    width,
+  } = useWindowDimensions();
   // const isDevicePortrait = isPortrait(height, width);
 
   return (
@@ -33,6 +38,7 @@ const Info = () => {
               flex: 1,
               position: 'absolute',
               top: 48,
+              width: '100%',
             }}
           >
             <View 
@@ -48,10 +54,26 @@ const Info = () => {
             >
               {(() => {
                 switch (game.status) {
-                  // case 'image-detail':
-                  //   return <ImageDetail image={imageDetail} level={level} />;
+                  case 'image-detail':
+                    return (
+                      <ImageDetail 
+                        dimensions={{
+                          height: infoHeight,
+                          width: infoWidth,
+                        }}
+                        image={images.detail} 
+                        level={game.level} 
+                      />
+                    );
                   case 'choose-image':
-                    return <ChooseImage />;
+                    return (
+                      <ChooseImage 
+                        dimensions={{
+                          height: infoHeight,
+                          width: infoWidth,
+                        }}
+                      />
+                    );
                   case 'game-over':
                     return <GameOver />;
                   // case 'game-paused':
@@ -74,6 +96,10 @@ const Info = () => {
                   case 'game-on':
                     return (
                       <GameOn
+                        dimensions={{
+                          height: infoHeight,
+                          width: infoWidth,
+                        }}
                         // bossMode={bossMode}
                         // gameImage={gameImage}
                         // invert={invert}
@@ -82,10 +108,6 @@ const Info = () => {
                         // percentComplete={percentComplete}
                         // status="game-on"
                         level={game.level}
-                        dimensions={{
-                          height: infoHeight,
-                          width: infoWidth,
-                        }}
                       />
                     );
                   default:
