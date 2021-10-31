@@ -39,6 +39,7 @@ const GameOver = () => {
               flex: 1,
               marginBottom: 12,
               padding: 12,
+              marginBottom: 24,
             }
           ]}
         >
