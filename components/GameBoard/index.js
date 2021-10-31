@@ -122,7 +122,6 @@ const GameBoard = props => {
               ]}
             >
               <Pressable
-                activeOpacity={0.25}
                 onPress={() => {
                   if (isButtonFound(val, game.found)) {
                     console.log(`${val} - FOUND`);
