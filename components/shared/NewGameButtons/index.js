@@ -57,9 +57,9 @@ const NewGameButtons = props => {
         {
           alignSelf: 'center',
           display: 'flex',
-          maxWidth: 400,
-          minWidth: 300,
-          width: '50%',
+          // maxWidth: 400,
+          // minWidth: 300,
+          width: '100%',
         },
       ]}
     >
