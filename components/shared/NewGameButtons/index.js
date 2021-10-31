@@ -78,7 +78,6 @@ const NewGameButtons = props => {
         ]}
       >
         <TouchableOpacity
-          color='white'
           onPress={() => {
             // dispatch(gameActions.setGameLevel('easy'));
             // dispatch(gameActions.setGameStatus('game-ready'));
@@ -118,7 +117,6 @@ const NewGameButtons = props => {
         ]}
       >
         <TouchableOpacity
-          color='white'
           onPress={() => {
             // dispatch(gameActions.setGameLevel('normal'));
             // dispatch(gameActions.setGameStatus('game-ready'));
@@ -158,7 +156,6 @@ const NewGameButtons = props => {
         ]}
       >
         <TouchableOpacity
-          color='white'
           onPress={() => {
             // dispatch(gameActions.setGameLevel('hard'));
             // dispatch(gameActions.setGameStatus('game-ready'));
