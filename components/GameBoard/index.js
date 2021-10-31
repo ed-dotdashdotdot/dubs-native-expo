@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   Image,
+  Pressable,
   Text,
   TouchableOpacity,
   useWindowDimensions,
@@ -118,7 +119,7 @@ const GameBoard = props => {
                 }
               ]}
             >
-              <TouchableOpacity
+              <Pressable
                 activeOpacity={0.25}
                 onPress={() => {
                   if (isButtonFound(val, game.found)) {
@@ -193,7 +194,7 @@ const GameBoard = props => {
                     />
                   </>
                 )}
-              </TouchableOpacity>
+              </Pressable>
             </View>
           )
         })
