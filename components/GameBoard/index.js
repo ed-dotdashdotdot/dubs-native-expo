@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import allActions from '../../actions';
 
+import getCorners from '../../js/helpers/getCorners';
 import getGameArray from '../../js/helpers/getGameArray';
 import getGameGridPositions from '../../js/helpers/getGameGridPositions';
 import getGameSpecs from '../../js/helpers/getGameSpecs';
@@ -94,6 +95,12 @@ const GameBoard = props => {
     // console.log(game);
     // console.log(`\n`);
   };
+  
+  console.log(getCorners(level, isDevicePortrait));
+
+  const topRightSquare = getCorners(level, isDevicePortrait).topRight;
+  const bottomLeftSquare = getCorners(level, isDevicePortrait).bottomLeft;
+  const bottomRightSquare = getCorners(level, isDevicePortrait).bottomRight;
 
   return (
     <View 
@@ -118,13 +125,10 @@ const GameBoard = props => {
                   opacity: isButtonFound(val, game.found) ? 0.1: 1,
                   overflow: 'hidden',
                   width: gameSpecs.width / gameSpecs.cols,
-                  borderBottomLeftRadius: index === 20 ? 124 : 0,
-                  borderBottomRightRadius: index === 23 ? 124 : 0,
-                  borderTopLeftRadius: index === 0 ? 124 : 0,
-                  borderTopRightRadius: index === 3 ? 124 : 0,
-                  // borderColor: 'red',
-                  // borderStyle: 'solid',
-                  // borderWidth: 2,
+                  borderBottomLeftRadius: index === bottomLeftSquare ? 10 : 0,
+                  borderBottomRightRadius: index === gameArray.length - 1 ? 10 : 0,
+                  borderTopLeftRadius: index === 0 ? 10 : 0,
+                  borderTopRightRadius: index === topRightSquare ? 10 : 0,
                 }
               ]}
             >
