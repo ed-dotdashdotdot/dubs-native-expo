@@ -1,23 +1,34 @@
 import React from 'react';
-import { Text, ScrollView, TouchableOpacity, View, } from 'react-native';
+import { Image, Text, ScrollView, TouchableOpacity, View, } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
-// import Button from '../../../../../ui.components/button';
-
-// import DrawThumbStyled from './styles';
-// import './css/index.scss';
-
 const DrawThumb = props => {
-  const { imageRef } = { ...props };
+  const { 
+    dimensions, 
+    imageRef 
+  } = { ...props };
+
+  const maxHeight = dimensions.height - 24 - 24 - 8;
+  const maxWidth = dimensions.width - 24 - 24 - 8;
+  const imagesPerRow = dimensions.width > 999 ? 6 : dimensions.width > 600 ? 4 : 2
 
   const { imagesActions, gameActions } = { ...allActions };
   const dispatch = useDispatch();
-  const imageSrc = `http://localhost/dubs-cdn/image/?image=${imageRef}.jpg&size=small`;
+  const imageSrc = {uri: `http://192.168.4.33/dubs-cdn/image/?image=${imageRef}.jpg&size=small`};
   // const imageSrc = `../../../../../../img/game-board/small/${imageRef}.jpg`;
 
   return (
-    <View id="thumb">
+    <View 
+      id="thumb"
+      style={[
+        { 
+          height: (maxWidth / imagesPerRow),
+          padding: 6,
+          width: (maxWidth / imagesPerRow),
+        }
+      ]}
+    >
       <TouchableOpacity
         onPress={() => {
           dispatch(gameActions.setGameStatus('image-detail'));
@@ -25,16 +36,19 @@ const DrawThumb = props => {
         }}
         type="button"
       >
-        <Text
-          style={{
-            color: 'white',
-            fontSize: 16,
-            marginBottom: 12,
-          }}
-        >
-          {/* <img src={imageSrc} alt="" /> */}
-          {imageSrc}
-        </Text>
+        <Image
+          source={imageSrc}
+          style={[
+            {
+              height: '100%',
+              width: '100%',
+              borderColor: 'white',
+              borderStyle: 'solid',
+              borderWidth: 2,
+              borderRadius: 8,
+            }
+          ]}
+        />
       </TouchableOpacity>
     </View>
   );

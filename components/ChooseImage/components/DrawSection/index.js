@@ -1,12 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
-import { Text, ScrollView, View, } from 'react-native';
+import { Text, ScrollView, View, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 // import axios from 'axios';
-// import classnames from 'classnames';
 import allActions from '../../../../actions';
 
-// import Button from '../../../../../ui.components/button';
 import SectionHeading from '../SectionHeading';
 import ImageGrid from '../ImageGrid';
 import ImageGridError from '../ImageGridError';
@@ -23,6 +21,7 @@ import ucFirst from '../../../../js/helpers/ucFirst';
 
 const DrawSection = props => {
   const {
+    dimensions,
     section,
   } = { ...props };
 
@@ -116,32 +115,29 @@ const DrawSection = props => {
       key={`${imagesValue.name}`}
       style={[
         {
-          backgroundColor: 'rgba(0,0,0, 0.5)',
           marginBottom: 12,
         }
       ]}
     >
       {!imagesValue.loaded && imagesValue.error === false ? (
-        <Button
-          className={classnames(
-            imagesValue.loading && 'loading'
-          )}
+        <TouchableOpacity
           data-section={imagesValue.name}
         >
-          <Translate textKey={`chooseACategory.${imagesValue.name}`} />
-        </Button>
+          <Text>
+            <Translate textKey={`chooseACategory.${imagesValue.name}`} />
+          </Text>
+        </TouchableOpacity>
       ) : (
         <>
           <SectionHeading 
-            className="button" 
             textKey={`chooseACategory.${imagesValue.name}`} 
-            // type="h3" 
           />
         </>
       )}
       {
         imagesValue.loaded && (
           <ImageGrid 
+            dimensions={dimensions}
             imageList={imagesValue.images} 
             title={imagesValue.name} 
           />

@@ -1,11 +1,9 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect } from 'react';
 import { Text, ScrollView, View, } from 'react-native';
-// import classnames from 'classnames';
 
 import Translate from '../../../Translate';
 
-// import './css/index.scss';
+import globalStyles from '../../../../css/style.js';
 
 const SectionHeading = props => {
   const {
@@ -18,22 +16,8 @@ const SectionHeading = props => {
   } = { ...props };
   // const Component = type;
 
-  // useEffect(() => {
-  //   // setTimeout(() => {
-  //   //   document
-  //   //     .querySelector(`.info ${type}`)
-  //   //     .focus();
-  //   // }, 0);
-  // }, []);
-
   return (
     <View
-      // className={classnames(
-      //   gameStatus || null,
-      //   // classes,
-      // )}
-      // tabIndex={type === 'h2' ? '-1' : null}
-      // {...rest}
       style={[
         {
           borderColor: 'white',
@@ -48,12 +32,15 @@ const SectionHeading = props => {
       ]}
     >
       <Text
-        style={{
-          color: 'white',
-          fontSize: 24,
-          fontWeight: 'bold',
-          textAlign: 'center',
-        }}
+        style={[
+          {
+            color: 'white',
+            fontSize: 24,
+            fontWeight: 'bold',
+            textAlign: 'center',
+          },
+          globalStyles.fontFamilyCourier
+        ]}
       >
         <Translate textKey={textKey} />
       </Text>
@@ -61,8 +48,8 @@ const SectionHeading = props => {
   );
 };
 
-// Heading.defaultProps = {
-//   type: 'h2'
+// SectionHeading.defaultProps = {
+//   textKey: 'h2'
 // };
 
 export default SectionHeading;
