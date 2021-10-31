@@ -25,7 +25,6 @@ const ImageDetail = props => {
   const dispatch = useDispatch();
   const gameData = getGameData(game.level);
   const imageSrc = {uri: `http://192.168.4.33/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`};
-  console.log(imageSrc);
 
   const imageWidth = dimensions.width > 999 ? 512 : dimensions.width > 600 ? 512 : 256
 
