@@ -6,6 +6,7 @@ import {
   Text,
   TouchableOpacity,
   useWindowDimensions,
+  Vibration,
   View,
 } from 'react-native';
 import allActions from '../../actions';
@@ -82,6 +83,7 @@ const GameBoard = props => {
             dispatch(gameActions.setGameHighlight([]));
             dispatch(gameActions.setGameLastMove(''));
           }, 250);
+          Vibration.vibrate();
         }
       }
     } else {
