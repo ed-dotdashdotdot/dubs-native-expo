@@ -34,7 +34,7 @@ const Info = () => {
           <View 
             id='infoContainer'
             style={{
-              backgroundColor: 'purple',
+              backgroundColor: 'rgba(0,0,0, 0.5)',
               flex: 1,
               position: 'absolute',
               top: 48,
