@@ -26,8 +26,6 @@ const NewGameButtons = props => {
   const {
     section
   } = { ...props };
-  console.log('section:');
-  console.log(section);
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
   const polyglot = new Polyglot();
