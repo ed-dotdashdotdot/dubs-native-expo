@@ -36,9 +36,9 @@ const globalStyles = StyleSheet.create({
   infoInner: {
     // backgroundColor: 'magenta',
     paddingTop: 24,
-    paddingRight: 24,
+    paddingRight: 12,
     paddingBottom: 0,
-    paddingLeft: 24,
+    paddingLeft: 12,
   },
 });
 
