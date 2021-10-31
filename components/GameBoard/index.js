@@ -118,18 +118,28 @@ const GameBoard = props => {
                   opacity: isButtonFound(val, game.found) ? 0.1: 1,
                   overflow: 'hidden',
                   width: gameSpecs.width / gameSpecs.cols,
+                  borderBottomLeftRadius: index === 20 ? 124 : 0,
+                  borderBottomRightRadius: index === 23 ? 124 : 0,
+                  borderTopLeftRadius: index === 0 ? 124 : 0,
+                  borderTopRightRadius: index === 3 ? 124 : 0,
+                  // borderColor: 'red',
+                  // borderStyle: 'solid',
+                  // borderWidth: 2,
                 }
               ]}
             >
               <Pressable
                 disabled={isButtonFound(val, game.found) ? true: false}
                 onPress={() => {
-                  if (isButtonFound(val, game.found)) {
-                    console.log(`${val} - FOUND`);
-                  } else {
+                  if (!isButtonFound(val, game.found)) {
                     makeSelection(val);
                   }
                 }}
+                style={[
+                  {
+                    // opacity: 0.25,
+                  }
+                ]}
               >
                 {!isButtonFound(val, game.found) &&
                   <Image
@@ -137,7 +147,7 @@ const GameBoard = props => {
                     source={imgSrc}
                     style={[
                       {
-                        borderRadius: 24, // was 10
+                        // borderRadius: index === 0 ? 24 : 0, // was 10
                         height: gameSpecs.height,
                         left: getGameGridPositions(
                           val, 
