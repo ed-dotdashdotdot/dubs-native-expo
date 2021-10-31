@@ -122,6 +122,7 @@ const GameBoard = props => {
               ]}
             >
               <Pressable
+                disabled={isButtonFound(val, game.found) ? true: false}
                 onPress={() => {
                   if (isButtonFound(val, game.found)) {
                     console.log(`${val} - FOUND`);
@@ -129,7 +130,6 @@ const GameBoard = props => {
                     makeSelection(val);
                   }
                 }}
-                disabled={isButtonFound(val, game.found) ? true: false}
               >
                 {!isButtonFound(val, game.found) &&
                   <Image
