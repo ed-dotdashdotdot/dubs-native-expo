@@ -43,7 +43,6 @@ const DrawThumb = props => {
               height: '100%',
               width: '100%',
               borderColor: 'white',
-              borderStyle: 'solid',
               borderWidth: 2,
               borderRadius: 8,
             }
