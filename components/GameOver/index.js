@@ -32,13 +32,13 @@ const GameOver = () => {
           style={[
             {
               alignContent: 'flex-end',
+              backgroundColor: 'black',
               borderColor: 'white',
               borderStyle: 'solid',
               borderRadius: 8,
               borderWidth: 2,
               flex: 1,
-              marginBottom: 12,
-              padding: 12,
+              padding: 24,
               marginBottom: 24,
             }
           ]}
@@ -47,7 +47,7 @@ const GameOver = () => {
             {
               alignSelf: 'center',
               color: 'white',
-              fontSize: 24,
+              fontSize: 28,
               fontWeight: 'bold',
               textAlign: 'center',
             },
