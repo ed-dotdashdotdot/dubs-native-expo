@@ -19,6 +19,7 @@ import sliceValue from '../../js/helpers/sliceValue';
 const GameBoard = props => {
   const { dimensions, level } = { ...props };
   const game = useSelector(state => state.game);
+  const images = useSelector(state => state.images);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
 
@@ -37,7 +38,8 @@ const GameBoard = props => {
     gameArray = game.data;
   }
 
-  const imgSrc = require('../../assets/game-images/2.jpg');
+  // const imgSrc = require('../../assets/game-images/2.jpg');
+  const imgSrc = {uri: `http://192.168.4.33/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`};
 
   const makeSelection = buttonId => {
     dispatch(gameActions.setGameClicks(game.clicks + 1));
