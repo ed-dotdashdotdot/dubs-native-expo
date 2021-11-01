@@ -7,16 +7,20 @@ import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
 import Translate from '../Translate';
 
+import whichLevelColour from '../../js/helpers/whichLevelColour';
+
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
 import globalStyles from '../../css/style.js';
 
 const GamePaused = () => {
-  const timer = useSelector(state => state.timer);
+  const game = useSelector(state => state.game);
+  // const timer = useSelector(state => state.timer);
   const language = useSelector(state => state.language);
 
-  const duration = ((timer.end - timer.start) / 1000).toFixed(2) * 1000;
+  // console.log(game.status);
+  // const duration = ((timer.end - timer.start) / 1000).toFixed(2) * 1000;
 
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
@@ -26,9 +30,10 @@ const GamePaused = () => {
     <ScrollView>
       <View style={globalStyles.infoInner}>
         <PageHeading 
+          colour={whichLevelColour(game.level)}
           text={polyglot.t(`gamePaused.${lang.toUpperCase()}`)} 
         />
-        <View
+        {/* <View
           style={[
             {
               alignContent: 'flex-end',
@@ -64,8 +69,8 @@ const GamePaused = () => {
               )
             }
           </Text>
-        </View>
-        <NewGameButtons section="game-over" />
+        </View> */}
+        <NewGameButtons section="game-paused" />
       </View>
     </ScrollView>
   );
