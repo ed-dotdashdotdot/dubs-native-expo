@@ -6,18 +6,19 @@ import globalStyles from '../../css/style.js';
 
 const PageHeading = props => {
   const { colour, text } = { ...props };
+  // console.log(colour)
 
   return (
     <View style={[
       {
         borderRadius: 8,
         backgroundColor: colour === 'green' 
-          ? 'green' 
+          ? '#00aa00' 
           : colour === 'amber' 
-            ? 'orange' 
+            ? '#ff9900' 
             : colour === 'red' 
-              ? 'red' 
-              : 'transparent',
+              ? '#aa0000' 
+              : '#000000',
         marginBottom: 24,
       },
       globalStyles.border,
