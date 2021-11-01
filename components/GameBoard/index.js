@@ -95,8 +95,6 @@ const GameBoard = props => {
     // console.log(game);
     // console.log(`\n`);
   };
-  
-  console.log(getCorners(level, isDevicePortrait));
 
   const topRightSquare = getCorners(level, isDevicePortrait).topRight;
   const bottomLeftSquare = getCorners(level, isDevicePortrait).bottomLeft;
