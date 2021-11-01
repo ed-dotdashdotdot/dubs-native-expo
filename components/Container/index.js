@@ -6,6 +6,7 @@ import allActions from '../../actions';
 
 import Header from '../Header';
 import GameOnHeader from '../GameOnHeader';
+import GameOptions from '../GameOptions';
 import Info from '../Info';
 import LanguageSelector from '../LanguageSelector';
 import Options from '../Options';
@@ -39,10 +40,13 @@ const Container = () => {
         <Header />
       }
       <Info />
+      {game.status === 'game-home' && <LanguageSelector />}
       {
         game.status === 'game-home'
           ? <LanguageSelector />
-          : <Options />
+          : game.status === 'game-on' 
+            ? <GameOptions />
+            : <Options />
       }
     </View>
   );
