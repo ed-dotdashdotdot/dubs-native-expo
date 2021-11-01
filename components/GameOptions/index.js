@@ -77,7 +77,17 @@ const GameOptions = () => {
           ]}
         >
           <TouchableOpacity
-            onPress={() => alert('Pause')}
+            // onPress={() => alert('Pause')}
+            onPress={() => {
+              // dispatch(gameActions.injectGameFound([]));
+              // dispatch(gameActions.setGameBossMode(false));
+              // dispatch(gameActions.setGameClicks(0));
+              // dispatch(gameActions.setGameData([]));
+              // dispatch(gameActions.setGameId(''));
+              // dispatch(gameActions.setGameLevel(''));
+              // dispatch(gameActions.setGameSelected(''));
+              dispatch(gameActions.setGameStatus('game-paused'));
+            }}
           >
             <PauseButton />
           </TouchableOpacity>

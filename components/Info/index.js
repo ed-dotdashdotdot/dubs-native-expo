@@ -7,6 +7,7 @@ import ChooseImage from '../ChooseImage';
 import GameHome from '../GameHome';
 import GameOn from '../GameOn';
 import GameOver from '../GameOver';
+import GamePaused from '../GamePaused';
 import GameReady from '../GameReady';
 import ImageDetail from '../ImageDetail';
 import WhatIsBossMode from '../WhatIsBossMode';
@@ -76,8 +77,8 @@ const Info = () => {
                     );
                   case 'game-over':
                     return <GameOver />;
-                  // case 'game-paused':
-                  //   return <GamePaused />;
+                  case 'game-paused':
+                    return <GamePaused />;
                   case 'game-ready':
                     return (
                       <GameReady
