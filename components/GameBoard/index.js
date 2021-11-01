@@ -18,6 +18,7 @@ import getGameSpecs from '../../js/helpers/getGameSpecs';
 import isButtonFound from '../../js/helpers/isButtonFound';
 import isPortrait from '../../js/helpers/isPortrait';
 import sliceValue from '../../js/helpers/sliceValue';
+import { ipAddress } from '../../configuration/config.json';
 
 const GameBoard = props => {
   const { dimensions, level } = { ...props };
@@ -42,7 +43,7 @@ const GameBoard = props => {
   }
 
   // const imgSrc = require('../../assets/game-images/2.jpg');
-  const imgSrc = {uri: `http://192.168.4.33/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`};
+  const imgSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=large`};
 
   const makeSelection = buttonId => {
     dispatch(gameActions.setGameClicks(game.clicks + 1));

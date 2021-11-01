@@ -3,6 +3,8 @@ import { Image, Text, ScrollView, TouchableOpacity, View, } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
+import { ipAddress } from '../../../../configuration/config.json';
+
 const DrawThumb = props => {
   const { 
     dimensions, 
@@ -11,11 +13,11 @@ const DrawThumb = props => {
 
   const maxHeight = dimensions.height - 24 - 24 - 8;
   const maxWidth = dimensions.width - 24 - 24 - 8;
-  const imagesPerRow = dimensions.width > 999 ? 6 : dimensions.width > 600 ? 4 : 2
+  const imagesPerRow = dimensions.width > 999 ? 6 : dimensions.width > 600 ? 4 : 2;
 
   const { imagesActions, gameActions } = { ...allActions };
   const dispatch = useDispatch();
-  const imageSrc = {uri: `http://192.168.4.33/dubs-cdn/image/?image=${imageRef}.jpg&size=small`};
+  const imageSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageRef}.jpg&size=small`};
   // const imageSrc = `../../../../../../img/game-board/small/${imageRef}.jpg`;
 
   return (
