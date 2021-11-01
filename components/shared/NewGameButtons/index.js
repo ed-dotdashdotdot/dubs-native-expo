@@ -9,7 +9,7 @@ import allActions from '../../../actions';
 // import allActions from '../../../../../actions';
 
 // import Button from '../../../../ui.components/button';
-// import ContinueGameButton from '../../ContinueGameButton';
+import ContinueGameButton from '../../ContinueGameButton';
 import PlayThisGameAgainButton from '../../PlayThisGameAgainButton';
 import Translate from '../../Translate';
 
@@ -64,11 +64,11 @@ const NewGameButtons = props => {
       ]}
     >
       {section === 'game-over' && <PlayThisGameAgainButton />}
-      {/* {section === 'game-paused' && <ContinueGameButton />} */}
+      {section === 'game-paused' && <ContinueGameButton />}
       <View
         style={[
           {
-            backgroundColor: 'green',
+            backgroundColor: '#00aa00',
             marginBottom: 12,
           },
           globalStyles.border,
@@ -107,7 +107,7 @@ const NewGameButtons = props => {
       <View
         style={[
           {
-            backgroundColor: 'orange',
+            backgroundColor: '#ff9900',
             marginBottom: 12,
           },
           globalStyles.border,
@@ -146,7 +146,7 @@ const NewGameButtons = props => {
       <View
         style={[
           {
-            backgroundColor: 'red',
+            backgroundColor: '#aa0000',
             marginBottom: 12,
           },
           globalStyles.border,
