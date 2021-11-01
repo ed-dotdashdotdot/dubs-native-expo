@@ -1,16 +1,17 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
-import { useDispatch } from 'react-redux';
-import allActions from '../../actions';
+// import { useDispatch } from 'react-redux';
+// import allActions from '../../actions';
 
-import PauseButtonSvg from '../PauseButtonSvg';
-import Translate from '../Translate';
+import PauseButton from '../PauseButton';
+// import PauseButtonSvg from '../PauseButtonSvg';
+// import Translate from '../Translate';
 
 import globalStyles from '../../css/style.js';
 
 const GameOptions = () => {
-  const { gameActions } = { ...allActions };
-  const dispatch = useDispatch();
+  // const { gameActions } = { ...allActions };
+  // const dispatch = useDispatch();
 
   return (
     <View 
@@ -34,12 +35,7 @@ const GameOptions = () => {
       >
         <View 
           id="left"
-          style={[
-            {
-              height: 48,
-              width: 48,
-            },
-          ]}
+          style={{ height: 48, width: 48 }}
         />
 
         <View 
@@ -76,21 +72,7 @@ const GameOptions = () => {
             },
           ]}
         >
-          <TouchableOpacity
-            // onPress={() => alert('Pause')}
-            onPress={() => {
-              // dispatch(gameActions.injectGameFound([]));
-              // dispatch(gameActions.setGameBossMode(false));
-              // dispatch(gameActions.setGameClicks(0));
-              // dispatch(gameActions.setGameData([]));
-              // dispatch(gameActions.setGameId(''));
-              // dispatch(gameActions.setGameLevel(''));
-              // dispatch(gameActions.setGameSelected(''));
-              dispatch(gameActions.setGameStatus('game-paused'));
-            }}
-          >
-            <PauseButtonSvg />
-          </TouchableOpacity>
+          <PauseButton />
         </View>
       
       </View>
