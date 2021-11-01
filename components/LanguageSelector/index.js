@@ -20,7 +20,6 @@ const LanguageSelector = props => {
           flexDirection: 'row',
           height: 48,
           width: '100%',
-          backgroundColor: 'green',
           position: 'absolute',
           bottom: 12,
         }}
