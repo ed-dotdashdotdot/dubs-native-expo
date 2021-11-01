@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import Translate from '../Translate';
@@ -8,8 +8,48 @@ import Translate from '../Translate';
 import globalStyles from '../../css/style.js';
 
 const Options = () => {
+  const game = useSelector(state => state.game);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
+
+  const dispatches = section => {
+    if (section === 'game-over') {
+      dispatch(gameActions.setGameLevel(''));
+      dispatch(gameActions.setGameStatus('game-home'));
+    }
+    if (section === 'game-paused') {
+      dispatch(gameActions.setGameLevel(''));
+      dispatch(gameActions.setGameStatus('game-home'));
+    }
+    if (section === 'game-ready') {
+      dispatch(gameActions.setGameLevel(''));
+      dispatch(gameActions.setGameStatus('game-home'));
+    }
+    if (section === 'choose-image') {
+      dispatch(gameActions.setGameStatus('game-ready'));
+    }
+    if (section === 'image-detail') {
+      dispatch(gameActions.setGameStatus('choose-image'));
+    }
+  }
+  const buttonText = section => {
+    if (section === 'game-over') {
+      return 'backToHome';
+    }
+    if (section === 'game-paused') {
+      return 'backToHome';
+    }
+    if (section === 'game-ready') {
+      return 'backToHome';
+    }
+    if (section === 'choose-image') {
+      return 'back';
+    }
+    if (section === 'image-detail') {
+      return 'back';
+    }
+    return 'sortItout'
+  }
 
   return (  
     <TouchableOpacity 
@@ -26,8 +66,9 @@ const Options = () => {
         globalStyles.borderRadius8,
       ]}
       onPress={() => {
-        dispatch(gameActions.setGameLevel(''));
-        dispatch(gameActions.setGameStatus('game-home'));
+        // dispatch(gameActions.setGameLevel(''));
+        // dispatch(gameActions.setGameStatus('game-home'));
+        dispatches(game.status);
       }}
     >
       <Text
@@ -41,7 +82,7 @@ const Options = () => {
           globalStyles.fontFamilyCourier,  
         ]}
       >
-        <Translate textKey='backToHome' />
+        <Translate textKey={buttonText(game.status)} />
       </Text>
     </TouchableOpacity>
   );
