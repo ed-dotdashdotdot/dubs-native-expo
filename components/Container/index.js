@@ -15,6 +15,7 @@ import isGameOver from '../../js/helpers/isGameOver';
 
 const Container = () => {
   const game = useSelector(state => state.game);
+  const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
 
@@ -43,7 +44,7 @@ const Container = () => {
       {game.status === 'game-home' && <LanguageSelector />}
       {
         game.status === 'game-home'
-          ? <LanguageSelector />
+          ? <LanguageSelector language={language.selected} />
           : game.status === 'game-on' 
             ? <GameOptions />
             : <Options />
