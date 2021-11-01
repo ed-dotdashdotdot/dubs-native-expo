@@ -70,7 +70,7 @@ const ImageDetail = props => {
           id="use-this-image"
           style={[
             {
-              backgroundColor: 'green',
+              backgroundColor: '#00aa00',
               marginTop: 12,
               width: imageWidth,
               alignSelf: 'center',
@@ -80,7 +80,6 @@ const ImageDetail = props => {
           ]}
         >
           <TouchableOpacity
-            // className="green"
             onPress={() => {
               dispatch(imagesActions.setImagesSelected(image));
               // dispatch(gameActions.setGameStatus('game-ready'));
