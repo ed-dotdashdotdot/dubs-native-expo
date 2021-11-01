@@ -2,7 +2,7 @@ import * as React from "react"
 import Svg, { Path } from "react-native-svg"
 /* SVGR has dropped some elements not supported by react-native-svg: style */
 
-const PauseButton = props => (
+const PauseButtonSvg = props => (
   <Svg
     id="prefix__Layer_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -25,4 +25,4 @@ const PauseButton = props => (
   </Svg>
 );
 
-export default PauseButton;
+export default PauseButtonSvg;
