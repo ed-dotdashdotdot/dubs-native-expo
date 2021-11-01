@@ -3,7 +3,7 @@ import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
-import PauseButton from '../PauseButton';
+import PauseButtonSvg from '../PauseButtonSvg';
 import Translate from '../Translate';
 
 import globalStyles from '../../css/style.js';
@@ -89,7 +89,7 @@ const GameOptions = () => {
               dispatch(gameActions.setGameStatus('game-paused'));
             }}
           >
-            <PauseButton />
+            <PauseButtonSvg />
           </TouchableOpacity>
         </View>
       
