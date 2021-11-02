@@ -10,6 +10,7 @@ import GameOver from '../GameOver';
 import GamePaused from '../GamePaused';
 import GameReady from '../GameReady';
 import ImageDetail from '../ImageDetail';
+import LoadingImage from '../LoadingImage';
 import WhatIsBossMode from '../WhatIsBossMode';
 
 // import isPortrait from '../../js/helpers/isPortrait';
@@ -95,6 +96,13 @@ const Info = () => {
                       />
                     );
                   case 'game-on':
+                    if (images.loaded === false) {
+                      return (
+                        <LoadingImage 
+                          imageToUse='3' 
+                        />
+                      )
+                    }
                     return (
                       <GameOn
                         dimensions={{
