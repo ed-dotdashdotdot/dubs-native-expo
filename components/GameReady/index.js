@@ -10,6 +10,7 @@ import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
 import getGameArray from '../../js/helpers/getGameArray';
+import getGameData from '../../js/helpers/getGameData';
 import whichLevelColour from '../../js/helpers/whichLevelColour';
 
 import globalStyles from '../../css/style.js';
@@ -27,7 +28,9 @@ const GameReady = props => {
   // const startTextKey = gameImage ? 'start' : 'startWithRandomImage';
   const startTextKey = 'startWithRandomImage';
 
-  const gameData = getGameArray(level);
+  // const gameData = getGameArray(level);
+  const gameData = getGameData(level);
+  // console.log(gameData);
 
   return (
     <ScrollView>

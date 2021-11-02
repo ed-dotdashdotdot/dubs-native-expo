@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   Image,
@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import allActions from '../../actions';
 
+import { defaultImages } from '../../configuration/config.json';
 import getCorners from '../../js/helpers/getCorners';
 import getGameArray from '../../js/helpers/getGameArray';
 import getGameGridPositions from '../../js/helpers/getGameGridPositions';
@@ -24,7 +25,7 @@ const GameBoard = props => {
   const { dimensions, level } = { ...props };
   const game = useSelector(state => state.game);
   const images = useSelector(state => state.images);
-  const { gameActions } = { ...allActions };
+  const { gameActions, imagesActions } = { ...allActions };
   const dispatch = useDispatch();
 
   const { height, width } = useWindowDimensions();
@@ -42,8 +43,46 @@ const GameBoard = props => {
     gameArray = game.data;
   }
 
+  // console.log('defaultImages:');
+  // console.log(defaultImages);
+  // console.log('-----');
+
+  let imageToUse = '';
+  // if (images.selected === "") {
+  //   // get random image
+  //   imageToUse = defaultImages[Math.floor(Math.random() * defaultImages.length)];
+  //   dispatch(imagesActions.setImagesSelected(imageToUse));
+  // } else {
+  //   imageToUse = images.selected;
+  // }
+
+  useEffect(() => {
+    console.log('images.selected:');
+    console.log(typeof images.selected);
+    console.log('-');
+    if (images.selected === "") {
+      // get random image
+      imageToUse = defaultImages[Math.floor(Math.random() * defaultImages.length)];
+      dispatch(imagesActions.setImagesSelected(imageToUse));
+    } 
+    // else {
+    //   imageToUse = images.selected;
+    // }
+    // console.log('imageToUse - useEffect:');
+    // console.log(imageToUse);
+    // console.log('-|-|-');
+  }, []);
+
+   imageToUse = images.selected;
+
   // const imgSrc = require('../../assets/game-images/2.jpg');
-  const imgSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=large`};
+  const imgSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`};
+
+  console.log('imgSrc:');
+  console.log(imgSrc);
+  console.log('imageToUse:');
+  console.log(imageToUse);
+  console.log('-----');
 
   const makeSelection = buttonId => {
     dispatch(gameActions.setGameClicks(game.clicks + 1));
