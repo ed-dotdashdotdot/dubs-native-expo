@@ -172,7 +172,7 @@ const GameBoard = props => {
             >
               <Pressable
                 disabled={isButtonFound(val, game.found) ? true: false}
-                onPress={() => {
+                onPressIn={() => {
                   if (!isButtonFound(val, game.found)) {
                     makeSelection(val);
                   }
