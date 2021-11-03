@@ -21,6 +21,8 @@ const Info = () => {
   const game = useSelector(state => state.game);
   const images = useSelector(state => state.images);
 
+  // console.log(images.loaded);
+
   const { 
     height, 
     width,
@@ -95,14 +97,13 @@ const Info = () => {
                         bossMode={game.bossMode}
                       />
                     );
+                  case 'game-loading':
+                    return (
+                      <LoadingImage 
+                        imageToUse={images.selected} 
+                      />
+                    )
                   case 'game-on':
-                    if (images.loaded === 'false123123') {
-                      return (
-                        <LoadingImage 
-                          imageToUse='3' 
-                        />
-                      )
-                    }
                     return (
                       <GameOn
                         dimensions={{
