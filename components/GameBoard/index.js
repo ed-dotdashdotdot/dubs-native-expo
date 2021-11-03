@@ -59,14 +59,14 @@ const GameBoard = props => {
   // }
 
   useEffect(() => {
-    console.log('images.loaded:');
-    console.log(images.loaded);
-    console.log('-');
+    // console.log('images.loaded:');
+    // console.log(images.loaded);
+    // console.log('-');
     if (images.selected === "") {
       // get random image
       imageToUse = defaultImages[Math.floor(Math.random() * defaultImages.length)];
-      console.log('get random image');
-      console.log(imageToUse);
+      // console.log('get random image');
+      // console.log(imageToUse);
       dispatch(imagesActions.setImagesSelected(imageToUse));
     } 
     // console.log(images);
@@ -86,8 +86,8 @@ const GameBoard = props => {
   // const imgSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`};
   const imgSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`;
 
-  console.log('imgSrc-imgSrc:')
-  console.log(imgSrc)
+  // console.log('imgSrc-imgSrc:')
+  // console.log(imgSrc)
 
   // console.log('imgSrc:');
   // console.log(imgSrc);

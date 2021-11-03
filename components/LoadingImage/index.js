@@ -32,7 +32,7 @@ const LoadingImage = props => {
     // console.log(images.loaded);
     // console.log('images:');
     // console.log(images);
-    console.log('imageLoaded');
+    // console.log('imageLoaded');
     return () => true;
   };
 
