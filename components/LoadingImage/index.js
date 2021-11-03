@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import allActions from '../../actions';
 
-import FastImage from 'react-native-fast-image';
+// import FastImage from 'react-native-fast-image';
 
 import { ipAddress } from '../../configuration/config.json';
 
@@ -37,14 +37,14 @@ const LoadingImage = props => {
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${images.selected}`;
 
   return (
-    <FastImage
+    <Image
       onLoad={imageLoaded} 
       resizeMode={'contain'}
       // source={{uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.selected}`}}
       source={{
         uri: imageSrc,
         // headers: { Authorization: 'someAuthToken' },
-        priority: FastImage.priority.normal,
+        // priority: FastImage.priority.normal,
       }}
     />
   );
