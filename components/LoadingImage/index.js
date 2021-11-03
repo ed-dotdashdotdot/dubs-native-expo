@@ -16,13 +16,14 @@ import { ipAddress } from '../../configuration/config.json';
 
 const LoadingImage = props => {
   const { imageToUse } = { ...props };
+  console.log(imageToUse)
   const game = useSelector(state => state.game);
   const images = useSelector(state => state.images);
   const { gameActions, imagesActions } = { ...allActions };
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log('LOADIMAGE - USEEFFECT');
+    // console.log('LOADIMAGE - USEEFFECT');
     // dispatch(imagesActions.setImagesLoaded(true));
   }, []);
 
@@ -36,11 +37,17 @@ const LoadingImage = props => {
     return () => true;
   };
 
-  const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${images.selected}`;
+  console.log(`images.loaded: ${images.loaded}`);
+  const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}&size=large&qwe=123`;
+  console.log(`imageSrc: ${imageSrc}`);
 
   return (
     <ExpoFastImage
       // onLoad={imageLoaded} 
+      onLoad={() => {
+        console.log('onLoad');
+        dispatch(imagesActions.setImagesLoaded(true));
+      }}
       // resizeMode={'contain'}
       // source={{uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.selected}`}}
       // source={{
