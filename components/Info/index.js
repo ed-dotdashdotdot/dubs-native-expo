@@ -96,7 +96,7 @@ const Info = () => {
                       />
                     );
                   case 'game-on':
-                    if (images.loaded === false) {
+                    if (images.loaded === 'false123123') {
                       return (
                         <LoadingImage 
                           imageToUse='3' 

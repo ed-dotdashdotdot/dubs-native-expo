@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 import allActions from '../../actions';
 
+import ExpoFastImage from 'expo-fast-image';
+
 import { defaultImages } from '../../configuration/config.json';
 import getCorners from '../../js/helpers/getCorners';
 import getGameArray from '../../js/helpers/getGameArray';
@@ -57,8 +59,8 @@ const GameBoard = props => {
   // }
 
   useEffect(() => {
-    console.log('images.selected:');
-    console.log(typeof images.selected);
+    console.log('images.loaded:');
+    console.log(images.loaded);
     console.log('-');
     if (images.selected === "") {
       // get random image
@@ -76,13 +78,14 @@ const GameBoard = props => {
    imageToUse = images.selected;
 
   // const imgSrc = require('../../assets/game-images/2.jpg');
-  const imgSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`};
+  // const imgSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`};
+  const imgSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`;
 
-  console.log('imgSrc:');
-  console.log(imgSrc);
-  console.log('imageToUse:');
-  console.log(imageToUse);
-  console.log('-----');
+  // console.log('imgSrc:');
+  // console.log(imgSrc);
+  // console.log('imageToUse:');
+  // console.log(imageToUse);
+  // console.log('-----');
 
   const makeSelection = buttonId => {
     dispatch(gameActions.setGameClicks(game.clicks + 1));
@@ -183,38 +186,79 @@ const GameBoard = props => {
                   }
                 ]}
               >
-                {!isButtonFound(val, game.found) &&
-                  <Image
-                    resizeMode='stretch'
-                    source={imgSrc}
-                    style={[
-                      {
-                        // borderRadius: index === 0 ? 24 : 0, // was 10
-                        height: gameSpecs.height,
-                        left: getGameGridPositions(
-                          val, 
-                          level, 
-                          isDevicePortrait, 
-                          gameSpecs.width, 
-                          gameSpecs.height,
-                          gameSpecs.rows,
-                          gameSpecs.cols
-                          ).x,
-                        position: 'absolute',
-                        top: getGameGridPositions(
-                          val, 
-                          level, 
-                          isDevicePortrait, 
-                          gameSpecs.width, 
-                          gameSpecs.height,
-                          gameSpecs.rows,
-                          gameSpecs.cols
-                        ).y,
-                        width: gameSpecs.width,
-                      }
-                    ]}
-                  />
-                }
+                {!isButtonFound(val, game.found) && (
+                  <>
+                    <ExpoFastImage
+                      // onLoad={imageLoaded} 
+                      // resizeMode={'contain'}
+                      // source={{uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.selected}`}}
+                      // source={{
+                      //   uri: imageSrc,
+                      //   // headers: { Authorization: 'someAuthToken' },
+                      //   // priority: FastImage.priority.normal,
+                      // }}
+                      cacheKey={`image-${images.selected}`}
+                      resizeMode='stretch'
+                      style={[
+                        {
+                          // borderRadius: index === 0 ? 24 : 0, // was 10
+                          height: gameSpecs.height,
+                          left: getGameGridPositions(
+                            val, 
+                            level, 
+                            isDevicePortrait, 
+                            gameSpecs.width, 
+                            gameSpecs.height,
+                            gameSpecs.rows,
+                            gameSpecs.cols
+                            ).x,
+                          position: 'absolute',
+                          top: getGameGridPositions(
+                            val, 
+                            level, 
+                            isDevicePortrait, 
+                            gameSpecs.width, 
+                            gameSpecs.height,
+                            gameSpecs.rows,
+                            gameSpecs.cols
+                          ).y,
+                          width: gameSpecs.width,
+                        }
+                      ]}
+                      uri={imgSrc}
+                    />
+                    {/* <Image
+                      resizeMode='stretch'
+                      source={imgSrc}
+                      style={[
+                        {
+                          // borderRadius: index === 0 ? 24 : 0, // was 10
+                          height: gameSpecs.height,
+                          left: getGameGridPositions(
+                            val, 
+                            level, 
+                            isDevicePortrait, 
+                            gameSpecs.width, 
+                            gameSpecs.height,
+                            gameSpecs.rows,
+                            gameSpecs.cols
+                            ).x,
+                          position: 'absolute',
+                          top: getGameGridPositions(
+                            val, 
+                            level, 
+                            isDevicePortrait, 
+                            gameSpecs.width, 
+                            gameSpecs.height,
+                            gameSpecs.rows,
+                            gameSpecs.cols
+                          ).y,
+                          width: gameSpecs.width,
+                        }
+                      ]}
+                    /> */}
+                  </>
+                )}
                 {game.selected === val && (
                   <>
                     <View

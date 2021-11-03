@@ -10,6 +10,7 @@ import {
 import allActions from '../../actions';
 
 // import FastImage from 'react-native-fast-image';
+import ExpoFastImage from 'expo-fast-image';
 
 import { ipAddress } from '../../configuration/config.json';
 
@@ -22,30 +23,33 @@ const LoadingImage = props => {
 
   useEffect(() => {
     console.log('LOADIMAGE - USEEFFECT');
-    dispatch(imagesActions.setImagesLoaded(true));
-  }, [imageLoaded]);
+    // dispatch(imagesActions.setImagesLoaded(true));
+  }, []);
 
   const imageLoaded = () => {
     // this.setState(() => ({ loaded: true }))
-    console.log('images.loaded:');
-    console.log(images.loaded);
-    console.log('images:');
-    console.log(images);
+    // console.log('images.loaded:');
+    // console.log(images.loaded);
+    // console.log('images:');
+    // console.log(images);
+    console.log('imageLoaded');
     return () => true;
   };
 
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${images.selected}`;
 
   return (
-    <Image
-      onLoad={imageLoaded} 
-      resizeMode={'contain'}
+    <ExpoFastImage
+      // onLoad={imageLoaded} 
+      // resizeMode={'contain'}
       // source={{uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.selected}`}}
-      source={{
-        uri: imageSrc,
-        // headers: { Authorization: 'someAuthToken' },
-        // priority: FastImage.priority.normal,
-      }}
+      // source={{
+      //   uri: imageSrc,
+      //   // headers: { Authorization: 'someAuthToken' },
+      //   // priority: FastImage.priority.normal,
+      // }}
+      uri={imageSrc}
+      cacheKey={`image-${images.selected}`}
     />
   );
 }

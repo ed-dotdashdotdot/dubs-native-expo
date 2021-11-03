@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import GameBoard from '../GameBoard';
-import LoadingImage from '../LoadingImage';
+// import LoadingImage from '../LoadingImage';
 
 const GameOn = props => {
   const images = useSelector(state => state.images);
