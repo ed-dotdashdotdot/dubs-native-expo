@@ -109,14 +109,6 @@ const ImageDetail = props => {
             </Text>
           </TouchableOpacity>
         </View>
-        {/* <StartButton
-          gameData={gameData}
-          startTextKey="start"
-          onClick={() => {
-            dispatch(imagesActions.setImagesSelected(image));
-            dispatch(gameActions.setGameStatus('game-ready'));
-          }}
-        /> */}
       </View>
     </ScrollView>
   );

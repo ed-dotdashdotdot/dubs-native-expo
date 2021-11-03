@@ -2,16 +2,16 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   Button,
-  Image,
-  Text,
-  TouchableOpacity,
-  useWindowDimensions,
-  View,
+  // Image,
+  // Text,
+  // TouchableOpacity,
+  // useWindowDimensions,
+  // View,
 } from 'react-native';
 
 import allActions from '../../actions';
 
-import Translate from '../Translate';
+// import Translate from '../Translate';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
