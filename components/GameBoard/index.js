@@ -65,8 +65,11 @@ const GameBoard = props => {
     if (images.selected === "") {
       // get random image
       imageToUse = defaultImages[Math.floor(Math.random() * defaultImages.length)];
+      console.log('get random image');
+      console.log(imageToUse);
       dispatch(imagesActions.setImagesSelected(imageToUse));
     } 
+    // console.log(images);
     // else {
     //   imageToUse = images.selected;
     // }
@@ -76,10 +79,15 @@ const GameBoard = props => {
   }, []);
 
    imageToUse = images.selected;
+  //  console.log('imageToUse-imageToUse');
+  //  console.log(imageToUse);
 
   // const imgSrc = require('../../assets/game-images/2.jpg');
   // const imgSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`};
   const imgSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`;
+
+  console.log('imgSrc-imgSrc:')
+  console.log(imgSrc)
 
   // console.log('imgSrc:');
   // console.log(imgSrc);
@@ -141,7 +149,7 @@ const GameBoard = props => {
 
   const topRightSquare = getCorners(level, isDevicePortrait).topRight;
   const bottomLeftSquare = getCorners(level, isDevicePortrait).bottomLeft;
-  const bottomRightSquare = getCorners(level, isDevicePortrait).bottomRight;
+  // const bottomRightSquare = getCorners(level, isDevicePortrait).bottomRight;
 
   return (
     <View 
