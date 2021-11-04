@@ -7,6 +7,7 @@ import allActions from '../../actions';
 // import Button from '../../../ui.components/button';
 // import InfoInner from '../InfoInner';
 // import StartButton from '../StartButton';
+import ExpoFastImage from 'expo-fast-image';
 import Translate from '../Translate';
 
 import getGameData from '../../js/helpers/getGameData';
@@ -25,7 +26,8 @@ const ImageDetail = props => {
   const { gameActions, imagesActions } = { ...allActions };
   const dispatch = useDispatch();
   const gameData = getGameData(game.level);
-  const imageSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`};
+  // const imageSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`};
+  const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`;
 
   const imageWidth = dimensions.width > 999 ? 512 : dimensions.width > 600 ? 512 : 256
 
@@ -51,9 +53,11 @@ const ImageDetail = props => {
             },
           ]}
         >
-          <Image 
+          <ExpoFastImage 
             // source={`http://localhost/dubs-cdn/image/?image=${image}&size=medium`} 
-            source={imageSrc}
+            // source={imageSrc}
+            uri={imageSrc}
+            cacheKey={`image-${images.detail}-medium`}
             style={[
               {
                 height: '100%',
@@ -86,7 +90,7 @@ const ImageDetail = props => {
               // dispatch(gameActions.setGameStatus('game-ready'));
               dispatch(gameActions.setGameData(gameData));
               // dispatch(gameActions.setGameId(uuidv4()));
-              dispatch(gameActions.setGameStatus('game-on'));
+              dispatch(gameActions.setGameStatus('game-loading'));
             }}
             style={[
               {
