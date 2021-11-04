@@ -47,7 +47,9 @@ const Container = () => {
           ? <LanguageSelector language={language.selected} />
           : game.status === 'game-on' 
             ? <GameOptions />
-            : <Options />
+              : game.status === 'game-loading'
+              ? null
+              : <Options />
       }
     </View>
   );
