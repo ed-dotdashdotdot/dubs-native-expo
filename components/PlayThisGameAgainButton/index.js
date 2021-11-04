@@ -35,7 +35,7 @@ const PlayThisGameAgainButton = () => {
       <TouchableOpacity
         onPress={() => {
           dispatch(gameActions.injectGameFound([]));
-          dispatch(gameActions.setGameStatus('game-on'));
+          dispatch(gameActions.setGameStatus('game-loading'));
           dispatch(gameActions.setGameSelected(''));
         }}
         style={[

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 // import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 // import allActions from '../../actions';
 
 import PauseButton from '../PauseButton';
@@ -8,10 +9,15 @@ import PauseButton from '../PauseButton';
 // import Translate from '../Translate';
 
 import globalStyles from '../../css/style.js';
+import Timer from '../Timer';
 
 const GameOptions = () => {
   // const { gameActions } = { ...allActions };
   // const dispatch = useDispatch();
+  const game = useSelector(state => state.game);
+  const language = useSelector(state => state.language);
+  const timer = useSelector(state => state.timer);
+
 
   return (
     <View 
@@ -59,7 +65,14 @@ const GameOptions = () => {
               globalStyles.fontFamilyCourier,  
             ]}
           >
-            Stopwatch
+            {
+              game.status === 'game-on' && timer.start && (
+                <Timer 
+                  lang={language.selected} 
+                  start={timer.start} 
+                />
+              )
+            }
           </Text>
         </View>
 

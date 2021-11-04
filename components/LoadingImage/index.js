@@ -14,6 +14,7 @@ import ExpoFastImage from 'expo-fast-image';
 
 import { defaultImages } from '../../configuration/config.json';
 import { ipAddress } from '../../configuration/config.json';
+import timerStartDate from '../../js/helpers/timerStartDate';
 
 const LoadingImage = props => {
   let { imageToUse } = { ...props };
@@ -23,7 +24,8 @@ const LoadingImage = props => {
 
   const game = useSelector(state => state.game);
   const images = useSelector(state => state.images);
-  const { gameActions, imagesActions } = { ...allActions };
+  const timer = useSelector(state => state.timer);
+  const { gameActions, imagesActions, timerActions } = { ...allActions };
   const dispatch = useDispatch();
 
   const imageLoaded = () => {
@@ -70,6 +72,15 @@ const LoadingImage = props => {
           dispatch(gameActions.setGameStatus('game-on'));
           dispatch(imagesActions.setImagesLoaded(true));
           dispatch(imagesActions.setImagesSelected(imageToUse));
+          // console.log(timerStartDate(timer.paused));
+          // console.log(timer.start);
+          dispatch(timerActions.setTimerStart(timerStartDate(timer.paused)));
+          dispatch(timerActions.setTimerEnd(''));
+          dispatch(timerActions.setTimerPaused(0));
+          dispatch(timerActions.setTimerSaved(0));
+          // dispatch(timerActions.setTimerStatus(''));
+          dispatch(timerActions.setTimerStatus('game-on'));
+          // console.log(timer.start);
           // start timer
         }}
         // onLoadEnd={() => {

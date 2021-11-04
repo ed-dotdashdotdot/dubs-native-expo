@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Text, ScrollView, View, } from 'react-native';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import allActions from '../../actions';
 
 import DrawGameDuration from '../DrawGameDuration';
 import PageHeading from '../PageHeading';
@@ -15,12 +16,25 @@ import globalStyles from '../../css/style.js';
 const GameOver = () => {
   const timer = useSelector(state => state.timer);
   const language = useSelector(state => state.language);
+  const { gameActions, imagesActions, timerActions } = { ...allActions };
+  const dispatch = useDispatch();
 
   const duration = ((timer.end - timer.start) / 1000).toFixed(2) * 1000;
 
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
+
+  useEffect(() => {
+    // gameImage('');
+    // if (timer.saved === 0) {
+    const endTime = new Date().getTime();
+    const timeDifference = (endTime - timer.start) / 1000;
+    const timeInSeconds = timeDifference;
+    dispatch(timerActions.setTimerEnd(endTime));
+    dispatch(timerActions.setTimerSaved(timeInSeconds));
+    // }
+  }, []);
 
   return (
     <ScrollView>

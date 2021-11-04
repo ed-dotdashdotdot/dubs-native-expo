@@ -27,7 +27,7 @@ const GameBoard = props => {
   const { dimensions, level } = { ...props };
   const game = useSelector(state => state.game);
   const images = useSelector(state => state.images);
-  const { gameActions, imagesActions } = { ...allActions };
+  const { gameActions, imagesActions, timerActions } = { ...allActions };
   const dispatch = useDispatch();
 
   const { height, width } = useWindowDimensions();
@@ -59,6 +59,7 @@ const GameBoard = props => {
       // get random image
       imageToUse = defaultImages[Math.floor(Math.random() * defaultImages.length)];
       dispatch(imagesActions.setImagesSelected(imageToUse));
+      dispatch(timerActions.setTimerPaused(0));
     } 
   }, []);
 
