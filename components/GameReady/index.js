@@ -28,9 +28,7 @@ const GameReady = props => {
   // const startTextKey = gameImage ? 'start' : 'startWithRandomImage';
   const startTextKey = 'startWithRandomImage';
 
-  // const gameData = getGameArray(level);
   const gameData = getGameData(level);
-  // console.log(gameData);
 
   return (
     <ScrollView>

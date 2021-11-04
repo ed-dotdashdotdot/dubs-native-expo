@@ -45,10 +45,6 @@ const GameBoard = props => {
     gameArray = game.data;
   }
 
-  // console.log('defaultImages:');
-  // console.log(defaultImages);
-  // console.log('-----');
-
   let imageToUse = '';
   // if (images.selected === "") {
   //   // get random image
@@ -59,41 +55,18 @@ const GameBoard = props => {
   // }
 
   useEffect(() => {
-    // console.log('images.loaded:');
-    // console.log(images.loaded);
-    // console.log('-');
     if (images.selected === "") {
       // get random image
       imageToUse = defaultImages[Math.floor(Math.random() * defaultImages.length)];
-      // console.log('get random image');
-      // console.log(imageToUse);
       dispatch(imagesActions.setImagesSelected(imageToUse));
     } 
-    // console.log(images);
-    // else {
-    //   imageToUse = images.selected;
-    // }
-    // console.log('imageToUse - useEffect:');
-    // console.log(imageToUse);
-    // console.log('-|-|-');
   }, []);
 
    imageToUse = images.selected;
-  //  console.log('imageToUse-imageToUse');
-  //  console.log(imageToUse);
 
   // const imgSrc = require('../../assets/game-images/2.jpg');
   // const imgSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`};
   const imgSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`;
-
-  // console.log('imgSrc-imgSrc:')
-  // console.log(imgSrc)
-
-  // console.log('imgSrc:');
-  // console.log(imgSrc);
-  // console.log('imageToUse:');
-  // console.log(imageToUse);
-  // console.log('-----');
 
   const makeSelection = buttonId => {
     dispatch(gameActions.setGameClicks(game.clicks + 1));
@@ -144,7 +117,6 @@ const GameBoard = props => {
       dispatch(gameActions.setGameSelected(buttonId));
     }
     // console.log(game);
-    // console.log(`\n`);
   };
 
   const topRightSquare = getCorners(level, isDevicePortrait).topRight;
@@ -170,8 +142,9 @@ const GameBoard = props => {
               key={`${val} - ${index}`}
               style={[
                 {
+                  // backgroundColor: isButtonFound(val, game.found) ? '#003300' : 'black',
                   height: gameSpecs.height / gameSpecs.rows,
-                  opacity: isButtonFound(val, game.found) ? 0.1: 1,
+                  opacity: isButtonFound(val, game.found) ? 1: 1,
                   overflow: 'hidden',
                   width: gameSpecs.width / gameSpecs.cols,
                   borderBottomLeftRadius: index === bottomLeftSquare ? 10 : 0,

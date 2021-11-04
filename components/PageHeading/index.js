@@ -6,8 +6,6 @@ import globalStyles from '../../css/style.js';
 
 const PageHeading = props => {
   const { colour, text } = { ...props };
-  // console.log(colour)
-
   return (
     <View style={[
       {

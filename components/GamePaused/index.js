@@ -19,7 +19,6 @@ const GamePaused = () => {
   // const timer = useSelector(state => state.timer);
   const language = useSelector(state => state.language);
 
-  // console.log(game.status);
   // const duration = ((timer.end - timer.start) / 1000).toFixed(2) * 1000;
 
   const polyglot = new Polyglot();
