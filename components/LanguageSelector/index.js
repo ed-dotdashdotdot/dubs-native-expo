@@ -16,12 +16,12 @@ const LanguageSelector = props => {
       <LanguageSelectorSelected language={language} />
       <View 
         style={{
+          bottom: 12,
           display: 'flex',
           flexDirection: 'row',
           height: 48,
-          width: '100%',
           position: 'absolute',
-          bottom: 12,
+          width: '100%',
         }}
       >
         <View style={languageSelectorStyles.buttonContainer}>
