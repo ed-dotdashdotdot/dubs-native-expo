@@ -3,6 +3,8 @@ import { Image, Text, ScrollView, TouchableOpacity, View, } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
+import ExpoFastImage from 'expo-fast-image';
+
 import { ipAddress } from '../../../../configuration/config.json';
 
 const DrawThumb = props => {
@@ -17,8 +19,8 @@ const DrawThumb = props => {
 
   const { imagesActions, gameActions } = { ...allActions };
   const dispatch = useDispatch();
-  const imageSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageRef}.jpg&size=small`};
-  // const imageSrc = `../../../../../../img/game-board/small/${imageRef}.jpg`;
+  // const imageSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageRef}.jpg&size=small`};
+  const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageRef}.jpg&size=small`;
 
   return (
     <View 
@@ -38,8 +40,10 @@ const DrawThumb = props => {
         }}
         type="button"
       >
-        <Image
-          source={imageSrc}
+        <ExpoFastImage
+          uri={imageSrc}
+          cacheKey={`image-${imageRef}-small`}
+          // source={imageSrc}
           style={[
             {
               height: '100%',
