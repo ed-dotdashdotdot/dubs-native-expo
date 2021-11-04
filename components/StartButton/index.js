@@ -24,7 +24,7 @@ const StartButton = props => {
   } = { ...props };
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
-  const { gameActions } = { ...allActions };
+  const { gameActions, imagesActions } = { ...allActions };
   const dispatch = useDispatch();
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
@@ -35,7 +35,7 @@ const StartButton = props => {
       onPress={() => {
         dispatch(gameActions.setGameData(gameData));
         dispatch(gameActions.setGameId(uid));
-        dispatch(gameActions.setGameStatus('game-on'));
+        dispatch(gameActions.setGameStatus('game-loading'));
       }}
       title={polyglot.t(`${startTextKey}.${lang.toUpperCase()}`)}
     />
