@@ -48,7 +48,7 @@ const Options = () => {
     if (section === 'image-detail') {
       return 'back';
     }
-    return 'sortItout'
+    return 'backToHome'
   }
 
   return (  
