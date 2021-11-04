@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
-import { StyleSheet, Button, Text, View, ScrollView } from 'react-native';
+import React from 'react';
+import { Text, View, ScrollView } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import PageHeading from '../PageHeading';
-import Translate from '../Translate';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';

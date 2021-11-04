@@ -66,8 +66,6 @@ const Options = () => {
         globalStyles.borderRadius8,
       ]}
       onPress={() => {
-        // dispatch(gameActions.setGameLevel(''));
-        // dispatch(gameActions.setGameStatus('game-home'));
         dispatches(game.status);
       }}
     >

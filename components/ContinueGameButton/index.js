@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
@@ -24,9 +24,7 @@ const ContinueGameButton = () => {
     >
       <TouchableOpacity
         onPress={() => {
-          // dispatch(gameActions.injectGameFound([]));
           dispatch(gameActions.setGameStatus('game-loading'));
-          // dispatch(gameActions.setGameSelected(''));
         }}
         style={[
           {

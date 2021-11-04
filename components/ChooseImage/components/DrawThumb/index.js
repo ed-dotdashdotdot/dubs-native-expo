@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Text, ScrollView, TouchableOpacity, View, } from 'react-native';
+import { TouchableOpacity, View, } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
@@ -19,7 +19,6 @@ const DrawThumb = props => {
 
   const { imagesActions, gameActions } = { ...allActions };
   const dispatch = useDispatch();
-  // const imageSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageRef}.jpg&size=small`};
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageRef}.jpg&size=small`;
 
   return (
@@ -43,7 +42,6 @@ const DrawThumb = props => {
         <ExpoFastImage
           uri={imageSrc}
           cacheKey={`image-${imageRef}-small`}
-          // source={imageSrc}
           style={[
             {
               height: '100%',

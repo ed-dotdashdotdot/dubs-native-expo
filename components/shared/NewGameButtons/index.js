@@ -2,31 +2,20 @@ import React from 'react';
 import { StyleSheet, Button, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../../actions';
-// import styles from '../../Container/styles';
 
-// import { useDispatch } from 'react-redux';
-// import classnames from 'classnames';
-// import allActions from '../../../../../actions';
-
-// import Button from '../../../../ui.components/button';
 import ContinueGameButton from '../../ContinueGameButton';
 import PlayThisGameAgainButton from '../../PlayThisGameAgainButton';
 import Translate from '../../Translate';
-
-// import NewGameButtonsStyled from './styles';
-// import './css/index.scss';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../../i18n';
 
 import globalStyles from '../../../css/style.js';
-// import styles from './styles.js';
 
 const NewGameButtons = props => {
   const {
     section
   } = { ...props };
-  const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
@@ -58,8 +47,6 @@ const NewGameButtons = props => {
         {
           alignSelf: 'center',
           display: 'flex',
-          // maxWidth: 400,
-          // minWidth: 300,
           width: '100%',
         },
       ]}
@@ -78,8 +65,6 @@ const NewGameButtons = props => {
       >
         <TouchableOpacity
           onPress={() => {
-            // dispatch(gameActions.setGameLevel('easy'));
-            // dispatch(gameActions.setGameStatus('game-ready'));
             newGameDispatches('easy');
           }}
           style={[
@@ -117,8 +102,6 @@ const NewGameButtons = props => {
       >
         <TouchableOpacity
           onPress={() => {
-            // dispatch(gameActions.setGameLevel('normal'));
-            // dispatch(gameActions.setGameStatus('game-ready'));
             newGameDispatches('normal');
           }}
           style={[
@@ -156,8 +139,6 @@ const NewGameButtons = props => {
       >
         <TouchableOpacity
           onPress={() => {
-            // dispatch(gameActions.setGameLevel('hard'));
-            // dispatch(gameActions.setGameStatus('game-ready'));
             newGameDispatches('hard');
           }}
           style={[

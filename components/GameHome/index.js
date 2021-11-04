@@ -1,17 +1,7 @@
-import React, { useEffect } from 'react';
-import {
-  StyleSheet,
-  Button,
-  Text,
-  View,
-  ScrollView,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  useWindowDimensions
-} from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
-import allActions from '../../actions';
+import React from 'react';
+import { ScrollView, View } from 'react-native';
+import { useSelector } from 'react-redux';
+// import allActions from '../../actions';
 // import { useWindowDimensions } from 'react-native';
 // import DeviceInfo from 'react-native-device-info';
 // import { getDeviceLocale, getDeviceCountry, getManufacturer } from 'react-native-device-info';
@@ -40,7 +30,7 @@ import allActions from '../../actions';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
 
-import isPortrait from '../../js/helpers/isPortrait';
+// import isPortrait from '../../js/helpers/isPortrait';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
@@ -53,9 +43,6 @@ const GameHome = () => {
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
-
-  // const { height, width } = useWindowDimensions();
-  // const isDevicePortrait = isPortrait(height, width);
 
   return (
     <ScrollView>

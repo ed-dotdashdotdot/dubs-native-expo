@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, ScrollView, View, } from 'react-native';
+import { ScrollView, View, } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import Polyglot from 'node-polyglot';

@@ -1,24 +1,16 @@
 import React from 'react';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
-// import { useDispatch } from 'react-redux';
-import { useSelector, useDispatch } from 'react-redux';
-// import allActions from '../../actions';
+import { Text, View } from 'react-native';
+import { useSelector } from 'react-redux';
 
 import PauseButton from '../PauseButton';
-// import PauseButtonSvg from '../PauseButtonSvg';
-// import Translate from '../Translate';
 
 import globalStyles from '../../css/style.js';
 import Timer from '../Timer';
 
 const GameOptions = () => {
-  // const { gameActions } = { ...allActions };
-  // const dispatch = useDispatch();
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
   const timer = useSelector(state => state.timer);
-
-
   return (
     <View 
       id="gameOptions"
@@ -43,7 +35,6 @@ const GameOptions = () => {
           id="left"
           style={{ height: 48, width: 48 }}
         />
-
         <View 
           id="stopwatch"
           style={[
@@ -75,7 +66,6 @@ const GameOptions = () => {
             }
           </Text>
         </View>
-
         <View 
           id="right"
           style={[
@@ -87,9 +77,7 @@ const GameOptions = () => {
         >
           <PauseButton />
         </View>
-      
       </View>
-
     </View>
   );
 }

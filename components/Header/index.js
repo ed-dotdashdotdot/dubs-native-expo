@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import globalStyles from '../../css/style.js';
 import styles from './styles.js';

@@ -26,14 +26,11 @@ const GameOver = () => {
   const lang = language.selected || 'en';
 
   useEffect(() => {
-    // gameImage('');
-    // if (timer.saved === 0) {
     const endTime = new Date().getTime();
     const timeDifference = (endTime - timer.start) / 1000;
     const timeInSeconds = timeDifference;
     dispatch(timerActions.setTimerEnd(endTime));
     dispatch(timerActions.setTimerSaved(timeInSeconds));
-    // }
   }, []);
 
   return (

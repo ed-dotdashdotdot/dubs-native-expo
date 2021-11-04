@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Text, ScrollView, View, } from 'react-native';
+import React from 'react';
+import { Text, View, } from 'react-native';
 
 import Translate from '../../../Translate';
 
@@ -7,14 +7,9 @@ import globalStyles from '../../../../css/style.js';
 
 const SectionHeading = props => {
   const {
-    // children,
-    // classes,
     gameStatus,
     textKey,
-    // type,
-    // ...rest
   } = { ...props };
-  // const Component = type;
 
   return (
     <View
@@ -47,9 +42,5 @@ const SectionHeading = props => {
     </View>
   );
 };
-
-// SectionHeading.defaultProps = {
-//   textKey: 'h2'
-// };
 
 export default SectionHeading;

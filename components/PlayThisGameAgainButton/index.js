@@ -1,17 +1,9 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
-// import styled from 'styled-components';
 import allActions from '../../actions';
 
-// import Button from '../../../ui.components/button';
 import Translate from '../Translate';
-
-// const PlayThisGameAgainButtonStyled = styled.li`
-//   button {
-//     height: 100%;
-//   }
-// `;
 
 import globalStyles from '../../css/style.js';
 
@@ -24,8 +16,6 @@ const PlayThisGameAgainButton = () => {
       style={[
         globalStyles.border,
         globalStyles.borderRadius8,
-        // styles.newGameButtonsButton, 
-        // styles.greenButton,
         {
           backgroundColor: 'black',
           marginBottom: 12,

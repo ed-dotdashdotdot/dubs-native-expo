@@ -1,20 +1,14 @@
 import React from 'react';
-import { Image, Text, ScrollView, TouchableOpacity, View, } from 'react-native';
+import { Text, ScrollView, TouchableOpacity, View, } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-// import classnames from 'classnames';
 import allActions from '../../actions';
 
-// import Button from '../../../ui.components/button';
-// import InfoInner from '../InfoInner';
-// import StartButton from '../StartButton';
 import ExpoFastImage from 'expo-fast-image';
 import Translate from '../Translate';
 
 import getGameData from '../../js/helpers/getGameData';
 import { ipAddress } from '../../configuration/config.json';
 
-// import ImageDetailStyled from './styles';
-// import './css/index.scss';
 import globalStyles from '../../css/style.js';
 
 const ImageDetail = props => {
@@ -26,7 +20,6 @@ const ImageDetail = props => {
   const { gameActions, imagesActions } = { ...allActions };
   const dispatch = useDispatch();
   const gameData = getGameData(game.level);
-  // const imageSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`};
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`;
 
   const imageWidth = dimensions.width > 999 ? 512 : dimensions.width > 600 ? 512 : 256
@@ -54,22 +47,16 @@ const ImageDetail = props => {
           ]}
         >
           <ExpoFastImage 
-            // source={`http://localhost/dubs-cdn/image/?image=${image}&size=medium`} 
-            // source={imageSrc}
             uri={imageSrc}
             cacheKey={`image-${images.detail}-medium`}
             style={[
               {
                 height: '100%',
                 width: '100%',
-                // borderColor: 'white',
-                // borderStyle: 'solid',
-                // borderWidth: 2,
                 borderRadius: 8,
               },
             ]}
           />
-          {/* <img src={`../../../../../../img/game-board/large/${image}.jpg`} alt="" /> */}
         </View>
         <View 
           id="use-this-image"
@@ -87,9 +74,7 @@ const ImageDetail = props => {
           <TouchableOpacity
             onPress={() => {
               dispatch(imagesActions.setImagesSelected(image));
-              // dispatch(gameActions.setGameStatus('game-ready'));
               dispatch(gameActions.setGameData(gameData));
-              // dispatch(gameActions.setGameId(uuidv4()));
               dispatch(gameActions.setGameStatus('game-loading'));
             }}
             style={[
