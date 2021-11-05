@@ -75,7 +75,7 @@ const GameReady = props => {
                   globalStyles.fontFamilyCourier,  
                 ]}
               >
-                <Translate textKey={game.bossMode ? 'turnBossModeOn' : 'turnBossModeOff'} />
+                <Translate textKey={game.bossMode ? 'turnBossModeOff' : 'turnBossModeOn'} />
               </Text>
             </TouchableOpacity>
           </View>
