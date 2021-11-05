@@ -31,6 +31,9 @@ const Options = () => {
     if (section === 'image-detail') {
       dispatch(gameActions.setGameStatus('choose-image'));
     }
+    if (section === 'what-is-boss-mode') {
+      dispatch(gameActions.setGameStatus('game-ready'));
+    }
   }
   const buttonText = section => {
     if (section === 'game-over') {
@@ -46,6 +49,9 @@ const Options = () => {
       return 'back';
     }
     if (section === 'image-detail') {
+      return 'back';
+    }
+    if (section === 'what-is-boss-mode') {
       return 'back';
     }
     return 'backToHome'
