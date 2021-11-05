@@ -17,6 +17,7 @@ import { defaultImages } from '../../configuration/config.json';
 import getCorners from '../../js/helpers/getCorners';
 import getGameArray from '../../js/helpers/getGameArray';
 import getGameGridPositions from '../../js/helpers/getGameGridPositions';
+import getGameGridPositionsBossMode from '../../js/helpers/getGameGridPositionsBossMode';
 import getGameSpecs from '../../js/helpers/getGameSpecs';
 import isButtonFound from '../../js/helpers/isButtonFound';
 import isPortrait from '../../js/helpers/isPortrait';
@@ -70,6 +71,7 @@ const GameBoard = props => {
   const imgSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`;
 
   const makeSelection = buttonId => {
+    console.log(buttonId)
     dispatch(gameActions.setGameClicks(game.clicks + 1));
     dispatch(gameActions.setGameHighlight([]));
     // console.log(`game.selected: ${game.selected}`);
@@ -152,6 +154,14 @@ const GameBoard = props => {
                   borderBottomRightRadius: index === gameArray.length - 1 ? 10 : 0,
                   borderTopLeftRadius: index === 0 ? 10 : 0,
                   borderTopRightRadius: index === topRightSquare ? 10 : 0,
+                  transform: [
+                    { 
+                      scale: getGameGridPositionsBossMode(
+                        val,
+                        game.bossMode,
+                      ).scaleFactor, 
+                    }
+                  ],
                 }
               ]}
             >
@@ -186,20 +196,20 @@ const GameBoard = props => {
                           // borderRadius: index === 0 ? 24 : 0, // was 10
                           height: gameSpecs.height,
                           left: getGameGridPositions(
-                            val, 
-                            level, 
-                            isDevicePortrait, 
-                            gameSpecs.width, 
+                            val,
+                            level,
+                            isDevicePortrait,
+                            gameSpecs.width,
                             gameSpecs.height,
                             gameSpecs.rows,
                             gameSpecs.cols
                             ).x,
                           position: 'absolute',
                           top: getGameGridPositions(
-                            val, 
-                            level, 
-                            isDevicePortrait, 
-                            gameSpecs.width, 
+                            val,
+                            level,
+                            isDevicePortrait,
+                            gameSpecs.width,
                             gameSpecs.height,
                             gameSpecs.rows,
                             gameSpecs.cols
