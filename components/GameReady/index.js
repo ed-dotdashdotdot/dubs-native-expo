@@ -39,14 +39,14 @@ const GameReady = props => {
           colour={whichLevelColour(level)}
           text={polyglot.t(`${level}Level.${lang.toUpperCase()}`)} 
         />
-        {/* <Button
+        <Button
           onPress={() => dispatch(gameActions.setGameBossMode(!game.bossMode))}
           title={`Turn boss mode ${game.bossMode ? 'off' : 'on'}`}
         />
         <Button
           onPress={() => dispatch(gameActions.setGameStatus('what-is-boss-mode'))}
           title="What is boss mode"
-        /> */}
+        />
         <ChooseAnImageButton />
         <StartButton
           gameData={gameData}
