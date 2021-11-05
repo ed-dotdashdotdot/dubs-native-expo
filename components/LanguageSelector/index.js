@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
@@ -7,6 +7,7 @@ import LanguageSelectorSelected from '../LanguageSelectorSelected';
 import DeSvg from '../flags/DeSvg';
 import EnSvg from '../flags/EnSvg';
 import EsSvg from '../flags/EsSvg';
+import FrSvg from '../flags/FrSvg';
 import ItSvg from '../flags/ItSvg';
 import PtSvg from '../flags/PtSvg';
 
@@ -77,6 +78,23 @@ const LanguageSelector = props => {
                 style={languageSelectorStyles.flagImage}
               /> */}
               <EsSvg width="48" height="48" />
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style={languageSelectorStyles.buttonContainer}>
+          <View style={languageSelectorStyles.flag}>
+            <TouchableOpacity
+              accessibilityLabel="Switch language to French"
+              activeOpacity={0.5}
+              onPress={() => {
+                dispatch(languageActions.setChangeLanguage('fr'));
+              }}
+            >
+              {/* <Image
+                source={require('../../assets/flags/fr.png')}
+                style={languageSelectorStyles.flagImage}
+              /> */}
+              <FrSvg width="48" height="48" />
             </TouchableOpacity>
           </View>
         </View>
