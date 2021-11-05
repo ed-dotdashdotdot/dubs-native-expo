@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
@@ -11,7 +11,6 @@ import Translate from '../Translate';
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
-import getGameArray from '../../js/helpers/getGameArray';
 import getGameData from '../../js/helpers/getGameData';
 import whichLevelColour from '../../js/helpers/whichLevelColour';
 
@@ -39,14 +38,81 @@ const GameReady = props => {
           colour={whichLevelColour(level)}
           text={polyglot.t(`${level}Level.${lang.toUpperCase()}`)} 
         />
-        <Button
-          onPress={() => dispatch(gameActions.setGameBossMode(!game.bossMode))}
-          title={`Turn boss mode ${game.bossMode ? 'off' : 'on'}`}
-        />
-        <Button
-          onPress={() => dispatch(gameActions.setGameStatus('what-is-boss-mode'))}
-          title="What is boss mode"
-        />
+        
+        <View 
+          id='boss-mode-buttons'
+          style={{
+            backgroundColor: 'black',
+            display: 'flex',
+            flexDirection: 'row',
+            marginBottom: 12,
+          }}
+        >
+          <View
+            style={{
+              borderColor: 'white',
+              borderStyle: 'solid',
+              borderWidth: 2,
+              borderTopLeftRadius: 8,
+              borderBottomLeftRadius: 8,
+              borderRightWidth: 0,
+              flex: 1,
+              padding: 12,
+            }}
+          >
+            <TouchableOpacity
+              onPress={() => dispatch(gameActions.setGameBossMode(!game.bossMode))}
+            >
+              <Text
+                style={[
+                  {
+                    color: 'white',
+                    fontSize: 20,
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    width: '100%',
+                  },
+                  globalStyles.fontFamilyCourier,  
+                ]}
+              >
+                <Translate textKey={game.bossMode ? 'turnBossModeOn' : 'turnBossModeOff'} />
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View
+            style={{
+              borderColor: 'white',
+              borderStyle: 'solid',
+              borderWidth: 2,
+              borderTopRightRadius: 8,
+              borderBottomRightRadius: 8,
+              justifyContent: 'center',
+              width: 48,
+            }}
+          >
+            <TouchableOpacity
+              onPress={() => dispatch(gameActions.setGameStatus('what-is-boss-mode'))}
+            >
+              <Text
+                style={[
+                  {
+                    color: 'white',
+                    fontSize: 20,
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    width: '100%',
+                  },
+                  globalStyles.fontFamilyCourier,  
+                ]}
+              >
+                ?
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+        </View>
+
+
         <ChooseAnImageButton />
         <StartButton
           gameData={gameData}
