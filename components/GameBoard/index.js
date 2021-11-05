@@ -71,7 +71,6 @@ const GameBoard = props => {
   const imgSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`;
 
   const makeSelection = buttonId => {
-    console.log(buttonId)
     dispatch(gameActions.setGameClicks(game.clicks + 1));
     dispatch(gameActions.setGameHighlight([]));
     // console.log(`game.selected: ${game.selected}`);
