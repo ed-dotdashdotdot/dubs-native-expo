@@ -1,10 +1,12 @@
 import React from 'react';
-import { Button, Text, View, ScrollView } from 'react-native';
+import { Button, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
+import ChooseAnImageButton from '../ChooseAnImageButton';
 import PageHeading from '../PageHeading';
 import StartButton from '../StartButton';
+import Translate from '../Translate';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
@@ -37,28 +39,15 @@ const GameReady = props => {
           colour={whichLevelColour(level)}
           text={polyglot.t(`${level}Level.${lang.toUpperCase()}`)} 
         />
-        <Text 
-          style={[
-            {
-              color: 'white',
-            },
-            globalStyles.fontFamilyCourier,
-          ]}
-        >
-          Game ready content
-        </Text>
-        <Button
+        {/* <Button
           onPress={() => dispatch(gameActions.setGameBossMode(!game.bossMode))}
           title={`Turn boss mode ${game.bossMode ? 'off' : 'on'}`}
         />
         <Button
           onPress={() => dispatch(gameActions.setGameStatus('what-is-boss-mode'))}
           title="What is boss mode"
-        />
-        <Button
-          onPress={() => dispatch(gameActions.setGameStatus('choose-image'))}
-          title="Choose an image to play with"
-        />
+        /> */}
+        <ChooseAnImageButton />
         <StartButton
           gameData={gameData}
           startTextKey={startTextKey}
