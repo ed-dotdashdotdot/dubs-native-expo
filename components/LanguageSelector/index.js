@@ -4,6 +4,11 @@ import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import LanguageSelectorSelected from '../LanguageSelectorSelected';
+import DeSvg from '../flags/DeSvg';
+import EnSvg from '../flags/EnSvg';
+import EsSvg from '../flags/EsSvg';
+import ItSvg from '../flags/ItSvg';
+import PtSvg from '../flags/PtSvg';
 
 import languageSelectorStyles from './styles.js';
 
@@ -33,10 +38,11 @@ const LanguageSelector = props => {
                 dispatch(languageActions.setChangeLanguage('de'));
               }}
             >
-              <Image
+              {/* <Image
                 source={require('../../assets/flags/de.png')}
                 style={languageSelectorStyles.flagImage}
-              />
+              /> */}
+              <DeSvg width="48" height="48" />
             </TouchableOpacity>
           </View>
         </View>
@@ -49,10 +55,11 @@ const LanguageSelector = props => {
                 dispatch(languageActions.setChangeLanguage('en'));
               }}
             >
-              <Image
+              {/* <Image
                 source={require('../../assets/flags/en.png')}
                 style={languageSelectorStyles.flagImage}
-              />
+              /> */}
+              <EnSvg width="48" height="48" />
             </TouchableOpacity>
           </View>
         </View>
@@ -65,10 +72,11 @@ const LanguageSelector = props => {
                 dispatch(languageActions.setChangeLanguage('es'));
               }}
             >
-              <Image
+              {/* <Image
                 source={require('../../assets/flags/es.png')}
                 style={languageSelectorStyles.flagImage}
-              />
+              /> */}
+              <EsSvg width="48" height="48" />
             </TouchableOpacity>
           </View>
         </View>
@@ -81,10 +89,11 @@ const LanguageSelector = props => {
                 dispatch(languageActions.setChangeLanguage('it'));
               }}
             >
-              <Image
+              {/* <Image
                 source={require('../../assets/flags/it.png')}
                 style={languageSelectorStyles.flagImage}
-              />
+              /> */}
+              <ItSvg width="48" height="48" />
             </TouchableOpacity>
           </View>
         </View>
@@ -97,10 +106,11 @@ const LanguageSelector = props => {
                 dispatch(languageActions.setChangeLanguage('pt'));
               }}
             >
-              <Image
+              {/* <Image
                 source={require('../../assets/flags/pt.png')}
                 style={languageSelectorStyles.flagImage}
-              />
+              /> */}
+              <PtSvg width="48" height="48" />
             </TouchableOpacity>
           </View>
         </View>
