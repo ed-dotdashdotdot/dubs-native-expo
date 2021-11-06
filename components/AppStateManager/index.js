@@ -4,13 +4,20 @@ import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 const AppStateManager = props => {
-  const { children } = { ...props };
+  const { status, children  } = { ...props };
   const game = useSelector(state => state.game);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-  const handleAppStateChange = state => {
-    if (state !== 'active') {
-      if(game.status === 'game-on') {
+  const handleAppStateChange = (state, gameStatus=game.status) => {
+    // console.log(`state: ${state}`);
+    // console.log(`game.status: ${game.status}`);
+    console.log(`gameStatus: ${gameStatus}`);
+    console.log(`status: ${status}`);
+    // console.log(game);
+    // console.log('- - -');
+    if(game.status === 'game-on' || status === 'game-on' || gameStatus === 'game-on') {
+      console.log("GAME ON");
+      if (state !== 'active') {
         dispatch(gameActions.setGameStatus('game-paused'));
       }
     }
