@@ -14,6 +14,7 @@ import allActions from '../../actions';
 import ExpoFastImage from 'expo-fast-image';
 
 import { defaultImages } from '../../configuration/config.json';
+import drawGameBoardBorderRadius from '../../js/helpers/drawGameBoardBorderRadius';
 import getCorners from '../../js/helpers/getCorners';
 import getGameArray from '../../js/helpers/getGameArray';
 import getGameGridPositions from '../../js/helpers/getGameGridPositions';
@@ -23,11 +24,6 @@ import isButtonFound from '../../js/helpers/isButtonFound';
 import isPortrait from '../../js/helpers/isPortrait';
 import sliceValue from '../../js/helpers/sliceValue';
 import { ipAddress } from '../../configuration/config.json';
-
-import drawBorderBottomLeftRadius from '../../js/helpers/drawBorderBottomLeftRadius';
-import drawBorderBottomRightRadius from '../../js/helpers/drawBorderBottomRightRadius';
-import drawBorderTopLeftRadius from '../../js/helpers/drawBorderTopLeftRadius';
-import drawBorderTopRightRadius from '../../js/helpers/drawBorderTopRightRadius';
 
 const GameBoard = props => {
   const { dimensions, level } = { ...props };
@@ -147,10 +143,10 @@ const GameBoard = props => {
             <View 
               key={`${val} - ${index}`}
               style={[
-                drawBorderBottomLeftRadius(val, index === bottomLeftSquare, cornerRadius, game.bossMode),
-                drawBorderBottomRightRadius(val, index === gameArray.length - 1, cornerRadius, game.bossMode),
-                drawBorderTopLeftRadius(val, index === 0, cornerRadius, game.bossMode),
-                drawBorderTopRightRadius(val, index === topRightSquare, cornerRadius, game.bossMode),
+                drawGameBoardBorderRadius('bottomLeft', val, index === bottomLeftSquare, cornerRadius, game.bossMode),
+                drawGameBoardBorderRadius('bottomRight', val, index === gameArray.length - 1, cornerRadius, game.bossMode),
+                drawGameBoardBorderRadius('topLeft', val, index === 0, cornerRadius, game.bossMode),
+                drawGameBoardBorderRadius('topRight', val, index === topRightSquare, cornerRadius, game.bossMode),
                 {
                   // backgroundColor: isButtonFound(val, game.found) ? '#003300' : 'black',
                   height: gameSpecs.height / gameSpecs.rows,
