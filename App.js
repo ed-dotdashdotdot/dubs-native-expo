@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
 
+import AppStateManager from './components/AppStateManager';
 import Container from './components/Container';
 
 const App = () => {
@@ -15,15 +16,17 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <SafeAreaProvider>
-        <SafeAreaView style={{
-          backgroundColor: 'rgba(0,0,0, 0.5)',
-          flex: 1,
-        }}>
-          <Container />
-          <StatusBar style="auto" />
-        </SafeAreaView>
-      </SafeAreaProvider>
+      <AppStateManager>
+        <SafeAreaProvider>
+          <SafeAreaView style={{
+            backgroundColor: 'rgba(0,0,0, 0.5)',
+            flex: 1,
+          }}>
+            <Container />
+            <StatusBar style="auto" />
+          </SafeAreaView>
+        </SafeAreaProvider>
+      </AppStateManager>
     </Provider>
   );
 }
