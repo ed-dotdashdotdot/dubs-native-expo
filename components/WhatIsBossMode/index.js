@@ -1,7 +1,6 @@
 import React from 'react';
-import { Image, Text, View, ScrollView } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
-import allActions from '../../actions';
+import { Text, View, ScrollView } from 'react-native';
+import { useSelector } from 'react-redux';
 
 import PageHeading from '../PageHeading';
 import Translate from '../Translate';
@@ -15,11 +14,8 @@ import i18n from '../../i18n';
 import globalStyles from '../../css/style.js';
 
 const WhatIsBossMode = props => {
-  const { level } = { ...props };
-  const game = useSelector(state => state.game);
+  const { bossMode } = { ...props };
   const language = useSelector(state => state.language);
-  const { gameActions } = { ...allActions };
-  const dispatch = useDispatch();
 
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
@@ -30,8 +26,7 @@ const WhatIsBossMode = props => {
       <View style={globalStyles.infoInner}>
         <PageHeading text={polyglot.t(`whatIsBossMode.${lang.toUpperCase()}`)} />
         <View>
-          <View 
-            id="what-is-boss-mode-content"
+          <View
             style={{
               backgroundColor: colours.black,
               borderColor: colours.white,
@@ -42,9 +37,7 @@ const WhatIsBossMode = props => {
               padding: 12,
             }}
           >
-            <View 
-              id="what-is-boss-mode-description"
-            >
+            <View>
               <Text
                 style={{
                   color: colours.white,
@@ -58,7 +51,6 @@ const WhatIsBossMode = props => {
                 <Translate textKey="whatIsBossMode_title_normal_mode" />
               </Text>
               <View 
-                id="what-is-boss-mode-example"
                 style={{
                   alignItems: 'center',
                   display: 'flex',
@@ -66,7 +58,6 @@ const WhatIsBossMode = props => {
                 }}
               >
                 <View 
-                  id="example-a" 
                   style={{
                     alignItems: 'flex-end',
                     flex: 2,
@@ -80,7 +71,6 @@ const WhatIsBossMode = props => {
                   }}
                 >
                   <Text 
-                    id="equals"
                     style={{
                       color: colours.white,
                       fontFamily: fontFamily,
@@ -93,7 +83,6 @@ const WhatIsBossMode = props => {
                   </Text>
                 </View>
                 <View 
-                  id="example-b" 
                   style={{
                     alignItems: 'flex-start',
                     flex: 2,
@@ -119,7 +108,6 @@ const WhatIsBossMode = props => {
             </View>           
           </View>
           <View 
-            id="what-is-boss-mode-content"
             style={{
               backgroundColor: colours.black,
               borderColor: colours.white,
@@ -130,9 +118,7 @@ const WhatIsBossMode = props => {
               padding: 12,
             }}
           >
-            <View 
-              id="what-is-boss-mode-description"
-            >
+            <View>
               <Text
                 style={{
                   color: colours.white,
@@ -145,16 +131,14 @@ const WhatIsBossMode = props => {
               >
                 <Translate textKey="whatIsBossMode_title_boss_mode" />
               </Text>
-              <View 
-                id="what-is-boss-mode-example"
+              <View
                 style={{
                   alignItems: 'center',
                   display: 'flex',
                   flexDirection: 'row',
                 }}
               >
-                <View 
-                  id="example-a" 
+                <View
                   style={{
                     alignItems: 'flex-end',
                     flex: 2,
@@ -167,8 +151,7 @@ const WhatIsBossMode = props => {
                     width: 72,
                   }}
                 >
-                  <Text 
-                    id="equals"
+                  <Text
                     style={{
                       color: colours.white,
                       fontFamily: fontFamily,
@@ -180,8 +163,7 @@ const WhatIsBossMode = props => {
                     =
                   </Text>
                 </View>
-                <View 
-                  id="example-b" 
+                <View
                   style={{
                     alignItems: 'flex-end',
                     flex: 2,
@@ -208,7 +190,7 @@ const WhatIsBossMode = props => {
             </View>           
           </View>
           <TurnOnBossModeButton 
-            bossMode={game.bossMode} 
+            bossMode={bossMode} 
           />
         </View>
       </View>
