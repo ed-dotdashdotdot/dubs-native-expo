@@ -14,6 +14,10 @@ const DrawLanguageButton = props => {
   const { whichLanguage } = { ...props };
   const { languageActions } = { ...allActions };
   const dispatch = useDispatch();
+  const buttonSize = 48;
+  const flagSize = 44;
+  const flagBorderWidth = 2;
+  const svgSize = flagSize - (flagBorderWidth * 2);
   return (
     <View 
       style={{
@@ -24,37 +28,37 @@ const DrawLanguageButton = props => {
       <View>
         <TouchableOpacity
           // accessibilityLabel="Switch language to German"
-          activeOpacity={0.5}
+          // activeOpacity={0.5}
           onPress={() => {
             dispatch(languageActions.setChangeLanguage(whichLanguage));
           }}
           style={{
             display: 'flex',
-            height: 48,
+            height: buttonSize,
             textAlign: 'center',
-            width: 48,
+            width: buttonSize,
           }}
         >
           <View
             style={{
               alignSelf: 'center',
               borderColor: 'white',
-              borderRadius: 20,
+              borderRadius: flagSize / 2,
               borderStyle: 'solid',
-              borderWidth: 1,
-              height: 40,
-              marginTop: 4,
-              width: 40,
+              borderWidth: flagBorderWidth,
+              height: flagSize,
+              marginTop: (buttonSize - flagSize) / 2,
+              width: flagSize,
             }}
           >
             {(() => {
               switch (whichLanguage) {
-                case 'de': return <DeSvg width="38" height="38" />;
-                case 'es': return <EsSvg width="38" height="38" />;
-                case 'fr': return <FrSvg width="38" height="38" />
-                case 'it': return <ItSvg width="38" height="38" />;
-                case 'pt': return <PtSvg width="38" height="38" />;
-                default: return <EnSvg width="38" height="38" />;
+                case 'de': return <DeSvg width={svgSize} height={svgSize} />;
+                case 'es': return <EsSvg width={svgSize} height={svgSize} />;
+                case 'fr': return <FrSvg width={svgSize} height={svgSize} />
+                case 'it': return <ItSvg width={svgSize} height={svgSize} />;
+                case 'pt': return <PtSvg width={svgSize} height={svgSize} />;
+                default: return <EnSvg width={svgSize} height={svgSize} />;
               }
             })()}
           </View>
