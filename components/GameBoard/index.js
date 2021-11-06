@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  Image,
   Pressable,
-  Text,
-  TouchableOpacity,
   useWindowDimensions,
   Vibration,
   View,
