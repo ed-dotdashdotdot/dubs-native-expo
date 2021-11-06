@@ -51,7 +51,7 @@ const Container = () => {
         {game.status === 'game-home' && <LanguageSelector />}
         {
           game.status === 'game-home'
-            ? <LanguageSelector language={language.selected} />
+            ? <LanguageSelector selectedLanguage={language.selected} />
             : game.status === 'game-on' 
               ? <GameOptions />
               : game.status === 'game-loading'

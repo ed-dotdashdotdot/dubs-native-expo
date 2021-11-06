@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import LanguageSelectorSelectedSvg from '../LanguageSelectorSelectedSvg';
 
 const LanguageSelectorSelected = props => {
-  const { language } = { ...props };
+  const { selectedLanguage } = { ...props };
   return (
     <View 
       style={[
@@ -19,22 +19,22 @@ const LanguageSelectorSelected = props => {
       ]}
     >
       <View style={{ flex: 1 }}>
-        {language === 'de' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'de' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {language === 'en' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'en' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {language === 'es' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'es' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {language === 'fr' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'fr' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {language === 'it' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'it' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {language === 'pt' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'pt' && <LanguageSelectorSelectedSvg />}
       </View>
     </View>
   );
