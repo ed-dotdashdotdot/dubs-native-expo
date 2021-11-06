@@ -36,6 +36,7 @@ const Info = () => {
             id='infoContainer'
             style={{
               backgroundColor: 'rgba(0,0,0, 0.5)',
+              borderRadius: 10,
               flex: 1,
               position: 'absolute',
               top: 48,
