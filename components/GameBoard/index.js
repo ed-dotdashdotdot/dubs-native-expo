@@ -24,6 +24,11 @@ import isPortrait from '../../js/helpers/isPortrait';
 import sliceValue from '../../js/helpers/sliceValue';
 import { ipAddress } from '../../configuration/config.json';
 
+import drawBorderBottomLeftRadius from '../../js/helpers/drawBorderBottomLeftRadius';
+import drawBorderBottomRightRadius from '../../js/helpers/drawBorderBottomRightRadius';
+import drawBorderTopLeftRadius from '../../js/helpers/drawBorderTopLeftRadius';
+import drawBorderTopRightRadius from '../../js/helpers/drawBorderTopRightRadius';
+
 const GameBoard = props => {
   const { dimensions, level } = { ...props };
   const game = useSelector(state => state.game);
@@ -64,7 +69,7 @@ const GameBoard = props => {
     } 
   }, []);
 
-   imageToUse = images.selected;
+  imageToUse = images.selected;
 
   // const imgSrc = require('../../assets/game-images/2.jpg');
   // const imgSrc = {uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`};
@@ -123,19 +128,18 @@ const GameBoard = props => {
 
   const topRightSquare = getCorners(level, isDevicePortrait).topRight;
   const bottomLeftSquare = getCorners(level, isDevicePortrait).bottomLeft;
-  // const bottomRightSquare = getCorners(level, isDevicePortrait).bottomRight;
+
+  const cornerRadius = 10;
 
   return (
     <View 
-      style={[
-        {
-          display: 'flex',
-          flexDirection: "row",
-          flexWrap: 'wrap',
-          height: gameSpecs.height,
-          width: gameSpecs.width,
-        }
-      ]}
+      style={{
+        display: 'flex',
+        flexDirection: "row",
+        flexWrap: 'wrap',
+        height: gameSpecs.height,
+        width: gameSpecs.width,
+      }}
     >
       {
         gameArray.map((val, index) => {
@@ -143,16 +147,20 @@ const GameBoard = props => {
             <View 
               key={`${val} - ${index}`}
               style={[
+                drawBorderBottomLeftRadius(val, index === bottomLeftSquare, cornerRadius, game.bossMode),
+                drawBorderBottomRightRadius(val, index === gameArray.length - 1, cornerRadius, game.bossMode),
+                drawBorderTopLeftRadius(val, index === 0, cornerRadius, game.bossMode),
+                drawBorderTopRightRadius(val, index === topRightSquare, cornerRadius, game.bossMode),
                 {
                   // backgroundColor: isButtonFound(val, game.found) ? '#003300' : 'black',
                   height: gameSpecs.height / gameSpecs.rows,
                   opacity: isButtonFound(val, game.found) ? 1: 1,
                   overflow: 'hidden',
                   width: gameSpecs.width / gameSpecs.cols,
-                  borderBottomLeftRadius: index === bottomLeftSquare ? 10 : 0,
-                  borderBottomRightRadius: index === gameArray.length - 1 ? 10 : 0,
-                  borderTopLeftRadius: index === 0 ? 10 : 0,
-                  borderTopRightRadius: index === topRightSquare ? 10 : 0,
+                  // borderBottomLeftRadius: index === bottomLeftSquare ? cornerRadius : 0,
+                  // borderBottomRightRadius: index === gameArray.length - 1 ? cornerRadius : 0,
+                  // borderTopLeftRadius: index === 0 ? cornerRadius : 0,
+                  // borderTopRightRadius: index === topRightSquare ? cornerRadius : 0,
                   transform: [
                     { 
                       scale: getGameGridPositionsBossMode(
