@@ -9,7 +9,7 @@ import allActions from '../../actions';
 import ExpoFastImage from 'expo-fast-image';
 
 import { defaultImages } from '../../configuration/config.json';
-import { ipAddress } from '../../configuration/config.json';
+import { colours, ipAddress } from '../../configuration/config.json';
 import timerStartDate from '../../js/helpers/timerStartDate';
 
 const LoadingImage = props => {
@@ -33,7 +33,7 @@ const LoadingImage = props => {
     >
       <Text
         style={{
-          color: 'white',
+          color: colours.white,
           fontSize: 24,
           textAlign: 'center',
         }}  

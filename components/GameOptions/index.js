@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import PauseButton from '../PauseButton';
+import { colours, fontFamily } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 import Timer from '../Timer';
@@ -48,12 +49,12 @@ const GameOptions = () => {
           <Text
             style={[
               {
-                color: 'white',
+                color: colours.white,
+                fontFamily: fontFamily,
                 fontSize: 24,
                 fontWeight: 'bold',
                 textAlign: 'center',
               },
-              globalStyles.fontFamilyCourier,  
             ]}
           >
             {

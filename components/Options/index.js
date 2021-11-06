@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import Translate from '../Translate';
+import { colours, fontFamily } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 
@@ -61,7 +62,7 @@ const Options = () => {
     <TouchableOpacity 
       style={[
         {
-          backgroundColor: 'black',
+          backgroundColor: colours.black,
           bottom: 12,
           height: 48,
           justifyContent: 'center',
@@ -78,12 +79,12 @@ const Options = () => {
       <Text
         style={[
           {
-            color: 'white',
+            color: colours.white,
+            fontFamily: fontFamily,
             fontSize: 20,
             fontWeight: 'bold',
             textAlign: 'center',
           },
-          globalStyles.fontFamilyCourier,  
         ]}
       >
         <Translate textKey={buttonText(game.status)} />

@@ -7,6 +7,7 @@ import ChooseAnImageButton from '../ChooseAnImageButton';
 import PageHeading from '../PageHeading';
 import StartButton from '../StartButton';
 import Translate from '../Translate';
+import { colours, fontFamily } from '../../configuration/config.json';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
@@ -42,7 +43,8 @@ const GameReady = props => {
         <View 
           id='boss-mode-buttons'
           style={{
-            backgroundColor: 'black',
+            backgroundColor: colours.black,
+            borderRadius: 8,
             display: 'flex',
             flexDirection: 'row',
             marginBottom: 12,
@@ -50,7 +52,7 @@ const GameReady = props => {
         >
           <View
             style={{
-              borderColor: 'white',
+              borderColor: colours.white,
               borderStyle: 'solid',
               borderWidth: 2,
               borderTopLeftRadius: 8,
@@ -66,13 +68,13 @@ const GameReady = props => {
               <Text
                 style={[
                   {
-                    color: 'white',
+                    color: colours.white,
+                    fontFamily: fontFamily,
                     fontSize: 20,
                     fontWeight: 'bold',
                     textAlign: 'center',
                     width: '100%',
                   },
-                  globalStyles.fontFamilyCourier,  
                 ]}
               >
                 <Translate textKey={game.bossMode ? 'turnBossModeOff' : 'turnBossModeOn'} />
@@ -81,7 +83,7 @@ const GameReady = props => {
           </View>
           <View
             style={{
-              borderColor: 'white',
+              borderColor: colours.white,
               borderStyle: 'solid',
               borderWidth: 2,
               borderTopRightRadius: 8,
@@ -96,13 +98,13 @@ const GameReady = props => {
               <Text
                 style={[
                   {
-                    color: 'white',
+                    color: colours.white,
+                    fontFamily: fontFamily,
                     fontSize: 20,
                     fontWeight: 'bold',
                     textAlign: 'center',
                     width: '100%',
                   },
-                  globalStyles.fontFamilyCourier,  
                 ]}
               >
                 ?

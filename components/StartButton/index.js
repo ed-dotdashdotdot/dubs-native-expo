@@ -5,6 +5,7 @@ import { Button, Text, TouchableOpacity, View } from 'react-native';
 import allActions from '../../actions';
 
 import Translate from '../Translate';
+import { colours, fontFamily } from '../../configuration/config.json';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
@@ -28,7 +29,7 @@ const StartButton = props => {
       style={[
         {
           alignSelf: 'center',
-          backgroundColor: '#00aa00',
+          backgroundColor: colours.green,
           width: '100%',
         },
         globalStyles.border,
@@ -50,12 +51,12 @@ const StartButton = props => {
         <Text
           style={[
             {
-              color: 'white',
+              color: colours.white,
+              fontFamily: fontFamily,
               fontSize: 20,
               fontWeight: 'bold',
               textAlign: 'center',
             },
-            globalStyles.fontFamilyCourier,  
           ]}
         >
           <Translate textKey={startTextKey} />

@@ -5,7 +5,7 @@ import allActions from '../../../../actions';
 
 import ExpoFastImage from 'expo-fast-image';
 
-import { ipAddress } from '../../../../configuration/config.json';
+import { colours, ipAddress } from '../../../../configuration/config.json';
 
 const DrawThumb = props => {
   const { 
@@ -44,7 +44,7 @@ const DrawThumb = props => {
           cacheKey={`image-${imageRef}-small`}
           style={[
             {
-              borderColor: 'white',
+              borderColor: colours.white,
               borderRadius: 8,
               borderWidth: 2,
               height: '100%',

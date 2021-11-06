@@ -6,6 +6,7 @@ import allActions from '../../actions';
 import PageHeading from '../PageHeading';
 import Translate from '../Translate';
 import TurnOnBossModeButton from '../TurnOnBossModeButton';
+import { colours, fontFamily } from '../../configuration/config.json';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
@@ -31,8 +32,8 @@ const WhatIsBossMode = props => {
           <View 
             id="what-is-boss-mode-content"
             style={{
-              backgroundColor: 'black',
-              borderColor: 'white',
+              backgroundColor: colours.black,
+              borderColor: colours.white,
               borderStyle: 'solid',
               borderWidth: 2,
               borderRadius: 8,
@@ -46,13 +47,13 @@ const WhatIsBossMode = props => {
               <Text
                 style={[
                   {
-                    color: 'white',
+                    color: colours.white,
+                    fontFamily: fontFamily,
                     fontSize: 28,
                     fontWeight: 'bold',
                     marginBottom: 12,
                     textAlign: 'center',
                   },
-                  globalStyles.fontFamilyCourier,
                 ]}
               >
                 <Translate textKey="whatIsBossMode_title_normal_mode" />
@@ -75,7 +76,7 @@ const WhatIsBossMode = props => {
                   <Image
                     source={require('./img/boss-mode-example.jpg')}
                     style={{
-                      borderColor: 'white',
+                      borderColor: colours.white,
                       borderRadius: 4,
                       borderWidth: 2,
                       height: 64,
@@ -92,12 +93,12 @@ const WhatIsBossMode = props => {
                     id="equals"
                     style={[
                       {
-                        color: 'white',
+                        color: colours.white,
+                        fontFamily: fontFamily,
                         fontSize: 48,
                         fontWeight: 'bold',
                         textAlign: 'center',
                       },
-                      globalStyles.fontFamilyCourier,
                     ]}
                   >
                     =
@@ -113,7 +114,7 @@ const WhatIsBossMode = props => {
                   <Image
                     source={require('./img/boss-mode-example.jpg')}
                     style={{
-                      borderColor: 'white',
+                      borderColor: colours.white,
                       borderRadius: 4,
                       borderWidth: 2,
                       height: 64,
@@ -130,13 +131,13 @@ const WhatIsBossMode = props => {
                 <Text
                   style={[
                     {
-                      color: 'white',
+                      color: colours.white,
+                      fontFamily: fontFamily,
                       fontSize: 20,
                       fontWeight: 'bold',
                       textAlign: 'center',
                       marginTop: 12,
                     },
-                    globalStyles.fontFamilyCourier,
                   ]}
                 >
                   <Translate textKey="whatIsBossMode_description_normal_mode" />
@@ -147,8 +148,8 @@ const WhatIsBossMode = props => {
           <View 
             id="what-is-boss-mode-content"
             style={{
-              backgroundColor: 'black',
-              borderColor: 'white',
+              backgroundColor: colours.black,
+              borderColor: colours.white,
               borderStyle: 'solid',
               borderWidth: 2,
               borderRadius: 8,
@@ -162,13 +163,13 @@ const WhatIsBossMode = props => {
               <Text
                 style={[
                   {
-                    color: 'white',
+                    color: colours.white,
+                    fontFamily: fontFamily,
                     fontSize: 28,
                     fontWeight: 'bold',
                     marginBottom: 12,
                     textAlign: 'center',
                   },
-                  globalStyles.fontFamilyCourier,
                 ]}
               >
                 <Translate textKey="whatIsBossMode_title_boss_mode" />
@@ -191,7 +192,7 @@ const WhatIsBossMode = props => {
                   <Image
                     source={require('./img/boss-mode-example.jpg')}
                     style={{
-                      borderColor: 'white',
+                      borderColor: colours.white,
                       borderRadius: 4,
                       borderWidth: 2,
                       height: 64,
@@ -208,12 +209,12 @@ const WhatIsBossMode = props => {
                     id="equals"
                     style={[
                       {
-                        color: 'white',
+                        color: colours.white,
+                        fontFamily: fontFamily,
                         fontSize: 48,
                         fontWeight: 'bold',
                         textAlign: 'center',
                       },
-                      globalStyles.fontFamilyCourier,
                     ]}
                   >
                     =
@@ -230,7 +231,7 @@ const WhatIsBossMode = props => {
                   <Image
                     source={require('./img/boss-mode-example.jpg')}
                     style={{
-                      borderColor: 'white',
+                      borderColor: colours.white,
                       borderRadius: 4,
                       borderWidth: 2,
                       height: 64,
@@ -247,13 +248,13 @@ const WhatIsBossMode = props => {
                 <Text
                   style={[
                     {
-                      color: 'white',
+                      color: colours.white,
+                      fontFamily: fontFamily,
                       fontSize: 20,
                       fontWeight: 'bold',
                       textAlign: 'center',
                       marginTop: 12,
                     },
-                    globalStyles.fontFamilyCourier,
                   ]}
                 >
                   <Translate textKey="whatIsBossMode_description_boss_mode" />

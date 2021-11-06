@@ -7,6 +7,7 @@ import DrawGameDuration from '../DrawGameDuration';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
 import Translate from '../Translate';
+import { colours, fontFamily } from '../../configuration/config.json';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
@@ -43,8 +44,8 @@ const GameOver = () => {
           style={[
             {
               alignContent: 'flex-end',
-              backgroundColor: 'black',
-              borderColor: 'white',
+              backgroundColor: colours.black,
+              borderColor: colours.white,
               borderStyle: 'solid',
               borderRadius: 8,
               borderWidth: 2,
@@ -57,12 +58,12 @@ const GameOver = () => {
           <Text style={[
             {
               alignSelf: 'center',
-              color: 'white',
+              color: colours.white,
+              fontFamily: fontFamily,
               fontSize: 28,
               fontWeight: 'bold',
               textAlign: 'center',
             },
-            globalStyles.fontFamilyCourier,
           ]}>
             {
               duration < 1200000 ? (

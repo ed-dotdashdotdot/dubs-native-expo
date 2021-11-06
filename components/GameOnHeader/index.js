@@ -2,6 +2,9 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 import Translate from '../Translate';
+import { colours, fontFamily } from '../../configuration/config.json';
+
+import globalStyles from '../../css/style';
 
 const GameOnHeader = props => {
   const { bossMode, level } = { ...props };
@@ -21,12 +24,12 @@ const GameOnHeader = props => {
       <Text 
         style={[
           {
-            color: 'white',
-            fontFamily: 'Courier New',
+            color: colours.white,
+            fontFamily: fontFamily,
             fontSize: 24,
             fontWeight: 'bold',
             textAlign: 'center',
-          }
+          },
         ]}
       >
         <Translate textKey={`${level}Level`} />

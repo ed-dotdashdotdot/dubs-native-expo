@@ -47,8 +47,8 @@ const Info = () => {
               id='info'
               style={[
                 globalStyles.border,
-                globalStyles.borderRadius12,
                 {
+                  borderRadius: 12,
                   height: infoHeight,
                   width: infoWidth,
                 }

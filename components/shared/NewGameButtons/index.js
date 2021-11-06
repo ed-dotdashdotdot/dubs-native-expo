@@ -6,6 +6,7 @@ import allActions from '../../../actions';
 import ContinueGameButton from '../../ContinueGameButton';
 import PlayThisGameAgainButton from '../../PlayThisGameAgainButton';
 import Translate from '../../Translate';
+import { colours, fontFamily } from '../../../configuration/config.json';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../../i18n';
@@ -56,7 +57,7 @@ const NewGameButtons = props => {
       <View
         style={[
           {
-            backgroundColor: '#00aa00',
+            backgroundColor: colours.green,
             marginBottom: 12,
           },
           globalStyles.border,
@@ -78,12 +79,12 @@ const NewGameButtons = props => {
           <Text
             style={[
               {
-                color: 'white',
+                color: colours.white,
+                fontFamily: fontFamily,
                 fontSize: 20,
                 fontWeight: 'bold',
                 textAlign: 'center',
               },
-              globalStyles.fontFamilyCourier,  
             ]}
           >
             <Translate textKey="startEasyGame" />
@@ -93,7 +94,7 @@ const NewGameButtons = props => {
       <View
         style={[
           {
-            backgroundColor: '#ff9900',
+            backgroundColor: colours.amber,
             marginBottom: 12,
           },
           globalStyles.border,
@@ -115,12 +116,12 @@ const NewGameButtons = props => {
           <Text
             style={[
               {
-                color: 'white',
+                color: colours.white,
+                fontFamily: fontFamily,
                 fontSize: 20,
                 fontWeight: 'bold',
                 textAlign: 'center',
               },
-              globalStyles.fontFamilyCourier,  
             ]}
           >
             <Translate textKey="startNormalGame" />
@@ -130,7 +131,7 @@ const NewGameButtons = props => {
       <View
         style={[
           {
-            backgroundColor: '#aa0000',
+            backgroundColor: colours.red,
             marginBottom: 12,
           },
           globalStyles.border,
@@ -152,12 +153,12 @@ const NewGameButtons = props => {
           <Text
             style={[
               {
-                color: 'white',
+                color: colours.white,
+                fontFamily: fontFamily,
                 fontSize: 20,
                 fontWeight: 'bold',
                 textAlign: 'center',
               },
-              globalStyles.fontFamilyCourier,  
             ]}
           >
             <Translate textKey="startHardGame" />

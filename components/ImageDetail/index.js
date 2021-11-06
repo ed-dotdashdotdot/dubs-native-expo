@@ -7,7 +7,7 @@ import ExpoFastImage from 'expo-fast-image';
 import Translate from '../Translate';
 
 import getGameData from '../../js/helpers/getGameData';
-import { ipAddress } from '../../configuration/config.json';
+import { colours, fontFamily, ipAddress } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 
@@ -35,14 +35,14 @@ const ImageDetail = props => {
           id="image-detail-img"
           style={[
             {
-              borderColor: 'white',
-              borderStyle: 'solid',
-              borderWidth: 2,
-              borderRadius: 8,
-              overflow: 'hidden',
-              height: imageWidth,
-              width: imageWidth,
               alignSelf: 'center',
+              borderColor: colours.white,
+              borderStyle: 'solid',
+              borderRadius: 10,
+              borderWidth: 2,
+              height: imageWidth,
+              overflow: 'hidden',
+              width: imageWidth,
             },
           ]}
         >
@@ -51,9 +51,9 @@ const ImageDetail = props => {
             cacheKey={`image-${images.detail}-medium`}
             style={[
               {
+                borderRadius: 8,
                 height: '100%',
                 width: '100%',
-                borderRadius: 8,
               },
             ]}
           />
@@ -62,10 +62,10 @@ const ImageDetail = props => {
           id="use-this-image"
           style={[
             {
-              backgroundColor: '#00aa00',
+              alignSelf: 'center',
+              backgroundColor: colours.green,
               marginTop: 12,
               width: imageWidth,
-              alignSelf: 'center',
             },
             globalStyles.border,
             globalStyles.borderRadius8,
@@ -86,12 +86,12 @@ const ImageDetail = props => {
             <Text
               style={[
                 {
-                  color: 'white',
+                  color: colours.white,
+                  fontFamily: fontFamily,
                   fontSize: 20,
                   fontWeight: 'bold',
                   textAlign: 'center',
                 },
-                globalStyles.fontFamilyCourier,  
               ]}
             >
               <Translate textKey="start" />

@@ -10,6 +10,8 @@ import FrSvg from '../../../flags/FrSvg';
 import ItSvg from '../../../flags/ItSvg';
 import PtSvg from '../../../flags/PtSvg';
 
+import { colours } from '../../../../configuration/config.json';
+
 const DrawLanguageButton = props => {
   const { whichLanguage } = { ...props };
   const { languageActions } = { ...allActions };
@@ -42,7 +44,7 @@ const DrawLanguageButton = props => {
           <View
             style={{
               alignSelf: 'center',
-              borderColor: 'white',
+              borderColor: colours.white,
               borderRadius: flagSize / 2,
               borderStyle: 'solid',
               borderWidth: flagBorderWidth,

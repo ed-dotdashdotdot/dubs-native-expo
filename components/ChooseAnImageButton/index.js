@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import Translate from '../Translate';
+import { colours, fontFamily } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 
@@ -17,7 +18,7 @@ const ChooseAnImageButton = () => {
         globalStyles.border,
         globalStyles.borderRadius8,
         {
-          backgroundColor: 'black',
+          backgroundColor: colours.black,
           marginBottom: 12,
         }
       ]}
@@ -36,12 +37,12 @@ const ChooseAnImageButton = () => {
         <Text
           style={[
             {
-              color: 'white',
+              color: colours.white,
+              fontFamily: fontFamily,
               fontSize: 20,
               fontWeight: 'bold',
               textAlign: 'center',
             },
-            globalStyles.fontFamilyCourier,  
           ]}
         >
           <Translate textKey="chooseAnImageToPlayWith" />

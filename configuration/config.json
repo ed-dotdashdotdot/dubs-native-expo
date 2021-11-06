@@ -98,10 +98,12 @@
   },
   "gameBoardCornerRadius": 10,
   "colours": {
-    "green": "#ff0000",
-    "amber": "orange",
-    "red": "red",
     "black": "#000000",
+    "amber": "#ff9900",
+    "green": "#00aa00",
+    "red": "#aa0000",
     "white": "#ffffff"
-  }
+  },
+  "fontFamily123": "Helvetica",
+  "fontFamily": "Courier New"
 }

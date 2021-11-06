@@ -1,6 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 
+import { colours } from '../../../../configuration/config.json';
+
 import DrawThumb from '../DrawThumb';
 
 const ImageGrid = props => {
@@ -14,7 +16,7 @@ const ImageGrid = props => {
     <View
       style={[
         {
-          borderColor: 'white',
+          borderColor: colours.white,
           borderRadius: 8,
           borderStyle: 'solid',
           borderWidth: 2,
@@ -31,14 +33,12 @@ const ImageGrid = props => {
         }
       ]}
     >
-      {
-        imageList.map(val => (
-          <DrawThumb 
-            dimensions={dimensions}
-            imageRef={`${val}`} key={val} 
-          />
-        ))
-      }
+      {imageList.map(val => (
+        <DrawThumb 
+          dimensions={dimensions}
+          imageRef={`${val}`} key={val} 
+        />
+      ))}
     </View>
   );
 };

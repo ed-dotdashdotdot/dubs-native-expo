@@ -23,7 +23,7 @@ import getGameSpecs from '../../js/helpers/getGameSpecs';
 import isButtonFound from '../../js/helpers/isButtonFound';
 import isPortrait from '../../js/helpers/isPortrait';
 import sliceValue from '../../js/helpers/sliceValue';
-import { ipAddress } from '../../configuration/config.json';
+import { colours, ipAddress } from '../../configuration/config.json';
 
 const GameBoard = props => {
   const { dimensions, level } = { ...props };
@@ -259,7 +259,7 @@ const GameBoard = props => {
                     <View
                       style={[
                         {
-                          borderColor: 'white',
+                          borderColor: colours.white,
                           borderStyle: 'solid',
                           borderWidth: '2',
                           height: gameSpecs.height / gameSpecs.rows,
@@ -273,7 +273,7 @@ const GameBoard = props => {
                     <View
                       style={[
                         {
-                          borderColor: 'black',
+                          borderColor: colours.black,
                           borderStyle: 'solid',
                           borderWidth: '2',
                           height: gameSpecs.height / gameSpecs.rows - 4,
