@@ -10,7 +10,10 @@ import allActions from '../../actions';
 
 import ExpoFastImage from 'expo-fast-image';
 
-import { defaultImages } from '../../configuration/config.json';
+import {
+  defaultImages,
+  gameBoardCornerRadius,
+} from '../../configuration/config.json';
 import drawGameBoardBorderRadius from '../../js/helpers/drawGameBoardBorderRadius';
 import getCorners from '../../js/helpers/getCorners';
 import getGameArray from '../../js/helpers/getGameArray';
@@ -122,7 +125,7 @@ const GameBoard = props => {
   const topRightSquare = getCorners(level, isDevicePortrait).topRight;
   const bottomLeftSquare = getCorners(level, isDevicePortrait).bottomLeft;
 
-  const cornerRadius = 10;
+  const cornerRadius = gameBoardCornerRadius;
 
   return (
     <View 
