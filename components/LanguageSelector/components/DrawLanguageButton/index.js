@@ -3,12 +3,12 @@ import { TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
-import DeSvg from '../../../flags/DeSvg';
-import EnSvg from '../../../flags/EnSvg';
-import EsSvg from '../../../flags/EsSvg';
-import FrSvg from '../../../flags/FrSvg';
-import ItSvg from '../../../flags/ItSvg';
-import PtSvg from '../../../flags/PtSvg';
+import DeSvg from '../flags/DeSvg';
+import EnSvg from '../flags/EnSvg';
+import EsSvg from '../flags/EsSvg';
+import FrSvg from '../flags/FrSvg';
+import ItSvg from '../flags/ItSvg';
+import PtSvg from '../flags/PtSvg';
 
 import { colours } from '../../../../configuration/config.json';
 
@@ -30,7 +30,6 @@ const DrawLanguageButton = props => {
       <View>
         <TouchableOpacity
           // accessibilityLabel="Switch language to German"
-          // activeOpacity={0.5}
           onPress={() => {
             dispatch(languageActions.setChangeLanguage(whichLanguage));
           }}
