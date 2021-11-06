@@ -44,11 +44,11 @@ const DrawThumb = props => {
           cacheKey={`image-${imageRef}-small`}
           style={[
             {
+              borderColor: 'white',
+              borderRadius: 8,
+              borderWidth: 2,
               height: '100%',
               width: '100%',
-              borderColor: 'white',
-              borderWidth: 2,
-              borderRadius: 8,
             }
           ]}
         />
