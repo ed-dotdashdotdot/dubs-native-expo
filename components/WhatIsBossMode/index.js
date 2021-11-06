@@ -5,6 +5,7 @@ import allActions from '../../actions';
 
 import PageHeading from '../PageHeading';
 import Translate from '../Translate';
+import SmileyFaceSvg from './components/SmileyFaceSvg';
 import TurnOnBossModeButton from '../TurnOnBossModeButton';
 import { colours, fontFamily } from '../../configuration/config.json';
 
@@ -45,16 +46,14 @@ const WhatIsBossMode = props => {
               id="what-is-boss-mode-description"
             >
               <Text
-                style={[
-                  {
-                    color: colours.white,
-                    fontFamily: fontFamily,
-                    fontSize: 28,
-                    fontWeight: 'bold',
-                    marginBottom: 12,
-                    textAlign: 'center',
-                  },
-                ]}
+                style={{
+                  color: colours.white,
+                  fontFamily: fontFamily,
+                  fontSize: 28,
+                  fontWeight: 'bold',
+                  marginBottom: 12,
+                  textAlign: 'center',
+                }}
               >
                 <Translate textKey="whatIsBossMode_title_normal_mode" />
               </Text>
@@ -73,16 +72,7 @@ const WhatIsBossMode = props => {
                     flex: 2,
                   }}
                 >
-                  <Image
-                    source={require('./img/boss-mode-example.jpg')}
-                    style={{
-                      borderColor: colours.white,
-                      borderRadius: 4,
-                      borderWidth: 2,
-                      height: 64,
-                      width: 64,
-                    }}
-                  />
+                  <SmileyFaceSvg height={48} width={48} />
                 </View>
                 <View
                   style={{
@@ -91,15 +81,13 @@ const WhatIsBossMode = props => {
                 >
                   <Text 
                     id="equals"
-                    style={[
-                      {
-                        color: colours.white,
-                        fontFamily: fontFamily,
-                        fontSize: 48,
-                        fontWeight: 'bold',
-                        textAlign: 'center',
-                      },
-                    ]}
+                    style={{
+                      color: colours.white,
+                      fontFamily: fontFamily,
+                      fontSize: 48,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                    }}
                   >
                     =
                   </Text>
@@ -111,34 +99,19 @@ const WhatIsBossMode = props => {
                     flex: 2,
                   }}
                 >
-                  <Image
-                    source={require('./img/boss-mode-example.jpg')}
-                    style={{
-                      borderColor: colours.white,
-                      borderRadius: 4,
-                      borderWidth: 2,
-                      height: 64,
-                      width: 64,
-                    }}
-                  />
+                  <SmileyFaceSvg height={48} width={48} />
                 </View>
               </View>
-              <View
-                style={{
-                  marginTop: 12,
-                }}
-              >
+              <View>
                 <Text
-                  style={[
-                    {
-                      color: colours.white,
-                      fontFamily: fontFamily,
-                      fontSize: 20,
-                      fontWeight: 'bold',
-                      textAlign: 'center',
-                      marginTop: 12,
-                    },
-                  ]}
+                  style={{
+                    color: colours.white,
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    fontWeight: 'bold',
+                    marginTop: 12,
+                    textAlign: 'center',
+                  }}
                 >
                   <Translate textKey="whatIsBossMode_description_normal_mode" />
                 </Text>
@@ -161,16 +134,14 @@ const WhatIsBossMode = props => {
               id="what-is-boss-mode-description"
             >
               <Text
-                style={[
-                  {
-                    color: colours.white,
-                    fontFamily: fontFamily,
-                    fontSize: 28,
-                    fontWeight: 'bold',
-                    marginBottom: 12,
-                    textAlign: 'center',
-                  },
-                ]}
+                style={{
+                  color: colours.white,
+                  fontFamily: fontFamily,
+                  fontSize: 28,
+                  fontWeight: 'bold',
+                  marginBottom: 12,
+                  textAlign: 'center',
+                }}
               >
                 <Translate textKey="whatIsBossMode_title_boss_mode" />
               </Text>
@@ -189,16 +160,7 @@ const WhatIsBossMode = props => {
                     flex: 2,
                   }}
                 >
-                  <Image
-                    source={require('./img/boss-mode-example.jpg')}
-                    style={{
-                      borderColor: colours.white,
-                      borderRadius: 4,
-                      borderWidth: 2,
-                      height: 64,
-                      width: 64,
-                    }}
-                  />
+                  <SmileyFaceSvg height={48} width={48} />
                 </View>
                 <View
                   style={{
@@ -207,15 +169,13 @@ const WhatIsBossMode = props => {
                 >
                   <Text 
                     id="equals"
-                    style={[
-                      {
-                        color: colours.white,
-                        fontFamily: fontFamily,
-                        fontSize: 48,
-                        fontWeight: 'bold',
-                        textAlign: 'center',
-                      },
-                    ]}
+                    style={{
+                      color: colours.white,
+                      fontFamily: fontFamily,
+                      fontSize: 48,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                    }}
                   >
                     =
                   </Text>
@@ -228,34 +188,19 @@ const WhatIsBossMode = props => {
                     transform: [{ scale: -1 }],
                   }}
                 >
-                  <Image
-                    source={require('./img/boss-mode-example.jpg')}
-                    style={{
-                      borderColor: colours.white,
-                      borderRadius: 4,
-                      borderWidth: 2,
-                      height: 64,
-                      width: 64,
-                    }}
-                  />
+                  <SmileyFaceSvg height={48} width={48} />
                 </View>
               </View>
-              <View
-                style={{
-                  marginTop: 12,
-                }}
-              >
+              <View>
                 <Text
-                  style={[
-                    {
-                      color: colours.white,
-                      fontFamily: fontFamily,
-                      fontSize: 20,
-                      fontWeight: 'bold',
-                      textAlign: 'center',
-                      marginTop: 12,
-                    },
-                  ]}
+                  style={{
+                    color: colours.white,
+                    fontFamily: fontFamily,
+                    fontSize: 20,
+                    fontWeight: 'bold',
+                    marginTop: 12,
+                    textAlign: 'center',
+                  }}
                 >
                   <Translate textKey="whatIsBossMode_description_boss_mode" />
                 </Text>
