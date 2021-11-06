@@ -9,9 +9,7 @@ const AppStateManager = props => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   const handleAppStateChange = (state, gameStatus=game.status) => {
-    // console.log(`state: ${state}`);
-    // console.log(`game.status: ${game.status}`);
-    console.log(`gameStatus: ${gameStatus}`);
+    // console.log`gameStatus: ${gameStatus}`);
     console.log(`status: ${status}`);
     // console.log(game);
     // console.log('- - -');
@@ -27,7 +25,7 @@ const AppStateManager = props => {
     return (() => {
       AppState.removeEventListener('change', handleAppStateChange);
     });
-  }, []);
+  }, [status]);
   return children;
 }
 
