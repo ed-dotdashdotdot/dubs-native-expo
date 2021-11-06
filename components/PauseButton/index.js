@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
-import PauseButtonSvg from '../PauseButtonSvg';
+import PauseButtonSvg from './components/PauseButtonSvg';
 
 const PauseButton = () => {
   const { gameActions } = { ...allActions };
