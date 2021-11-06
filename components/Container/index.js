@@ -30,11 +30,6 @@ const Container = () => {
     <AppStateManager
       status={game.status}
     >
-      <Text
-        style={{
-          color: 'white'
-        }}
-      >{game.status}</Text>
       <View 
         style={{
           alignItems: 'center',
