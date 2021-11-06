@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 import Translate from '../Translate';
 
 const GameOnHeader = props => {
-  const { level } = { ...props };
+  const { bossMode, level } = { ...props };
   return (
     <View 
       style={[
@@ -29,7 +29,16 @@ const GameOnHeader = props => {
           }
         ]}
       >
-        <Translate textKey={level} />
+        <Translate textKey={`${level}Level`} />
+        {
+          bossMode && (
+            <Text>
+              (
+                <Translate textKey="bossMode" />
+              )
+            </Text>
+          )
+        }
       </Text>
     </View>
   );
