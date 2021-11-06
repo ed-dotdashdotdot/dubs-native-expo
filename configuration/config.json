@@ -95,5 +95,13 @@
     "patterns": [ "5", "10", "11", "12" ],
     "technology": [ "13", "14", "15" ],
     "typography": [ "5", "16", "17", "18", "19" ]
+  },
+  "gameBoardCornerRadius": 10,
+  "colours": {
+    "green": "#ff0000",
+    "amber": "orange",
+    "red": "red",
+    "black": "#000000",
+    "white": "#ffffff"
   }
 }
