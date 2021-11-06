@@ -1,4 +1,10 @@
-const drawGameBoardBorderRadius = (position, val, squareMatches, cornerRadius, bossMode) => {
+const drawGameBoardBorderRadius = (
+  position, 
+  val, 
+  squareMatches, 
+  cornerRadius, 
+  bossMode
+) => {
   if (position === 'bottomLeft') {
     if (bossMode) {
       if (val.indexOf('B') !== -1) {
