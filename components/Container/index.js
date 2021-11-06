@@ -1,9 +1,10 @@
 // import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
+import AppStateManager from '../AppStateManager';
 import Header from '../Header';
 import GameOnHeader from '../GameOnHeader';
 import GameOptions from '../GameOptions';
@@ -26,32 +27,44 @@ const Container = () => {
   }, [game.found.length]);
 
   return (
-    <View 
-      style={{
-        alignItems: 'center',
-        backgroundColor: 'rgba(0,0,0, 0.33)',
-        flex: 1,
-        paddingLeft: 12,
-        paddingRight: 12,
-      }}
+    <AppStateManager
+      status={game.status}
     >
-      {game.status === 'game-on' ? (
-        <GameOnHeader level={game.level} />
-      ) : 
-        <Header />
-      }
-      <Info />
-      {game.status === 'game-home' && <LanguageSelector />}
-      {
-        game.status === 'game-home'
-          ? <LanguageSelector language={language.selected} />
-          : game.status === 'game-on' 
-            ? <GameOptions />
-            : game.status === 'game-loading'
-              ? null
-              : <Options />
-      }
-    </View>
+      <Text
+        style={{
+          color: 'white'
+        }}
+      >{game.status}</Text>
+      <View 
+        style={{
+          alignItems: 'center',
+          backgroundColor: 'rgba(0,0,0, 0.33)',
+          flex: 1,
+          paddingLeft: 12,
+          paddingRight: 12,
+        }}
+      >
+        {game.status === 'game-on' ? (
+          <GameOnHeader 
+            bossMode={game.bossMode} 
+            level={game.level} 
+          />
+        ) : 
+          <Header />
+        }
+        <Info />
+        {game.status === 'game-home' && <LanguageSelector />}
+        {
+          game.status === 'game-home'
+            ? <LanguageSelector language={language.selected} />
+            : game.status === 'game-on' 
+              ? <GameOptions />
+              : game.status === 'game-loading'
+                ? null
+                : <Options />
+        }
+      </View>
+    </AppStateManager>
   );
 }
 
