@@ -52,6 +52,9 @@ const Info = () => {
                   width: infoWidth,
                 },
                 globalStyles.border,
+                {
+                  borderColor: game.lastMove === 'incorrect' ? 'red' : 'white',
+                }
               ]}
             >
               {(() => {
