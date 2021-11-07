@@ -17,6 +17,9 @@ const globalStyles = StyleSheet.create({
     paddingRight: 12,
     paddingTop: 24,
   },
+  padding12: {
+    padding: 12,
+  },
 });
 
 export default globalStyles;
