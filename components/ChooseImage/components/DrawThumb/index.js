@@ -42,13 +42,15 @@ const DrawThumb = props => {
         <ExpoFastImage
           uri={imageSrc}
           cacheKey={`image-${imageRef}-small`}
-          style={{
-            borderColor: colours.white,
-            borderRadius: 8,
-            borderWidth: 2,
-            height: '100%',
-            width: '100%',
-          }}
+          style={[
+            {
+              borderColor: colours.white,
+              borderWidth: 2,
+              height: '100%',
+              width: '100%',
+            },
+            globalStyles.borderRadius8,
+          ]}
         />
       </TouchableOpacity>
     </View>

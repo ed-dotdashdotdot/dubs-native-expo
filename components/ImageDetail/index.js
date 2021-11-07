@@ -36,19 +36,18 @@ const ImageDetail = props => {
           style={[
             {
               alignSelf: 'center',
-              borderRadius: 8,
               height: imageWidth,
               overflow: 'hidden',
               width: imageWidth,
             },
             globalStyles.border,
+            globalStyles.borderRadius8,
           ]}
         >
           <ExpoFastImage 
             uri={imageSrc}
             cacheKey={`image-${images.detail}-medium`}
             style={{
-              borderRadius: 8,
               height: '100%',
               width: '100%',
             }}

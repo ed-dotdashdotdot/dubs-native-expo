@@ -18,7 +18,6 @@ const ImageGrid = props => {
     <View
       style={[
         {
-          borderRadius: 8,
           borderTopWidth: 0,
           borderTopLeftRadius: 0,
           borderTopRightRadius: 0,
@@ -31,6 +30,7 @@ const ImageGrid = props => {
           marginTop: 0,
         },
         globalStyles.border,
+        globalStyles.borderRadius8,
       ]}
     >
       {imageList.map(val => (

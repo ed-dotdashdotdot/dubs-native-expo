@@ -12,7 +12,6 @@ const PageHeading = props => {
     <View 
       style={[
         {
-          borderRadius: 8,
           backgroundColor: colour === 'green' 
             ? colours.green  
             : colour === 'amber' 
@@ -24,6 +23,7 @@ const PageHeading = props => {
           padding: 12,
         },
         globalStyles.border,
+        globalStyles.borderRadius8,
       ]}
     >
       <Text

@@ -42,13 +42,15 @@ const GameReady = props => {
         
         <View 
           id='boss-mode-buttons'
-          style={{
-            backgroundColor: colours.black,
-            borderRadius: 8,
-            display: 'flex',
-            flexDirection: 'row',
-            marginBottom: 12,
-          }}
+          style={[
+            {
+              backgroundColor: colours.black,
+              display: 'flex',
+              flexDirection: 'row',
+              marginBottom: 12,
+            },
+            globalStyles.borderRadius8,
+          ]}
         >
           <View
             style={[
