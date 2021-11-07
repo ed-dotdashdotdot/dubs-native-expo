@@ -286,6 +286,27 @@ const GameBoard = props => {
                     />
                   </>
                 )}
+                {
+                  game.lastMove === 'incorrect' && 
+                  game.highlight.includes(val) && (
+                    <View
+                      style={[
+                        {
+                          backgroundColor: 'rgba(128,0,0, 0.5)',
+                          borderColor: colours.red,
+                          borderStyle: 'solid',
+                          borderWidth: '4',
+                          left: 2,
+                          position: 'absolute',
+                          top: 2,
+                        }, {
+                          height: (gameSpecs.height / gameSpecs.rows) - 4,
+                          width: (gameSpecs.width / gameSpecs.cols) - 4,
+                        }
+                      ]}
+                    />
+                  )
+                }
               </Pressable>
             </View>
           )
