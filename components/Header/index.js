@@ -1,7 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
+import { colours } from '../../configuration/config.json';
 
 import LogoSvg from './components/LogoSvg';
+
 
 const Header = () => {
   return (
@@ -14,7 +16,10 @@ const Header = () => {
         zIndex: 100,
       }}
     >
-      <LogoSvg />
+      <LogoSvg 
+        lineColour={colours.white} 
+        textColour={colours.white} 
+      />
     </View>
   );
 }

@@ -1,10 +1,13 @@
 import React from 'react';
 import { View } from 'react-native';
 
+import { colours } from '../../../../configuration/config.json';
+
 import LanguageSelectorSelectedSvg from '../LanguageSelectorSelectedSvg';
 
 const LanguageSelectorSelected = props => {
   const { selectedLanguage } = { ...props };
+  const highlightColour = colours.white;
   return (
     <View 
       style={[
@@ -19,22 +22,22 @@ const LanguageSelectorSelected = props => {
       ]}
     >
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'de' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'de' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'en' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'en' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'es' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'es' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'fr' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'fr' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'it' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'it' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'pt' && <LanguageSelectorSelectedSvg />}
+        {selectedLanguage === 'pt' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
       </View>
     </View>
   );
