@@ -129,13 +129,16 @@ const GameBoard = props => {
 
   return (
     <View 
-      style={{
-        display: 'flex',
-        flexDirection: "row",
-        flexWrap: 'wrap',
-        height: gameSpecs.height,
-        width: gameSpecs.width,
-      }}
+      style={[
+        {
+          display: 'flex',
+          flexDirection: "row",
+          flexWrap: 'wrap',
+        }, {
+          height: gameSpecs.height,
+          width: gameSpecs.width,
+        }
+      ]}
     >
       {
         gameArray.map((val, index) => {
@@ -189,29 +192,32 @@ const GameBoard = props => {
                       // }}
                       cacheKey={`image-${images.selected}`}
                       resizeMode='stretch'
-                      style={{
-                        height: gameSpecs.height,
-                        left: getGameGridPositions(
-                          val,
-                          level,
-                          isDevicePortrait,
-                          gameSpecs.width,
-                          gameSpecs.height,
-                          gameSpecs.rows,
-                          gameSpecs.cols
-                          ).x,
-                        position: 'absolute',
-                        top: getGameGridPositions(
-                          val,
-                          level,
-                          isDevicePortrait,
-                          gameSpecs.width,
-                          gameSpecs.height,
-                          gameSpecs.rows,
-                          gameSpecs.cols
-                        ).y,
-                        width: gameSpecs.width,
-                      }}
+                      style={[
+                        {
+                          position: 'absolute',
+                        }, {
+                          height: gameSpecs.height,
+                          left: getGameGridPositions(
+                            val,
+                            level,
+                            isDevicePortrait,
+                            gameSpecs.width,
+                            gameSpecs.height,
+                            gameSpecs.rows,
+                            gameSpecs.cols
+                            ).x,
+                          top: getGameGridPositions(
+                            val,
+                            level,
+                            isDevicePortrait,
+                            gameSpecs.width,
+                            gameSpecs.height,
+                            gameSpecs.rows,
+                            gameSpecs.cols
+                          ).y,
+                          width: gameSpecs.width,
+                        }
+                      ]}
                       uri={imgSrc}
                     />
                     {/* <Image
@@ -249,28 +255,34 @@ const GameBoard = props => {
                 {game.selected === val && (
                   <>
                     <View
-                      style={{
-                        borderColor: colours.white,
-                        borderStyle: 'solid',
-                        borderWidth: '2',
-                        height: gameSpecs.height / gameSpecs.rows,
-                        left: 0,
-                        position: 'absolute',
-                        top: 0,
-                        width: gameSpecs.width / gameSpecs.cols,
-                      }}
+                      style={[
+                        {
+                          borderColor: colours.white,
+                          borderStyle: 'solid',
+                          borderWidth: '2',
+                          left: 0,
+                          position: 'absolute',
+                          top: 0,
+                        }, {
+                          height: gameSpecs.height / gameSpecs.rows,
+                          width: gameSpecs.width / gameSpecs.cols,
+                        }
+                      ]}
                     />
                     <View
-                      style={{
-                        borderColor: colours.black,
-                        borderStyle: 'solid',
-                        borderWidth: '2',
-                        height: gameSpecs.height / gameSpecs.rows - 4,
-                        left: 2,
-                        position: 'absolute',
-                        top: 2,
-                        width: gameSpecs.width / gameSpecs.cols - 4,
-                      }}
+                      style={[
+                        {
+                          borderColor: colours.black,
+                          borderStyle: 'solid',
+                          borderWidth: '2',
+                          left: 2,
+                          position: 'absolute',
+                          top: 2,
+                        }, {
+                          height: gameSpecs.height / gameSpecs.rows - 4,
+                          width: gameSpecs.width / gameSpecs.cols - 4,
+                        }
+                      ]}
                     />
                   </>
                 )}
