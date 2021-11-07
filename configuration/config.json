@@ -1,8 +1,8 @@
 {
   "ipAddress": {
     "local": "192.168.4.33",
-    "server": "192.168.4.33", 
-    "server-EMM18": "192.168.1.115"
+    "server-EMBA": "192.168.4.33", 
+    "server": "192.168.1.115"
   },
   "gameArray": [
     "001", "002", "003", "004", "005", "006", "007", "008",
@@ -23,7 +23,7 @@
     "hard": 96,
     "normal": 48
   },
-  "supportedLanguages": [
+  "supportedLanguages123123": [
     {
       "lang": "de",
       "text": "Deutsche"
@@ -44,10 +44,10 @@
       "text": "Português"
     }
   ],
-  "wowMessageAfterMs": 1200000,
-  "oneHourMs": 3600000,
-  "oneDayMs": 86400000,
-  "imageSections": [
+  "wowMessageAfterMs123123": 1200000,
+  "oneHourMs123123": 3600000,
+  "oneDayMs123123": 86400000,
+  "imageSections123123": [
     "topRated",
     "difficult",
     "animals",
@@ -81,13 +81,13 @@
     "22",
     "23"
   ],
-  "defaultImages_normal": [
+  "defaultImages_normal123123": [
     "face1",
     "face2.jpg",
     "face3.jpg",
     "face4.jpg"
   ],
-  "imageCategories": {
+  "imageCategories123123": {
     "topRated": [ "1", "2", "3" ],
     "difficult": [ "4", "5" ],
     "architecture": [ "20", "21", "22", "23" ],
@@ -104,6 +104,12 @@
     "red": "#aa0000",
     "white": "#ffffff"
   },
-  "fontFamily123": "Helvetica",
-  "fontFamily": "Courier New"
+  "fontFamily123123": "Helvetica",
+  "fontFamily": "Courier New",
+  "textSize": {
+    "bodyText": 16,
+    "buttonText": 24,
+    "heading": 48,
+    "subHeading": 36
+  }
 }
