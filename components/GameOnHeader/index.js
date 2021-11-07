@@ -21,7 +21,7 @@ const GameOnHeader = props => {
         style={{
           color: colours.white,
           fontFamily: fontFamily,
-          fontSize: 24,
+          fontSize: 20,
           fontWeight: 'bold',
           textAlign: 'center',
         }}
