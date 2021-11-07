@@ -16,15 +16,13 @@ const SectionHeading = props => {
     <View
       style={[
         {
-          borderColor: colours.white,
           borderRadius: 8,
-          borderStyle: 'solid',
-          borderWidth: 2,
           borderBottomWidth: 0,
           borderBottomLeftRadius: 0,
           borderBottomRightRadius: 0,
           padding: 12,
-        }
+        },
+        globalStyles.border,
       ]}
     >
       <Text

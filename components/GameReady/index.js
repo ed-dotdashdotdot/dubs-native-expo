@@ -51,16 +51,16 @@ const GameReady = props => {
           }}
         >
           <View
-            style={{
-              borderColor: colours.white,
-              borderStyle: 'solid',
-              borderWidth: 2,
-              borderTopLeftRadius: 8,
-              borderBottomLeftRadius: 8,
-              borderRightWidth: 0,
-              flex: 1,
-              padding: 12,
-            }}
+            style={[
+              {
+                borderTopLeftRadius: 8,
+                borderBottomLeftRadius: 8,
+                borderRightWidth: 0,
+                flex: 1,
+                padding: 12,
+              },
+              globalStyles.border,
+            ]}
           >
             <TouchableOpacity
               onPress={() => dispatch(gameActions.setGameBossMode(!game.bossMode))}
@@ -82,15 +82,15 @@ const GameReady = props => {
             </TouchableOpacity>
           </View>
           <View
-            style={{
-              borderColor: colours.white,
-              borderStyle: 'solid',
-              borderWidth: 2,
-              borderTopRightRadius: 8,
-              borderBottomRightRadius: 8,
-              justifyContent: 'center',
-              width: 48,
-            }}
+            style={[
+              {
+                borderTopRightRadius: 8,
+                borderBottomRightRadius: 8,
+                justifyContent: 'center',
+                width: 48,
+              },
+              globalStyles.border
+            ]}
           >
             <TouchableOpacity
               onPress={() => dispatch(gameActions.setGameStatus('what-is-boss-mode'))}

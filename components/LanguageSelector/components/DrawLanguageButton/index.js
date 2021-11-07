@@ -12,6 +12,8 @@ import PtSvg from '../flags/PtSvg';
 
 import { colours } from '../../../../configuration/config.json';
 
+import globalStyles from '../../../../css/style';
+
 const DrawLanguageButton = props => {
   const { whichLanguage } = { ...props };
   const { languageActions } = { ...allActions };
@@ -41,16 +43,16 @@ const DrawLanguageButton = props => {
           }}
         >
           <View
-            style={{
-              alignSelf: 'center',
-              borderColor: colours.white,
-              borderRadius: flagSize / 2,
-              borderStyle: 'solid',
-              borderWidth: flagBorderWidth,
-              height: flagSize,
-              marginTop: (buttonSize - flagSize) / 2,
-              width: flagSize,
-            }}
+            style={[
+              {
+                alignSelf: 'center',
+                borderRadius: flagSize / 2,
+                height: flagSize,
+                marginTop: (buttonSize - flagSize) / 2,
+                width: flagSize,
+              },
+              globalStyles.border,
+            ]}
           >
             {(() => {
               switch (whichLanguage) {

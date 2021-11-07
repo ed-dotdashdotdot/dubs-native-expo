@@ -27,15 +27,15 @@ const WhatIsBossMode = props => {
         <PageHeading text={polyglot.t(`whatIsBossMode.${lang.toUpperCase()}`)} />
         <View>
           <View
-            style={{
-              backgroundColor: colours.black,
-              borderColor: colours.white,
-              borderStyle: 'solid',
-              borderWidth: 2,
-              borderRadius: 8,
-              marginBottom: 12,
-              padding: 12,
-            }}
+            style={[
+              {
+                backgroundColor: colours.black,
+                borderRadius: 8,
+                marginBottom: 12,
+                padding: 12,
+              },
+              globalStyles.border,
+            ]}
           >
             <View>
               <Text
@@ -108,15 +108,15 @@ const WhatIsBossMode = props => {
             </View>           
           </View>
           <View 
-            style={{
-              backgroundColor: colours.black,
-              borderColor: colours.white,
-              borderStyle: 'solid',
-              borderWidth: 2,
-              borderRadius: 8,
-              marginBottom: 12,
-              padding: 12,
-            }}
+            style={[
+              {
+                backgroundColor: colours.black,
+                borderRadius: 8,
+                marginBottom: 12,
+                padding: 12,
+              },
+              globalStyles.border,
+            ]}
           >
             <View>
               <Text

@@ -45,14 +45,12 @@ const GameOver = () => {
             {
               alignContent: 'flex-end',
               backgroundColor: colours.black,
-              borderColor: colours.white,
-              borderStyle: 'solid',
               borderRadius: 8,
-              borderWidth: 2,
               flex: 1,
               padding: 24,
               marginBottom: 24,
-            }
+            },
+            globalStyles.border,
           ]}
         >
           <Text style={[

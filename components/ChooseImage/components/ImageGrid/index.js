@@ -5,6 +5,8 @@ import { colours } from '../../../../configuration/config.json';
 
 import DrawThumb from '../DrawThumb';
 
+import globalStyles from '../../../../css/style';
+
 const ImageGrid = props => {
   const {
     dimensions,
@@ -16,10 +18,7 @@ const ImageGrid = props => {
     <View
       style={[
         {
-          borderColor: colours.white,
           borderRadius: 8,
-          borderStyle: 'solid',
-          borderWidth: 2,
           borderTopWidth: 0,
           borderTopLeftRadius: 0,
           borderTopRightRadius: 0,
@@ -30,7 +29,8 @@ const ImageGrid = props => {
           padding: 12,
           paddingTop: 0,
           marginTop: 0,
-        }
+        },
+        globalStyles.border,
       ]}
     >
       {imageList.map(val => (

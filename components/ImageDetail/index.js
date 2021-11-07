@@ -36,14 +36,12 @@ const ImageDetail = props => {
           style={[
             {
               alignSelf: 'center',
-              borderColor: colours.white,
-              borderStyle: 'solid',
-              borderRadius: 10,
-              borderWidth: 2,
+              borderRadius: 8,
               height: imageWidth,
               overflow: 'hidden',
               width: imageWidth,
             },
+            globalStyles.border,
           ]}
         >
           <ExpoFastImage 
