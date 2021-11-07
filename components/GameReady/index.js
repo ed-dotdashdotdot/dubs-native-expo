@@ -9,11 +9,13 @@ import StartButton from '../StartButton';
 import Translate from '../Translate';
 import { colours, fontFamily } from '../../configuration/config.json';
 
-import Polyglot from 'node-polyglot';
-import i18n from '../../i18n';
+import InfoInner from '../InfoInner';
 
 import getGameData from '../../js/helpers/getGameData';
 import whichLevelColour from '../../js/helpers/whichLevelColour';
+
+import Polyglot from 'node-polyglot';
+import i18n from '../../i18n';
 
 import globalStyles from '../../css/style.js';
 
@@ -34,10 +36,7 @@ const GameReady = props => {
 
   return (
     <ScrollView>
-      <View 
-        style={[
-          globalStyles.infoInner,
-        ]}>
+      <InfoInner>
         <PageHeading 
           colour={whichLevelColour(level)}
           text={polyglot.t(`${level}Level.${lang.toUpperCase()}`)} 
@@ -112,16 +111,13 @@ const GameReady = props => {
               </Text>
             </TouchableOpacity>
           </View>
-
         </View>
-
-
         <ChooseAnImageButton />
         <StartButton
           gameData={gameData}
           startTextKey={startTextKey}
         />
-      </View>
+      </InfoInner>
     </ScrollView>
   );
 }

@@ -6,6 +6,7 @@ import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
 import DrawSection from './components/DrawSection';
+import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 
 import globalStyles from '../../css/style.js';
@@ -21,11 +22,7 @@ const ChooseImage = props => {
 
   return (
     <ScrollView>
-      <View 
-        style={[
-          globalStyles.infoInner,
-        ]}
-      >
+      <InfoInner>
         <PageHeading 
           text={polyglot.t(`chooseAnImageToPlayWith.${lang.toUpperCase()}`)} 
         />
@@ -40,7 +37,7 @@ const ChooseImage = props => {
             ))
           }
         </View>
-      </View>
+      </InfoInner>
     </ScrollView>
   );
 };

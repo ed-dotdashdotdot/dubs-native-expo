@@ -3,6 +3,7 @@ import { ScrollView, View, } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
+import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
 
@@ -36,16 +37,13 @@ const GamePaused = () => {
 
   return (
     <ScrollView>
-      <View 
-        style={[
-          globalStyles.infoInner,
-        ]}>
+      <InfoInner>
         <PageHeading 
           colour={whichLevelColour(game.level)}
           text={polyglot.t(`gamePaused.${lang.toUpperCase()}`)} 
         />
         <NewGameButtons section="game-paused" />
-      </View>
+      </InfoInner>
     </ScrollView>
   );
 }

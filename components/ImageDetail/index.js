@@ -2,8 +2,9 @@ import React from 'react';
 import { Text, ScrollView, TouchableOpacity, View, } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
-
 import ExpoFastImage from 'expo-fast-image';
+
+import InfoInner from '../InfoInner';
 import Translate from '../Translate';
 
 import getGameData from '../../js/helpers/getGameData';
@@ -26,11 +27,7 @@ const ImageDetail = props => {
 
   return (
     <ScrollView>
-      <View 
-        style={[
-          globalStyles.infoInner,
-        ]}
-      >
+      <InfoInner>
         <View 
           id="image-detail-img"
           style={[
@@ -92,7 +89,7 @@ const ImageDetail = props => {
             </Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </InfoInner>
     </ScrollView>
   );
 };

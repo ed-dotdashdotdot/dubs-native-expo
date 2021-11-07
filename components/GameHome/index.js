@@ -27,6 +27,7 @@ import { useSelector } from 'react-redux';
 //   // Windows: ?
 // });
 
+import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
 
@@ -46,14 +47,10 @@ const GameHome = () => {
 
   return (
     <ScrollView>
-      <View 
-        style={[
-          globalStyles.infoInner,
-        ]}
-      >
+      <InfoInner>
         <PageHeading text={polyglot.t(`howToPlay.${lang.toUpperCase()}`)} />
         <NewGameButtons section="game-home" />
-      </View>
+      </InfoInner>
     </ScrollView>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { useSelector } from 'react-redux';
 
+import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import Translate from '../Translate';
 import SmileyFaceSvg from './components/SmileyFaceSvg';
@@ -23,11 +24,7 @@ const WhatIsBossMode = props => {
 
   return (
     <ScrollView>
-      <View 
-        style={[
-          globalStyles.infoInner,
-        ]}
-      >
+      <InfoInner>
         <PageHeading text={polyglot.t(`whatIsBossMode.${lang.toUpperCase()}`)} />
         <View>
           <View
@@ -197,7 +194,7 @@ const WhatIsBossMode = props => {
             bossMode={bossMode} 
           />
         </View>
-      </View>
+      </InfoInner>
     </ScrollView>    
   );
 }

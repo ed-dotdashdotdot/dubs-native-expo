@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import DrawGameDuration from '../DrawGameDuration';
+import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
 import Translate from '../Translate';
@@ -36,11 +37,7 @@ const GameOver = () => {
 
   return (
     <ScrollView>
-      <View 
-        style={[
-          globalStyles.infoInner,
-        ]}
-      >
+      <InfoInner>
         <PageHeading 
           text={polyglot.t(`gameOver.${lang.toUpperCase()}`)} 
         />
@@ -80,7 +77,7 @@ const GameOver = () => {
           </Text>
         </View>
         <NewGameButtons section="game-over" />
-      </View>
+      </InfoInner>
     </ScrollView>
   );
 }
