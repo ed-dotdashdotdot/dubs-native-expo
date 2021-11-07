@@ -67,7 +67,7 @@ const WhatIsBossMode = props => {
                     flex: 2,
                   }}
                 >
-                  <SmileyFaceSvg height={48} width={48} />
+                  <SmileyFaceSvg />
                 </View>
                 <View
                   style={{
@@ -92,7 +92,7 @@ const WhatIsBossMode = props => {
                     flex: 2,
                   }}
                 >
-                  <SmileyFaceSvg height={48} width={48} />
+                  <SmileyFaceSvg />
                 </View>
               </View>
               <View>
@@ -148,7 +148,7 @@ const WhatIsBossMode = props => {
                     flex: 2,
                   }}
                 >
-                  <SmileyFaceSvg height={48} width={48} />
+                  <SmileyFaceSvg />
                 </View>
                 <View
                   style={{
@@ -174,7 +174,7 @@ const WhatIsBossMode = props => {
                     transform: [{ scale: -1 }],
                   }}
                 >
-                  <SmileyFaceSvg height={48} width={48} />
+                  <SmileyFaceSvg />
                 </View>
               </View>
               <View>

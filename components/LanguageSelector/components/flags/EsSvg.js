@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import Svg, {
   Defs,
   Path,
@@ -7,7 +7,7 @@ import Svg, {
   G,
   Ellipse,
   Use,
-} from "react-native-svg"
+} from "react-native-svg";
 
 const EsSvg = props => (
   <Svg

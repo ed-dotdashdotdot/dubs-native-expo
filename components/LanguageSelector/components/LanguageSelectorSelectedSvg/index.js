@@ -1,5 +1,7 @@
-import React from "react"
-import Svg, { Path } from "react-native-svg"
+import React from "react";
+import Svg, { Path } from "react-native-svg";
+
+import { colours } from '../../../../configuration/config.json';
 
 const LanguageSelectorSelectedSvg = props => {
   const { colour } = { ...props };
@@ -15,5 +17,9 @@ const LanguageSelectorSelectedSvg = props => {
     </Svg>
   );
 };
+
+LanguageSelectorSelectedSvg.defaultProps = {
+  colour: colours.white,
+}
 
 export default LanguageSelectorSelectedSvg;

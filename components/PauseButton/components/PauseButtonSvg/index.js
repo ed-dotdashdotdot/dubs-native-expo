@@ -1,6 +1,7 @@
-import * as React from "react"
-import Svg, { Path } from "react-native-svg"
-/* SVGR has dropped some elements not supported by react-native-svg: style */
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
+
+import { colours } from '../../../../configuration/config.json';
 
 const PauseButtonSvg = props => {
   const { 
@@ -30,8 +31,8 @@ const PauseButtonSvg = props => {
 };
 
 PauseButtonSvg.defaultProps = {
-  colour: "#ffffff"
-}
+  colour: colours.white,
+};
   
 
 export default PauseButtonSvg;

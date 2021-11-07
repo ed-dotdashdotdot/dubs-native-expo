@@ -5,8 +5,6 @@ import allActions from '../../actions';
 
 import PauseButtonSvg from './components/PauseButtonSvg';
 
-import { colours } from '../../configuration/config.json';
-
 const PauseButton = () => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
@@ -17,7 +15,7 @@ const PauseButton = () => {
         dispatch(gameActions.setGameStatus('game-paused'));
       }}
     >
-      <PauseButtonSvg colour={colours.white} />
+      <PauseButtonSvg />
     </TouchableOpacity>
   );
 }

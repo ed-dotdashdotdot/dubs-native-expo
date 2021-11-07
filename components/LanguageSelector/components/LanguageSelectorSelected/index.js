@@ -20,22 +20,22 @@ const LanguageSelectorSelected = props => {
       }}
     >
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'de' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
+        {selectedLanguage === 'de' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'en' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
+        {selectedLanguage === 'en' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'es' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
+        {selectedLanguage === 'es' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'fr' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
+        {selectedLanguage === 'fr' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'it' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
+        {selectedLanguage === 'it' && <LanguageSelectorSelectedSvg />}
       </View>
       <View style={{ flex: 1 }}>
-        {selectedLanguage === 'pt' && <LanguageSelectorSelectedSvg colour={highlightColour} />}
+        {selectedLanguage === 'pt' && <LanguageSelectorSelectedSvg />}
       </View>
     </View>
   );

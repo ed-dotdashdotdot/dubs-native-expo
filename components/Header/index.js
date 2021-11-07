@@ -19,10 +19,7 @@ const Header = () => {
         }
       ]}
     >
-      <LogoSvg 
-        lineColour={colours.white} 
-        textColour={colours.white} 
-      />
+      <LogoSvg />
     </View>
   );
 }
