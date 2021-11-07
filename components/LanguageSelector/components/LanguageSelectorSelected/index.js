@@ -10,16 +10,14 @@ const LanguageSelectorSelected = props => {
   const highlightColour = colours.white;
   return (
     <View 
-      style={[
-        {
-          bottom: 60,
-          display: 'flex',
-          flexDirection: 'row',
-          height: 12,
-          position: 'absolute',
-          width: '100%',
-        }
-      ]}
+      style={{
+        bottom: 60,
+        display: 'flex',
+        flexDirection: 'row',
+        height: 12,
+        position: 'absolute',
+        width: '100%',
+      }}
     >
       <View style={{ flex: 1 }}>
         {selectedLanguage === 'de' && <LanguageSelectorSelectedSvg colour={highlightColour} />}

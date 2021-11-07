@@ -26,15 +26,13 @@ const SectionHeading = props => {
       ]}
     >
       <Text
-        style={[
-          {
-            color: colours.white,
-            fontFamily: fontFamily,
-            fontSize: 24,
-            fontWeight: 'bold',
-            textAlign: 'center',
-          },
-        ]}
+        style={{
+          color: colours.white,
+          fontFamily: fontFamily,
+          fontSize: 24,
+          fontWeight: 'bold',
+          textAlign: 'center',
+        }}
       >
         <Translate textKey={textKey} />
       </Text>

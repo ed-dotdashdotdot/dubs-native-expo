@@ -46,12 +46,12 @@ const Info = () => {
             <View 
               id='info'
               style={[
-                globalStyles.border,
                 {
                   borderRadius: 12,
                   height: infoHeight,
                   width: infoWidth,
-                }
+                },
+                globalStyles.border,
               ]}
             >
               {(() => {

@@ -113,11 +113,9 @@ const DrawSection = props => {
   return (
     <View 
       key={`${imagesValue.name}`}
-      style={[
-        {
-          marginBottom: 12,
-        }
-      ]}
+      style={{
+        marginBottom: 12,
+      }}
     >
       {!imagesValue.loaded && imagesValue.error === false ? (
         <TouchableOpacity

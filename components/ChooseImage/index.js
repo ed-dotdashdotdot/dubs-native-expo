@@ -21,9 +21,11 @@ const ChooseImage = props => {
 
   return (
     <ScrollView>
-      <View style={[
-        globalStyles.infoInner
-      ]}>
+      <View 
+        style={[
+          globalStyles.infoInner
+        ]}
+      >
         <PageHeading 
           text={polyglot.t(`chooseAnImageToPlayWith.${lang.toUpperCase()}`)} 
         />

@@ -47,13 +47,11 @@ const ImageDetail = props => {
           <ExpoFastImage 
             uri={imageSrc}
             cacheKey={`image-${images.detail}-medium`}
-            style={[
-              {
-                borderRadius: 8,
-                height: '100%',
-                width: '100%',
-              },
-            ]}
+            style={{
+              borderRadius: 8,
+              height: '100%',
+              width: '100%',
+            }}
           />
         </View>
         <View 
@@ -75,22 +73,18 @@ const ImageDetail = props => {
               dispatch(gameActions.setGameData(gameData));
               dispatch(gameActions.setGameStatus('game-loading'));
             }}
-            style={[
-              {
-                padding: 12,
-              }
-            ]}
+            style={{
+              padding: 12,
+            }}
           >
             <Text
-              style={[
-                {
-                  color: colours.white,
-                  fontFamily: fontFamily,
-                  fontSize: 20,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                },
-              ]}
+              style={{
+                color: colours.white,
+                fontFamily: fontFamily,
+                fontSize: 20,
+                fontWeight: 'bold',
+                textAlign: 'center',
+              }}
             >
               <Translate textKey="start" />
             </Text>

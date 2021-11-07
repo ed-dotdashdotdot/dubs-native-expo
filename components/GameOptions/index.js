@@ -15,47 +15,42 @@ const GameOptions = () => {
   return (
     <View 
       id="gameOptions"
-      style={[
-        {
-          bottom: 12,
-          height: 48,
-          position: 'absolute',
-          width: '100%',
-        },
-      ]}
+      style={{
+        bottom: 12,
+        height: 48,
+        position: 'absolute',
+        width: '100%',
+      }}
     >
       <View 
-        style={[
-          {
-            flexDirection: 'row',
-            height: 48,
-          },
-        ]}
+        style={{
+          flexDirection: 'row',
+          height: 48,
+        }}
       >
         <View 
           id="left"
-          style={{ height: 48, width: 48 }}
+          style={{ 
+            height: 48, 
+            width: 48 
+          }}
         />
         <View 
           id="stopwatch"
-          style={[
-            {
-              flex: 1,
-              height: 48,
-              justifyContent: 'center',
-            },
-          ]}
+          style={{
+            flex: 1,
+            height: 48,
+            justifyContent: 'center',
+          }}
         >
           <Text
-            style={[
-              {
-                color: colours.white,
-                fontFamily: fontFamily,
-                fontSize: 24,
-                fontWeight: 'bold',
-                textAlign: 'center',
-              },
-            ]}
+            style={{
+              color: colours.white,
+              fontFamily: fontFamily,
+              fontSize: 24,
+              fontWeight: 'bold',
+              textAlign: 'center',
+            }}
           >
             {
               game.status === 'game-on' && timer.start && (
@@ -69,12 +64,10 @@ const GameOptions = () => {
         </View>
         <View 
           id="right"
-          style={[
-            {
-              height: 48,
-              width: 48,
-            },
-          ]}
+          style={{
+            height: 48,
+            width: 48,
+          }}
         >
           <PauseButton />
         </View>

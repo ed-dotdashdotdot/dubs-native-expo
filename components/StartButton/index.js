@@ -42,22 +42,18 @@ const StartButton = props => {
           dispatch(gameActions.setGameData(gameData));
           dispatch(gameActions.setGameStatus('game-loading'));
         }}
-        style={[
-          {
-            padding: 12,
-          }
-        ]}
+        style={{
+          padding: 12,
+        }}
       >
         <Text
-          style={[
-            {
-              color: colours.white,
-              fontFamily: fontFamily,
-              fontSize: 20,
-              fontWeight: 'bold',
-              textAlign: 'center',
-            },
-          ]}
+          style={{
+            color: colours.white,
+            fontFamily: fontFamily,
+            fontSize: 20,
+            fontWeight: 'bold',
+            textAlign: 'center',
+          }}
         >
           <Translate textKey={startTextKey} />
         </Text>

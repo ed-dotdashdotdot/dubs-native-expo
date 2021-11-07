@@ -77,15 +77,13 @@ const Options = () => {
       }}
     >
       <Text
-        style={[
-          {
-            color: colours.white,
-            fontFamily: fontFamily,
-            fontSize: 20,
-            fontWeight: 'bold',
-            textAlign: 'center',
-          },
-        ]}
+        style={{
+          color: colours.white,
+          fontFamily: fontFamily,
+          fontSize: 20,
+          fontWeight: 'bold',
+          textAlign: 'center',
+        }}
       >
         <Translate textKey={buttonText(game.status)} />
       </Text>

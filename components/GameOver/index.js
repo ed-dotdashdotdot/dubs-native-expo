@@ -53,16 +53,14 @@ const GameOver = () => {
             globalStyles.border,
           ]}
         >
-          <Text style={[
-            {
-              alignSelf: 'center',
-              color: colours.white,
-              fontFamily: fontFamily,
-              fontSize: 28,
-              fontWeight: 'bold',
-              textAlign: 'center',
-            },
-          ]}>
+          <Text style={{
+            alignSelf: 'center',
+            color: colours.white,
+            fontFamily: fontFamily,
+            fontSize: 28,
+            fontWeight: 'bold',
+            textAlign: 'center',
+          }}>
             {
               duration < 1200000 ? (
                 <DrawGameDuration

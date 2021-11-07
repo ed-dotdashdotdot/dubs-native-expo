@@ -175,11 +175,6 @@ const GameBoard = props => {
                     makeSelection(val);
                   }
                 }}
-                style={[
-                  {
-                    // opacity: 0.25,
-                  }
-                ]}
               >
                 {!isButtonFound(val, game.found) && (
                   <>
@@ -194,32 +189,29 @@ const GameBoard = props => {
                       // }}
                       cacheKey={`image-${images.selected}`}
                       resizeMode='stretch'
-                      style={[
-                        {
-                          // borderRadius: index === 0 ? 24 : 0, // was 10
-                          height: gameSpecs.height,
-                          left: getGameGridPositions(
-                            val,
-                            level,
-                            isDevicePortrait,
-                            gameSpecs.width,
-                            gameSpecs.height,
-                            gameSpecs.rows,
-                            gameSpecs.cols
-                            ).x,
-                          position: 'absolute',
-                          top: getGameGridPositions(
-                            val,
-                            level,
-                            isDevicePortrait,
-                            gameSpecs.width,
-                            gameSpecs.height,
-                            gameSpecs.rows,
-                            gameSpecs.cols
-                          ).y,
-                          width: gameSpecs.width,
-                        }
-                      ]}
+                      style={{
+                        height: gameSpecs.height,
+                        left: getGameGridPositions(
+                          val,
+                          level,
+                          isDevicePortrait,
+                          gameSpecs.width,
+                          gameSpecs.height,
+                          gameSpecs.rows,
+                          gameSpecs.cols
+                          ).x,
+                        position: 'absolute',
+                        top: getGameGridPositions(
+                          val,
+                          level,
+                          isDevicePortrait,
+                          gameSpecs.width,
+                          gameSpecs.height,
+                          gameSpecs.rows,
+                          gameSpecs.cols
+                        ).y,
+                        width: gameSpecs.width,
+                      }}
                       uri={imgSrc}
                     />
                     {/* <Image
@@ -257,32 +249,28 @@ const GameBoard = props => {
                 {game.selected === val && (
                   <>
                     <View
-                      style={[
-                        {
-                          borderColor: colours.white,
-                          borderStyle: 'solid',
-                          borderWidth: '2',
-                          height: gameSpecs.height / gameSpecs.rows,
-                          left: 0,
-                          position: 'absolute',
-                          top: 0,
-                          width: gameSpecs.width / gameSpecs.cols,
-                        }
-                      ]}
+                      style={{
+                        borderColor: colours.white,
+                        borderStyle: 'solid',
+                        borderWidth: '2',
+                        height: gameSpecs.height / gameSpecs.rows,
+                        left: 0,
+                        position: 'absolute',
+                        top: 0,
+                        width: gameSpecs.width / gameSpecs.cols,
+                      }}
                     />
                     <View
-                      style={[
-                        {
-                          borderColor: colours.black,
-                          borderStyle: 'solid',
-                          borderWidth: '2',
-                          height: gameSpecs.height / gameSpecs.rows - 4,
-                          left: 2,
-                          position: 'absolute',
-                          top: 2,
-                          width: gameSpecs.width / gameSpecs.cols - 4,
-                        }
-                      ]}
+                      style={{
+                        borderColor: colours.black,
+                        borderStyle: 'solid',
+                        borderWidth: '2',
+                        height: gameSpecs.height / gameSpecs.rows - 4,
+                        left: 2,
+                        position: 'absolute',
+                        top: 2,
+                        width: gameSpecs.width / gameSpecs.cols - 4,
+                      }}
                     />
                   </>
                 )}

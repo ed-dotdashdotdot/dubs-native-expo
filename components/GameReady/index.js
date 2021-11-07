@@ -66,16 +66,14 @@ const GameReady = props => {
               onPress={() => dispatch(gameActions.setGameBossMode(!game.bossMode))}
             >
               <Text
-                style={[
-                  {
-                    color: colours.white,
-                    fontFamily: fontFamily,
-                    fontSize: 20,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                    width: '100%',
-                  },
-                ]}
+                style={{
+                  color: colours.white,
+                  fontFamily: fontFamily,
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  width: '100%',
+                }}
               >
                 <Translate textKey={game.bossMode ? 'turnBossModeOff' : 'turnBossModeOn'} />
               </Text>
@@ -96,16 +94,14 @@ const GameReady = props => {
               onPress={() => dispatch(gameActions.setGameStatus('what-is-boss-mode'))}
             >
               <Text
-                style={[
-                  {
-                    color: colours.white,
-                    fontFamily: fontFamily,
-                    fontSize: 20,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                    width: '100%',
-                  },
-                ]}
+                style={{
+                  color: colours.white,
+                  fontFamily: fontFamily,
+                  fontSize: 20,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  width: '100%',
+                }}
               >
                 ?
               </Text>

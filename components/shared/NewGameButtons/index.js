@@ -44,13 +44,11 @@ const NewGameButtons = props => {
   };
   return (
     <View
-      style={[
-        {
-          alignSelf: 'center',
-          display: 'flex',
-          width: '100%',
-        },
-      ]}
+      style={{
+        alignSelf: 'center',
+        display: 'flex',
+        width: '100%',
+      }}
     >
       {section === 'game-over' && <PlayThisGameAgainButton />}
       {section === 'game-paused' && <ContinueGameButton />}
@@ -68,24 +66,20 @@ const NewGameButtons = props => {
           onPress={() => {
             newGameDispatches('easy');
           }}
-          style={[
-            {
-              padding: 12,
-            }
-          ]}
+          style={{
+            padding: 12,
+          }}
           title={polyglot.t(`startEasyGame.${lang.toUpperCase()}`)}
           type="button"
         >
           <Text
-            style={[
-              {
-                color: colours.white,
-                fontFamily: fontFamily,
-                fontSize: 20,
-                fontWeight: 'bold',
-                textAlign: 'center',
-              },
-            ]}
+            style={{
+              color: colours.white,
+              fontFamily: fontFamily,
+              fontSize: 20,
+              fontWeight: 'bold',
+              textAlign: 'center',
+            }}
           >
             <Translate textKey="startEasyGame" />
           </Text>
@@ -105,24 +99,20 @@ const NewGameButtons = props => {
           onPress={() => {
             newGameDispatches('normal');
           }}
-          style={[
-            {
-              padding: 12,
-            }
-          ]}
+          style={{
+            padding: 12,
+          }}
           title={polyglot.t(`startNormalGame.${lang.toUpperCase()}`)}
           type="button"
         >
           <Text
-            style={[
-              {
-                color: colours.white,
-                fontFamily: fontFamily,
-                fontSize: 20,
-                fontWeight: 'bold',
-                textAlign: 'center',
-              },
-            ]}
+            style={{
+              color: colours.white,
+              fontFamily: fontFamily,
+              fontSize: 20,
+              fontWeight: 'bold',
+              textAlign: 'center',
+            }}
           >
             <Translate textKey="startNormalGame" />
           </Text>
@@ -142,24 +132,20 @@ const NewGameButtons = props => {
           onPress={() => {
             newGameDispatches('hard');
           }}
-          style={[
-            {
-              padding: 12,
-            }
-          ]}
+          style={{
+            padding: 12,
+          }}
           title={polyglot.t(`startHardGame.${lang.toUpperCase()}`)}
           type="button"
         >
           <Text
-            style={[
-              {
-                color: colours.white,
-                fontFamily: fontFamily,
-                fontSize: 20,
-                fontWeight: 'bold',
-                textAlign: 'center',
-              },
-            ]}
+            style={{
+              color: colours.white,
+              fontFamily: fontFamily,
+              fontSize: 20,
+              fontWeight: 'bold',
+              textAlign: 'center',
+            }}
           >
             <Translate textKey="startHardGame" />
           </Text>
