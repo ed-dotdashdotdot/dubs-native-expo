@@ -99,9 +99,11 @@
   "gameBoardCornerRadius": 10,
   "colours": {
     "black": "#000000",
+    "black050": "#00000080",
     "amber": "#ff9900",
     "green": "#00aa00",
     "red": "#aa0000",
+    "red050": "#aa000080",
     "white": "#ffffff"
   },
   "fontFamily123123": "Helvetica",
