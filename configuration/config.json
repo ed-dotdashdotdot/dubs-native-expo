@@ -104,7 +104,8 @@
     "green": "#00aa00",
     "red": "#aa0000",
     "red050": "#aa000080",
-    "white": "#ffffff"
+    "white": "#ffffff",
+    "yellow": "#f3e600"
   },
   "fontFamily123123": "Helvetica",
   "fontFamily": "Courier New",
