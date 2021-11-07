@@ -19,7 +19,7 @@ const globalStyles = StyleSheet.create({
   },
   padding12: {
     padding: 12,
-  },
+  }
 });
 
 export default globalStyles;
