@@ -8,6 +8,7 @@ import rootReducer from './reducers';
 
 import AppStateManager from './components/AppStateManager';
 import Container from './components/Container';
+import { colours } from './configuration/config.json';
 
 const App = () => {
   const store = createStore(
@@ -17,7 +18,7 @@ const App = () => {
     <Provider store={store}>
       <SafeAreaProvider>
         <SafeAreaView style={{
-          backgroundColor: 'rgba(0,0,0, 0.5)',
+          backgroundColor: colours.black050,
           flex: 1,
         }}>
           <Container />
