@@ -38,7 +38,7 @@ const GameOver = () => {
     <ScrollView>
       <View 
         style={[
-          globalStyles,
+          globalStyles.infoInner,
         ]}
       >
         <PageHeading 
