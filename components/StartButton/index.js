@@ -30,6 +30,7 @@ const StartButton = props => {
         {
           alignSelf: 'center',
           backgroundColor: colours.green,
+          marginBottom: 12,
           width: '100%',
         },
         globalStyles.border,

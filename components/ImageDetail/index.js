@@ -60,6 +60,7 @@ const ImageDetail = props => {
             {
               alignSelf: 'center',
               backgroundColor: colours.green,
+              marginBottom: 12,
               marginTop: 12,
             }, {
               width: imageWidth,
