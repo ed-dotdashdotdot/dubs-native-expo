@@ -32,9 +32,9 @@ const TurnOnBossModeButton = props => {
           dispatch(gameActions.setGameBossMode(!bossMode));
           dispatch(gameActions.setGameStatus('game-ready'));
         }}
-        style={{
-          padding: 12,
-        }}
+        style={[
+          globalStyles.padding12,
+        ]}
         type="button"
       >
         <Text

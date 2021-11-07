@@ -27,9 +27,9 @@ const ContinueGameButton = () => {
         onPress={() => {
           dispatch(gameActions.setGameStatus('game-loading'));
         }}
-        style={{
-          padding: 12,
-        }}
+        style={[
+          globalStyles.padding12,
+        ]}
         type="button"
       >
         <Text

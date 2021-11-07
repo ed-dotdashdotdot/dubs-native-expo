@@ -59,9 +59,9 @@ const GameReady = props => {
                 borderBottomLeftRadius: 8,
                 borderRightWidth: 0,
                 flex: 1,
-                padding: 12,
               },
               globalStyles.border,
+              globalStyles.padding12,
             ]}
           >
             <TouchableOpacity

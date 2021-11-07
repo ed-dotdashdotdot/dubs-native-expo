@@ -19,10 +19,10 @@ const SectionHeading = props => {
           borderBottomWidth: 0,
           borderBottomLeftRadius: 0,
           borderBottomRightRadius: 0,
-          padding: 12,
         },
         globalStyles.border,
         globalStyles.borderRadius8,
+        globalStyles.padding12,
       ]}
     >
       <Text

@@ -72,9 +72,9 @@ const ImageDetail = props => {
               dispatch(gameActions.setGameData(gameData));
               dispatch(gameActions.setGameStatus('game-loading'));
             }}
-            style={{
-              padding: 12,
-            }}
+            style={[
+              globalStyles.padding12,
+            ]}
           >
             <Text
               style={{

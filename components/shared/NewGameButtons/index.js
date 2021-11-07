@@ -66,9 +66,9 @@ const NewGameButtons = props => {
           onPress={() => {
             newGameDispatches('easy');
           }}
-          style={{
-            padding: 12,
-          }}
+          style={[
+            globalStyles.padding12,
+          ]}
           title={polyglot.t(`startEasyGame.${lang.toUpperCase()}`)}
           type="button"
         >
@@ -99,9 +99,9 @@ const NewGameButtons = props => {
           onPress={() => {
             newGameDispatches('normal');
           }}
-          style={{
-            padding: 12,
-          }}
+          style={[
+            globalStyles.padding12,
+          ]}
           title={polyglot.t(`startNormalGame.${lang.toUpperCase()}`)}
           type="button"
         >
@@ -132,9 +132,9 @@ const NewGameButtons = props => {
           onPress={() => {
             newGameDispatches('hard');
           }}
-          style={{
-            padding: 12,
-          }}
+          style={[
+            globalStyles.padding12,
+          ]}
           title={polyglot.t(`startHardGame.${lang.toUpperCase()}`)}
           type="button"
         >

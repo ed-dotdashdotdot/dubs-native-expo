@@ -25,12 +25,12 @@ const ImageGrid = props => {
           flexDirection: 'row',
           flexWrap: 'wrap',
           justifyContent: 'flex-start',
-          padding: 12,
           paddingTop: 0,
           marginTop: 0,
         },
         globalStyles.border,
         globalStyles.borderRadius8,
+        globalStyles.padding12,
       ]}
     >
       {imageList.map(val => (

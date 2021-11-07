@@ -29,9 +29,9 @@ const PlayThisGameAgainButton = () => {
           dispatch(gameActions.setGameStatus('game-loading'));
           dispatch(gameActions.setGameSelected(''));
         }}
-        style={{
-          padding: 12,
-        }}
+        style={[
+          globalStyles.padding12,
+        ]}
         type="button"
       >
         <Text

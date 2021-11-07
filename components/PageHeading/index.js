@@ -20,10 +20,10 @@ const PageHeading = props => {
                 ? colours.red  
                 : colours.black ,
           marginBottom: 24,
-          padding: 12,
         },
         globalStyles.border,
         globalStyles.borderRadius8,
+        globalStyles.padding12,
       ]}
     >
       <Text

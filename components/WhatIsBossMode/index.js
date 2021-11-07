@@ -31,10 +31,10 @@ const WhatIsBossMode = props => {
               {
                 backgroundColor: colours.black,
                 marginBottom: 12,
-                padding: 12,
               },
               globalStyles.border,
               globalStyles.borderRadius8,
+              globalStyles.padding12,
             ]}
           >
             <View>
@@ -112,10 +112,10 @@ const WhatIsBossMode = props => {
               {
                 backgroundColor: colours.black,
                 marginBottom: 12,
-                padding: 12,
               },
               globalStyles.border,
               globalStyles.borderRadius8,
+              globalStyles.padding12,
             ]}
           >
             <View>

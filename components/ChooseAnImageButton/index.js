@@ -27,9 +27,9 @@ const ChooseAnImageButton = () => {
         onPress={() => {
           dispatch(gameActions.setGameStatus('choose-image'));
         }}
-        style={{
-          padding: 12,
-        }}
+        style={[
+          globalStyles.padding12,
+        ]}
         type="button"
       >
         <Text
