@@ -12,6 +12,7 @@ import GameReady from '../GameReady';
 import ImageDetail from '../ImageDetail';
 import LoadingImage from '../LoadingImage';
 import WhatIsBossMode from '../WhatIsBossMode';
+import { colours } from '../../configuration/config.json';
 
 // import isPortrait from '../../js/helpers/isPortrait';
 
@@ -35,7 +36,7 @@ const Info = () => {
           <View 
             id='infoContainer'
             style={{
-              backgroundColor: 'rgba(0,0,0, 0.5)',
+              backgroundColor: colours.black050,
               borderRadius: 10,
               flex: 1,
               position: 'absolute',
@@ -51,7 +52,7 @@ const Info = () => {
                 },
                 globalStyles.border,
                 {
-                  borderColor: game.lastMove === 'incorrect' ? 'red' : 'white',
+                  borderColor: game.lastMove === 'incorrect' ? colours.red : colours.white,
                   height: infoHeight,
                   width: infoWidth,
                 }

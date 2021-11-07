@@ -11,6 +11,7 @@ import GameOptions from '../GameOptions';
 import Info from '../Info';
 import LanguageSelector from '../LanguageSelector';
 import Options from '../Options';
+import { colours } from '../../configuration/config.json';
 
 import isGameOver from '../../js/helpers/isGameOver';
 
@@ -33,7 +34,7 @@ const Container = () => {
       <View 
         style={{
           alignItems: 'center',
-          backgroundColor: 'rgba(0,0,0, 0.33)',
+          backgroundColor: colours.black050,
           flex: 1,
           paddingLeft: 12,
           paddingRight: 12,

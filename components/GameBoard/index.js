@@ -292,7 +292,7 @@ const GameBoard = props => {
                     <View
                       style={[
                         {
-                          backgroundColor: 'rgba(128,0,0, 0.5)',
+                          backgroundColor: colours.red050,
                           borderColor: colours.red,
                           borderStyle: 'solid',
                           borderWidth: '4',
