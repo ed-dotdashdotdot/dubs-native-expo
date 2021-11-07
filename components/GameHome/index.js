@@ -46,7 +46,11 @@ const GameHome = () => {
 
   return (
     <ScrollView>
-      <View style={globalStyles.infoInner}>
+      <View 
+        style={[
+          globalStyles.infoInner,
+        ]}
+      >
         <PageHeading text={polyglot.t(`howToPlay.${lang.toUpperCase()}`)} />
         <NewGameButtons section="game-home" />
       </View>

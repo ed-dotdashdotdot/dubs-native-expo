@@ -35,17 +35,21 @@ const DrawLanguageButton = props => {
           onPress={() => {
             dispatch(languageActions.setChangeLanguage(whichLanguage));
           }}
-          style={{
-            display: 'flex',
-            height: buttonSize,
-            textAlign: 'center',
-            width: buttonSize,
-          }}
+          style={[
+            {
+              display: 'flex',
+              textAlign: 'center',
+            }, {
+              height: buttonSize,
+              width: buttonSize,
+            }
+          ]}
         >
           <View
             style={[
               {
                 alignSelf: 'center',
+              }, {
                 borderRadius: flagSize / 2,
                 height: flagSize,
                 marginTop: (buttonSize - flagSize) / 2,

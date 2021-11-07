@@ -26,11 +26,14 @@ const DrawThumb = props => {
   return (
     <View 
       id="thumb"
-      style={{ 
-        height: (maxWidth / imagesPerRow),
-        padding: 6,
-        width: (maxWidth / imagesPerRow),
-      }}
+      style={[
+        { 
+          padding: 6,
+        }, {
+          height: (maxWidth / imagesPerRow),
+          width: (maxWidth / imagesPerRow),
+        }
+      ]}
     >
       <TouchableOpacity
         onPress={() => {

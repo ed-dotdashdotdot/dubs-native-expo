@@ -34,7 +34,10 @@ const GameReady = props => {
 
   return (
     <ScrollView>
-      <View style={globalStyles.infoInner}>
+      <View 
+        style={[
+          globalStyles.infoInner,
+        ]}>
         <PageHeading 
           colour={whichLevelColour(level)}
           text={polyglot.t(`${level}Level.${lang.toUpperCase()}`)} 

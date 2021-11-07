@@ -48,12 +48,12 @@ const Info = () => {
               style={[
                 {
                   borderRadius: 12,
-                  height: infoHeight,
-                  width: infoWidth,
                 },
                 globalStyles.border,
                 {
                   borderColor: game.lastMove === 'incorrect' ? 'red' : 'white',
+                  height: infoHeight,
+                  width: infoWidth,
                 }
               ]}
             >

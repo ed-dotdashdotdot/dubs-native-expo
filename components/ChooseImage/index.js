@@ -23,7 +23,7 @@ const ChooseImage = props => {
     <ScrollView>
       <View 
         style={[
-          globalStyles.infoInner
+          globalStyles.infoInner,
         ]}
       >
         <PageHeading 

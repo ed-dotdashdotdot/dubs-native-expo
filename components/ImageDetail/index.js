@@ -28,7 +28,7 @@ const ImageDetail = props => {
     <ScrollView>
       <View 
         style={[
-          globalStyles.infoInner
+          globalStyles.infoInner,
         ]}
       >
         <View 
@@ -36,8 +36,9 @@ const ImageDetail = props => {
           style={[
             {
               alignSelf: 'center',
-              height: imageWidth,
               overflow: 'hidden',
+            }, {
+              height: imageWidth,
               width: imageWidth,
             },
             globalStyles.border,
@@ -60,6 +61,7 @@ const ImageDetail = props => {
               alignSelf: 'center',
               backgroundColor: colours.green,
               marginTop: 12,
+            }, {
               width: imageWidth,
             },
             globalStyles.border,

@@ -12,14 +12,15 @@ const PageHeading = props => {
     <View 
       style={[
         {
+          marginBottom: 24,
+        }, {
           backgroundColor: colour === 'green' 
             ? colours.green  
             : colour === 'amber' 
               ? colours.amber  
               : colour === 'red' 
                 ? colours.red  
-                : colours.black ,
-          marginBottom: 24,
+                : colours.black,
         },
         globalStyles.border,
         globalStyles.borderRadius8,

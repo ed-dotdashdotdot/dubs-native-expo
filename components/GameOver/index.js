@@ -36,7 +36,11 @@ const GameOver = () => {
 
   return (
     <ScrollView>
-      <View style={globalStyles.infoInner}>
+      <View 
+        style={[
+          globalStyles,
+        ]}
+      >
         <PageHeading 
           text={polyglot.t(`gameOver.${lang.toUpperCase()}`)} 
         />
@@ -53,14 +57,16 @@ const GameOver = () => {
             globalStyles.borderRadius8,
           ]}
         >
-          <Text style={{
-            alignSelf: 'center',
-            color: colours.white,
-            fontFamily: fontFamily,
-            fontSize: 28,
-            fontWeight: 'bold',
-            textAlign: 'center',
-          }}>
+          <Text 
+            style={{
+              alignSelf: 'center',
+              color: colours.white,
+              fontFamily: fontFamily,
+              fontSize: 28,
+              fontWeight: 'bold',
+              textAlign: 'center',
+            }}
+          >
             {
               duration < 1200000 ? (
                 <DrawGameDuration

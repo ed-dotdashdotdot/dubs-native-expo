@@ -36,7 +36,10 @@ const GamePaused = () => {
 
   return (
     <ScrollView>
-      <View style={globalStyles.infoInner}>
+      <View 
+        style={[
+          globalStyles.infoInner,
+        ]}>
         <PageHeading 
           colour={whichLevelColour(game.level)}
           text={polyglot.t(`gamePaused.${lang.toUpperCase()}`)} 
