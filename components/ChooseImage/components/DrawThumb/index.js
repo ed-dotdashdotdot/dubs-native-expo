@@ -7,6 +7,8 @@ import ExpoFastImage from 'expo-fast-image';
 
 import { colours, ipAddress } from '../../../../configuration/config.json';
 
+import globalStyles from '../../../../css/style';
+
 const DrawThumb = props => {
   const { 
     dimensions, 
@@ -24,13 +26,11 @@ const DrawThumb = props => {
   return (
     <View 
       id="thumb"
-      style={[
-        { 
-          height: (maxWidth / imagesPerRow),
-          padding: 6,
-          width: (maxWidth / imagesPerRow),
-        }
-      ]}
+      style={{ 
+        height: (maxWidth / imagesPerRow),
+        padding: 6,
+        width: (maxWidth / imagesPerRow),
+      }}
     >
       <TouchableOpacity
         onPress={() => {
@@ -42,15 +42,13 @@ const DrawThumb = props => {
         <ExpoFastImage
           uri={imageSrc}
           cacheKey={`image-${imageRef}-small`}
-          style={[
-            {
-              borderColor: colours.white,
-              borderRadius: 8,
-              borderWidth: 2,
-              height: '100%',
-              width: '100%',
-            }
-          ]}
+          style={{
+            borderColor: colours.white,
+            borderRadius: 8,
+            borderWidth: 2,
+            height: '100%',
+            width: '100%',
+          }}
         />
       </TouchableOpacity>
     </View>
