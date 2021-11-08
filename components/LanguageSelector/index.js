@@ -5,11 +5,16 @@ import PropTypes from 'prop-types';
 import DrawLanguageButton from './components/DrawLanguageButton';
 import LanguageSelectorSelected from './components/LanguageSelectorSelected';
 
+import { supportedLanguages } from '../../configuration/config.json';
+
 const LanguageSelector = props => {
-  const { selectedLanguage } = { ...props };
+  const { selectedLanguage, width } = { ...props };
   return (
     <>
-      <LanguageSelectorSelected selectedLanguage={selectedLanguage} />
+      <LanguageSelectorSelected 
+        selectedLanguage={selectedLanguage} 
+        width={width}
+      />
       <View 
         style={{
           bottom: 12,
@@ -20,14 +25,13 @@ const LanguageSelector = props => {
           width: '100%',
         }}
       >
-        <DrawLanguageButton whichLanguage="cn" />
-        <DrawLanguageButton whichLanguage="de" />
-        <DrawLanguageButton whichLanguage="en" />
-        <DrawLanguageButton whichLanguage="es" />
-        <DrawLanguageButton whichLanguage="fr" />
-        <DrawLanguageButton whichLanguage="it" />
-        <DrawLanguageButton whichLanguage="pt" />
-        <DrawLanguageButton whichLanguage="ru" />
+        {supportedLanguages.map(value => (
+          <DrawLanguageButton 
+            key={value.countryCode}
+            whichLanguage={value.countryCode} 
+            width={width} 
+          />
+        ))}
       </View>
     </>
   );
@@ -35,6 +39,7 @@ const LanguageSelector = props => {
 
 LanguageSelector.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
 };
 
 export default LanguageSelector;

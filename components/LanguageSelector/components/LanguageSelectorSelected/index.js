@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 import LanguageSelectorSelectedSvg from '../LanguageSelectorSelectedSvg';
 
+import { supportedLanguages } from '../../../../configuration/config.json';
+
 const LanguageSelectorSelected = props => {
   const { selectedLanguage } = { ...props };
   return (
@@ -17,30 +19,13 @@ const LanguageSelectorSelected = props => {
         width: '100%',
       }}
     >
-      <View style={{ flex: 1 }}>
-        {selectedLanguage === 'cn' && <LanguageSelectorSelectedSvg />}
-      </View>
-      <View style={{ flex: 1 }}>
-        {selectedLanguage === 'de' && <LanguageSelectorSelectedSvg />}
-      </View>
-      <View style={{ flex: 1 }}>
-        {selectedLanguage === 'en' && <LanguageSelectorSelectedSvg />}
-      </View>
-      <View style={{ flex: 1 }}>
-        {selectedLanguage === 'es' && <LanguageSelectorSelectedSvg />}
-      </View>
-      <View style={{ flex: 1 }}>
-        {selectedLanguage === 'fr' && <LanguageSelectorSelectedSvg />}
-      </View>
-      <View style={{ flex: 1 }}>
-        {selectedLanguage === 'it' && <LanguageSelectorSelectedSvg />}
-      </View>
-      <View style={{ flex: 1 }}>
-        {selectedLanguage === 'pt' && <LanguageSelectorSelectedSvg />}
-      </View>
-      <View style={{ flex: 1 }}>
-        {selectedLanguage === 'ru' && <LanguageSelectorSelectedSvg />}
-      </View>
+      {
+        supportedLanguages.map(value => (
+          <View style={{ flex: 1 }} key={value.countryCode}>
+            <LanguageSelectorSelectedSvg show={selectedLanguage === value.countryCode} />
+          </View>
+        ))
+      }
     </View>
   );
 };
