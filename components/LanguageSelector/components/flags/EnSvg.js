@@ -1,43 +1,31 @@
-import * as React from "react";
-import Svg, { Defs, Mask, Circle, G, Path } from "react-native-svg";
+import React from "react";
+import Svg, { Circle, Path } from "react-native-svg";
 
 const EnSvg = props => (
   <Svg
-    xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 48 48"
-    enableBackground="new 0 0 48 48"
+    xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <Defs></Defs>
-    <Mask
-      maskUnits="userSpaceOnUse"
-      x={0}
-      y={0}
-      width={48}
-      height={48}
-      id="prefix__b"
-    >
-      <Circle cx={24} cy={24} r={24} fill="#fff" filter="url(#prefix__a)" />
-    </Mask>
-    <G mask="url(#prefix__b)">
-      <Path
-        d="M0 0h4.4l7.2 2 6.1-2h3.1L24 1.6 27.1 0h3.1l6.6 2.1L43.6 0h1.5l1.1.7L48 0v4.4l-1.9 7.3 1.9 6v3.1l-1.5 2.9 1.5 3.4v3.1l-1.4 6.4 1.4 6.9V45l-.7 1 .7 2h-4.4l-6.7-1.6-6.6 1.6h-3.1l-2.8-1.8-3.5 1.8h-3.1l-6-1.9L4.4 48H2.9l-1-.8L0 48v-4.4l2.1-7.4L0 30.3v-3.1l2.4-3L0 20.9v-3.1l2.1-6.1L0 4.4V2.9l.8-.7L0 0z"
-        fill="#fff"
-      />
-      <Path
-        d="M4.4 0l13.3 13.3V0H4.4zm25.9 0v13.3L43.6 0H30.3zM0 4.4v13.3h13.3L0 4.4zm48 0L34.7 17.7H48V4.4zM0 30.3v13.3l13.3-13.3H0zm34.7 0L48 43.6V30.3H34.7zm-17 4.4L4.4 48h13.3V34.7zm12.6 0V48h13.3L30.3 34.7z"
-        fill="#012169"
-      />
-      <Path
-        d="M20.9 0v20.9H0v6.3h20.9V48h6.3V27.1H48v-6.3H27.1V0h-6.2z"
-        fill="#c8102e"
-      />
-      <Path
-        d="M0 0v2.9l14.8 14.8h3L0 0zm45.1 0L30.3 14.8v3L48 0h-2.9zM17.7 30.3L0 48h2.9l14.8-14.8v-2.9zm12.6 0L48 48v-2.9L33.2 30.3h-2.9z"
-        fill="#d80027"
-      />
-    </G>
+    <Circle 
+      cx={24} 
+      cy={24} 
+      fill="#ffffff" 
+      r={24} 
+    />
+    <Path
+      d="M9.4 43c2.4 1.9 5.3 3.3 8.3 4.1V34.7L9.4 43zM43 38.6c1.9-2.4 3.3-5.3 4.1-8.3H34.7l8.3 8.3zM30.3 47.2c3.1-.8 5.9-2.3 8.3-4.1l-8.3-8.3v12.4zM17.7.8c-3.1.9-5.9 2.3-8.3 4.2l8.3 8.3V.8zM.8 30.3c.8 3.1 2.3 5.9 4.1 8.3l8.3-8.3H.8zM47.2 17.7c-.8-3.1-2.3-5.9-4.1-8.3l-8.3 8.3h12.4zM38.6 5c-2.4-1.9-5.3-3.3-8.3-4.1v12.5L38.6 5zM5 9.4c-1.9 2.4-3.3 5.3-4.1 8.3h12.5L5 9.4z"
+      fill="#012169"
+    />
+    <Path
+      d="M27.1 20.8V.2c-1-.1-2-.2-3.1-.2s-2.1.1-3.1.2v20.7H.2c-.1 1-.2 2-.2 3.1s.1 2.2.2 3.2h20.7v20.6c1 .1 2 .2 3.1.2s2.2-.1 3.2-.2V27.1h20.6c.1-1 .2-2 .2-3.1s-.1-2.2-.2-3.2H27.1z"
+      fill="#c8102e"
+    />
+    <Path
+      d="M33.2 30.3h-2.9L41 41c.5-.5.9-1 1.4-1.5l-9.2-9.2zM8.5 42.4l9.2-9.2v-2.9L7 41c.5.5 1 .9 1.5 1.4zM5.6 8.5l9.2 9.2h3L7 7c-.4.5-.9 1-1.4 1.5zM39.5 5.6l-9.2 9.2v3L41 7c-.5-.4-1-.9-1.5-1.4z"
+      fill="#c8102e"
+    />
   </Svg>
-  );
+);
 
 export default EnSvg;
