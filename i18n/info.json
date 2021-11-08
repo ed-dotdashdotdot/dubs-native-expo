@@ -1,5 +1,6 @@
 {
   "easy": {
+    "CN": "",
     "DE": "Einfach",
     "EN": "Easy",
     "ES": "Fácil",
@@ -9,6 +10,7 @@
     "RU": "Легкий"
   },
   "hard": {
+    "CN": "",
     "DE": "Schwer",
     "EN": "Hard",
     "ES": "Duro",
@@ -18,6 +20,7 @@
     "RU": "Жесткий"
   },
   "normal": {
+    "CN": "",
     "DE": "Normal",
     "EN": "Normal",
     "ES": "Normal",
@@ -27,6 +30,7 @@
     "RU": "Обычный"
   },
   "easyGame": {
+    "CN": "",
     "DE": "Einfaches Spiel",
     "EN": "Easy game",
     "ES": "Juego fácil",
@@ -36,6 +40,7 @@
     "RU": "Легкая игра"
   },
   "hardGame": {
+    "CN": "",
     "DE": "Hartes Spiel",
     "EN": "Hard game",
     "ES": "Juego difícil",
@@ -45,6 +50,7 @@
     "RU": "Жесткая игра"
   },
   "normalGame": {
+    "CN": "",
     "DE": "Normales Spiel",
     "EN": "Normal game",
     "ES": "Juego normal",
@@ -54,6 +60,7 @@
     "RU": "Нормальная игра"
   },
   "back": {
+    "CN": "",
     "DE": "Zurück",
     "EN": "Back",
     "ES": "Atrás",
@@ -63,6 +70,7 @@
     "RU": "Назад"
   },
   "backToHome": {
+    "CN": "",
     "DE": "Zurück nach Hause",
     "EN": "Back to home",
     "ES": "De vuelta a casa",
@@ -72,6 +80,7 @@
     "RU": "Вернуться домой"
   },
   "chooseAnImageToPlayWith": {
+    "CN": "",
     "DE": "Wählen Sie ein Bild zum Spielen aus",
     "EN": "Choose an image to play with",
     "ES": "Elige una imagen para jugar",
@@ -81,6 +90,7 @@
     "RU": "Выберите изображение для игры"
   },
   "changeImage": {
+    "CN": "",
     "DE": "Bild ändern",
     "EN": "Change image",
     "ES": "Cambiar imagen",
@@ -90,6 +100,7 @@
     "RU": "Сменить изображение"
   },
   "easyLevel": {
+    "CN": "",
     "DE": "Einfaches Niveau",
     "EN": "Easy level",
     "ES": "Nivel fácil",
@@ -99,6 +110,7 @@
     "RU": "Легкий уровень"
   },
   "normalLevel": {
+    "CN": "",
     "DE": "Normales Niveau",
     "EN": "Normal level",
     "ES": "Nivel normal",
@@ -108,6 +120,7 @@
     "RU": "Нормальный уровень"
   },
   "hardLevel": {
+    "CN": "",
     "DE": "Schweres Niveau",
     "EN": "Hard level",
     "ES": "Nivel dificil",
@@ -117,6 +130,7 @@
     "RU": "Жесткий уровень"
   },
   "howToPlay": {
+    "CN": "",
     "DE": "Wählen Sie den Schwierigkeitsgrad, finden Sie die\u00A0Doppel...",
     "EN": "Select the difficulty, find the\u00A0doubles...",
     "ES": "Selecciona la dificultad, encuentra los dobles\u00A0...",
@@ -126,6 +140,7 @@
     "RU": "Выберите сложность, найдите двойников\u00A0..."
   },
   "bossMode": {
+    "CN": "",
     "DE": "Boss-Modus",
     "EN": "Boss mode",
     "ES": "Modo jefe",
@@ -135,6 +150,7 @@
     "RU": "Режим босса"
   },
   "turnBossModeOn": {
+    "CN": "",
     "DE": "Boss-Modus aktivieren",
     "EN": "Turn boss mode on",
     "ES": "Activa el modo jefe",
@@ -144,6 +160,7 @@
     "RU": "Включите режим босса"
   },
   "turnBossModeOff": {
+    "CN": "",
     "DE": "Boss-Modus ausschalten",
     "EN": "Turn boss mode off",
     "ES": "Desactiva el modo jefe",
@@ -153,6 +170,7 @@
     "RU": "Отключить режим босса"
   },
   "gameOver": {
+    "CN": "",
     "DE": "Spiel ist\u00A0aus",
     "EN": "Game over",
     "ES": "Juego terminado",
@@ -162,6 +180,7 @@
     "RU": "Игра закончена"
   },
   "gamePaused": {
+    "CN": "",
     "DE": "Spiel pausiert",
     "EN": "Game paused",
     "ES": "Juego pausado",
@@ -171,6 +190,7 @@
     "RU": "Игра приостановлена"
   },
   "whatIsBossMode": {
+    "CN": "",
     "DE": "Was ist der Boss\u2011Modus?",
     "EN": "What is boss\u00A0mode?",
     "ES": "¿Qué es el modo jefe?",
@@ -180,6 +200,7 @@
     "RU": "Что такое режим босса?"
   },
   "whatIsBossMode_title_normal_mode": {
+    "CN": "",
     "DE": "Normal Modus",
     "EN": "Regular mode",
     "ES": "Modo normal",
@@ -189,6 +210,7 @@
     "RU": "Обычный режим"
   },
   "whatIsBossMode_title_boss_mode": {
+    "CN": "",
     "DE": "Boss-Modus",
     "EN": "Boss mode",
     "ES": "Modo jefe",
@@ -198,6 +220,7 @@
     "RU": "Режим босса"
   },
   "whatIsBossMode_description_normal_mode": {
+    "CN": "",
     "DE": "Im regulären Modus suchen Sie nach einer genauen Übereinstimmung",
     "EN": "In regular mode you are looking for an exact match",
     "ES": "En el modo normal, busca una coincidencia exacta",
@@ -207,6 +230,7 @@
     "RU": "В обычном режиме вы ищете точное совпадение"
   },
   "whatIsBossMode_description_boss_mode": {
+    "CN": "",
     "DE": "Im Boss-Modus steht das Match auf dem Kopf",
     "EN": "In boss mode the match is upside down",
     "ES": "En el modo jefe, la partida está patas arriba.",
@@ -216,6 +240,7 @@
     "RU": "В режиме босса матч перевернут"
   },
   "startEasyGame": {
+    "CN": "",
     "DE": "Einfaches Spiel starten",
     "EN": "Start easy game",
     "ES": "Empieza un juego fácil",
@@ -225,6 +250,7 @@
     "RU": "Начать легкую игру"
   },
   "startNormalGame": {
+    "CN": "",
     "DE": "Normales Spiel starten",
     "EN": "Start normal game",
     "ES": "Iniciar juego normal",
@@ -234,6 +260,7 @@
     "RU": "Начать нормальную игру"
   },
   "startHardGame": {
+    "CN": "",
     "DE": "Schweres Spiel starten",
     "EN": "Start hard game",
     "ES": "Empieza el juego difícil",
@@ -243,6 +270,7 @@
     "RU": "Начать тяжелую игру"
   },
   "start": {
+    "CN": "",
     "DE": "Start",
     "EN": "Start",
     "ES": "Comienzo",
@@ -252,6 +280,7 @@
     "RU": ""
   },
   "startWithRandomImage": {
+    "CN": "",
     "DE": "Beginnen Sie mit einem zufälligen Bild",
     "EN": "Start with random image",
     "ES": "Comience con una imagen aleatoria",
@@ -261,6 +290,7 @@
     "RU": "Начинать"
   },
   "useThisImage": {
+    "CN": "",
     "DE": "Verwenden Sie dieses Bild",
     "EN": "Use this image",
     "ES": "Usa esta imagen",
@@ -270,6 +300,7 @@
     "RU": "Используйте это изображение"
   },
   "whatIsBossMode_ally": {
+    "CN": "",
     "DE": "Was ist der Boss-Modus?",
     "EN": "What is boss mode?",
     "ES": "¿Qué es el modo jefe?",
@@ -279,6 +310,7 @@
     "RU": "Что такое режим босса?"
   },
   "withBossMode": {
+    "CN": "",
     "DE": "Mit Boss-Modus",
     "EN": "With boss mode",
     "ES": "Con modo jefe",
@@ -288,6 +320,7 @@
     "RU": "С режимом босса"
   },
   "wowThatTookAReallyLongTime": {
+    "CN": "",
     "DE": "Wow, das hat echt lange gedauert!",
     "EN": "Wow, that took a really long time!",
     "ES": "¡Vaya, eso tomó mucho tiempo!",
@@ -297,6 +330,7 @@
     "RU": "Вау, это заняло очень много времени!"
   },
   "playThisGameAgain": {
+    "CN": "",
     "DE": "Spiele dieses Spiel noch einmal",
     "EN": "Play this game again",
     "ES": "Juega este juego de nuevo",
@@ -306,6 +340,7 @@
     "RU": "Сыграй в эту игру снова"
   },
   "found": {
+    "CN": "",
     "DE": "Gefunden",
     "EN": "Found",
     "ES": "Encontrada",
@@ -315,6 +350,7 @@
     "RU": "Нашел"
   },
   "chooseACategory": {
+    "CN": "",
     "DE": "DE - Choose a category",
     "EN": "Choose a category",
     "ES": "ES - Choose a category",
@@ -323,6 +359,7 @@
     "PT": "PT - Choose a category",
     "RU": "RU - Choose a category",
     "recentlyPlayed": {
+      "CN": "",
       "DE": "Kürzlich gespielt",
       "EN": "Recently played",
       "ES": "Recientemente jugado",
@@ -332,6 +369,7 @@
       "RU": ""
     },
     "topRated": {
+      "CN": "",
       "DE": "Bestbewertet",
       "EN": "Top rated",
       "ES": "Los más valorados",
@@ -341,6 +379,7 @@
       "RU": "Недавно играл"
     },
     "consideredDifficult": {
+      "CN": "",
       "DE": "Gilt als schwierig",
       "EN": "Considered difficult",
       "ES": "Considerada dificil",
@@ -350,6 +389,7 @@
       "RU": ""
     },
     "difficult": {
+      "CN": "",
       "DE": "Schwierig",
       "EN": "Difficult",
       "ES": "Difícil",
@@ -359,6 +399,7 @@
       "RU": "Считается трудным"
     },
     "architecture": {
+      "CN": "",
       "DE": "Die Architektur",
       "EN": "Architecture",
       "ES": "Arquitectura",
@@ -368,6 +409,7 @@
       "RU": "Архитектура"
     },
     "nature": {
+      "CN": "",
       "DE": "Natur",
       "EN": "Nature",
       "ES": "Naturaleza",
@@ -377,6 +419,7 @@
       "RU": "Природа"
     },
     "patterns": {
+      "CN": "",
       "DE": "Muster",
       "EN": "Patterns",
       "ES": "Patronas",
@@ -386,6 +429,7 @@
       "RU": "Узоры"
     },
     "technology": {
+      "CN": "",
       "DE": "Technologie",
       "EN": "Technology",
       "ES": "Tecnología",
@@ -395,6 +439,7 @@
       "RU": "Технология"
     },
     "typography": {
+      "CN": "",
       "DE": "Typografie",
       "EN": "Typography",
       "ES": "Tipografía",
@@ -405,6 +450,7 @@
     }
   },
   "anErrorHasOccured": {
+    "CN": "",
     "DE": "Ein Fehler ist aufgetreten",
     "EN": "An error has occurred",
     "ES": "Se ha producido un error",
@@ -414,6 +460,7 @@
     "RU": "произошла ошибка"
   },
   "pauseGame": {
+    "CN": "",
     "DE": "Spiel pausieren",
     "EN": "Pause game",
     "ES": "Pausar juego",
@@ -423,6 +470,7 @@
     "RU": "Приостановить игру"
   },
   "continueGame": {
+    "CN": "",
     "DE": "Weiterspielen",
     "EN": "Continue game",
     "ES": "Continua el juego",
