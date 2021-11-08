@@ -1,6 +1,6 @@
 {
   "easy": {
-    "CN": "",
+    "CN": "简单",
     "DE": "Einfach",
     "EN": "Easy",
     "ES": "Fácil",
@@ -10,7 +10,7 @@
     "RU": "Легкий"
   },
   "hard": {
-    "CN": "",
+    "CN": "难的",
     "DE": "Schwer",
     "EN": "Hard",
     "ES": "Duro",
@@ -20,7 +20,7 @@
     "RU": "Жесткий"
   },
   "normal": {
-    "CN": "",
+    "CN": "普通的",
     "DE": "Normal",
     "EN": "Normal",
     "ES": "Normal",
@@ -30,7 +30,7 @@
     "RU": "Обычный"
   },
   "easyGame": {
-    "CN": "",
+    "CN": "简单的游戏",
     "DE": "Einfaches Spiel",
     "EN": "Easy game",
     "ES": "Juego fácil",
@@ -40,7 +40,7 @@
     "RU": "Легкая игра"
   },
   "hardGame": {
-    "CN": "",
+    "CN": "硬游戏",
     "DE": "Hartes Spiel",
     "EN": "Hard game",
     "ES": "Juego difícil",
@@ -50,7 +50,7 @@
     "RU": "Жесткая игра"
   },
   "normalGame": {
-    "CN": "",
+    "CN": "普通游戏",
     "DE": "Normales Spiel",
     "EN": "Normal game",
     "ES": "Juego normal",
@@ -60,7 +60,7 @@
     "RU": "Нормальная игра"
   },
   "back": {
-    "CN": "",
+    "CN": "后退",
     "DE": "Zurück",
     "EN": "Back",
     "ES": "Atrás",
@@ -70,7 +70,7 @@
     "RU": "Назад"
   },
   "backToHome": {
-    "CN": "",
+    "CN": "回到家",
     "DE": "Zurück nach Hause",
     "EN": "Back to home",
     "ES": "De vuelta a casa",
@@ -80,7 +80,7 @@
     "RU": "Вернуться домой"
   },
   "chooseAnImageToPlayWith": {
-    "CN": "",
+    "CN": "选择要播放的图像",
     "DE": "Wählen Sie ein Bild zum Spielen aus",
     "EN": "Choose an image to play with",
     "ES": "Elige una imagen para jugar",
@@ -90,7 +90,7 @@
     "RU": "Выберите изображение для игры"
   },
   "changeImage": {
-    "CN": "",
+    "CN": "更改图像",
     "DE": "Bild ändern",
     "EN": "Change image",
     "ES": "Cambiar imagen",
@@ -100,7 +100,7 @@
     "RU": "Сменить изображение"
   },
   "easyLevel": {
-    "CN": "",
+    "CN": "轻松级别",
     "DE": "Einfaches Niveau",
     "EN": "Easy level",
     "ES": "Nivel fácil",
@@ -110,7 +110,7 @@
     "RU": "Легкий уровень"
   },
   "normalLevel": {
-    "CN": "",
+    "CN": "正常水平",
     "DE": "Normales Niveau",
     "EN": "Normal level",
     "ES": "Nivel normal",
@@ -120,7 +120,7 @@
     "RU": "Нормальный уровень"
   },
   "hardLevel": {
-    "CN": "",
+    "CN": "硬水平",
     "DE": "Schweres Niveau",
     "EN": "Hard level",
     "ES": "Nivel dificil",
@@ -130,7 +130,7 @@
     "RU": "Жесткий уровень"
   },
   "howToPlay": {
-    "CN": "",
+    "CN": "选择难度，找到双打...",
     "DE": "Wählen Sie den Schwierigkeitsgrad, finden Sie die\u00A0Doppel...",
     "EN": "Select the difficulty, find the\u00A0doubles...",
     "ES": "Selecciona la dificultad, encuentra los dobles\u00A0...",
@@ -140,7 +140,7 @@
     "RU": "Выберите сложность, найдите двойников\u00A0..."
   },
   "bossMode": {
-    "CN": "",
+    "CN": "老板模式",
     "DE": "Boss-Modus",
     "EN": "Boss mode",
     "ES": "Modo jefe",
@@ -150,7 +150,7 @@
     "RU": "Режим босса"
   },
   "turnBossModeOn": {
-    "CN": "",
+    "CN": "开启boss模式",
     "DE": "Boss-Modus aktivieren",
     "EN": "Turn boss mode on",
     "ES": "Activa el modo jefe",
@@ -160,7 +160,7 @@
     "RU": "Включите режим босса"
   },
   "turnBossModeOff": {
-    "CN": "",
+    "CN": "关闭老板模式",
     "DE": "Boss-Modus ausschalten",
     "EN": "Turn boss mode off",
     "ES": "Desactiva el modo jefe",
@@ -170,7 +170,7 @@
     "RU": "Отключить режим босса"
   },
   "gameOver": {
-    "CN": "",
+    "CN": "游戏结束",
     "DE": "Spiel ist\u00A0aus",
     "EN": "Game over",
     "ES": "Juego terminado",
@@ -180,7 +180,7 @@
     "RU": "Игра закончена"
   },
   "gamePaused": {
-    "CN": "",
+    "CN": "游戏暂停",
     "DE": "Spiel pausiert",
     "EN": "Game paused",
     "ES": "Juego pausado",
@@ -190,7 +190,7 @@
     "RU": "Игра приостановлена"
   },
   "whatIsBossMode": {
-    "CN": "",
+    "CN": "什么是boss模式？",
     "DE": "Was ist der Boss\u2011Modus?",
     "EN": "What is boss\u00A0mode?",
     "ES": "¿Qué es el modo jefe?",
@@ -200,7 +200,7 @@
     "RU": "Что такое режим босса?"
   },
   "whatIsBossMode_title_normal_mode": {
-    "CN": "",
+    "CN": "常规模式",
     "DE": "Normal Modus",
     "EN": "Regular mode",
     "ES": "Modo normal",
@@ -210,7 +210,7 @@
     "RU": "Обычный режим"
   },
   "whatIsBossMode_title_boss_mode": {
-    "CN": "",
+    "CN": "老板模式",
     "DE": "Boss-Modus",
     "EN": "Boss mode",
     "ES": "Modo jefe",
@@ -220,7 +220,7 @@
     "RU": "Режим босса"
   },
   "whatIsBossMode_description_normal_mode": {
-    "CN": "",
+    "CN": "在常规模式下，您正在寻找完全匹配",
     "DE": "Im regulären Modus suchen Sie nach einer genauen Übereinstimmung",
     "EN": "In regular mode you are looking for an exact match",
     "ES": "En el modo normal, busca una coincidencia exacta",
@@ -230,7 +230,7 @@
     "RU": "В обычном режиме вы ищете точное совпадение"
   },
   "whatIsBossMode_description_boss_mode": {
-    "CN": "",
+    "CN": "在老板模式下，比赛是颠倒的",
     "DE": "Im Boss-Modus steht das Match auf dem Kopf",
     "EN": "In boss mode the match is upside down",
     "ES": "En el modo jefe, la partida está patas arriba.",
@@ -240,7 +240,7 @@
     "RU": "В режиме босса матч перевернут"
   },
   "startEasyGame": {
-    "CN": "",
+    "CN": "开始简单的游戏",
     "DE": "Einfaches Spiel starten",
     "EN": "Start easy game",
     "ES": "Empieza un juego fácil",
@@ -250,7 +250,7 @@
     "RU": "Начать легкую игру"
   },
   "startNormalGame": {
-    "CN": "",
+    "CN": "开始正常游戏",
     "DE": "Normales Spiel starten",
     "EN": "Start normal game",
     "ES": "Iniciar juego normal",
@@ -260,7 +260,7 @@
     "RU": "Начать нормальную игру"
   },
   "startHardGame": {
-    "CN": "",
+    "CN": "开始艰苦的比赛",
     "DE": "Schweres Spiel starten",
     "EN": "Start hard game",
     "ES": "Empieza el juego difícil",
@@ -270,7 +270,7 @@
     "RU": "Начать тяжелую игру"
   },
   "start": {
-    "CN": "",
+    "CN": "开始",
     "DE": "Start",
     "EN": "Start",
     "ES": "Comienzo",
@@ -280,7 +280,7 @@
     "RU": ""
   },
   "startWithRandomImage": {
-    "CN": "",
+    "CN": "从随机图像开始",
     "DE": "Beginnen Sie mit einem zufälligen Bild",
     "EN": "Start with random image",
     "ES": "Comience con una imagen aleatoria",
@@ -290,7 +290,7 @@
     "RU": "Начинать"
   },
   "useThisImage": {
-    "CN": "",
+    "CN": "使用此图像",
     "DE": "Verwenden Sie dieses Bild",
     "EN": "Use this image",
     "ES": "Usa esta imagen",
@@ -300,7 +300,7 @@
     "RU": "Используйте это изображение"
   },
   "whatIsBossMode_ally": {
-    "CN": "",
+    "CN": "什么是boss模式？",
     "DE": "Was ist der Boss-Modus?",
     "EN": "What is boss mode?",
     "ES": "¿Qué es el modo jefe?",
@@ -310,7 +310,7 @@
     "RU": "Что такое режим босса?"
   },
   "withBossMode": {
-    "CN": "",
+    "CN": "带老板模式",
     "DE": "Mit Boss-Modus",
     "EN": "With boss mode",
     "ES": "Con modo jefe",
@@ -320,7 +320,7 @@
     "RU": "С режимом босса"
   },
   "wowThatTookAReallyLongTime": {
-    "CN": "",
+    "CN": "哇，这花了很长时间！",
     "DE": "Wow, das hat echt lange gedauert!",
     "EN": "Wow, that took a really long time!",
     "ES": "¡Vaya, eso tomó mucho tiempo!",
@@ -330,7 +330,7 @@
     "RU": "Вау, это заняло очень много времени!"
   },
   "playThisGameAgain": {
-    "CN": "",
+    "CN": "再玩这个游戏",
     "DE": "Spiele dieses Spiel noch einmal",
     "EN": "Play this game again",
     "ES": "Juega este juego de nuevo",
@@ -340,7 +340,7 @@
     "RU": "Сыграй в эту игру снова"
   },
   "found": {
-    "CN": "",
+    "CN": "成立",
     "DE": "Gefunden",
     "EN": "Found",
     "ES": "Encontrada",
@@ -350,7 +350,7 @@
     "RU": "Нашел"
   },
   "chooseACategory": {
-    "CN": "",
+    "CN": "CN - Choose a category",
     "DE": "DE - Choose a category",
     "EN": "Choose a category",
     "ES": "ES - Choose a category",
@@ -359,7 +359,7 @@
     "PT": "PT - Choose a category",
     "RU": "RU - Choose a category",
     "recentlyPlayed": {
-      "CN": "",
+      "CN": "最近玩过",
       "DE": "Kürzlich gespielt",
       "EN": "Recently played",
       "ES": "Recientemente jugado",
@@ -369,7 +369,7 @@
       "RU": ""
     },
     "topRated": {
-      "CN": "",
+      "CN": "评分最高",
       "DE": "Bestbewertet",
       "EN": "Top rated",
       "ES": "Los más valorados",
@@ -379,7 +379,7 @@
       "RU": "Недавно играл"
     },
     "consideredDifficult": {
-      "CN": "",
+      "CN": "认为困难",
       "DE": "Gilt als schwierig",
       "EN": "Considered difficult",
       "ES": "Considerada dificil",
@@ -389,7 +389,7 @@
       "RU": ""
     },
     "difficult": {
-      "CN": "",
+      "CN": "难的",
       "DE": "Schwierig",
       "EN": "Difficult",
       "ES": "Difícil",
@@ -399,7 +399,7 @@
       "RU": "Считается трудным"
     },
     "architecture": {
-      "CN": "",
+      "CN": "建筑学",
       "DE": "Die Architektur",
       "EN": "Architecture",
       "ES": "Arquitectura",
@@ -409,7 +409,7 @@
       "RU": "Архитектура"
     },
     "nature": {
-      "CN": "",
+      "CN": "自然",
       "DE": "Natur",
       "EN": "Nature",
       "ES": "Naturaleza",
@@ -419,7 +419,7 @@
       "RU": "Природа"
     },
     "patterns": {
-      "CN": "",
+      "CN": "图案",
       "DE": "Muster",
       "EN": "Patterns",
       "ES": "Patronas",
@@ -429,7 +429,7 @@
       "RU": "Узоры"
     },
     "technology": {
-      "CN": "",
+      "CN": "技术",
       "DE": "Technologie",
       "EN": "Technology",
       "ES": "Tecnología",
@@ -439,7 +439,7 @@
       "RU": "Технология"
     },
     "typography": {
-      "CN": "",
+      "CN": "排版",
       "DE": "Typografie",
       "EN": "Typography",
       "ES": "Tipografía",
@@ -450,7 +450,7 @@
     }
   },
   "anErrorHasOccured": {
-    "CN": "",
+    "CN": "发生了错误",
     "DE": "Ein Fehler ist aufgetreten",
     "EN": "An error has occurred",
     "ES": "Se ha producido un error",
@@ -460,7 +460,7 @@
     "RU": "произошла ошибка"
   },
   "pauseGame": {
-    "CN": "",
+    "CN": "暂停游戏",
     "DE": "Spiel pausieren",
     "EN": "Pause game",
     "ES": "Pausar juego",
@@ -470,7 +470,7 @@
     "RU": "Приостановить игру"
   },
   "continueGame": {
-    "CN": "",
+    "CN": "继续游戏",
     "DE": "Weiterspielen",
     "EN": "Continue game",
     "ES": "Continua el juego",
