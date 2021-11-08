@@ -31,7 +31,7 @@ const TurnOnBossModeButton = props => {
       <TouchableOpacity
         onPress={() => {
           dispatch(gameActions.setGameBossMode(!bossMode));
-          dispatch(gameActions.setGameStatus('game-ready'));
+          // dispatch(gameActions.setGameStatus('game-ready'));
         }}
         style={[
           globalStyles.padding12,

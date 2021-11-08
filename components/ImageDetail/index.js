@@ -6,6 +6,7 @@ import allActions from '../../actions';
 import ExpoFastImage from 'expo-fast-image';
 
 import InfoInner from '../InfoInner';
+import TurnOnBossModeButton from '../TurnOnBossModeButton';
 import Translate from '../Translate';
 
 import getGameData from '../../js/helpers/getGameData';
@@ -24,7 +25,7 @@ const ImageDetail = props => {
   const gameData = getGameData(game.level);
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`;
 
-  const imageWidth = dimensions.width > 999 ? 512 : dimensions.width > 600 ? 512 : 256
+  const imageWidth = dimensions.width > 999 ? 440 : dimensions.width > 600 ? 512 : '100%'
 
   return (
     <ScrollView>
@@ -52,6 +53,21 @@ const ImageDetail = props => {
             }}
           />
         </View>
+        <View
+          style={[
+            {
+              alignSelf: 'center',
+              marginTop: 12,
+            }, {
+              width: imageWidth,
+            },
+            globalStyles.borderRadius8,
+          ]}
+        >
+          <TurnOnBossModeButton
+            bossMode={game.bossMode}
+          />
+        </View>
         <View 
           id="use-this-image"
           style={[
@@ -59,7 +75,6 @@ const ImageDetail = props => {
               alignSelf: 'center',
               backgroundColor: colours.green,
               marginBottom: 12,
-              marginTop: 12,
             }, {
               width: imageWidth,
             },
