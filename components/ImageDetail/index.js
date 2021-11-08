@@ -31,7 +31,6 @@ const ImageDetail = props => {
     <ScrollView>
       <InfoInner>
         <View 
-          id="image-detail-img"
           style={[
             {
               alignSelf: 'center',
@@ -69,7 +68,6 @@ const ImageDetail = props => {
           />
         </View>
         <View 
-          id="use-this-image"
           style={[
             {
               alignSelf: 'center',

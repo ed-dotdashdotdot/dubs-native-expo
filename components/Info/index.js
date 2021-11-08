@@ -31,7 +31,6 @@ const Info = () => {
         const infoWidth = width - (12 * 2);
         return (
           <View 
-            id='infoContainer'
             style={{
               backgroundColor: colours.black050,
               borderRadius: 10,
@@ -42,7 +41,6 @@ const Info = () => {
             }}
           >
             <View 
-              id='info'
               style={[
                 {
                   borderRadius: 12,

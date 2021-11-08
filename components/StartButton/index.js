@@ -26,7 +26,6 @@ const StartButton = props => {
   const lang = language.selected || 'en';
   return (
     <View 
-      id="start-with-random-image"
       style={[
         {
           alignSelf: 'center',

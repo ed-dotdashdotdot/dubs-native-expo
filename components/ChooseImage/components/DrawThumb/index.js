@@ -26,7 +26,6 @@ const DrawThumb = props => {
 
   return (
     <View 
-      id="thumb"
       style={[
         { 
           padding: 6,

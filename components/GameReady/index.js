@@ -44,7 +44,6 @@ const GameReady = props => {
         />
         
         <View 
-          id='boss-mode-buttons'
           style={[
             {
               backgroundColor: colours.black,

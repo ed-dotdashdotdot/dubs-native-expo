@@ -13,7 +13,6 @@ const GameOptions = () => {
   const timer = useSelector(state => state.timer);
   return (
     <View 
-      id="gameOptions"
       style={{
         bottom: 12,
         height: 48,
@@ -28,14 +27,12 @@ const GameOptions = () => {
         }}
       >
         <View 
-          id="left"
           style={{ 
             height: 48, 
             width: 48 
           }}
         />
         <View 
-          id="stopwatch"
           style={{
             flex: 1,
             height: 48,
@@ -62,7 +59,6 @@ const GameOptions = () => {
           </Text>
         </View>
         <View 
-          id="right"
           style={{
             height: 48,
             width: 48,

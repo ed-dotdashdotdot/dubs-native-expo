@@ -25,16 +25,14 @@ const ChooseImage = props => {
         <PageHeading 
           text={polyglot.t(`chooseAnImageToPlayWith.${lang.toUpperCase()}`)} 
         />
-        <View id="choose-image">
-          {
-            images.sections.map(val => (
-              <DrawSection
-                dimensions={dimensions}
-                key={val.name} 
-                section={val.name} 
-              />
-            ))
-          }
+        <View>
+          {images.sections.map(val => (
+            <DrawSection
+              dimensions={dimensions}
+              key={val.name} 
+              section={val.name} 
+            />
+          ))}
         </View>
       </InfoInner>
     </ScrollView>
