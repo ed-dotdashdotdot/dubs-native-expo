@@ -27,7 +27,7 @@ const Container = () => {
   const dispatch = useDispatch();
 
   const { 
-    height , 
+    height,
     width,
   } = useWindowDimensions();
 
@@ -73,10 +73,10 @@ const Container = () => {
           <Header />
         }
         <Info />
-        {game.status === 'game-home' && <LanguageSelector />}
+        {/* {game.status === 'game-home' && <LanguageSelector width={width} />} */}
         {
           game.status === 'game-home'
-            ? <LanguageSelector selectedLanguage={language.selected} />
+            ? <LanguageSelector selectedLanguage={language.selected} width={width} />
             : game.status === 'game-on' 
               ? <GameOptions />
               : game.status === 'game-loading'
