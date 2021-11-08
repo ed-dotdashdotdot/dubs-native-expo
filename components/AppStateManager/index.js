@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { AppState } from 'react-native';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import allActions from '../../actions';
 
 const AppStateManager = props => {
@@ -21,6 +22,13 @@ const AppStateManager = props => {
     });
   }, [status]);
   return children;
-}
+};
+
+AppStateManager.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+};
 
 export default AppStateManager;

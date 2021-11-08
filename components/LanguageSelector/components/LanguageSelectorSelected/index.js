@@ -1,13 +1,14 @@
 import React from 'react';
 import { View } from 'react-native';
+import PropTypes from 'prop-types';
 
-import { colours } from '../../../../configuration/config.json';
+// import { colours } from '../../../../configuration/config.json';
 
 import LanguageSelectorSelectedSvg from '../LanguageSelectorSelectedSvg';
 
 const LanguageSelectorSelected = props => {
   const { selectedLanguage } = { ...props };
-  const highlightColour = colours.white;
+  // const highlightColour = colours.white;
   return (
     <View 
       style={{
@@ -39,6 +40,10 @@ const LanguageSelectorSelected = props => {
       </View>
     </View>
   );
-}
+};
+
+LanguageSelectorSelected.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+};
 
 export default LanguageSelectorSelected;

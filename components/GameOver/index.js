@@ -18,7 +18,7 @@ import globalStyles from '../../css/style.js';
 const GameOver = () => {
   const timer = useSelector(state => state.timer);
   const language = useSelector(state => state.language);
-  const { gameActions, imagesActions, timerActions } = { ...allActions };
+  const { timerActions } = { ...allActions };
   const dispatch = useDispatch();
 
   const duration = ((timer.end - timer.start) / 1000).toFixed(2) * 1000;
@@ -80,6 +80,6 @@ const GameOver = () => {
       </InfoInner>
     </ScrollView>
   );
-}
+};
 
 export default GameOver;

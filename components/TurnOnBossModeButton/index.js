@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import allActions from '../../actions';
 
 import Translate from '../Translate';
@@ -51,6 +52,10 @@ const TurnOnBossModeButton = props => {
       </TouchableOpacity>
     </View>
   );
+};
+
+TurnOnBossModeButton.propTypes = {
+  bossMode: PropTypes.bool.isRequired,
 };
 
 export default TurnOnBossModeButton;

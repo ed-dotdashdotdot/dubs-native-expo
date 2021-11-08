@@ -6,6 +6,7 @@ import {
   Vibration,
   View,
 } from 'react-native';
+import PropTypes from 'prop-types';
 import allActions from '../../actions';
 
 import ExpoFastImage from 'expo-fast-image';
@@ -314,6 +315,11 @@ const GameBoard = props => {
       }
     </View>
   );
-}
+};
+
+GameBoard.propTypes = {
+  dimensions: PropTypes.object.isRequired,
+  level: PropTypes.string.isRequired,
+};
 
 export default GameBoard;

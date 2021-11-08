@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Button, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import allActions from '../../../actions';
 
 import ContinueGameButton from '../../ContinueGameButton';
@@ -153,6 +154,10 @@ const NewGameButtons = props => {
       </View>
     </View>
   );
+};
+
+NewGameButtons.propTypes = {
+  section: PropTypes.string.isRequired,
 };
 
 export default NewGameButtons;

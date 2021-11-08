@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import allActions from '../../actions';
 
 import ChooseAnImageButton from '../ChooseAnImageButton';
@@ -120,6 +121,10 @@ const GameReady = props => {
       </InfoInner>
     </ScrollView>
   );
-}
+};
+
+GameReady.propTypes = {
+  level: PropTypes.string.isRequired,
+};
 
 export default GameReady;

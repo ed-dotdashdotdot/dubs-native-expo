@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, ScrollView, TouchableOpacity, View, } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import allActions from '../../actions';
 import ExpoFastImage from 'expo-fast-image';
 
@@ -13,7 +14,7 @@ import { colours, fontFamily, ipAddress } from '../../configuration/config.json'
 import globalStyles from '../../css/style.js';
 
 const ImageDetail = props => {
-  const { dimensions, image, level } = { ...props };
+  const { dimensions, image, } = { ...props };
 
   const game = useSelector(state => state.game);
   const images = useSelector(state => state.images);
@@ -92,6 +93,11 @@ const ImageDetail = props => {
       </InfoInner>
     </ScrollView>
   );
+};
+
+ImageDetail.propTypes = {
+  dimensions: PropTypes.object.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default ImageDetail;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, } from 'react-native';
+import PropTypes from 'prop-types';
 
 import Translate from '../../../Translate';
 import { colours, fontFamily } from '../../../../configuration/config.json';
@@ -8,7 +9,6 @@ import globalStyles from '../../../../css/style.js';
 
 const SectionHeading = props => {
   const {
-    gameStatus,
     textKey,
   } = { ...props };
 
@@ -38,6 +38,10 @@ const SectionHeading = props => {
       </Text>
     </View>
   );
+};
+
+SectionHeading.propTypes = {
+  textKey: PropTypes.string.isRequired,
 };
 
 export default SectionHeading;

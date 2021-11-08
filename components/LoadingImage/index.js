@@ -4,6 +4,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import PropTypes from 'prop-types';
 import allActions from '../../actions';
 
 import ExpoFastImage from 'expo-fast-image';
@@ -64,6 +65,10 @@ const LoadingImage = props => {
       />
     </View>
   );
-}
+};
+
+LoadingImage.propTypes = {
+  imageToUse: PropTypes.string.isRequired,
+};
 
 export default LoadingImage;

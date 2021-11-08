@@ -31,16 +31,11 @@ import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../shared/NewGameButtons';
 
-// import isPortrait from '../../js/helpers/isPortrait';
-
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
-import globalStyles from '../../css/style.js';
-
 const GameHome = () => {
   const language = useSelector(state => state.language);
-
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'en';
@@ -53,6 +48,6 @@ const GameHome = () => {
       </InfoInner>
     </ScrollView>
   );
-}
+};
 
 export default GameHome;

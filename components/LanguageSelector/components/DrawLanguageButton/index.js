@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import allActions from '../../../../actions';
 
 import DeSvg from '../flags/DeSvg';
@@ -73,6 +74,10 @@ const DrawLanguageButton = props => {
       </View>
     </View>
   );
-}
+};
+
+DrawLanguageButton.propTypes = {
+  whichLanguage: PropTypes.string.isRequired,
+};
 
 export default DrawLanguageButton;

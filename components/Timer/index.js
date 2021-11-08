@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import DrawGameDuration from '../DrawGameDuration';
 
@@ -33,6 +34,11 @@ const Timer = props => {
       section="timer"
     />
   );
+};
+
+Timer.propTypes = {
+  lang: PropTypes.string.isRequired,
+  start: PropTypes.number.isRequired,
 };
 
 export default Timer;

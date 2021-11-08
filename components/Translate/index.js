@@ -1,5 +1,3 @@
-import React from 'react';
-import { Button, View, Image, TouchableOpacity, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Button, Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import allActions from '../../actions';
 
@@ -61,6 +62,11 @@ const StartButton = props => {
       </TouchableOpacity>
     </View>
   );
+};
+
+StartButton.propTypes = {
+  gameData: PropTypes.array.isRequired,
+  startTextKey: PropTypes.string.isRequired,
 };
 
 export default StartButton;

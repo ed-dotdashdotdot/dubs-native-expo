@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { colours } from '../../../../configuration/config.json';
 
@@ -11,7 +12,6 @@ const ImageGrid = props => {
   const {
     dimensions,
     imageList,
-    title,
   } = { ...props };
 
   return (
@@ -41,6 +41,11 @@ const ImageGrid = props => {
       ))}
     </View>
   );
+};
+
+ImageGrid.propTypes = {
+  dimensions: PropTypes.object.isRequired,
+  imageList: PropTypes.array.isRequired,
 };
 
 export default ImageGrid;

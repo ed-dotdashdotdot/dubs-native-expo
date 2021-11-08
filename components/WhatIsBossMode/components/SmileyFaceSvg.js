@@ -1,5 +1,6 @@
 import React from "react";
 import Svg, { Circle, Path } from "react-native-svg";
+import PropTypes from 'prop-types';
 
 import { colours } from '../../../configuration/config.json';
 
@@ -45,6 +46,13 @@ SmileyFaceSvg.defaultProps = {
   colourFeatures: colours.black,
   height: 48, 
   width: 48,
+};
+
+SmileyFaceSvg.propTypes = {
+  colourFace: PropTypes.string.isRequired,
+  colourFeatures: PropTypes.string.isRequired,
+  height: PropTypes.number.isRequired,
+  weight: PropTypes.number.isRequired,
 };
 
 export default SmileyFaceSvg;

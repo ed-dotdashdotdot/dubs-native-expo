@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, View, } from 'react-native';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
@@ -8,8 +9,6 @@ import i18n from '../../i18n';
 import DrawSection from './components/DrawSection';
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
-
-import globalStyles from '../../css/style.js';
 
 const ChooseImage = props => {
   const { dimensions } = { ...props };
@@ -40,6 +39,10 @@ const ChooseImage = props => {
       </InfoInner>
     </ScrollView>
   );
+};
+
+ChooseImage.propTypes = {
+  dimensions: PropTypes.object.isRequired,
 };
 
 export default ChooseImage;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, } from 'react-native';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import allActions from '../../../../actions';
 
 import ExpoFastImage from 'expo-fast-image';
@@ -58,6 +59,11 @@ const DrawThumb = props => {
       </TouchableOpacity>
     </View>
   );
+};
+
+DrawThumb.propTypes = {
+  dimensions: PropTypes.object.isRequired,
+  imageRef: PropTypes.string.isRequired,
 };
 
 export default DrawThumb;

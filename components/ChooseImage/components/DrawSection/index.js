@@ -110,6 +110,8 @@ const DrawSection = props => {
   //   }
   // }, []);
 
+  console.log(imagesValue.images)
+
   return (
     <View 
       key={`${imagesValue.name}`}
@@ -137,7 +139,6 @@ const DrawSection = props => {
           <ImageGrid 
             dimensions={dimensions}
             imageList={imagesValue.images} 
-            title={imagesValue.name} 
           />
         )
       }

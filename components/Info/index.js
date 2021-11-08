@@ -65,7 +65,6 @@ const Info = () => {
                           width: infoWidth,
                         }}
                         image={images.detail} 
-                        level={game.level} 
                       />
                     );
                   case 'choose-image':

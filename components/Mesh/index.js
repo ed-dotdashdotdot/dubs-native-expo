@@ -1,5 +1,6 @@
-import React from "react"
-import Svg, { Path } from "react-native-svg"
+import React from "react";
+import Svg, { Path } from "react-native-svg";
+import PropTypes from 'prop-types';
 
 import { colours } from '../../configuration/config.json';
 
@@ -238,7 +239,11 @@ const Mesh = props => {
 };
 
 Mesh.defaultProps = {
-  colour: colours.white050,
+  colour: colours.white,
+};
+
+Mesh.propTypes = {
+  colour: PropTypes.string.isRequired,
 };
 
 export default Mesh;

@@ -1,5 +1,6 @@
 import React from "react";
 import Svg, { Path } from "react-native-svg";
+import PropTypes from 'prop-types';
 
 import { colours } from '../../../../configuration/config.json';
 
@@ -43,6 +44,11 @@ const LogoSvg = props => {
 LogoSvg.defaultProps = {
   lineColour: colours.white,
   textColour: colours.white,
-}
+};
+
+LogoSvg.propTypes = {
+  lineColour: PropTypes.string.isRequired,
+  textColour: PropTypes.string.isRequired,
+};
 
 export default LogoSvg;

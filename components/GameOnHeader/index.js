@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import Translate from '../Translate';
 import { colours, fontFamily } from '../../configuration/config.json';
@@ -39,6 +40,11 @@ const GameOnHeader = props => {
       </Text>
     </View>
   );
-}
+};
+
+GameOnHeader.propTypes = {
+  bossMode: PropTypes.bool.isRequired,
+  level: PropTypes.string.isRequired,
+};
 
 export default GameOnHeader;

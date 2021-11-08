@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import DrawLanguageButton from './components/DrawLanguageButton';
 import LanguageSelectorSelected from './components/LanguageSelectorSelected';
@@ -28,6 +29,10 @@ const LanguageSelector = props => {
       </View>
     </>
   );
-}
+};
+
+LanguageSelector.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+};
 
 export default LanguageSelector;

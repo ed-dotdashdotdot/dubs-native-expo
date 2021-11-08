@@ -1,5 +1,5 @@
 import React from 'react';
-// import { View } from 'react-native';
+import PropTypes from 'prop-types';
 
 import GameBoard from '../GameBoard';
 
@@ -11,6 +11,11 @@ const GameOn = props => {
       level={level}
     />
   );
-}
+};
+
+GameOn.propTypes = {
+  dimensions: PropTypes.object.isRequired,
+  level: PropTypes.string.isRequired,
+};
 
 export default GameOn;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
@@ -197,6 +198,10 @@ const WhatIsBossMode = props => {
       </InfoInner>
     </ScrollView>    
   );
-}
+};
+
+WhatIsBossMode.propTypes = {
+  bossMode: PropTypes.bool.isRequired,
+};
 
 export default WhatIsBossMode;

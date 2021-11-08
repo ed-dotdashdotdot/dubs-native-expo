@@ -1,5 +1,6 @@
-import * as React from "react";
+import React from "react";
 import Svg, { Path } from "react-native-svg";
+import PropTypes from 'prop-types';
 
 import { colours } from '../../../../configuration/config.json';
 
@@ -32,6 +33,10 @@ const PauseButtonSvg = props => {
 
 PauseButtonSvg.defaultProps = {
   colour: colours.white,
+};
+
+PauseButtonSvg.propTypes = {
+  colour: PropTypes.string.isRequired,
 };
   
 
