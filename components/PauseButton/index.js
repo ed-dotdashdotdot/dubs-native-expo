@@ -8,7 +8,6 @@ import PauseButtonSvg from './components/PauseButtonSvg';
 const PauseButton = () => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-
   return (
     <TouchableOpacity
       onPress={() => {
@@ -18,6 +17,6 @@ const PauseButton = () => {
       <PauseButtonSvg />
     </TouchableOpacity>
   );
-}
+};
 
 export default PauseButton;

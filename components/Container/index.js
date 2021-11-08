@@ -86,6 +86,6 @@ const Container = () => {
       </View>
     </AppStateManager>
   );
-}
+};
 
 export default Container;

@@ -89,6 +89,6 @@ const Options = () => {
       </Text>
     </TouchableOpacity>
   );
-}
+};
 
 export default Options;

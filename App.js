@@ -27,6 +27,6 @@ const App = () => {
       </SafeAreaProvider>
     </Provider>
   );
-}
+};
 
 export default App;

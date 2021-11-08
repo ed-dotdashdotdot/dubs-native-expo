@@ -11,7 +11,6 @@ import globalStyles from '../../css/style.js';
 const PlayThisGameAgainButton = () => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-
   return (
     <View
       style={[
