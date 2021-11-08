@@ -38,6 +38,9 @@ const LanguageSelectorSelected = props => {
       <View style={{ flex: 1 }}>
         {selectedLanguage === 'pt' && <LanguageSelectorSelectedSvg />}
       </View>
+      <View style={{ flex: 1 }}>
+        {selectedLanguage === 'ru' && <LanguageSelectorSelectedSvg />}
+      </View>
     </View>
   );
 };

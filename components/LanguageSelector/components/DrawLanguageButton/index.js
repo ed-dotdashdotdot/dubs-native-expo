@@ -10,6 +10,7 @@ import EsSvg from '../flags/EsSvg';
 import FrSvg from '../flags/FrSvg';
 import ItSvg from '../flags/ItSvg';
 import PtSvg from '../flags/PtSvg';
+import RuSvg from '../flags/RuSvg';
 
 import { languageSelector } from '../../../../configuration/config.json';
 
@@ -66,6 +67,7 @@ const DrawLanguageButton = props => {
                 case 'fr': return <FrSvg width={svgSize} height={svgSize} />
                 case 'it': return <ItSvg width={svgSize} height={svgSize} />;
                 case 'pt': return <PtSvg width={svgSize} height={svgSize} />;
+                case 'ru': return <RuSvg width={svgSize} height={svgSize} />;
                 default: return <EnSvg width={svgSize} height={svgSize} />;
               }
             })()}

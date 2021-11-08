@@ -26,6 +26,7 @@ const LanguageSelector = props => {
         <DrawLanguageButton whichLanguage="fr" />
         <DrawLanguageButton whichLanguage="it" />
         <DrawLanguageButton whichLanguage="pt" />
+        <DrawLanguageButton whichLanguage="ru" />
       </View>
     </>
   );
