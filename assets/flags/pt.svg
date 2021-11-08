@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:v="https://vecta.io/nano"><defs><filter id="A" filterUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/></filter></defs><mask maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48" id="B"><circle cx="24" cy="24" r="24" fill="#fff" filter="url(#A)"/></mask><g mask="url(#B)"><path d="M15.7,0H0v48h15.7" fill="#6da544"/><path d="M48,0H15.7v48H48V0z" fill="#d80027"/><circle cx="15.7" cy="24" r="8.3" fill="#ffda44"/><path d="M11 19.8V25c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7v-5.2H11h0z" fill="#d80027"/><path d="M15.7 26.6a1.58 1.58 0 0 1-1.6-1.6v-2h3.1v2c0 .9-.7 1.6-1.5 1.6h0z" fill="#eee"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#076A39;}
+	.st1{fill:#DB291C;}
+	.st2{fill:#FFE907;}
+	.st3{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M0,24c0,10.3,6.5,19.1,15.7,22.5v-45C6.5,4.9,0,13.7,0,24z"/>
+<path class="st1" d="M24,0c-2.9,0-5.7,0.5-8.3,1.5v45c2.6,1,5.4,1.5,8.3,1.5c13.3,0,24-10.7,24-24S37.3,0,24,0z"/>
+<circle class="st2" cx="15.7" cy="24" r="8.3"/>
+<path class="st1" d="M11,19.8V25c0,2.6,2.1,4.7,4.7,4.7s4.7-2.1,4.7-4.7v-5.2H11L11,19.8z"/>
+<path class="st3" d="M15.7,26.6c-0.9,0-1.6-0.7-1.6-1.6c0,0,0,0,0,0v-2h3.1v2C17.2,25.9,16.5,26.6,15.7,26.6
+	C15.7,26.6,15.7,26.6,15.7,26.6z"/>
+</svg>
