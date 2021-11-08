@@ -114,5 +114,10 @@
     "buttonText": 24,
     "heading": 48,
     "subHeading": 36
+  },
+  "languageSelector": {
+    "flagButtonSize": 48,
+    "flagSize": 44,
+    "flagBorderWidth": 2
   }
 }

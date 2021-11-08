@@ -10,7 +10,7 @@ import FrSvg from '../flags/FrSvg';
 import ItSvg from '../flags/ItSvg';
 import PtSvg from '../flags/PtSvg';
 
-import { colours } from '../../../../configuration/config.json';
+import { languageSelector } from '../../../../configuration/config.json';
 
 import globalStyles from '../../../../css/style';
 
@@ -18,9 +18,9 @@ const DrawLanguageButton = props => {
   const { whichLanguage } = { ...props };
   const { languageActions } = { ...allActions };
   const dispatch = useDispatch();
-  const buttonSize = 48;
-  const flagSize = 44;
-  const flagBorderWidth = 2;
+  const buttonSize = languageSelector.flagButtonSize;
+  const flagSize = languageSelector.flagSize;
+  const flagBorderWidth = languageSelector.flagBorderWidth;
   const svgSize = flagSize - (flagBorderWidth * 2);
   return (
     <View 
