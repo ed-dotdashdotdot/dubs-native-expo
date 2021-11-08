@@ -14,8 +14,6 @@ import LoadingImage from '../LoadingImage';
 import WhatIsBossMode from '../WhatIsBossMode';
 import { colours } from '../../configuration/config.json';
 
-// import isPortrait from '../../js/helpers/isPortrait';
-
 import globalStyles from '../../css/style.js';
 
 const Info = () => {
@@ -25,7 +23,6 @@ const Info = () => {
     height, 
     width,
   } = useWindowDimensions();
-  // const isDevicePortrait = isPortrait(height, width);
 
   return (
     <SafeAreaInsetsContext.Consumer>
@@ -87,10 +84,7 @@ const Info = () => {
                   case 'game-ready':
                     return (
                       <GameReady
-                        // bossMode={bossMode}
-                        // lang={lang}
                         level={game.level}
-                        // gameImage={gameImage}
                       />
                     );
                   case 'what-is-boss-mode':
@@ -112,13 +106,6 @@ const Info = () => {
                           height: infoHeight,
                           width: infoWidth,
                         }}
-                        // bossMode={bossMode}
-                        // gameImage={gameImage}
-                        // invert={invert}
-                        // lang="en"
-                        // level="easy"
-                        // percentComplete={percentComplete}
-                        // status="game-on"
                         level={game.level}
                       />
                     );
@@ -132,6 +119,6 @@ const Info = () => {
       }}
     </SafeAreaInsetsContext.Consumer>
   );
-}
+};
 
 export default Info;
