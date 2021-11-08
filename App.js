@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
 
-import AppStateManager from './components/AppStateManager';
+// import AppStateManager from './components/AppStateManager';
 import Container from './components/Container';
 import { colours } from './configuration/config.json';
 
