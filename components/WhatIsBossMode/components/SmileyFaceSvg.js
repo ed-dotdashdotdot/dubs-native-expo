@@ -52,7 +52,7 @@ SmileyFaceSvg.propTypes = {
   colourFace: PropTypes.string.isRequired,
   colourFeatures: PropTypes.string.isRequired,
   height: PropTypes.number.isRequired,
-  weight: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
 };
 
 export default SmileyFaceSvg;
