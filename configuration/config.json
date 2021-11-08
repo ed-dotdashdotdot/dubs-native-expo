@@ -23,25 +23,35 @@
     "hard": 96,
     "normal": 48
   },
-  "supportedLanguages123123": [
+  "supportedLanguages": [
     {
-      "lang": "de",
+      "countryCode": "cn",
+      "text": "中国人"
+    },
+    {
+      "countryCode": "de",
       "text": "Deutsche"
     }, {
-      "lang": "en",
+      "countryCode": "en",
       "text": "English"
     }, {
-      "lang": "es",
+      "countryCode": "es",
       "text": "Español"
     }, {
-      "lang": "fr",
+      "countryCode": "fr",
       "text": "Française"
     }, {
-      "lang": "it",
+      "countryCode": "it",
       "text": "Italiano"
     }, {
-      "lang": "pt",
+      "countryCode": "jp",
+      "text": "日本"
+    }, {
+      "countryCode": "pt",
       "text": "Português"
+    }, {
+      "countryCode": "ru",
+      "text": "русский"
     }
   ],
   "wowMessageAfterMs123123": 1200000,
