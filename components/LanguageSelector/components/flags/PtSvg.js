@@ -5,7 +5,7 @@ const PtSvg = props => (
   <Svg
     viewBox="0 0 48 48"
     xmlns="http://www.w3.org/2000/svg"
-    {...props}
+    { ...props }
   >
     <Path
       d="M0 24c0 10.3 6.5 19.1 15.7 22.5v-45C6.5 4.9 0 13.7 0 24z"

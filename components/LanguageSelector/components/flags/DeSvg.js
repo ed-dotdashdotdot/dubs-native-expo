@@ -5,7 +5,7 @@ const DeSvg = props => (
   <Svg 
     viewBox="0 0 48 48" 
     xmlns="http://www.w3.org/2000/svg" 
-    {...props}
+    { ...props }
   >
     <Path
       d="M1.4 16h45.2C43.3 6.7 34.4 0 24 0 13.6 0 4.7 6.7 1.4 16z"
