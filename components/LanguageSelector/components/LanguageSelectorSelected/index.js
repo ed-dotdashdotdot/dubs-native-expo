@@ -2,13 +2,10 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-// import { colours } from '../../../../configuration/config.json';
-
 import LanguageSelectorSelectedSvg from '../LanguageSelectorSelectedSvg';
 
 const LanguageSelectorSelected = props => {
   const { selectedLanguage } = { ...props };
-  // const highlightColour = colours.white;
   return (
     <View 
       style={{
@@ -20,6 +17,9 @@ const LanguageSelectorSelected = props => {
         width: '100%',
       }}
     >
+      <View style={{ flex: 1 }}>
+        {selectedLanguage === 'cn' && <LanguageSelectorSelectedSvg />}
+      </View>
       <View style={{ flex: 1 }}>
         {selectedLanguage === 'de' && <LanguageSelectorSelectedSvg />}
       </View>

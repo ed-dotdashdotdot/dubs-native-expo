@@ -20,6 +20,7 @@ const LanguageSelector = props => {
           width: '100%',
         }}
       >
+        <DrawLanguageButton whichLanguage="cn" />
         <DrawLanguageButton whichLanguage="de" />
         <DrawLanguageButton whichLanguage="en" />
         <DrawLanguageButton whichLanguage="es" />

@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import allActions from '../../../../actions';
 
+import CnSvg from '../flags/CnSvg';
 import DeSvg from '../flags/DeSvg';
 import EnSvg from '../flags/EnSvg';
 import EsSvg from '../flags/EsSvg';
@@ -62,6 +63,7 @@ const DrawLanguageButton = props => {
           >
             {(() => {
               switch (whichLanguage) {
+                case 'cn': return <CnSvg width={svgSize} height={svgSize} />;
                 case 'de': return <DeSvg width={svgSize} height={svgSize} />;
                 case 'es': return <EsSvg width={svgSize} height={svgSize} />;
                 case 'fr': return <FrSvg width={svgSize} height={svgSize} />
