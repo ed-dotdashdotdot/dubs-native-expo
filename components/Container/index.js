@@ -1,6 +1,10 @@
 // import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
-import { Text, View } from 'react-native';
+import { 
+  ImageBackground, 
+  useWindowDimensions, 
+  View 
+} from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
@@ -11,6 +15,7 @@ import GameOptions from '../GameOptions';
 import Info from '../Info';
 import LanguageSelector from '../LanguageSelector';
 import Options from '../Options';
+import Mesh from '../Mesh';
 import { colours } from '../../configuration/config.json';
 
 import isGameOver from '../../js/helpers/isGameOver';
@@ -20,6 +25,11 @@ const Container = () => {
   const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
+
+  const { 
+    height , 
+    width,
+  } = useWindowDimensions();
 
   useEffect(() => {
     if (isGameOver(game.status, game.data.length, game.found.length)) {
@@ -40,6 +50,20 @@ const Container = () => {
           paddingRight: 12,
         }}
       >
+        <ImageBackground 
+          style={[
+            {
+              height: height,
+              width: width,
+            },
+          ]}
+        >
+          <Mesh 
+            colour={colours.white025} 
+            height={height}
+            width={width}
+          />
+        </ImageBackground>
         {game.status === 'game-on' ? (
           <GameOnHeader 
             bossMode={game.bossMode} 
