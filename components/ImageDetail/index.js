@@ -44,12 +44,12 @@ const ImageDetail = props => {
           ]}
         >
           <ExpoFastImage 
-            uri={imageSrc}
             cacheKey={`image-${images.detail}-medium`}
             style={{
               height: '100%',
               width: '100%',
             }}
+            uri={imageSrc}
           />
         </View>
         <View
