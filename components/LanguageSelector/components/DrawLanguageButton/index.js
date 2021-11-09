@@ -24,12 +24,7 @@ const DrawLanguageButton = props => {
   const { languageActions } = { ...allActions };
   const dispatch = useDispatch();
 
-  // console.log(supportedLanguages.length);
-  // console.log(width);
-
-  // const buttonSize = languageSelector.flagButtonSize;
   const buttonSize = (width - 24) / supportedLanguages.length;
-  // const flagSize = languageSelector.flagSize;
   let flagSize = ((width - 24) / supportedLanguages.length) - 4;
   if (flagSize > 48) {
     flagSize = 48;
@@ -41,20 +36,14 @@ const DrawLanguageButton = props => {
     <View 
       style={{
         alignItems: 'center',
-        // borderColor: 'red',
-        // borderStyle: 'solid',
-        // borderWidth: 1,
-        // flex: 1,
       }}
     >
       <TouchableOpacity
-        // accessibilityLabel="Switch language to German"
         onPress={() => {
           dispatch(languageActions.setChangeLanguage(whichLanguage));
         }}
         style={[
           {
-            // backgroundColor: 'yellow',
             display: 'flex',
             textAlign: 'center',
             justifyContent: 'center'
@@ -68,11 +57,9 @@ const DrawLanguageButton = props => {
           style={[
             {
               alignSelf: 'center',
-              // justifyContent : 'flex-end',
             }, {
               borderRadius: flagSize / 2,
               height: flagSize,
-              // marginTop: (buttonSize - flagSize) / 2,
               width: flagSize,
             },
             globalStyles.border,

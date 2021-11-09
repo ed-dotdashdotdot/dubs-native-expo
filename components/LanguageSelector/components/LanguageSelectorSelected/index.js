@@ -21,8 +21,15 @@ const LanguageSelectorSelected = props => {
     >
       {
         supportedLanguages.map(value => (
-          <View style={{ flex: 1 }} key={value.countryCode}>
-            <LanguageSelectorSelectedSvg show={selectedLanguage === value.countryCode} />
+          <View 
+            style={{ 
+              flex: 1 
+            }} 
+            key={value.countryCode}
+          >
+            <LanguageSelectorSelectedSvg 
+              show={selectedLanguage === value.countryCode} 
+            />
           </View>
         ))
       }
