@@ -112,7 +112,6 @@ const DrawSection = props => {
 
   return (
     <View 
-      // key={`${imagesValue.name}`}
       style={{
         marginBottom: 12,
       }}
