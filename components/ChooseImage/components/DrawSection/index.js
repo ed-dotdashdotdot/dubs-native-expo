@@ -125,11 +125,9 @@ const DrawSection = props => {
           </Text>
         </TouchableOpacity>
       ) : (
-        <>
-          <SectionHeading 
-            textKey={`chooseACategory.${imagesValue.name}`} 
-          />
-        </>
+        <SectionHeading 
+          textKey={`chooseACategory.${imagesValue.name}`} 
+        />
       )}
       {
         imagesValue.loaded && (
