@@ -1,7 +1,8 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
 import ExpoFastImage from 'expo-fast-image';

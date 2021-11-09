@@ -1,7 +1,8 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { Text, TouchableOpacity, View } from 'react-native';
 // import axios from 'axios';
+
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
 import SectionHeading from '../SectionHeading';

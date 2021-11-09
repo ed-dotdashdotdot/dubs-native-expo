@@ -1,11 +1,8 @@
 // import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
+import { ImageBackground, useWindowDimensions, View } from 'react-native';
+
 import { useSelector, useDispatch } from 'react-redux';
-import { 
-  ImageBackground, 
-  useWindowDimensions, 
-  View 
-} from 'react-native';
 import allActions from '../../actions';
 
 import AppStateManager from '../AppStateManager';

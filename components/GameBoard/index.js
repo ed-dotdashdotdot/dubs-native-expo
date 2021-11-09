@@ -1,12 +1,8 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  Pressable,
-  useWindowDimensions,
-  Vibration,
-  View
-} from 'react-native';
+import { Pressable, useWindowDimensions, Vibration, View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import ExpoFastImage from 'expo-fast-image';

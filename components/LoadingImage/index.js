@@ -1,11 +1,10 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  Text,
-  View
-} from 'react-native';
+import { Text, View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
+
 import ExpoFastImage from 'expo-fast-image';
 
 import { timerStartDate } from '../../js/helpers/timerStartDate';

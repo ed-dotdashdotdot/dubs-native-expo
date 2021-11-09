@@ -1,6 +1,7 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import { TouchableOpacity } from 'react-native';
+
+import { useDispatch } from 'react-redux';
 import allActions from '../../../actions';
 
 import PauseButtonSvg from './components/PauseButtonSvg';

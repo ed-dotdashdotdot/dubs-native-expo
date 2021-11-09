@@ -1,7 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { useWindowDimensions, View } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
+
+import { useSelector } from 'react-redux';
 
 import ChooseImage from '../ChooseImage';
 import GameHome from '../GameHome';

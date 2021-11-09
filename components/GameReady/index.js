@@ -1,7 +1,8 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import ChooseAnImageButton from '../buttons/ChooseAnImageButton';
