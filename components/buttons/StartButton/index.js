@@ -17,8 +17,9 @@ import globalStyles from '../../../css/style.js';
 const StartButton = props => {
   const {
     gameData,
-    startTextKey,
+    textKey,
   } = { ...props };
+  console.log(textKey);
   const language = useSelector(state => state.language);
   const { gameActions, imagesActions } = { ...allActions };
   const dispatch = useDispatch();
@@ -40,7 +41,6 @@ const StartButton = props => {
     >
       <TouchableOpacity
         onPress={() => {
-          // dispatch(imagesActions.setImagesSelected(image));
           dispatch(gameActions.setGameData(gameData));
           dispatch(gameActions.setGameStatus('game-loading'));
         }}
@@ -57,7 +57,7 @@ const StartButton = props => {
             textAlign: 'center',
           }}
         >
-          <Translate textKey={startTextKey} />
+          <Translate textKey={textKey} />
         </Text>
       </TouchableOpacity>
     </View>
@@ -66,7 +66,7 @@ const StartButton = props => {
 
 StartButton.propTypes = {
   gameData: PropTypes.array.isRequired,
-  startTextKey: PropTypes.string.isRequired,
+  textKey: PropTypes.string.isRequired,
 };
 
 export default StartButton;

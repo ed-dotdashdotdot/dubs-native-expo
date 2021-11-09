@@ -23,7 +23,6 @@ const GameReady = props => {
   const game = useSelector(state => state.game);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-  const startTextKey = 'startWithRandomImage';
   const gameData = getGameData(level);
   return (
     <ScrollView>
@@ -104,7 +103,7 @@ const GameReady = props => {
         <ChooseAnImageButton />
         <StartButton
           gameData={gameData}
-          startTextKey={startTextKey}
+          textKey='startWithRandomImage'
         />
       </InfoInner>
     </ScrollView>
