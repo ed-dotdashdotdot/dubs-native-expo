@@ -1,4 +1,4 @@
-const drawGameBoardBorderRadius = (
+export const drawGameBoardBorderRadius = (
   position, 
   val, 
   squareMatches, 
@@ -54,5 +54,3 @@ const drawGameBoardBorderRadius = (
     };
   }
 };
-
-export default drawGameBoardBorderRadius;

@@ -9,7 +9,7 @@ import ImageGrid from '../ImageGrid';
 import ImageGridError from '../ImageGridError';
 import Translate from '../../../Translate';
 
-import ucFirst from '../../../../js/helpers/ucFirst';
+import { ucFirst } from '../../../../js/helpers/ucFirst';
 
 // axios load images into each area
 // build backend to handle requests

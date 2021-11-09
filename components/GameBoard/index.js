@@ -15,15 +15,16 @@ import {
   defaultImages,
   gameBoardCornerRadius,
 } from '../../configuration/config.json';
-import drawGameBoardBorderRadius from '../../js/helpers/drawGameBoardBorderRadius';
-import getCorners from '../../js/helpers/getCorners';
-import getGameArray from '../../js/helpers/getGameArray';
-import getGameGridPositions from '../../js/helpers/getGameGridPositions';
-import getGameGridPositionsBossMode from '../../js/helpers/getGameGridPositionsBossMode';
-import getGameSpecs from '../../js/helpers/getGameSpecs';
-import isButtonFound from '../../js/helpers/isButtonFound';
-import isPortrait from '../../js/helpers/isPortrait';
-import sliceValue from '../../js/helpers/sliceValue';
+
+import { drawGameBoardBorderRadius } from '../../js/helpers/drawGameBoardBorderRadius';
+import { getCorners } from '../../js/helpers/getCorners';
+import { getGameArray } from '../../js/helpers/getGameArray';
+import { getGameGridPositions } from '../../js/helpers/getGameGridPositions';
+import { getGameGridPositionsBossMode } from '../../js/helpers/getGameGridPositionsBossMode';
+import { getGameSpecs } from '../../js/helpers/getGameSpecs';
+import { isButtonFound } from '../../js/helpers/isButtonFound';
+import { isPortrait } from '../../js/helpers/isPortrait';
+import { sliceValue } from '../../js/helpers/sliceValue';
 import { colours, ipAddress } from '../../configuration/config.json';
 
 const GameBoard = props => {

@@ -1,4 +1,4 @@
-const getGameGridPositionsBossMode = (position, bossMode) => {
+export const getGameGridPositionsBossMode = (position, bossMode) => {
   if (bossMode) {
     if (position.indexOf('B') !== -1) {
       return { scaleFactor: -1};
@@ -6,5 +6,3 @@ const getGameGridPositionsBossMode = (position, bossMode) => {
   }
   return { scaleFactor: 1 };
 };
-
-export default getGameGridPositionsBossMode;

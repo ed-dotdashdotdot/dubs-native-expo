@@ -1,5 +1,4 @@
-const getGameGridPositions = (position, level, portrait, gameWidth, gameHeight, rows, cols) => {
-  
+export const getGameGridPositions = (position, level, portrait, gameWidth, gameHeight, rows, cols) => {
   if (level === 'easy') {
     if (portrait) {
       switch (position) {
@@ -1367,5 +1366,3 @@ const getGameGridPositions = (position, level, portrait, gameWidth, gameHeight, 
     };
   }
 };
-
-export default getGameGridPositions;

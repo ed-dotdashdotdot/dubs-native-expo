@@ -1,4 +1,4 @@
-let getGameArray = level => {
+export const getGameArray = level => {
   if (level === "normal") {
     return [
       '000A', '001A', '002A', '003A', '004A', '005A', '006A', '007A', '008A', '009A', 
@@ -29,5 +29,3 @@ let getGameArray = level => {
     '006B', '007B', '008B', '009B', '010B', '011B', 
   ];
 };
-
-export default getGameArray;

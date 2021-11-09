@@ -3,9 +3,8 @@ import { useSelector } from 'react-redux';
 import { Text, View } from 'react-native';
 
 import PauseButton from '../buttons/PauseButton';
-import { colours, fontFamily } from '../../configuration/config.json';
-
 import Timer from '../Timer';
+import { colours, fontFamily } from '../../configuration/config.json';
 
 const GameOptions = () => {
   const game = useSelector(state => state.game);

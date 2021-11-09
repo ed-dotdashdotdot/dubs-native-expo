@@ -9,10 +9,11 @@ import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import StartButton from '../buttons/StartButton';
 import Translate from '../Translate';
-import { colours, fontFamily } from '../../configuration/config.json';
 
-import getGameData from '../../js/helpers/getGameData';
-import whichLevelColour from '../../js/helpers/whichLevelColour';
+import { getGameData } from '../../js/helpers/getGameData';
+import { whichLevelColour } from '../../js/helpers/whichLevelColour';
+
+import { colours, fontFamily } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 

@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import isButtonFound from '.';
+import { isButtonFound } from '.';
 
 describe('isButtonFound()', () => {
   it('should return true when the values are the same', () => {

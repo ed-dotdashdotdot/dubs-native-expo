@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import sliceValue from '.';
+import { sliceValue } from '.';
 
 describe('sliceValue()', () => {
   it('should return the correct value', () => {

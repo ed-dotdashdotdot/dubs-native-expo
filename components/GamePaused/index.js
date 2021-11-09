@@ -7,7 +7,7 @@ import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../buttons/NewGameButtons';
 
-import whichLevelColour from '../../js/helpers/whichLevelColour';
+import { whichLevelColour } from '../../js/helpers/whichLevelColour';
 
 const GamePaused = () => {
   const game = useSelector(state => state.game);

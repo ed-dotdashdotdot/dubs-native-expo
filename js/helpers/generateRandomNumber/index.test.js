@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import generateRandomNumber from '.';
+import { generateRandomNumber } from '.';
 
 describe('generateRandomNumber', () => {
   it.each`

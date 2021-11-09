@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import ucFirst from '.';
+import { ucFirst } from '.';
 
 describe('ucFirst()', () => {
   it('should return the correct string', () => {

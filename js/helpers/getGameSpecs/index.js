@@ -1,5 +1,5 @@
-const getGameSpecs = (level, isPortrait, gameWidth, gameHeight)  => ({
-cols: level === 'hard' 
+export const getGameSpecs = (level, isPortrait, gameWidth, gameHeight)  => ({
+  cols: level === 'hard' 
     ? isPortrait ? 8 : 12 
     : level === 'normal' 
       ? isPortrait ? 6 : 8
@@ -13,5 +13,3 @@ cols: level === 'hard'
   total: level === 'hard' ? 96 : level === 'normal' ? 48 : 24,
   width: gameWidth,
 });
-
-export default getGameSpecs;

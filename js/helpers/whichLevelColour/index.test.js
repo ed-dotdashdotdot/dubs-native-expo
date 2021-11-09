@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import whichLevelColour from '.';
+import { whichLevelColour } from '.';
 
 describe('whichLevelColour()', () => {
   it('should return the correct string', () => {

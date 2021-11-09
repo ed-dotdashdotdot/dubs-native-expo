@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import isGameOver from '.';
+import { isGameOver } from '.';
 
 describe('isGameOver()', () => {
   it('should return true', () => {

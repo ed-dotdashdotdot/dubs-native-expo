@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import timeDifference from '.';
+import { timeDifference } from '.';
 
 describe('timeDifference()', () => {
   it.each`

@@ -1,4 +1,4 @@
-import getGameGridPositionsBossMode from '.';
+import { getGameGridPositionsBossMode } from '.';
 
 describe('getGameGridPositionsBossMode()', () => {
   it.each`

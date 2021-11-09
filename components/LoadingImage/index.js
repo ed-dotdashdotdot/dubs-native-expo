@@ -11,7 +11,7 @@ import ExpoFastImage from 'expo-fast-image';
 
 import { defaultImages } from '../../configuration/config.json';
 import { colours, ipAddress } from '../../configuration/config.json';
-import timerStartDate from '../../js/helpers/timerStartDate';
+import { timerStartDate } from '../../js/helpers/timerStartDate';
 
 const LoadingImage = props => {
   let { imageToUse } = { ...props };

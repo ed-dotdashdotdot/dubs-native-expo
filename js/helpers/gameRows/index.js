@@ -1,4 +1,4 @@
-const gameRows = (level, portrait) => {
+export const gameRows = (level, portrait) => {
   if (level === 'easy') {
     if (portrait) {
       return {
@@ -78,5 +78,3 @@ const gameRows = (level, portrait) => {
     };
   }
 };
-
-export default gameRows;

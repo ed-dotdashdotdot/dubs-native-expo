@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import drawStopwatch from '.';
+import { drawStopwatch } from '.';
 
 describe('drawStopwatch() - null values', () => {
   it.each`

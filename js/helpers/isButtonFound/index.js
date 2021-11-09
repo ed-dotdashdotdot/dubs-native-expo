@@ -1,5 +1,3 @@
-import sliceValue from '../sliceValue';
+import { sliceValue } from '../sliceValue';
 
-const isButtonFound = (value, found) => found.includes(sliceValue(value));
-
-export default isButtonFound;
+export const isButtonFound = (value, found) => found.includes(sliceValue(value));

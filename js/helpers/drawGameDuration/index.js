@@ -6,7 +6,7 @@ import humanizeDuration from 'humanize-duration';
   if decimal points are '.00' don't show them at all
   if decimal points are '.10' etc : only show 1 decimal point
 ### */
-const drawGameDuration = (durationMs, lang) => {
+export const drawGameDuration = (durationMs, lang) => {
   if (!durationMs) return '-';
   if (durationMs < 180000) { // 180000 = 3 minutes
     return humanizeDuration(durationMs, {
@@ -21,5 +21,3 @@ const drawGameDuration = (durationMs, lang) => {
     units: ['d', 'h', 'm', 's']
   });
 };
-
-export default drawGameDuration;

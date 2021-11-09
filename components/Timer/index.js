@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import DrawGameDuration from '../DrawGameDuration';
 
-import timeDifference from '../../js/helpers/timeDifference';
+import { timeDifference }  from '../../js/helpers/timeDifference';
 
 const Timer = props => {
   const {

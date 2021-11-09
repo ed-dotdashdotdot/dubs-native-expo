@@ -1,4 +1,4 @@
-const getCorners = (level, portrait) => {
+export const getCorners = (level, portrait) => {
   if (level === 'easy') {
     if (portrait) {
       return {
@@ -34,5 +34,3 @@ const getCorners = (level, portrait) => {
     };
   }
 };
-
-export default getCorners;

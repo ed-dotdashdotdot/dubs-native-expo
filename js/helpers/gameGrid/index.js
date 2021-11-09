@@ -1,4 +1,4 @@
-const gameGrid = (level, height, width, portrait) => {
+export const gameGrid = (level, height, width, portrait) => {
   if (level === 'easy') {
     if (portrait) {
       return {
@@ -34,5 +34,3 @@ const gameGrid = (level, height, width, portrait) => {
     }
   }
 };
-
-export default gameGrid;

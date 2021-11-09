@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import drawGameDuration from '.';
+import { drawGameDuration } from '.';
 
 describe('drawGameDuration()', () => {
   describe('when lang is `de`', () => {

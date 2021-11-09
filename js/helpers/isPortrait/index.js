@@ -1,5 +1,3 @@
-const isPortrait = (height, width) => {
+export const isPortrait = (height, width) => {
   return height >= width;
 };
-
-export default isPortrait;

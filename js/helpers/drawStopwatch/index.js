@@ -1,4 +1,4 @@
-const drawStopwatch = (durationMs) => {
+export const drawStopwatch = (durationMs) => {
   if (!durationMs) return '00:00';
 
   const duration = Math.round(durationMs / 1000);
@@ -25,5 +25,3 @@ const drawStopwatch = (durationMs) => {
   const sDisplay = s > 0 ? `${s}` : '00';
   return `${dDisplay}${hDisplay}${mDisplay}${sDisplay}`;
 };
-
-export default drawStopwatch;

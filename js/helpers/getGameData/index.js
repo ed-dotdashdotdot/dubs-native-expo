@@ -1,10 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-return-assign */
-import generateRandomNumber from '../generateRandomNumber';
+import { generateRandomNumber } from '../generateRandomNumber';
 import { gameArray, gameSize } from '../../../configuration/config.json';
-import sliceValue from '../sliceValue';
+import { sliceValue } from '../sliceValue';
 
-const getGameData = level => {
+export const getGameData = level => {
   // SHUFFLE
   const workingArray = [...gameArray];
   workingArray.length = gameSize[level];
@@ -28,4 +26,3 @@ const getGameData = level => {
   // return gameEntriesFinal;
 };
 
-export default getGameData;

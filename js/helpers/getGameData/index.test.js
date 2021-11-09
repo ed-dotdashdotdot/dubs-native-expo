@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-import getGameData from '.';
+import { getGameData } from '.';
 
 describe('getGameData()', () => {
   describe('when level is `easy`', () => {

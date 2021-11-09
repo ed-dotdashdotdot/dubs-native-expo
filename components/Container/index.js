@@ -18,14 +18,13 @@ import Options from '../Options';
 import Mesh from '../Mesh';
 import { colours } from '../../configuration/config.json';
 
-import isGameOver from '../../js/helpers/isGameOver';
+import { isGameOver } from '../../js/helpers/isGameOver';
 
 const Container = () => {
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-
   const { 
     height,
     width,
