@@ -1,4 +1,15 @@
 {
+  "boss": {
+    "CN": "老板",
+    "DE": "Bossin",
+    "EN": "Boss",
+    "ES": "Patrona",
+    "FR": "Chef",
+    "IT": "Capo",
+    "JP": "ボス",
+    "PT": "Chefe",
+    "RU": "Босс"
+  },
   "easy": {
     "CN": "简单",
     "DE": "Einfach",
@@ -6,7 +17,7 @@
     "ES": "Fácil",
     "FR": "Facile",
     "IT": "Facile",
-    "JP": "",
+    "JP": "簡単",
     "PT": "Fácil",
     "RU": "Легкий"
   },
@@ -17,7 +28,7 @@
     "ES": "Duro",
     "FR": "Dur",
     "IT": "Duro",
-    "JP": "",
+    "JP": "難しい",
     "PT": "Duro",
     "RU": "Жесткий"
   },
@@ -28,7 +39,7 @@
     "ES": "Normal",
     "FR": "Normal",
     "IT": "Normale",
-    "JP": "",
+    "JP": "普通",
     "PT": "Normal",
     "RU": "Обычный"
   },
@@ -39,7 +50,7 @@
     "ES": "Juego fácil",
     "FR": "Jeu facile",
     "IT": "Gioco facile",
-    "JP": "",
+    "JP": "簡単なゲーム",
     "PT": "Jogo fácil",
     "RU": "Легкая игра"
   },
@@ -50,7 +61,7 @@
     "ES": "Juego difícil",
     "FR": "Jeu difficile",
     "IT": "Gioco difficile",
-    "JP": "",
+    "JP": "ハードゲーム",
     "PT": "Jogo duro",
     "RU": "Жесткая игра"
   },
@@ -61,7 +72,7 @@
     "ES": "Juego normal",
     "FR": "Jeu normal",
     "IT": "Gioco normale",
-    "JP": "",
+    "JP": "通常のゲーム",
     "PT": "Jogo normal",
     "RU": "Нормальная игра"
   },
@@ -72,7 +83,7 @@
     "ES": "Atrás",
     "FR": "Arrière",
     "IT": "Di ritorno",
-    "JP": "",
+    "JP": "戻る",
     "PT": "Voltar",
     "RU": "Назад"
   },
@@ -83,7 +94,7 @@
     "ES": "De vuelta a casa",
     "FR": "De retour à la maison",
     "IT": "Tornare a casa",
-    "JP": "",
+    "JP": "家に帰る",
     "PT": "De volta para casa",
     "RU": "Вернуться домой"
   },
@@ -94,7 +105,7 @@
     "ES": "Elige una imagen para jugar",
     "FR": "Choisissez une image pour jouer avec",
     "IT": "Scegli un'immagine con cui giocare",
-    "JP": "",
+    "JP": "遊ぶ画像を選択してください",
     "PT": "Escolha uma imagem para brincar",
     "RU": "Выберите изображение для игры"
   },
@@ -105,7 +116,7 @@
     "ES": "Cambiar imagen",
     "FR": "Changer l'image",
     "IT": "Cambia immagine",
-    "JP": "",
+    "JP": "画像を変更する",
     "PT": "Mudar a imagem",
     "RU": "Сменить изображение"
   },
@@ -116,7 +127,7 @@
     "ES": "Nivel fácil",
     "FR": "Niveau facile",
     "IT": "Livello facile",
-    "JP": "",
+    "JP": "イージーレベル",
     "PT": "Nível fácil",
     "RU": "Легкий уровень"
   },
@@ -127,7 +138,7 @@
     "ES": "Nivel normal",
     "FR": "Niveau normal",
     "IT": "Livello normale",
-    "JP": "",
+    "JP": "通常レベル",
     "PT": "Nível normal",
     "RU": "Нормальный уровень"
   },
@@ -138,7 +149,7 @@
     "ES": "Nivel dificil",
     "FR": "Niveau difficile",
     "IT": "Livello difficile",
-    "JP": "",
+    "JP": "ハードレベル",
     "PT": "Nível difícil",
     "RU": "Жесткий уровень"
   },
@@ -160,7 +171,7 @@
     "ES": "Modo jefe",
     "FR": "Mode patron",
     "IT": "Modalità Boss",
-    "JP": "",
+    "JP": "ボスモード",
     "PT": "Modo de chefe",
     "RU": "Режим босса"
   },
@@ -171,7 +182,7 @@
     "ES": "Activa el modo jefe",
     "FR": "Activer le mode boss",
     "IT": "Attiva la modalità boss",
-    "JP": "",
+    "JP": "ボスモードをオンにする",
     "PT": "Ative o modo chefe",
     "RU": "Включите режим босса"
   },
@@ -182,7 +193,7 @@
     "ES": "Desactiva el modo jefe",
     "FR": "Désactiver le mode boss",
     "IT": "Disattiva la modalità boss",
-    "JP": "",
+    "JP": "ボスモードをオフにする",
     "PT": "Desligue o modo chefe",
     "RU": "Отключить режим босса"
   },
@@ -193,7 +204,7 @@
     "ES": "Juego terminado",
     "FR": "Jeu terminé",
     "IT": "Game Over",
-    "JP": "",
+    "JP": "ゲームオーバー",
     "PT": "Game over",
     "RU": "Игра закончена"
   },
@@ -204,7 +215,7 @@
     "ES": "Juego pausado",
     "FR": "Jeu en pause",
     "IT": "Gioco in pausa",
-    "JP": "",
+    "JP": "ゲームが一時停止しました",
     "PT": "Jogo pausado",
     "RU": "Игра приостановлена"
   },
@@ -215,7 +226,7 @@
     "ES": "¿Qué es el modo jefe?",
     "FR": "Qu'est-ce que le mode boss\u2009?",
     "IT": "Che cos'è la modalità boss?",
-    "JP": "",
+    "JP": "ボスモードとは何ですか？",
     "PT": "O que é o modo chefe?",
     "RU": "Что такое режим босса?"
   },
@@ -226,7 +237,7 @@
     "ES": "Modo normal",
     "FR": "Mode normal",
     "IT": "Modalità normale",
-    "JP": "",
+    "JP": "通常モード",
     "PT": "Modo regular",
     "RU": "Обычный режим"
   },
@@ -237,7 +248,7 @@
     "ES": "Modo jefe",
     "FR": "Mode Boss",
     "IT": "Modalità Boss",
-    "JP": "",
+    "JP": "ボスモード",
     "PT": "Modo de chefe",
     "RU": "Режим босса"
   },
@@ -248,7 +259,7 @@
     "ES": "En el modo normal, busca una coincidencia exacta",
     "FR": "En mode normal, vous recherchez une correspondance exacte",
     "IT": "In modalità normale stai cercando una corrispondenza esatta",
-    "JP": "",
+    "JP": "通常モードでは、完全に一致するものを探しています",
     "PT": "No modo normal, você está procurando uma correspondência exata",
     "RU": "В обычном режиме вы ищете точное совпадение"
   },
@@ -259,7 +270,7 @@
     "ES": "En el modo jefe, la partida está patas arriba.",
     "FR": "En mode boss, le match est à l'envers",
     "IT": "In modalità boss la partita è capovolta",
-    "JP": "",
+    "JP": "ボスモードでは、試合は逆さまになります",
     "PT": "No modo chefe, a partida está de cabeça para baixo",
     "RU": "В режиме босса матч перевернут"
   },
@@ -270,7 +281,7 @@
     "ES": "Empieza un juego fácil",
     "FR": "Commencer le jeu facile",
     "IT": "Inizia il gioco facile",
-    "JP": "",
+    "JP": "簡単なゲームを始める",
     "PT": "Comece o jogo fácil",
     "RU": "Начать легкую игру"
   },
@@ -281,7 +292,7 @@
     "ES": "Iniciar juego normal",
     "FR": "Démarrer le jeu normal",
     "IT": "Inizia il gioco normale",
-    "JP": "",
+    "JP": "通常のゲームを開始します",
     "PT": "Comece o jogo normal",
     "RU": "Начать нормальную игру"
   },
@@ -292,7 +303,7 @@
     "ES": "Empieza el juego difícil",
     "FR": "Démarrer un jeu difficile",
     "IT": "Inizia il gioco duro",
-    "JP": "",
+    "JP": "ハードゲームを開始する",
     "PT": "Comece um jogo difícil",
     "RU": "Начать тяжелую игру"
   },
@@ -303,7 +314,7 @@
     "ES": "Comienzo",
     "FR": "Début",
     "IT": "Cominciare",
-    "JP": "",
+    "JP": "始める",
     "PT": "Começar",
     "RU": ""
   },
@@ -314,7 +325,7 @@
     "ES": "Comience con una imagen aleatoria",
     "FR": "Commencer avec une image aléatoire",
     "IT": "Inizia con un'immagine casuale",
-    "JP": "",
+    "JP": "ランダムな画像から始める",
     "PT": "Comece com uma imagem aleatória",
     "RU": "Начинать"
   },
@@ -325,7 +336,7 @@
     "ES": "Usa esta imagen",
     "FR": "Utiliser cette image",
     "IT": "Usa questa immagine",
-    "JP": "",
+    "JP": "この画像を使用する",
     "PT": "Use esta imagem",
     "RU": "Используйте это изображение"
   },
@@ -336,7 +347,7 @@
     "ES": "¿Qué es el modo jefe?",
     "FR": "Qu'est-ce que le mode boss ?",
     "IT": "Che cos'è la modalità boss?",
-    "JP": "",
+    "JP": "ボスモードとは何ですか？",
     "PT": "O que é o modo chefe?",
     "RU": "Что такое режим босса?"
   },
@@ -347,7 +358,7 @@
     "ES": "Con modo jefe",
     "FR": "Avec le mode patron",
     "IT": "Con la modalità boss",
-    "JP": "",
+    "JP": "ボスモード付き",
     "PT": "Com modo de chefe",
     "RU": "С режимом босса"
   },
@@ -358,7 +369,7 @@
     "ES": "¡Vaya, eso tomó mucho tiempo!",
     "FR": "Wow, ça a pris beaucoup de temps\u2009!",
     "IT": "Wow, ci è voluto davvero tanto tempo!",
-    "JP": "",
+    "JP": "うわー、それは本当に長い時間がかかりました！",
     "PT": "Uau, isso demorou muito!",
     "RU": "Вау, это заняло очень много времени!"
   },
@@ -369,7 +380,7 @@
     "ES": "Juega este juego de nuevo",
     "FR": "Rejouer à ce jeu",
     "IT": "Gioca di nuovo a questo gioco",
-    "JP": "",
+    "JP": "このゲームをもう一度プレイする",
     "PT": "Jogue este jogo novamente",
     "RU": "Сыграй в эту игру снова"
   },
@@ -380,7 +391,7 @@
     "ES": "Encontrada",
     "FR": "Trouvée",
     "IT": "Fondare",
-    "JP": "",
+    "JP": "見つかった",
     "PT": "Encontrada",
     "RU": "Нашел"
   },
@@ -391,7 +402,7 @@
     "ES": "ES - Choose a category",
     "FR": "FR - Choose a category",
     "IT": "IT - Choose a category",
-    "JP": "",
+    "JP": "カテゴリを選択",
     "PT": "PT - Choose a category",
     "RU": "RU - Choose a category",
     "recentlyPlayed": {
@@ -401,7 +412,7 @@
       "ES": "Recientemente jugado",
       "FR": "Joué récemment",
       "IT": "Giocato recentemente",
-      "JP": "",
+      "JP": "最近再生しました",
       "PT": "Tocado recentemente",
       "RU": ""
     },
@@ -412,7 +423,7 @@
       "ES": "Los más valorados",
       "FR": "Les mieux notés",
       "IT": "Più votati",
-      "JP": "",
+      "JP": "トップレート",
       "PT": "Mais votado",
       "RU": "Недавно играл"
     },
@@ -423,7 +434,7 @@
       "ES": "Considerada dificil",
       "FR": "Considéré comme difficile",
       "IT": "Considerato difficile",
-      "JP": "",
+      "JP": "難しいと思われる",
       "PT": "Considerado difícil",
       "RU": ""
     },
@@ -434,7 +445,7 @@
       "ES": "Difícil",
       "FR": "Difficile",
       "IT": "Difficile",
-      "JP": "",
+      "JP": "難しい",
       "PT": "Difícil",
       "RU": "Считается трудным"
     },
@@ -445,7 +456,7 @@
       "ES": "Arquitectura",
       "FR": "Architecture",
       "IT": "Architettura",
-      "JP": "",
+      "JP": "建築",
       "PT": "Arquitetura",
       "RU": "Архитектура"
     },
@@ -456,7 +467,7 @@
       "ES": "Naturaleza",
       "FR": "La nature",
       "IT": "Natura",
-      "JP": "",
+      "JP": "自然",
       "PT": "Natureza",
       "RU": "Природа"
     },
@@ -467,7 +478,7 @@
       "ES": "Patronas",
       "FR": "Motifs",
       "IT": "Modelli",
-      "JP": "",
+      "JP": "パターン",
       "PT": "Padrões",
       "RU": "Узоры"
     },
@@ -478,7 +489,7 @@
       "ES": "Tecnología",
       "FR": "La technologie",
       "IT": "Tecnologia",
-      "JP": "",
+      "JP": "テクノロジー",
       "PT": "Tecnologia",
       "RU": "Технология"
     },
@@ -489,7 +500,7 @@
       "ES": "Tipografía",
       "FR": "Typographie",
       "IT": "Tipografia",
-      "JP": "",
+      "JP": "タイポグラフィ",
       "PT": "Tipografia",
       "RU": "Типография"
     }
@@ -501,7 +512,7 @@
     "ES": "Se ha producido un error",
     "FR": "Une erreur est survenue",
     "IT": "C'è stato un errore",
-    "JP": "",
+    "JP": "エラーが発生しました",
     "PT": "ocorreu um erro",
     "RU": "произошла ошибка"
   },
@@ -512,7 +523,7 @@
     "ES": "Pausar juego",
     "FR": "Suspendre le jeu",
     "IT": "Metti in pausa il gioco",
-    "JP": "",
+    "JP": "ゲームを一時停止",
     "PT": "Pausar o jogo",
     "RU": "Приостановить игру"
   },
@@ -523,7 +534,7 @@
     "ES": "Continua el juego",
     "FR": "Continuer le jeu",
     "IT": "Continua il gioco",
-    "JP": "",
+    "JP": "ゲームを続ける",
     "PT": "Continuar o jogo",
     "RU": "Продолжить игру"
   }
