@@ -5,44 +5,31 @@ import PropTypes from 'prop-types';
 import allActions from '../../actions';
 
 import ChooseAnImageButton from '../buttons/ChooseAnImageButton';
+import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import StartButton from '../buttons/StartButton';
 import Translate from '../Translate';
 import { colours, fontFamily } from '../../configuration/config.json';
 
-import InfoInner from '../InfoInner';
-
 import getGameData from '../../js/helpers/getGameData';
 import whichLevelColour from '../../js/helpers/whichLevelColour';
-
-import Polyglot from 'node-polyglot';
-import i18n from '../../i18n';
 
 import globalStyles from '../../css/style.js';
 
 const GameReady = props => {
   const { level } = { ...props };
   const game = useSelector(state => state.game);
-  const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-
-  const polyglot = new Polyglot();
-  polyglot.extend(i18n());
-  const lang = language.selected || 'en';
-  // const startTextKey = gameImage ? 'start' : 'startWithRandomImage';
   const startTextKey = 'startWithRandomImage';
-
   const gameData = getGameData(level);
-
   return (
     <ScrollView>
       <InfoInner>
         <PageHeading 
           colour={whichLevelColour(level)}
-          text={polyglot.t(`${level}Level.${lang.toUpperCase()}`)} 
+          textKey={`${level}Level`} 
         />
-        
         <View 
           style={[
             {

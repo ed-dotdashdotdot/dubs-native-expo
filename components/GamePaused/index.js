@@ -9,19 +9,11 @@ import NewGameButtons from '../buttons/NewGameButtons';
 
 import whichLevelColour from '../../js/helpers/whichLevelColour';
 
-import Polyglot from 'node-polyglot';
-import i18n from '../../i18n';
-
 const GamePaused = () => {
   const game = useSelector(state => state.game);
-  const language = useSelector(state => state.language);
   const timer = useSelector(state => state.timer);
   const { timerActions } = { ...allActions };
   const dispatch = useDispatch();
-
-  const polyglot = new Polyglot();
-  polyglot.extend(i18n());
-  const lang = language.selected || 'en';
 
   useEffect(() => {
     if (timer.saved === 0) {
@@ -38,7 +30,7 @@ const GamePaused = () => {
       <InfoInner>
         <PageHeading 
           colour={whichLevelColour(game.level)}
-          text={polyglot.t(`gamePaused.${lang.toUpperCase()}`)} 
+          textKey='gamePaused' 
         />
         <NewGameButtons section="game-paused" />
       </InfoInner>

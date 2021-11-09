@@ -10,9 +10,6 @@ import NewGameButtons from '../buttons/NewGameButtons';
 import Translate from '../Translate';
 import { colours, fontFamily } from '../../configuration/config.json';
 
-import Polyglot from 'node-polyglot';
-import i18n from '../../i18n';
-
 import globalStyles from '../../css/style.js';
 
 const GameOver = () => {
@@ -22,10 +19,6 @@ const GameOver = () => {
   const dispatch = useDispatch();
 
   const duration = ((timer.end - timer.start) / 1000).toFixed(2) * 1000;
-
-  const polyglot = new Polyglot();
-  polyglot.extend(i18n());
-  const lang = language.selected || 'en';
 
   useEffect(() => {
     const endTime = new Date().getTime();
@@ -39,7 +32,7 @@ const GameOver = () => {
     <ScrollView>
       <InfoInner>
         <PageHeading 
-          text={polyglot.t(`gameOver.${lang.toUpperCase()}`)} 
+          textKey='gameOver' 
         />
         <View
           style={[
