@@ -316,7 +316,7 @@
     "IT": "Cominciare",
     "JP": "始める",
     "PT": "Começar",
-    "RU": ""
+    "RU": "Начинать"
   },
   "startWithRandomImage": {
     "CN": "从随机图像开始",
@@ -414,7 +414,7 @@
       "IT": "Giocato recentemente",
       "JP": "最近再生しました",
       "PT": "Tocado recentemente",
-      "RU": ""
+      "RU": "Недавно играл"
     },
     "topRated": {
       "CN": "评分最高",
@@ -436,7 +436,7 @@
       "IT": "Considerato difficile",
       "JP": "難しいと思われる",
       "PT": "Considerado difícil",
-      "RU": ""
+      "RU": "Считается трудным"
     },
     "difficult": {
       "CN": "难的",
