@@ -19,6 +19,8 @@ const PageHeading = props => {
 
   return (
     <View 
+      accessible={true}
+      accessibilityRole='header'
       style={[
         {
           marginBottom: 24,

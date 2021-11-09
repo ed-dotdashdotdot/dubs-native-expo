@@ -10,6 +10,9 @@ const WhatIsBossModeTitle = props => {
   const { textKey } = { ...props };
   return (
     <Text
+      accessible={true}
+      // accessibilityLabel='What is boss mode?'
+      accessibilityRole='header'
       style={{
         color: colours.white,
         fontFamily: fontFamily,

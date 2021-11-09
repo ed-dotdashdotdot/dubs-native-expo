@@ -55,6 +55,8 @@ const GameReady = props => {
             ]}
           >
             <TouchableOpacity
+              accessible={true}
+              accessibilityRole='button'
               onPress={() => dispatch(gameActions.setGameBossMode(!game.bossMode))}
             >
               <Text
@@ -74,8 +76,8 @@ const GameReady = props => {
           <View
             style={[
               {
-                borderTopRightRadius: 8,
                 borderBottomRightRadius: 8,
+                borderTopRightRadius: 8,
                 justifyContent: 'center',
                 width: 48,
               },
@@ -83,6 +85,9 @@ const GameReady = props => {
             ]}
           >
             <TouchableOpacity
+              accessible={true}
+              accessibilityLabel='What is boss mode?'
+              accessibilityRole='link'
               onPress={() => dispatch(gameActions.setGameStatus('what-is-boss-mode'))}
             >
               <Text

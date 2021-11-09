@@ -26,6 +26,8 @@ const SectionHeading = props => {
       ]}
     >
       <Text
+        accessible={true}
+        accessibilityRole='header'
         style={{
           color: colours.white,
           fontFamily: fontFamily,

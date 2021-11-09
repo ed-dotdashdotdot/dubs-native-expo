@@ -26,13 +26,16 @@ const ChooseAnImageButton = () => {
       ]}
     >
       <TouchableOpacity
+        accessible={true}
+        // accessibilityLabel='What is boss mode?'
+        accessibilityRole='button'
         onPress={() => {
           dispatch(gameActions.setGameStatus('choose-image'));
         }}
         style={[
           globalStyles.padding12,
         ]}
-        type="button"
+        // type="button"
       >
         <Text
           style={{

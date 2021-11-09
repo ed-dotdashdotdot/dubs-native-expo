@@ -33,6 +33,7 @@ const ImageDetail = props => {
     <ScrollView>
       <InfoInner>
         <View 
+          accessible={true}
           style={[
             {
               alignSelf: 'center',
@@ -52,8 +53,9 @@ const ImageDetail = props => {
               position: 'absolute',
               width: '100%',
             }}
-            >
+          >
             <Text
+              accessible={false}
               style={{
                 color: 'white',
                 fontSize: 24,
@@ -63,14 +65,21 @@ const ImageDetail = props => {
               <Translate textKey='loading' />
             </Text>
           </View>
-          <ExpoFastImage 
-            cacheKey={`image-${images.detail}-medium`}
-            style={{
-              height: '100%',
-              width: '100%',
-            }}
-            uri={imageSrc}
-          />
+          <View
+            accessible={true}
+            accessibilityRole='image'
+          >
+            <ExpoFastImage 
+              accessible={true}
+              accessibilityRole='image'
+              cacheKey={`image-${images.detail}-medium`}
+              style={{
+                height: '100%',
+                width: '100%',
+              }}
+              uri={imageSrc}
+            />
+          </View>
         </View>
         <View
           style={[
@@ -101,6 +110,8 @@ const ImageDetail = props => {
           ]}
         >
           <TouchableOpacity
+            accessible={true}
+            accessibilityRole='button'
             onPress={() => {
               dispatch(imagesActions.setImagesSelected(image));
               dispatch(gameActions.setGameData(gameData));

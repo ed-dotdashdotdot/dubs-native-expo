@@ -33,7 +33,10 @@ const GameOptions = () => {
             width: 48 
           }}
         />
-        <View 
+        <View
+          accessible={true}
+          // accessibilityLabel='What is boss mode?'
+          accessibilityRole='timer'
           style={{
             flex: 1,
             height: 48,
@@ -59,7 +62,10 @@ const GameOptions = () => {
             }
           </Text>
         </View>
-        <View 
+        <View
+          accessible={true}
+          accessibilityLabel='Pause game'
+          accessibilityRole='button'
           style={{
             height: 48,
             width: 48,

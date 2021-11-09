@@ -1,9 +1,12 @@
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
+
+import Polyglot from 'node-polyglot';
+import i18n from '../../../../i18n';
 
 import CnSvg from '../flags/CnSvg';
 import DeSvg from '../flags/DeSvg';
@@ -14,6 +17,7 @@ import ItSvg from '../flags/ItSvg';
 import JpSvg from '../flags/JpSvg';
 import PtSvg from '../flags/PtSvg';
 import RuSvg from '../flags/RuSvg';
+import Translate from '../../../Translate';
 
 import { languageSelector, supportedLanguages } from '../../../../configuration/config.json';
 
@@ -23,6 +27,13 @@ const DrawLanguageButton = props => {
   const { whichLanguage, width } = { ...props };
   const { languageActions } = { ...allActions };
   const dispatch = useDispatch();
+
+  console.log(whichLanguage);
+
+  const language = useSelector(state => state.language);
+  const polyglot = new Polyglot();
+  polyglot.extend(i18n());
+  const lang = language.selected || 'EN';
 
   const buttonSize = (width - 24) / supportedLanguages.length;
   let flagSize = ((width - 24) / supportedLanguages.length) - 4;
@@ -39,6 +50,9 @@ const DrawLanguageButton = props => {
       }}
     >
       <TouchableOpacity
+        accessible={true}
+        accessibilityLabel={polyglot.t(`languageButton.${whichLanguage.toUpperCase()}`)}
+        accessibilityRole="button"
         onPress={() => {
           dispatch(languageActions.setChangeLanguage(whichLanguage));
         }}
@@ -53,6 +67,12 @@ const DrawLanguageButton = props => {
           }
         ]}
       >
+        {/* <Text
+          accessible={true}
+          accessibilityLabel='Gook'
+        >
+          <Translate textKey={`languageButton`} />
+        </Text> */}
         <View
           style={[
             {

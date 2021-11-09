@@ -57,13 +57,15 @@ const NewGameButtons = props => {
         ]}
       >
         <TouchableOpacity
+          accessible={true}
+          accessibilityRole='button'
           onPress={() => {
             newGameDispatches('easy');
           }}
           style={[
             globalStyles.padding12,
           ]}
-          type="button"
+          // type="button"
         >
           <Text
             style={{
@@ -89,13 +91,15 @@ const NewGameButtons = props => {
         ]}
       >
         <TouchableOpacity
+          accessible={true}
+          accessibilityRole='button'
           onPress={() => {
             newGameDispatches('normal');
           }}
           style={[
             globalStyles.padding12,
           ]}
-          type="button"
+          // type="button"
         >
           <Text
             style={{
@@ -121,13 +125,15 @@ const NewGameButtons = props => {
         ]}
       >
         <TouchableOpacity
+          accessible={true}
+          accessibilityRole='button'
           onPress={() => {
             newGameDispatches('hard');
           }}
           style={[
             globalStyles.padding12,
           ]}
-          type="button"
+          // type="button"
         >
           <Text
             style={{

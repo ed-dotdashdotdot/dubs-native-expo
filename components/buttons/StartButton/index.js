@@ -32,6 +32,9 @@ const StartButton = props => {
       ]}
     >
       <TouchableOpacity
+        accessible={true}
+        // accessibilityLabel='What is boss mode?'
+        accessibilityRole='button'
         onPress={() => {
           dispatch(gameActions.setGameData(gameData));
           dispatch(gameActions.setGameStatus('game-loading'));

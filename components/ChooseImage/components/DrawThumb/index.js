@@ -37,11 +37,12 @@ const DrawThumb = props => {
       ]}
     >
       <TouchableOpacity
+        accessible={true}
+        accessibilityRole='imagebutton'
         onPress={() => {
           dispatch(gameActions.setGameStatus('image-detail'));
           dispatch(imagesActions.setImagesDetail(imageRef));
         }}
-        type="button"
       >
         <ExpoFastImage
           uri={imageSrc}
