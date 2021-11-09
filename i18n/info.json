@@ -1,4 +1,15 @@
 {
+  "languageButton": {
+    "CN": "中国人",
+    "DE": "Deutsche",
+    "EN": "English",
+    "ES": "Español",
+    "FR": "Française",
+    "IT": "Italiano",
+    "JP": "日本",
+    "PT": "Português",
+    "RU": "русский"
+  },
   "loading": {
     "CN": "正在加载...",
     "DE": "Wird geladen...",
