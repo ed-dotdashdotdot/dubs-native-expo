@@ -33,7 +33,6 @@ const PlayThisGameAgainButton = () => {
         style={[
           globalStyles.padding12,
         ]}
-        // type="button"
       >
         <Text
           style={{

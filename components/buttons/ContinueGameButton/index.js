@@ -27,7 +27,6 @@ const ContinueGameButton = () => {
     >
       <TouchableOpacity
         accessible={true}
-        // accessibilityLabel='Pause game'
         accessibilityRole='button'
         onPress={() => {
           dispatch(gameActions.setGameStatus('game-loading'));
@@ -35,7 +34,6 @@ const ContinueGameButton = () => {
         style={[
           globalStyles.padding12,
         ]}
-        // type="button"
       >
         <Text
           style={{

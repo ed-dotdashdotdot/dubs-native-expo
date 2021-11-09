@@ -32,16 +32,13 @@ const TurnOnBossModeButton = props => {
     >
       <TouchableOpacity
         accessible={true}
-        // accessibilityLabel='What is boss mode?'
         accessibilityRole='button'
         onPress={() => {
           dispatch(gameActions.setGameBossMode(!bossMode));
-          // dispatch(gameActions.setGameStatus('game-ready'));
         }}
         style={[
           globalStyles.padding12,
         ]}
-        // type="button"
       >
         <Text
           style={{

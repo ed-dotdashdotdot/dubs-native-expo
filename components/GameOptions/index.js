@@ -35,7 +35,6 @@ const GameOptions = () => {
         />
         <View
           accessible={true}
-          // accessibilityLabel='What is boss mode?'
           accessibilityRole='timer'
           style={{
             flex: 1,

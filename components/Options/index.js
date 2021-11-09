@@ -63,7 +63,6 @@ const Options = () => {
   return (  
     <TouchableOpacity 
       accessible={true}
-      // accessibilityLabel='What is boss mode?'
       accessibilityRole='button'
       style={[
         {

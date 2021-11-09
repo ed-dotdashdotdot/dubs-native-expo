@@ -65,7 +65,6 @@ const NewGameButtons = props => {
           style={[
             globalStyles.padding12,
           ]}
-          // type="button"
         >
           <Text
             style={{
@@ -99,7 +98,6 @@ const NewGameButtons = props => {
           style={[
             globalStyles.padding12,
           ]}
-          // type="button"
         >
           <Text
             style={{
@@ -133,7 +131,6 @@ const NewGameButtons = props => {
           style={[
             globalStyles.padding12,
           ]}
-          // type="button"
         >
           <Text
             style={{
