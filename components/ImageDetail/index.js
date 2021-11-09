@@ -27,7 +27,6 @@ const ImageDetail = props => {
   const dispatch = useDispatch();
   const gameData = getGameData(game.level);
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`;
-
   const imageWidth = dimensions.width > 999 ? 440 : dimensions.width > 600 ? 512 : '100%'
 
   return (
@@ -37,9 +36,9 @@ const ImageDetail = props => {
           style={[
             {
               alignSelf: 'center',
+              aspectRatio: '1/1',
               overflow: 'hidden',
             }, {
-              height: imageWidth,
               width: imageWidth,
             },
             globalStyles.border,
