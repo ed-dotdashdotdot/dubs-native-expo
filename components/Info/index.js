@@ -12,6 +12,7 @@ import GameReady from '../GameReady';
 import ImageDetail from '../ImageDetail';
 import LoadingImage from '../LoadingImage';
 import WhatIsBossMode from '../WhatIsBossMode';
+
 import { colours } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';

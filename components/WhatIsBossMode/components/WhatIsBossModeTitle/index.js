@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Translate from '../../../Translate';
+
 import { colours, fontFamily } from '../../../../configuration/config.json';
 
 const WhatIsBossModeTitle = props => {

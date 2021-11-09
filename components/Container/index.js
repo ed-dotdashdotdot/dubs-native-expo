@@ -16,9 +16,10 @@ import Info from '../Info';
 import LanguageSelector from '../LanguageSelector';
 import Options from '../Options';
 import Mesh from '../Mesh';
-import { colours } from '../../configuration/config.json';
 
 import { isGameOver } from '../../js/helpers/isGameOver';
+
+import { colours } from '../../configuration/config.json';
 
 const Container = () => {
   const game = useSelector(state => state.game);

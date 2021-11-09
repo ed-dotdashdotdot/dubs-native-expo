@@ -6,12 +6,11 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import allActions from '../../actions';
-
 import ExpoFastImage from 'expo-fast-image';
 
-import { defaultImages } from '../../configuration/config.json';
-import { colours, ipAddress } from '../../configuration/config.json';
 import { timerStartDate } from '../../js/helpers/timerStartDate';
+
+import { colours, defaultImages, ipAddress } from '../../configuration/config.json';
 
 const LoadingImage = props => {
   let { imageToUse } = { ...props };

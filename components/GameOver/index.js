@@ -8,6 +8,7 @@ import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../buttons/NewGameButtons';
 import Translate from '../Translate';
+
 import { colours, fontFamily } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
