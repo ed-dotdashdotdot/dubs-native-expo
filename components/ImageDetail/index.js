@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, ScrollView, TouchableOpacity, View, } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import allActions from '../../actions';

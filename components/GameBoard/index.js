@@ -4,7 +4,7 @@ import {
   Pressable,
   useWindowDimensions,
   Vibration,
-  View,
+  View
 } from 'react-native';
 import PropTypes from 'prop-types';
 import allActions from '../../actions';

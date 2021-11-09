@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   Text,
-  View,
+  View
 } from 'react-native';
 import PropTypes from 'prop-types';
 import allActions from '../../actions';

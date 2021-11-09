@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Text, ScrollView, View, } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
-import { Text, ScrollView, View, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 // import axios from 'axios';
 import allActions from '../../../../actions';

@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
   TouchableOpacity, 
-  useWindowDimensions, 
   View 
 } from 'react-native';
 import { useDispatch } from 'react-redux';
