@@ -9,7 +9,14 @@ import { colours, fontFamily } from '../../configuration/config.json';
 import globalStyles from '../../css/style.js';
 
 const PageHeading = props => {
-  const { colour, textKey } = { ...props };
+  const { colour, textKey, subTextKeys } = { ...props };
+
+  // compose subKeys - used for game-over screen
+  let subTextKeysSplit = [];
+  if (subTextKeys) {
+    subTextKeysSplit = subTextKeys.split("|");
+  }
+
   return (
     <View 
       style={[
@@ -43,13 +50,37 @@ const PageHeading = props => {
       >
         <Translate textKey={textKey} />
       </Text>
+      {!!subTextKeysSplit.length && (
+        <Text
+          style={{
+            color: colours.white,
+            fontFamily: fontFamily,
+            fontSize: 20,
+            fontWeight: 'bold',
+            marginTop: 8,
+            padding: 0,
+            textAlign: 'center',
+            width: '100%',
+          }}
+        >
+          <Translate textKey={subTextKeysSplit[0]} />
+          {subTextKeysSplit[1] && (
+            <>
+              {" ("}
+                <Translate textKey={subTextKeysSplit[1]} />
+              {")"}
+            </>
+          )}
+        </Text>
+      )}
     </View>
   );
 };
 
 PageHeading.propTypes = {
   colour: PropTypes.string,
-  textKey: PropTypes.string.isRequired
+  textKey: PropTypes.string.isRequired,
+  subTextKeys: PropTypes.string
 };
 
 export default PageHeading;
