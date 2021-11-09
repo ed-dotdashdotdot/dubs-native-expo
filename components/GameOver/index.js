@@ -13,12 +13,18 @@ import { colours, fontFamily } from '../../configuration/config.json';
 import globalStyles from '../../css/style.js';
 
 const GameOver = () => {
-  const timer = useSelector(state => state.timer);
+  const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
+  const timer = useSelector(state => state.timer);
   const { timerActions } = { ...allActions };
   const dispatch = useDispatch();
 
   const duration = ((timer.end - timer.start) / 1000).toFixed(2) * 1000;
+
+  let subTextKeys = `${game.level}Level`;
+  if (game.bossMode) {
+    subTextKeys += '|withBossMode';
+  }
 
   useEffect(() => {
     const endTime = new Date().getTime();
@@ -32,7 +38,8 @@ const GameOver = () => {
     <ScrollView>
       <InfoInner>
         <PageHeading 
-          textKey='gameOver' 
+          textKey='gameOver'
+          subTextKeys={subTextKeys}
         />
         <View
           style={[
