@@ -1,20 +1,11 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  Pressable,
-  useWindowDimensions,
-  Vibration,
-  View
-} from 'react-native';
+import { Pressable, useWindowDimensions, Vibration, View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import ExpoFastImage from 'expo-fast-image';
-
-import {
-  defaultImages,
-  gameBoardCornerRadius,
-} from '../../configuration/config.json';
 
 import { drawGameBoardBorderRadius } from '../../js/helpers/drawGameBoardBorderRadius';
 import { getCorners } from '../../js/helpers/getCorners';
@@ -25,7 +16,13 @@ import { getGameSpecs } from '../../js/helpers/getGameSpecs';
 import { isButtonFound } from '../../js/helpers/isButtonFound';
 import { isPortrait } from '../../js/helpers/isPortrait';
 import { sliceValue } from '../../js/helpers/sliceValue';
-import { colours, ipAddress } from '../../configuration/config.json';
+
+import {
+  colours,
+  defaultImages,
+  gameBoardCornerRadius,
+  ipAddress,
+} from '../../configuration/config.json';
 
 const GameBoard = props => {
   const { dimensions, level } = { ...props };
@@ -182,77 +179,45 @@ const GameBoard = props => {
                 }}
               >
                 {!isButtonFound(val, game.found) && (
-                  <>
-                    <ExpoFastImage
-                      // onLoad={imageLoaded} 
-                      // resizeMode={'contain'}
-                      // source={{uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.selected}`}}
-                      // source={{
-                      //   uri: imageSrc,
-                      //   // headers: { Authorization: 'someAuthToken' },
-                      //   // priority: FastImage.priority.normal,
-                      // }}
-                      cacheKey={`image-${images.selected}`}
-                      resizeMode='stretch'
-                      style={[
-                        {
-                          position: 'absolute',
-                        }, {
-                          height: gameSpecs.height,
-                          left: getGameGridPositions(
-                            val,
-                            level,
-                            isDevicePortrait,
-                            gameSpecs.width,
-                            gameSpecs.height,
-                            gameSpecs.rows,
-                            gameSpecs.cols
-                            ).x,
-                          top: getGameGridPositions(
-                            val,
-                            level,
-                            isDevicePortrait,
-                            gameSpecs.width,
-                            gameSpecs.height,
-                            gameSpecs.rows,
-                            gameSpecs.cols
-                          ).y,
-                          width: gameSpecs.width,
-                        }
-                      ]}
-                      uri={imgSrc}
-                    />
-                    {/* <Image
-                      resizeMode='stretch'
-                      source={imgSrc}
-                      style={[
-                        {
-                          // borderRadius: index === 0 ? 24 : 0, // was 10
-                          height: gameSpecs.height,
-                          left: getGameGridPositions(
-                            val, 
-                            level, 
-                            isDevicePortrait, 
-                            gameSpecs.width, 
-                            gameSpecs.height,
-                            gameSpecs.rows,
-                            gameSpecs.cols
-                            ).x,
-                          position: 'absolute',
-                          top: getGameGridPositions(
-                            val, 
-                            level, 
-                            isDevicePortrait, 
-                            gameSpecs.width, 
-                            gameSpecs.height,
-                            gameSpecs.rows,
-                            gameSpecs.cols
-                          ).y,
-                          width: gameSpecs.width,
-                        }
-                      ]}
-                    /> */}
-                  </>
+                  <ExpoFastImage
+                    // onLoad={imageLoaded} 
+                    // resizeMode={'contain'}
+                    // source={{uri: `http://${ipAddress.server}/dubs-cdn/image/?image=${images.selected}`}}
+                    // source={{
+                    //   uri: imageSrc,
+                    //   // headers: { Authorization: 'someAuthToken' },
+                    //   // priority: FastImage.priority.normal,
+                    // }}
+                    cacheKey={`image-${images.selected}`}
+                    resizeMode='stretch'
+                    style={[
+                      {
+                        position: 'absolute',
+                      }, {
+                        height: gameSpecs.height,
+                        left: getGameGridPositions(
+                          val,
+                          level,
+                          isDevicePortrait,
+                          gameSpecs.width,
+                          gameSpecs.height,
+                          gameSpecs.rows,
+                          gameSpecs.cols
+                          ).x,
+                        top: getGameGridPositions(
+                          val,
+                          level,
+                          isDevicePortrait,
+                          gameSpecs.width,
+                          gameSpecs.height,
+                          gameSpecs.rows,
+                          gameSpecs.cols
+                        ).y,
+                        width: gameSpecs.width,
+                      }
+                    ]}
+                    uri={imgSrc}
+                  />
                 )}
                 {game.selected === val && (
                   <>

@@ -1,7 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { useWindowDimensions, View } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
+
+import { useSelector } from 'react-redux';
 
 import ChooseImage from '../ChooseImage';
 import GameHome from '../GameHome';
@@ -12,6 +13,7 @@ import GameReady from '../GameReady';
 import ImageDetail from '../ImageDetail';
 import LoadingImage from '../LoadingImage';
 import WhatIsBossMode from '../WhatIsBossMode';
+
 import { colours } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';

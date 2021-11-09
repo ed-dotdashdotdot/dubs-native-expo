@@ -1,9 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { Text, TouchableOpacity } from 'react-native';
+
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import Translate from '../Translate';
+
 import { colours, fontFamily } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';

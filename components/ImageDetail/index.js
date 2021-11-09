@@ -1,8 +1,10 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
+
 import ExpoFastImage from 'expo-fast-image';
 
 import InfoInner from '../InfoInner';
@@ -10,6 +12,7 @@ import TurnOnBossModeButton from '../buttons/TurnOnBossModeButton';
 import Translate from '../Translate';
 
 import { getGameData } from '../../js/helpers/getGameData';
+
 import { colours, fontFamily, ipAddress } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';

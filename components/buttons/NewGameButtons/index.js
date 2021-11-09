@@ -1,16 +1,15 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import { useDispatch } from 'react-redux';
 import allActions from '../../../actions';
 
 import ContinueGameButton from '../../buttons/ContinueGameButton';
 import PlayThisGameAgainButton from '../../buttons/PlayThisGameAgainButton';
 import Translate from '../../Translate';
-import { colours, fontFamily } from '../../../configuration/config.json';
 
-import Polyglot from 'node-polyglot';
-import i18n from '../../../i18n';
+import { colours, fontFamily } from '../../../configuration/config.json';
 
 import globalStyles from '../../../css/style.js';
 
@@ -18,14 +17,8 @@ const NewGameButtons = props => {
   const {
     section
   } = { ...props };
-  const language = useSelector(state => state.language);
-  const polyglot = new Polyglot();
-  polyglot.extend(i18n());
-  const lang = language.selected || 'en';
-
   const { gameActions, imagesActions, timerActions } = { ...allActions };
   const dispatch = useDispatch();
-
   const newGameDispatches = level => {
     dispatch(gameActions.setGameClicks(0));
     dispatch(gameActions.setGameStatus('game-ready'));
@@ -70,7 +63,7 @@ const NewGameButtons = props => {
           style={[
             globalStyles.padding12,
           ]}
-          title={polyglot.t(`startEasyGame.${lang.toUpperCase()}`)}
+          // title={polyglot.t(`startEasyGame.${lang.toUpperCase()}`)}
           type="button"
         >
           <Text
@@ -103,7 +96,7 @@ const NewGameButtons = props => {
           style={[
             globalStyles.padding12,
           ]}
-          title={polyglot.t(`startNormalGame.${lang.toUpperCase()}`)}
+          // title={polyglot.t(`startNormalGame.${lang.toUpperCase()}`)}
           type="button"
         >
           <Text
@@ -136,7 +129,7 @@ const NewGameButtons = props => {
           style={[
             globalStyles.padding12,
           ]}
-          title={polyglot.t(`startHardGame.${lang.toUpperCase()}`)}
+          // title={polyglot.t(`startHardGame.${lang.toUpperCase()}`)}
           type="button"
         >
           <Text

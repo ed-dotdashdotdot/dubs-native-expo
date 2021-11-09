@@ -2,8 +2,6 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { colours } from '../../../../configuration/config.json';
-
 import DrawThumb from '../DrawThumb';
 
 import globalStyles from '../../../../css/style';

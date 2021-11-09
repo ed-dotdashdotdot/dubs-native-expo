@@ -1,17 +1,15 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  Text,
-  View
-} from 'react-native';
+import { Text, View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import ExpoFastImage from 'expo-fast-image';
 
-import { defaultImages } from '../../configuration/config.json';
-import { colours, ipAddress } from '../../configuration/config.json';
 import { timerStartDate } from '../../js/helpers/timerStartDate';
+
+import { colours, defaultImages, ipAddress } from '../../configuration/config.json';
 
 const LoadingImage = props => {
   let { imageToUse } = { ...props };

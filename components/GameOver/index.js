@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { ScrollView, Text, View } from 'react-native';
+
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import DrawGameDuration from '../DrawGameDuration';
@@ -8,6 +9,7 @@ import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../buttons/NewGameButtons';
 import Translate from '../Translate';
+
 import { colours, fontFamily } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';

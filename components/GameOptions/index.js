@@ -1,9 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { Text, View } from 'react-native';
+
+import { useSelector } from 'react-redux';
 
 import PauseButton from '../buttons/PauseButton';
 import Timer from '../Timer';
+
 import { colours, fontFamily } from '../../configuration/config.json';
 
 const GameOptions = () => {
