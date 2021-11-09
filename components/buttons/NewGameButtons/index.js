@@ -63,7 +63,6 @@ const NewGameButtons = props => {
           style={[
             globalStyles.padding12,
           ]}
-          // title={polyglot.t(`startEasyGame.${lang.toUpperCase()}`)}
           type="button"
         >
           <Text
@@ -96,7 +95,6 @@ const NewGameButtons = props => {
           style={[
             globalStyles.padding12,
           ]}
-          // title={polyglot.t(`startNormalGame.${lang.toUpperCase()}`)}
           type="button"
         >
           <Text
@@ -129,7 +127,6 @@ const NewGameButtons = props => {
           style={[
             globalStyles.padding12,
           ]}
-          // title={polyglot.t(`startHardGame.${lang.toUpperCase()}`)}
           type="button"
         >
           <Text
