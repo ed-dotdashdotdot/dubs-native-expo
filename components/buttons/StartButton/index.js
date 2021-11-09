@@ -2,15 +2,12 @@ import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import allActions from '../../../actions';
 
 import Translate from '../../Translate';
 
 import { colours, fontFamily } from '../../../configuration/config.json';
-
-import Polyglot from 'node-polyglot';
-import i18n from '../../../i18n';
 
 import globalStyles from '../../../css/style.js';
 
@@ -19,13 +16,8 @@ const StartButton = props => {
     gameData,
     textKey,
   } = { ...props };
-  console.log(textKey);
-  const language = useSelector(state => state.language);
-  const { gameActions, imagesActions } = { ...allActions };
+  const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-  const polyglot = new Polyglot();
-  polyglot.extend(i18n());
-  const lang = language.selected || 'en';
   return (
     <View 
       style={[
