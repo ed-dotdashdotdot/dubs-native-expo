@@ -45,6 +45,24 @@ const ImageDetail = props => {
             globalStyles.borderRadius8,
           ]}
         >
+          <View
+            style={{
+              height: '100%',
+              justifyContent: 'center',
+              position: 'absolute',
+              width: '100%',
+            }}
+            >
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 24,
+                textAlign: 'center',
+              }}
+            >
+              <Translate textKey='loading' />
+            </Text>
+          </View>
           <ExpoFastImage 
             cacheKey={`image-${images.detail}-medium`}
             style={{

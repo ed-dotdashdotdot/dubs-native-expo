@@ -7,6 +7,8 @@ import allActions from '../../actions';
 
 import ExpoFastImage from 'expo-fast-image';
 
+import Translate from '../Translate';
+
 import { timerStartDate } from '../../js/helpers/timerStartDate';
 
 import { colours, defaultImages, ipAddress } from '../../configuration/config.json';
@@ -37,7 +39,7 @@ const LoadingImage = props => {
           textAlign: 'center',
         }}  
       >
-        Loading...
+        <Translate textKey='loading' />
       </Text>
       <ExpoFastImage
         // onLoad={() => {}}

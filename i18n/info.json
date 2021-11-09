@@ -1,4 +1,15 @@
 {
+  "loading": {
+    "CN": "正在加载...",
+    "DE": "Wird geladen...",
+    "EN": "Loading...",
+    "ES": "Cargando...",
+    "FR": "Chargement...",
+    "IT": "Caricamento in corso...",
+    "JP": "読み込んでいます...",
+    "PT": "Carregando...",
+    "RU": "Загружается\u2011..."
+  },
   "boss": {
     "CN": "老板",
     "DE": "Bossin",
