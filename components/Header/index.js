@@ -5,6 +5,8 @@ import LogoSvg from './components/LogoSvg';
 
 const Header = () => (
   <View
+    // accessible={true}
+    // accessibilityLabel="Dubs App"
     style={[
       {
         height: 48,
