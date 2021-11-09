@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
 import { useSelector } from 'react-redux';
+import { ScrollView, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import InfoInner from '../InfoInner';

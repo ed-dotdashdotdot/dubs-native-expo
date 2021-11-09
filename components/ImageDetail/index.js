@@ -1,6 +1,6 @@
 import React from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 import allActions from '../../actions';
 import ExpoFastImage from 'expo-fast-image';

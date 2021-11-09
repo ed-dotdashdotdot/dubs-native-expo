@@ -1,9 +1,9 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { 
   TouchableOpacity, 
   View 
 } from 'react-native';
-import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import allActions from '../../../../actions';
 

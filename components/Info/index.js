@@ -1,6 +1,6 @@
 import React from 'react';
-import { useWindowDimensions, View } from 'react-native';
 import { useSelector } from 'react-redux';
+import { useWindowDimensions, View } from 'react-native';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 
 import ChooseImage from '../ChooseImage';

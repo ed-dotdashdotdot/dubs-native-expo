@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { AppState } from 'react-native';
 import { useDispatch } from 'react-redux';
+import { AppState } from 'react-native';
 import PropTypes from 'prop-types';
 import allActions from '../../actions';
 

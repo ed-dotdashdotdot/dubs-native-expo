@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { ScrollView, Text, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
+import { ScrollView, Text, View } from 'react-native';
 import allActions from '../../actions';
 
 import DrawGameDuration from '../DrawGameDuration';

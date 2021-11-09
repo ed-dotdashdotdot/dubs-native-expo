@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import { useSelector } from 'react-redux';
+import { Text, View } from 'react-native';
 
 import PauseButton from '../buttons/PauseButton';
 import { colours, fontFamily } from '../../configuration/config.json';

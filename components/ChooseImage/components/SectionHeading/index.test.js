@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable no-undef */
 import React from 'react';
 import renderer from 'react-test-renderer';
 
