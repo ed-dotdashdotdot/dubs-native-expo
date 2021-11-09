@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, View } from 'react-native';
 
+import Translate from '../Translate';
+
 import { colours, fontFamily } from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 
 const PageHeading = props => {
-  const { colour, text } = { ...props };
+  const { colour, textKey } = { ...props };
   return (
     <View 
       style={[
@@ -39,7 +41,7 @@ const PageHeading = props => {
           width: '100%',
         }}
       >
-        { text }
+        <Translate textKey={textKey} />
       </Text>
     </View>
   );
@@ -47,7 +49,7 @@ const PageHeading = props => {
 
 PageHeading.propTypes = {
   colour: PropTypes.string,
-  text: PropTypes.string.isRequired
+  textKey: PropTypes.string.isRequired
 };
 
 export default PageHeading;
