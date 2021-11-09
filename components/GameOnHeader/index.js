@@ -29,15 +29,13 @@ const GameOnHeader = props => {
         }}
       >
         <Translate textKey={`${level}Level`} />
-        {
-          bossMode && (
-            <Text>
-              (
-                <Translate textKey="bossMode" />
-              )
-            </Text>
-          )
-        }
+        {bossMode && (
+          <Text>
+            (
+              <Translate textKey="boss" />
+            )
+          </Text>
+        )}
       </Text>
     </View>
   );
