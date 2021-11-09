@@ -6,7 +6,7 @@ import allActions from '../../actions';
 import DrawGameDuration from '../DrawGameDuration';
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
-import NewGameButtons from '../shared/NewGameButtons';
+import NewGameButtons from '../buttons/NewGameButtons';
 import Translate from '../Translate';
 import { colours, fontFamily } from '../../configuration/config.json';
 

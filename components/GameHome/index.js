@@ -29,7 +29,7 @@ import { useSelector } from 'react-redux';
 
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
-import NewGameButtons from '../shared/NewGameButtons';
+import NewGameButtons from '../buttons/NewGameButtons';
 
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';

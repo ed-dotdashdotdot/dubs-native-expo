@@ -4,9 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import allActions from '../../actions';
 
-import ChooseAnImageButton from '../ChooseAnImageButton';
+import ChooseAnImageButton from '../buttons/ChooseAnImageButton';
 import PageHeading from '../PageHeading';
-import StartButton from '../StartButton';
+import StartButton from '../buttons/StartButton';
 import Translate from '../Translate';
 import { colours, fontFamily } from '../../configuration/config.json';
 

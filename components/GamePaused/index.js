@@ -5,7 +5,7 @@ import allActions from '../../actions';
 
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
-import NewGameButtons from '../shared/NewGameButtons';
+import NewGameButtons from '../buttons/NewGameButtons';
 
 import whichLevelColour from '../../js/helpers/whichLevelColour';
 

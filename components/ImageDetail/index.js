@@ -6,7 +6,7 @@ import allActions from '../../actions';
 import ExpoFastImage from 'expo-fast-image';
 
 import InfoInner from '../InfoInner';
-import TurnOnBossModeButton from '../TurnOnBossModeButton';
+import TurnOnBossModeButton from '../buttons/TurnOnBossModeButton';
 import Translate from '../Translate';
 
 import getGameData from '../../js/helpers/getGameData';

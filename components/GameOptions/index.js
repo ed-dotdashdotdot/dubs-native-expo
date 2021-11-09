@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { useSelector } from 'react-redux';
 
-import PauseButton from '../PauseButton';
+import PauseButton from '../buttons/PauseButton';
 import { colours, fontFamily } from '../../configuration/config.json';
 
 import Timer from '../Timer';

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
-import allActions from '../../actions';
+import allActions from '../../../actions';
 
-import Translate from '../Translate';
-import { colours, fontFamily } from '../../configuration/config.json';
+import Translate from '../../Translate';
+import { colours, fontFamily } from '../../../configuration/config.json';
 
-import globalStyles from '../../css/style.js';
+import globalStyles from '../../../css/style.js';
 
-const ChooseAnImageButton = () => {
+const ContinueGameButton = () => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
 
@@ -25,7 +25,7 @@ const ChooseAnImageButton = () => {
     >
       <TouchableOpacity
         onPress={() => {
-          dispatch(gameActions.setGameStatus('choose-image'));
+          dispatch(gameActions.setGameStatus('game-loading'));
         }}
         style={[
           globalStyles.padding12,
@@ -41,11 +41,11 @@ const ChooseAnImageButton = () => {
             textAlign: 'center',
           }}
         >
-          <Translate textKey="chooseAnImageToPlayWith" />
+          <Translate textKey="continueGame" />
         </Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-export default ChooseAnImageButton;
+export default ContinueGameButton;

@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import allActions from '../../../actions';
 
-import ContinueGameButton from '../../ContinueGameButton';
-import PlayThisGameAgainButton from '../../PlayThisGameAgainButton';
+import ContinueGameButton from '../../buttons/ContinueGameButton';
+import PlayThisGameAgainButton from '../../buttons/PlayThisGameAgainButton';
 import Translate from '../../Translate';
 import { colours, fontFamily } from '../../../configuration/config.json';
 

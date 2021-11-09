@@ -1,22 +1,16 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
-import allActions from '../../actions';
+import allActions from '../../../actions';
 
-import Translate from '../Translate';
-import { colours, fontFamily } from '../../configuration/config.json';
+import Translate from '../../Translate';
+import { colours, fontFamily } from '../../../configuration/config.json';
 
-import globalStyles from '../../css/style.js';
+import globalStyles from '../../../css/style.js';
 
-const TurnOnBossModeButton = props => {
-  const { 
-    bossMode, 
-  } = { ...props };
-
+const PlayThisGameAgainButton = () => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-
   return (
     <View
       style={[
@@ -30,8 +24,9 @@ const TurnOnBossModeButton = props => {
     >
       <TouchableOpacity
         onPress={() => {
-          dispatch(gameActions.setGameBossMode(!bossMode));
-          // dispatch(gameActions.setGameStatus('game-ready'));
+          dispatch(gameActions.injectGameFound([]));
+          dispatch(gameActions.setGameStatus('game-loading'));
+          dispatch(gameActions.setGameSelected(''));
         }}
         style={[
           globalStyles.padding12,
@@ -47,15 +42,11 @@ const TurnOnBossModeButton = props => {
             textAlign: 'center',
           }}
         >
-          <Translate textKey={bossMode ? 'turnBossModeOff' : 'turnBossModeOn'} />
+          <Translate textKey="playThisGameAgain" />
         </Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-TurnOnBossModeButton.propTypes = {
-  bossMode: PropTypes.bool.isRequired,
-};
-
-export default TurnOnBossModeButton;
+export default PlayThisGameAgainButton;

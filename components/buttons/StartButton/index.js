@@ -3,15 +3,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import allActions from '../../actions';
+import allActions from '../../../actions';
 
-import Translate from '../Translate';
-import { colours, fontFamily } from '../../configuration/config.json';
+import Translate from '../../Translate';
+import { colours, fontFamily } from '../../../configuration/config.json';
 
 import Polyglot from 'node-polyglot';
-import i18n from '../../i18n';
+import i18n from '../../../i18n';
 
-import globalStyles from '../../css/style.js';
+import globalStyles from '../../../css/style.js';
 
 const StartButton = props => {
   const {

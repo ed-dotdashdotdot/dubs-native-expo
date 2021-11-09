@@ -7,7 +7,7 @@ import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import Translate from '../Translate';
 import SmileyFaceSvg from './components/SmileyFaceSvg';
-import TurnOnBossModeButton from '../TurnOnBossModeButton';
+import TurnOnBossModeButton from '../buttons/TurnOnBossModeButton';
 import { colours, fontFamily } from '../../configuration/config.json';
 
 import Polyglot from 'node-polyglot';
