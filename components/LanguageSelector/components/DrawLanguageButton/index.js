@@ -28,8 +28,6 @@ const DrawLanguageButton = props => {
   const { languageActions } = { ...allActions };
   const dispatch = useDispatch();
 
-  console.log(whichLanguage);
-
   const language = useSelector(state => state.language);
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
