@@ -1,5 +1,5 @@
 const defaultLanguageState = {
-  selected: 'en',
+  selected: 'en-GB',
 };
 
 const language = (state = defaultLanguageState, action) => {

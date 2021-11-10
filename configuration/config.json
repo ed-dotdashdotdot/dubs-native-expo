@@ -25,31 +25,31 @@
   },
   "supportedLanguages": [
     {
-      "countryCode": "cn",
+      "countryCode": "zh-CN",
       "text": "中国人"
     }, {
-      "countryCode": "de",
+      "countryCode": "de-DE",
       "text": "Deutsche"
     }, {
-      "countryCode": "en",
+      "countryCode": "en-GB",
       "text": "English"
     }, {
-      "countryCode": "es",
+      "countryCode": "es-ES",
       "text": "Español"
     }, {
-      "countryCode": "fr",
+      "countryCode": "fr-FR",
       "text": "Française"
     }, {
-      "countryCode": "it",
+      "countryCode": "it-IT",
       "text": "Italiano"
     }, {
-      "countryCode": "jp",
+      "countryCode": "ja-JP",
       "text": "日本"
     }, {
-      "countryCode": "pt",
+      "countryCode": "pt-PT",
       "text": "Português"
     }, {
-      "countryCode": "ru",
+      "countryCode": "ru-RU",
       "text": "русский"
     }
   ],

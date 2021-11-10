@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
 import Polyglot from 'node-polyglot';
@@ -17,7 +17,6 @@ import ItSvg from '../flags/ItSvg';
 import JpSvg from '../flags/JpSvg';
 import PtSvg from '../flags/PtSvg';
 import RuSvg from '../flags/RuSvg';
-import Translate from '../../../Translate';
 
 import { languageSelector, supportedLanguages } from '../../../../configuration/config.json';
 
@@ -28,10 +27,8 @@ const DrawLanguageButton = props => {
   const { languageActions } = { ...allActions };
   const dispatch = useDispatch();
 
-  const language = useSelector(state => state.language);
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
-  const lang = language.selected || 'EN';
 
   const buttonSize = (width - 24) / supportedLanguages.length;
   let flagSize = ((width - 24) / supportedLanguages.length) - 4;
@@ -49,7 +46,7 @@ const DrawLanguageButton = props => {
     >
       <TouchableOpacity
         accessible={true}
-        accessibilityLabel={polyglot.t(`languageButton.${whichLanguage.toUpperCase()}`)}
+        accessibilityLabel={polyglot.t(`languageButton.${whichLanguage}`)}
         accessibilityRole="button"
         onPress={() => {
           dispatch(languageActions.setChangeLanguage(whichLanguage));
@@ -65,12 +62,6 @@ const DrawLanguageButton = props => {
           }
         ]}
       >
-        {/* <Text
-          accessible={true}
-          accessibilityLabel='Gook'
-        >
-          <Translate textKey={`languageButton`} />
-        </Text> */}
         <View
           style={[
             {
@@ -85,14 +76,14 @@ const DrawLanguageButton = props => {
         >
           {(() => {
             switch (whichLanguage) {
-              case 'cn': return <CnSvg width={svgSize} height={svgSize} />;
-              case 'de': return <DeSvg width={svgSize} height={svgSize} />;
-              case 'es': return <EsSvg width={svgSize} height={svgSize} />;
-              case 'fr': return <FrSvg width={svgSize} height={svgSize} />
-              case 'it': return <ItSvg width={svgSize} height={svgSize} />;
-              case 'jp': return <JpSvg width={svgSize} height={svgSize} />;
-              case 'pt': return <PtSvg width={svgSize} height={svgSize} />;
-              case 'ru': return <RuSvg width={svgSize} height={svgSize} />;
+              case 'zh-CN': return <CnSvg width={svgSize} height={svgSize} />;
+              case 'de-DE': return <DeSvg width={svgSize} height={svgSize} />;
+              case 'es-ES': return <EsSvg width={svgSize} height={svgSize} />;
+              case 'fr-FR': return <FrSvg width={svgSize} height={svgSize} />
+              case 'it-IT': return <ItSvg width={svgSize} height={svgSize} />;
+              case 'ja-JP': return <JpSvg width={svgSize} height={svgSize} />;
+              case 'pt-PT': return <PtSvg width={svgSize} height={svgSize} />;
+              case 'ru-RU': return <RuSvg width={svgSize} height={svgSize} />;
               default: return <EnSvg width={svgSize} height={svgSize} />;
             }
           })()}
