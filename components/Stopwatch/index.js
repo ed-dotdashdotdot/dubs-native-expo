@@ -1,21 +1,21 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import DrawGameDuration from '../DrawGameDuration';
+import DrawGameStopwatch from '../DrawGameStopwatch';
 
 import { timeDifference }  from '../../js/helpers/timeDifference';
 
-const Timer = props => {
+const Stopwatch = props => {
   const {
     lang,
     start,
   } = { ...props };
 
-  const timerIdRef = useRef(0);
+  const stopwatchIdRef = useRef(0);
   const [count, setCount] = useState(0);
 
   const startHandler = () => {
-    timerIdRef.current = setInterval(() => setCount(c => {
+    stopwatchIdRef.current = setInterval(() => setCount(c => {
       return c + 100;
     }), 100);
   };
@@ -23,22 +23,22 @@ const Timer = props => {
   useEffect(() => {
     startHandler();
     return () => {
-      clearInterval(timerIdRef.current);
+      clearInterval(stopwatchIdRef.current);
     };
   }, []);
 
   return (
-    <DrawGameDuration
+    <DrawGameStopwatch
       duration={timeDifference(start, new Date().getTime())}
-      lang={lang}
-      section="timer"
+      // lang={lang}
+      // section="stopwatch"
     />
   );
 };
 
-Timer.propTypes = {
+Stopwatch.propTypes = {
   lang: PropTypes.string.isRequired,
   start: PropTypes.number.isRequired,
 };
 
-export default Timer;
+export default Stopwatch;

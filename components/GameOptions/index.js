@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import PauseButton from '../buttons/PauseButton';
-import Timer from '../Timer';
+import Stopwatch from '../Stopwatch';
 
 import { colours, fontFamily } from '../../configuration/config.json';
 
@@ -53,7 +53,7 @@ const GameOptions = () => {
           >
             {
               game.status === 'game-on' && timer.start && (
-                <Timer 
+                <Stopwatch 
                   lang={language.selected} 
                   start={timer.start} 
                 />
