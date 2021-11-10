@@ -6,8 +6,6 @@ import { getDurationLanguage } from '../../js/helpers/getDurationLanguage';
 const DrawGameDuration = props => {
   const { duration, lang } = { ...props };
   const durationLanguage = getDurationLanguage(lang);
-
-  console.log(durationLanguage);
   return drawGameDuration(duration, durationLanguage);
 };
 
