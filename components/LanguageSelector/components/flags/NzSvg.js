@@ -2,7 +2,11 @@ import React from "react";
 import Svg, { Circle, Path } from "react-native-svg";
 
 const NzSvg = props => (
-  <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
+  <Svg 
+    viewBox="0 0 48 48" 
+    xmlns="http://www.w3.org/2000/svg" 
+    {...props}
+  >
     <Circle 
       cx={24} 
       cy={24} 
