@@ -1,6 +1,7 @@
 const defaultDeviceState = {
   device: '',
   orientation: '',
+  vibration: true,
 };
 
 const device = (state = defaultDeviceState, action) => {
@@ -18,6 +19,12 @@ const device = (state = defaultDeviceState, action) => {
         browserName: action.payload.browserName,
         userAgent: action.payload.userAgent,
         browserTypes: action.payload.browserTypes,
+      }
+    };
+    case 'SET_DEVICE_VIBRATION': return {
+      ...state,
+      ...{
+        vibration: action.payload,
       }
     };
     default: return state;

@@ -26,6 +26,7 @@ import {
 
 const GameBoard = props => {
   const { dimensions, level } = { ...props };
+  const device = useSelector(state => state.device);
   const game = useSelector(state => state.game);
   const images = useSelector(state => state.images);
   const { gameActions, imagesActions, timerActions } = { ...allActions };
@@ -110,7 +111,7 @@ const GameBoard = props => {
             dispatch(gameActions.setGameHighlight([]));
             // dispatch(gameActions.setGameLastMove(''));
           }, 250);
-          Vibration.vibrate();
+          device.vibration && Vibration.vibrate();
         }
       }
     } else {

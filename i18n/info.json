@@ -1,4 +1,26 @@
 {
+  "appInfo": {
+    "zh-CN": "App info",
+    "de-DE": "App info",
+    "en-GB": "App info",
+    "es-ES": "App info",
+    "fr-FR": "App info",
+    "it-IT": "App info",
+    "ja-JP": "App info",
+    "pt-PT": "App info",
+    "ru-RU": "App info"
+  },
+  "appSettings": {
+    "zh-CN": "App settings",
+    "de-DE": "App settings",
+    "en-GB": "App settings",
+    "es-ES": "App settings",
+    "fr-FR": "App settings",
+    "it-IT": "App settings",
+    "ja-JP": "App settings",
+    "pt-PT": "App settings",
+    "ru-RU": "App settings"
+  },
   "selectLanguage": {
     "zh-CN": "选择语言",
     "de-DE": "Sprache auswählen",

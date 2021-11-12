@@ -3,6 +3,11 @@ import { StyleSheet } from 'react-native';
 import { colours } from '../configuration/config.json';
 
 const globalStyles = StyleSheet.create({
+  bodyText: {
+    color: colours.white,
+    fontSize: 20,
+    marginBottom: 12,
+  },
   border: {
     borderColor: colours.white,
     borderStyle: 'solid',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, } from 'react-native';
 // import allActions from '../../actions';
 // import { useWindowDimensions } from 'react-native';
 // import DeviceInfo from 'react-native-device-info';
