@@ -1,5 +1,6 @@
 const defaultLanguageState = {
-  selected: 'en-GB',
+  preferred: 'de-DE', // user can over-ride the selection made by the app
+  selected: 'en-GB', // app calculates this by device region
 };
 
 const language = (state = defaultLanguageState, action) => {
