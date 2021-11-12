@@ -12,6 +12,7 @@ import GameOptions from '../GameOptions';
 import Info from '../Info';
 import LanguageSelector from '../LanguageSelector';
 import Options from '../Options';
+import OptionsHomepage from '../OptionsHomepage';
 import Mesh from '../Mesh';
 
 import { isGameOver } from '../../js/helpers/isGameOver';
@@ -73,7 +74,8 @@ const Container = () => {
         {/* {game.status === 'game-home' && <LanguageSelector width={width} />} */}
         {
           game.status === 'game-home'
-            ? <LanguageSelector selectedLanguage={language.selected} width={width} />
+            // ? <LanguageSelector selectedLanguage={language.selected} width={width} />
+            ? <OptionsHomepage selectedLanguage={language.selected} width={width} />
             : game.status === 'game-on' 
               ? <GameOptions />
               : game.status === 'game-loading'

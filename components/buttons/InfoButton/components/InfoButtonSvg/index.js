@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { colours } from '../../../../../configuration/config.json';
 
-const PauseButtonSvg = props => {
+const InfoButtonSvg = props => {
   const { 
     colour
   } = { ...props };
@@ -19,19 +19,19 @@ const PauseButtonSvg = props => {
         fill={colour}
       />
       <Path
-        d="M168 144h48v192h-48zM264 144h48v192h-48z"
+        d="M240 122c14.4 0 26 11.6 26 26s-11.6 26-26 26-26-11.6-26-26 11.6-26 26-26zm31 205h-16V220c0-8-7-15-15-15h-31c-8 0-15 7-15 15s7 15 15 15h16v92h-16c-8 0-15 7-15 15s7 15 15 15h62c8 0 15-7 15-15s-7-15-15-15z"
         fill={colour}
       />
     </Svg>
   );
 };
 
-PauseButtonSvg.defaultProps = {
+InfoButtonSvg.defaultProps = {
   colour: colours.white,
 };
 
-PauseButtonSvg.propTypes = {
+InfoButtonSvg.propTypes = {
   colour: PropTypes.string.isRequired,
 };
 
-export default PauseButtonSvg;
+export default InfoButtonSvg;

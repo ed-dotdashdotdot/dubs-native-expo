@@ -4,6 +4,8 @@ import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 
 import { useSelector } from 'react-redux';
 
+import AppInfo from '../AppInfo';
+import AppSettings from '../AppSettings';
 import ChooseImage from '../ChooseImage';
 import GameHome from '../GameHome';
 import GameOn from '../GameOn';
@@ -11,6 +13,7 @@ import GameOver from '../GameOver';
 import GamePaused from '../GamePaused';
 import GameReady from '../GameReady';
 import ImageDetail from '../ImageDetail';
+import LanguageSelect from '../LanguageSelect';
 import LoadingImage from '../LoadingImage';
 import WhatIsBossMode from '../WhatIsBossMode';
 
@@ -108,6 +111,9 @@ const Info = () => {
                         level={game.level}
                       />
                     );
+                    case 'app-info': return <AppInfo />;
+                    case 'app-settings': return <AppSettings />;
+                    case 'language-select': return <LanguageSelect />;
                   default:
                     return <GameHome />;
                 }

@@ -37,6 +37,15 @@ const Options = () => {
     if (section === 'what-is-boss-mode') {
       dispatch(gameActions.setGameStatus('game-ready'));
     }
+    if (section === 'app-info') {
+      dispatch(gameActions.setGameStatus('game-home'));
+    }
+    if (section === 'app-settings') {
+      dispatch(gameActions.setGameStatus('game-home'));
+    }
+    if (section === 'language-select') {
+      dispatch(gameActions.setGameStatus('game-home'));
+    }
   }
   const buttonText = section => {
     if (section === 'game-over') {
@@ -55,6 +64,15 @@ const Options = () => {
       return 'back';
     }
     if (section === 'what-is-boss-mode') {
+      return 'back';
+    }
+    if (section === 'app-info') {
+      return 'back';
+    }
+    if (section === 'app-settings') {
+      return 'back';
+    }
+    if (section === 'language-select') {
       return 'back';
     }
     return 'backToHome'

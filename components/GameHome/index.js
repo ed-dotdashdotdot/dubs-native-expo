@@ -32,42 +32,42 @@ import PageHeading from '../PageHeading';
 import NewGameButtons from '../buttons/NewGameButtons';
 import { sanitiseDeviceLocale } from '../../js/helpers/sanitiseDeviceLocale';
 
-import MaSvg from '../LanguageSelector/components/flags/MaSvg';
-import CzSvg from '../LanguageSelector/components/flags/CzSvg';
-import CySvg from '../LanguageSelector/components/flags/CySvg';
-import DkSvg from '../LanguageSelector/components/flags/DkSvg';
-import IdSvg from '../LanguageSelector/components/flags/IdSvg';
-import MySvg from '../LanguageSelector/components/flags/MySvg';
-import UaSvg from '../LanguageSelector/components/flags/UaSvg';
-import VnSvg from '../LanguageSelector/components/flags/VnSvg';
-import ArSvg from '../LanguageSelector/components/flags/ArSvg';
-import HuSvg from '../LanguageSelector/components/flags/HuSvg';
-import KrSvg from '../LanguageSelector/components/flags/KrSvg';
-import SgSvg from '../LanguageSelector/components/flags/SgSvg';
-import IsSvg from '../LanguageSelector/components/flags/IsSvg';
-import IlSvg from '../LanguageSelector/components/flags/IlSvg';
-import HkSvg from '../LanguageSelector/components/flags/HkSvg';
-import ClSvg from '../LanguageSelector/components/flags/ClSvg';
-import GrSvg from '../LanguageSelector/components/flags/GrSvg';
-import TrSvg from '../LanguageSelector/components/flags/TrSvg';
-import ZaSvg from '../LanguageSelector/components/flags/ZaSvg';
-import ChSvg from '../LanguageSelector/components/flags/ChSvg';
-import BrSvg from '../LanguageSelector/components/flags/BrSvg';
-import FiSvg from '../LanguageSelector/components/flags/FiSvg';
-import NoSvg from '../LanguageSelector/components/flags/NoSvg';
-import SeSvg from '../LanguageSelector/components/flags/SeSvg';
-import CoSvg from '../LanguageSelector/components/flags/CoSvg';
-import NzSvg from '../LanguageSelector/components/flags/NzSvg';
-import AuSvg from '../LanguageSelector/components/flags/AuSvg';
-import McSvg from '../LanguageSelector/components/flags/McSvg';
-import PlSvg from '../LanguageSelector/components/flags/PlSvg';
-import RoSvg from '../LanguageSelector/components/flags/RoSvg';
-import IeSvg from '../LanguageSelector/components/flags/IeSvg';
-import AtSvg from '../LanguageSelector/components/flags/AtSvg';
-import BeSvg from '../LanguageSelector/components/flags/BeSvg';
-import CaSvg from '../LanguageSelector/components/flags/CaSvg';
-import NlSvg from '../LanguageSelector/components/flags/NlSvg';
-import UsSvg from '../LanguageSelector/components/flags/UsSvg';
+// import MaSvg from '../LanguageSelector/components/flags/MaSvg';
+// import CzSvg from '../LanguageSelector/components/flags/CzSvg';
+// import CySvg from '../LanguageSelector/components/flags/CySvg';
+// import DkSvg from '../LanguageSelector/components/flags/DkSvg';
+// import IdSvg from '../LanguageSelector/components/flags/IdSvg';
+// import MySvg from '../LanguageSelector/components/flags/MySvg';
+// import UaSvg from '../LanguageSelector/components/flags/UaSvg';
+// import VnSvg from '../LanguageSelector/components/flags/VnSvg';
+// import ArSvg from '../LanguageSelector/components/flags/ArSvg';
+// import HuSvg from '../LanguageSelector/components/flags/HuSvg';
+// import KrSvg from '../LanguageSelector/components/flags/KrSvg';
+// import SgSvg from '../LanguageSelector/components/flags/SgSvg';
+// import IsSvg from '../LanguageSelector/components/flags/IsSvg';
+// import IlSvg from '../LanguageSelector/components/flags/IlSvg';
+// import HkSvg from '../LanguageSelector/components/flags/HkSvg';
+// import ClSvg from '../LanguageSelector/components/flags/ClSvg';
+// import GrSvg from '../LanguageSelector/components/flags/GrSvg';
+// import TrSvg from '../LanguageSelector/components/flags/TrSvg';
+// import ZaSvg from '../LanguageSelector/components/flags/ZaSvg';
+// import ChSvg from '../LanguageSelector/components/flags/ChSvg';
+// import BrSvg from '../LanguageSelector/components/flags/BrSvg';
+// import FiSvg from '../LanguageSelector/components/flags/FiSvg';
+// import NoSvg from '../LanguageSelector/components/flags/NoSvg';
+// import SeSvg from '../LanguageSelector/components/flags/SeSvg';
+// import CoSvg from '../LanguageSelector/components/flags/CoSvg';
+// import NzSvg from '../LanguageSelector/components/flags/NzSvg';
+// import AuSvg from '../LanguageSelector/components/flags/AuSvg';
+// import McSvg from '../LanguageSelector/components/flags/McSvg';
+// import PlSvg from '../LanguageSelector/components/flags/PlSvg';
+// import RoSvg from '../LanguageSelector/components/flags/RoSvg';
+// import IeSvg from '../LanguageSelector/components/flags/IeSvg';
+// import AtSvg from '../LanguageSelector/components/flags/AtSvg';
+// import BeSvg from '../LanguageSelector/components/flags/BeSvg';
+// import CaSvg from '../LanguageSelector/components/flags/CaSvg';
+// import NlSvg from '../LanguageSelector/components/flags/NlSvg';
+// import UsSvg from '../LanguageSelector/components/flags/UsSvg';
 
 const GameHome = () => {
   const language = useSelector(state => state.language);
@@ -82,7 +82,7 @@ const GameHome = () => {
         />
         <NewGameButtons section="game-home" />
 
-        <Text style={{ color: 'white', fontSize: 48 }}>
+        {/* <Text style={{ color: 'white', fontSize: 48 }}>
           Locale: {language.selected}
         </Text>
         <Text style={{ color: 'white', fontSize: 24 }}>
@@ -210,7 +210,7 @@ const GameHome = () => {
           <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
             <ZaSvg width={48} height={48} />
           </View>
-        </View>
+        </View> */}
       </InfoInner>
     </ScrollView>
   );
