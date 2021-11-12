@@ -1,14 +1,14 @@
 {
   "selectLanguage": {
-    "zh-CN": "Select language",
-    "de-DE": "Select language",
+    "zh-CN": "选择语言",
+    "de-DE": "Sprache auswählen",
     "en-GB": "Select language",
-    "es-ES": "Select language",
-    "fr-FR": "Select language",
-    "it-IT": "Select language",
-    "ja-JP": "Select language",
-    "pt-PT": "Select language",
-    "ru-RU": "Select language"
+    "es-ES": "Seleccione el idioma",
+    "fr-FR": "Choisir la langue",
+    "it-IT": "Seleziona la lingua",
+    "ja-JP": "言語を選択する",
+    "pt-PT": "Selecione o idioma",
+    "ru-RU": "Выбрать язык"
   },
   "languageButton": {
     "zh-CN": "中国人",
