@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  useWindowDimensions,
-  View,
-} from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
 import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
@@ -57,7 +51,7 @@ import RuSvg from '../../../LanguageSelector/components/flags/RuSvg';
 // import NlSvg from '../../../LanguageSelector/components/flags/NlSvg';
 // import UsSvg from '../../../LanguageSelector/components/flags/UsSvg';
 
-import { isPortrait } from '../../../../js/helpers/isPortrait';
+// import { isPortrait } from '../../../../js/helpers/isPortrait';
 
 import globalStyles from '../../../../css/style.js';
 
@@ -66,10 +60,10 @@ const DrawFlag = props => {
   const { gameActions, languageActions } = { ...allActions };
   const dispatch = useDispatch();
 
-  const { height, width } = useWindowDimensions();
+  // const { height, width } = useWindowDimensions();
   // const isDevicePortrait = isPortrait(height, width);
 
-  const maxHeight = dimensions.height - 12 - 12 - 8;
+  // const maxHeight = dimensions.height - 12 - 12 - 8;
   const maxWidth = dimensions.width - 12 - 12 - 8;
   const flagsPerRow = dimensions.width > 999 ? 6 : dimensions.width > 600 ? 4 : 3;
 
