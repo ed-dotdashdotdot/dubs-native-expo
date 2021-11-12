@@ -52,7 +52,8 @@ const Info = () => {
                 },
                 globalStyles.border,
                 {
-                  borderColor: game.lastMove === 'incorrect' ? colours.red : colours.white,
+                  // borderColor: game.lastMove === 'incorrect' ? colours.red : colours.white,
+                  borderColor: colours.white,
                   height: infoHeight,
                   width: infoWidth,
                 }
