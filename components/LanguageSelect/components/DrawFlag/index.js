@@ -63,7 +63,7 @@ import globalStyles from '../../../../css/style.js';
 
 const DrawFlag = props => {
   const { dimensions, flag } = { ...props };
-  const { languageActions } = { ...allActions };
+  const { gameActions, languageActions } = { ...allActions };
   const dispatch = useDispatch();
 
   const { height, width } = useWindowDimensions();
@@ -128,6 +128,7 @@ const DrawFlag = props => {
           // accessibilityRole='imagebutton'
           onPress={() => {
             dispatch(languageActions.setChangeLanguage(flagToLanguage(flag)));
+            dispatch(gameActions.setGameStatus('game-home'));
           }}
         >
           {(() => whichFlag(
