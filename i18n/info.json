@@ -1,4 +1,15 @@
 {
+  "selectLanguage": {
+    "zh-CN": "Select language",
+    "de-DE": "Select language",
+    "en-GB": "Select language",
+    "es-ES": "Select language",
+    "fr-FR": "Select language",
+    "it-IT": "Select language",
+    "ja-JP": "Select language",
+    "pt-PT": "Select language",
+    "ru-RU": "Select language"
+  },
   "languageButton": {
     "zh-CN": "中国人",
     "de-DE": "Deutsche",
