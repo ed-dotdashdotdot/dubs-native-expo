@@ -66,7 +66,6 @@ const Container = () => {
           <GameOnHeader 
             bossMode={game.bossMode} 
             level={game.level} 
-            highlight={!!game.highlight.length}
           />
         ) : 
           <Header />
