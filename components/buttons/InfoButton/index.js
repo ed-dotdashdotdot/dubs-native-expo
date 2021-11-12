@@ -35,7 +35,7 @@ InfoButton.defaultProps = {
 };
 
 InfoButton.propTypes = {
-  width: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
 };
 
 export default InfoButton;

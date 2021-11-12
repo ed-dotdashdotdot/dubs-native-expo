@@ -35,7 +35,7 @@ SettingsButton.defaultProps = {
 };
 
 SettingsButton.propTypes = {
-  width: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
 };
 
 export default SettingsButton;

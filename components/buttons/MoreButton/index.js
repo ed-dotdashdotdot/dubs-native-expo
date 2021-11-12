@@ -35,7 +35,7 @@ MoreButton.defaultProps = {
 };
 
 MoreButton.propTypes = {
-  width: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
 };
 
 export default MoreButton;
