@@ -96,19 +96,19 @@ const GameBoard = props => {
             (game.selected !== '')
             && ((game.found.length + 1) !== (game.data.length / 2))
           ) {
-            dispatch(gameActions.setGameLastMove('correct'));
+            // dispatch(gameActions.setGameLastMove('correct'));
             setTimeout(() => {
-              dispatch(gameActions.setGameLastMove(''));
+              // dispatch(gameActions.setGameLastMove(''));
             }, 250);
           }
         } else {
           // incorrect selection
           dispatch(gameActions.setGameSelected(''));
           dispatch(gameActions.setGameHighlight([game.selected, buttonId]));
-          dispatch(gameActions.setGameLastMove('incorrect'));
+          // dispatch(gameActions.setGameLastMove('incorrect'));
           setTimeout(() => {
             dispatch(gameActions.setGameHighlight([]));
-            dispatch(gameActions.setGameLastMove(''));
+            // dispatch(gameActions.setGameLastMove(''));
           }, 250);
           Vibration.vibrate();
         }
@@ -254,7 +254,6 @@ const GameBoard = props => {
                   </>
                 )}
                 {
-                  game.lastMove === 'incorrect' && 
                   game.highlight.includes(val) && (
                     <View
                       style={[
