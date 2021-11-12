@@ -4,7 +4,7 @@ import { Button, Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
-import EnSvg from '../LanguageSelector/components/flags/ItSvg';
+import EnSvg from '../LanguageSelector/components/flags/EnSvg';
 import InfoButton from '../buttons/InfoButton';
 import MoreButton from '../buttons/MoreButton';
 import SettingsButton from '../buttons/SettingsButton';
@@ -42,7 +42,10 @@ const OptionsHomepage = () => {
             onPress={() => {
               dispatch(gameActions.setGameStatus('language-select'));
             }}
-            style={{ height: 48, width: 48 }}
+            style={{ 
+              height: 48, 
+              width: 48, 
+            }}
           >
             <View
               style={{
@@ -57,21 +60,22 @@ const OptionsHomepage = () => {
             >
               <EnSvg height={44} width={44} />
             </View>
+            
           </TouchableOpacity>
         </View>
 
-        <View style={{ marginLeft: 12, width: 48 }} >
-          <MoreButton />
+        <View style={{ width: 48 }} >
+          <MoreButton width={36} />
         </View>
 
         <View style={{ flex: 1 }}/>
         
-        <View style={{ marginLeft: 12, width: 48 }} >
-          <SettingsButton />
+        <View style={{ width: 48 }} >
+          <SettingsButton width={36} />
         </View>
 
-        <View style={{ marginLeft: 12, width: 48 }} >
-          <InfoButton />
+        <View style={{ width: 48 }} >
+          <InfoButton width={36} />
         </View>
 
       </View>
