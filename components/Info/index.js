@@ -113,7 +113,15 @@ const Info = () => {
                     );
                     case 'app-info': return <AppInfo />;
                     case 'app-settings': return <AppSettings />;
-                    case 'language-select': return <LanguageSelect />;
+                    case 'language-select': return (
+                      <LanguageSelect 
+                        dimensions={{
+                          height: infoHeight,
+                          width: infoWidth,
+                        }}
+                      />
+                    );
+
                   default:
                     return <GameHome />;
                 }
