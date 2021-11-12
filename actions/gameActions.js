@@ -18,22 +18,22 @@ const injectGameFound = data => ({
   type: 'INJECT_GAME_FOUND',
   payload: data,
 });
-const setGameId = data => ({
-  type: 'SET_GAME_ID',
-  payload: data,
-});
+// const setGameId = data => ({
+//   type: 'SET_GAME_ID',
+//   payload: data,
+// });
 const setGameHighlight = data => ({
   type: 'SET_GAME_HIGHLIGHT',
   payload: data,
 });
-const setGameInvert = data => ({
-  type: 'SET_GAME_INVERT',
-  payload: data,
-});
-const setGameLastMove = data => ({
-  type: 'SET_GAME_LASTMOVE',
-  payload: data,
-});
+// const setGameInvert = data => ({
+//   type: 'SET_GAME_INVERT',
+//   payload: data,
+// });
+// const setGameLastMove = data => ({
+//   type: 'SET_GAME_LASTMOVE',
+//   payload: data,
+// });
 const setGameLevel = data => ({
   type: 'SET_GAME_LEVEL',
   payload: data,
@@ -53,10 +53,10 @@ const exportedGameObject = {
   setGameData,
   setGameFound,
   injectGameFound,
-  setGameId,
+  // setGameId,
   setGameHighlight,
-  setGameInvert,
-  setGameLastMove,
+  // setGameInvert,
+  // setGameLastMove,
   setGameLevel,
   setGameSelected,
   setGameStatus,
