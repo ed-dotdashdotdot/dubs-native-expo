@@ -42,7 +42,7 @@ const Container = () => {
       <View 
         style={{
           alignItems: 'center',
-          backgroundColor: colours.black050,
+          backgroundColor: game.highlight.length ? colours.red025 : colours.black050,
           flex: 1,
           paddingLeft: 12,
           paddingRight: 12,
@@ -66,6 +66,7 @@ const Container = () => {
           <GameOnHeader 
             bossMode={game.bossMode} 
             level={game.level} 
+            highlight={!!game.highlight.length}
           />
         ) : 
           <Header />
