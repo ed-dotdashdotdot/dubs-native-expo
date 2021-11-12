@@ -1,8 +1,8 @@
 {
   "ipAddress": {
     "local": "192.168.4.33",
-    "server": "192.168.4.33",
-    "server-EMM18": "192.168.1.115"
+    "server-EMBA": "192.168.4.33",
+    "server": "192.168.1.115"
   },
   "gameArray": [
     "001",
@@ -204,6 +204,7 @@
     "amber": "#ff9900",
     "green": "#00aa00",
     "red": "#aa0000",
+    "red025": "#aa000040",
     "red050": "#aa000080",
     "white": "#ffffff",
     "white025": "#ffffff40",
@@ -212,6 +213,7 @@
   },
   "fontFamily123123": "Helvetica",
   "fontFamily": "Courier New",
+  "fontFamilyAndroid": "Cousine",
   "textSize": {
     "bodyText": 16,
     "buttonText": 24,
