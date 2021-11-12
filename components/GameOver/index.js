@@ -10,7 +10,11 @@ import PageHeading from '../PageHeading';
 import NewGameButtons from '../buttons/NewGameButtons';
 import Translate from '../Translate';
 
-import { colours, fontFamily } from '../../configuration/config.json';
+import {
+  colours,
+  fontFamily,
+  wowMessageAfterMs,
+} from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 
@@ -67,7 +71,7 @@ const GameOver = () => {
             }}
           >
             {
-              duration < 1200000 ? (
+              duration < wowMessageAfterMs ? (
                 <DrawGameDuration
                   duration={duration}
                   lang={language.selected}

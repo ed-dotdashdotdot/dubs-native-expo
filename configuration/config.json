@@ -1,8 +1,8 @@
 {
   "ipAddress": {
     "local": "192.168.4.33",
-    "server-EMBA": "192.168.4.33",
-    "server": "192.168.1.115"
+    "server": "192.168.4.33",
+    "server-EMM18": "192.168.1.115"
   },
   "gameArray": [
     "001",
@@ -145,9 +145,7 @@
       "text": "русский"
     }
   ],
-  "wowMessageAfterMs123123": 1200000,
-  "oneHourMs123123": 3600000,
-  "oneDayMs123123": 86400000,
+  "wowMessageAfterMs": 1200000,
   "imageSections123123": [
     "topRated",
     "difficult",
