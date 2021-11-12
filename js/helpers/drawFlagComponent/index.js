@@ -1,0 +1,62 @@
+import React from 'react';
+
+import CnSvg from '../../../components/LanguageSelector/components/flags/CnSvg';
+import DeSvg from '../../../components/LanguageSelector/components/flags/DeSvg';
+import EnSvg from '../../../components/LanguageSelector/components/flags/EnSvg';
+import EsSvg from '../../../components/LanguageSelector/components/flags/EsSvg';
+import FrSvg from '../../../components/LanguageSelector/components/flags/FrSvg';
+import ItSvg from '../../../components/LanguageSelector/components/flags/ItSvg';
+import JpSvg from '../../../components/LanguageSelector/components/flags/JpSvg';
+import PtSvg from '../../../components/LanguageSelector/components/flags/PtSvg';
+import RuSvg from '../../../components/LanguageSelector/components/flags/RuSvg';
+
+// import MaSvg from '../../../LanguageSelector/components/flags/MaSvg';
+// import CzSvg from '../../../LanguageSelector/components/flags/CzSvg';
+// import CySvg from '../../../LanguageSelector/components/flags/CySvg';
+// import DkSvg from '../../../LanguageSelector/components/flags/DkSvg';
+// import IdSvg from '../../../LanguageSelector/components/flags/IdSvg';
+// import MySvg from '../../../LanguageSelector/components/flags/MySvg';
+// import UaSvg from '../../../LanguageSelector/components/flags/UaSvg';
+// import VnSvg from '../../../LanguageSelector/components/flags/VnSvg';
+// import ArSvg from '../../../LanguageSelector/components/flags/ArSvg';
+// import HuSvg from '../../../LanguageSelector/components/flags/HuSvg';
+// import KrSvg from '../../../LanguageSelector/components/flags/KrSvg';
+// import SgSvg from '../../../LanguageSelector/components/flags/SgSvg';
+// import IsSvg from '../../../LanguageSelector/components/flags/IsSvg';
+// import IlSvg from '../../../LanguageSelector/components/flags/IlSvg';
+// import HkSvg from '../../../LanguageSelector/components/flags/HkSvg';
+// import ClSvg from '../../../LanguageSelector/components/flags/ClSvg';
+// import GrSvg from '../../../LanguageSelector/components/flags/GrSvg';
+// import TrSvg from '../../../LanguageSelector/components/flags/TrSvg';
+// import ZaSvg from '../../../LanguageSelector/components/flags/ZaSvg';
+// import ChSvg from '../../../LanguageSelector/components/flags/ChSvg';
+// import BrSvg from '../../../LanguageSelector/components/flags/BrSvg';
+// import FiSvg from '../../../LanguageSelector/components/flags/FiSvg';
+// import NoSvg from '../../../LanguageSelector/components/flags/NoSvg';
+// import SeSvg from '../../../LanguageSelector/components/flags/SeSvg';
+// import CoSvg from '../../../LanguageSelector/components/flags/CoSvg';
+// import NzSvg from '../../../LanguageSelector/components/flags/NzSvg';
+// import AuSvg from '../../../LanguageSelector/components/flags/AuSvg';
+// import McSvg from '../../../LanguageSelector/components/flags/McSvg';
+// import PlSvg from '../../../LanguageSelector/components/flags/PlSvg';
+// import RoSvg from '../../../LanguageSelector/components/flags/RoSvg';
+// import IeSvg from '../../../LanguageSelector/components/flags/IeSvg';
+// import AtSvg from '../../../LanguageSelector/components/flags/AtSvg';
+// import BeSvg from '../../../LanguageSelector/components/flags/BeSvg';
+// import CaSvg from '../../../LanguageSelector/components/flags/CaSvg';
+// import NlSvg from '../../../LanguageSelector/components/flags/NlSvg';
+// import UsSvg from '../../../LanguageSelector/components/flags/UsSvg';
+
+export const drawFlagComponent = (flag, height, width) => {
+  switch (flag) {
+    case 'Cn' : return <CnSvg height={height} width={width} />;
+    case 'De' : return <DeSvg height={height} width={width} />;
+    case 'Es' : return <EsSvg height={height} width={width} />;
+    case 'Fr' : return <FrSvg height={height} width={width} />;
+    case 'It' : return <ItSvg height={height} width={width} />;
+    case 'Jp' : return <JpSvg height={height} width={width} />;
+    case 'Pt' : return <PtSvg height={height} width={width} />;
+    case 'Ru' : return <RuSvg height={height} width={width} />;
+    default : return <EnSvg height={height} width={width} />;
+  };
+};
