@@ -1,6 +1,7 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { ScrollView, useWindowDimensions, View } from 'react-native';
 
+import DrawFlag from './components/DrawFlag';
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 
@@ -52,168 +53,189 @@ import CaSvg from '../LanguageSelector/components/flags/CaSvg';
 import NlSvg from '../LanguageSelector/components/flags/NlSvg';
 import UsSvg from '../LanguageSelector/components/flags/UsSvg';
 
+import { isPortrait } from '../../js/helpers/isPortrait';
 
-const LanguageSelect = () => (
-  <ScrollView>
-    <InfoInner>
-      <PageHeading 
-        textKey='selectLanguage' 
-      />
-      <View
-        style={{
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          marginBottom: 48
-        }}
-      >
-        <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
-          <CnSvg width={92} height={92} />
-        </View>
-        <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
-          <DeSvg width={92} height={92} />
-        </View>
-        <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
-          <EnSvg width={92} height={92} />
-        </View>
-        <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
-          <EsSvg width={92} height={92} />
-        </View>
-        <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
-          <FrSvg width={92} height={92} />
-        </View>
-        <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
-          <ItSvg width={92} height={92} />
-        </View>
-        <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
-          <JpSvg width={92} height={92} />
-        </View>
-        <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
-          <PtSvg width={92} height={92} />
-        </View>
-        <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
-          <RuSvg width={92} height={92} />
-        </View>
-      </View>
+const LanguageSelect = props => {
+  const { dimensions } = { ...props };
 
-      <View
-        style={{
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          marginBottom: 48
-        }}
-      >          
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <ArSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <AtSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <AuSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <BeSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <BrSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <CaSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <ChSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <ClSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <CoSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <CySvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <CzSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <DkSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <FiSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <GrSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <HkSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <HuSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <IdSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <IeSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <IlSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <IsSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <KrSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <McSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <NlSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <NoSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <NzSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <MaSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <MySvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <PlSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <RoSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <SeSvg width={48} height={48} />
-          </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <SgSvg width={48} height={48} />
-          </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <TrSvg width={48} height={48} />
-          </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <UaSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <UsSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <VnSvg width={48} height={48} />
-        </View>
-        <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
-          <ZaSvg width={48} height={48} />
-        </View>
-      </View>
+  const { height, width } = useWindowDimensions();
+  const isDevicePortrait = isPortrait(height, width);
 
-    </InfoInner>
-  </ScrollView>
-);
+  // console.log(`height: ${height}`);
+  // console.log(`dimensions.height: ${dimensions.height}`);
+  // console.log(`width: ${width}`);
+  // console.log(`dimensions.width: ${dimensions.width}`);
+  // console.log(`isDevicePortrait: ${isDevicePortrait}`);
+  
+  const flagsPerRow = dimensions.width > 999 ? 6 : dimensions.width > 600 ? 4 : 2;
+  // console.log(`flagsPerRow: ${flagsPerRow}`);
+
+  return (
+    <ScrollView>
+      <InfoInner>
+        <PageHeading 
+          textKey='selectLanguage' 
+        />
+        <View
+          style={{
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            marginBottom: 48
+          }}
+        >
+          <DrawFlag dimensions={dimensions} flag="Cn" />
+          <DrawFlag dimensions={dimensions} flag="De" />
+          <DrawFlag dimensions={dimensions} flag="En" />
+          <DrawFlag dimensions={dimensions} flag="Es" />
+          <DrawFlag dimensions={dimensions} flag="Fr" />
+          <DrawFlag dimensions={dimensions} flag="It" />
+          <DrawFlag dimensions={dimensions} flag="Jp" />
+          <DrawFlag dimensions={dimensions} flag="Pt" />
+          <DrawFlag dimensions={dimensions} flag="Ru" />
+          
+          {/* <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
+            <EnSvg width={92} height={92} />
+          </View>
+          <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
+            <EsSvg width={92} height={92} />
+          </View>
+          <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
+            <FrSvg width={92} height={92} />
+          </View>
+          <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
+            <ItSvg width={92} height={92} />
+          </View>
+          <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
+            <JpSvg width={92} height={92} />
+          </View>
+          <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
+            <PtSvg width={92} height={92} />
+          </View>
+          <View style={{ width:96, height:96, borderColor:'white', borderStyle:'solid', borderRadius:48, borderWidth:2, margin: 12 }}>
+            <RuSvg width={92} height={92} />
+          </View> */}
+        </View>
+
+        <View
+          style={{
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            marginBottom: 48
+          }}
+        >          
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <ArSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <AtSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <AuSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <BeSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <BrSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <CaSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <ChSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <ClSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <CoSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <CySvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <CzSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <DkSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <FiSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <GrSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <HkSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <HuSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <IdSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <IeSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <IlSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <IsSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <KrSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <McSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <NlSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <NoSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <NzSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <MaSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <MySvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <PlSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <RoSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <SeSvg width={48} height={48} />
+            </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <SgSvg width={48} height={48} />
+            </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <TrSvg width={48} height={48} />
+            </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <UaSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <UsSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <VnSvg width={48} height={48} />
+          </View>
+          <View style={{ width:52, height:52, borderColor:'white', borderStyle:'solid', borderRadius:26, borderWidth:2, margin: 12 }}>
+            <ZaSvg width={48} height={48} />
+          </View>
+        </View>
+
+      </InfoInner>
+    </ScrollView>
+  );
+};
 
 export default LanguageSelect;
