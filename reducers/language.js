@@ -1,5 +1,5 @@
 const defaultLanguageState = {
-  preferred: 'de-DE', // user can over-ride the selection made by the app
+  preferred: '', // user can over-ride the selection made by the app
   preferredFlag: '', 
   preferredLanguage: '', 
   selected: 'en-GB', 
