@@ -1,19 +1,37 @@
 import React from 'react';
-import { Button, Text, TouchableOpacity, View } from 'react-native';
+import {Platform, Text, TouchableOpacity, View } from 'react-native';
+import { languages } from 'humanize-duration';
 
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
-import EnSvg from '../LanguageSelector/components/flags/EnSvg';
+// import CnSvg from '../LanguageSelector/components/flags/CnSvg';
+// import DeSvg from '../LanguageSelector/components/flags/DeSvg';
+// import EnSvg from '../LanguageSelector/components/flags/EnSvg';
+// import EsSvg from '../LanguageSelector/components/flags/EsSvg';
+// import FrSvg from '../LanguageSelector/components/flags/FrSvg';
+// import ItSvg from '../LanguageSelector/components/flags/ItSvg';
+// import JpSvg from '../LanguageSelector/components/flags/JpSvg';
+// import PtSvg from '../LanguageSelector/components/flags/PtSvg';
+// import RuSvg from '../LanguageSelector/components/flags/RuSvg';
+
+import DrawSelectedFlag from './components/DrawSelectedFlag';
 import InfoButton from '../buttons/InfoButton';
 import MoreButton from '../buttons/MoreButton';
 import SettingsButton from '../buttons/SettingsButton';
 
-import { colours, fontFamily } from '../../configuration/config.json';
+// import { colours, fontFamily } from '../../configuration/config.json';
+import { drawFlagComponent } from '../../js/helpers/drawFlagComponent';
+import { getFlagFromLanguage } from '../../js/helpers/getFlagFromLanguage';
 
-import globalStyles from '../../css/style.js';
+// import globalStyles from '../../css/style.js';
+
+const isDeviceATablet = isPad => { // needs to be extended for android
+  return isPad;
+}
 
 const OptionsHomepage = () => {
+  const language = useSelector(state => state.language);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   return (  
@@ -38,7 +56,8 @@ const OptionsHomepage = () => {
         }}
       >
         <View style={{ width: 48 }}>
-          <TouchableOpacity
+          <DrawSelectedFlag flag={getFlagFromLanguage(language.selected)} />
+          {/* <TouchableOpacity
             onPress={() => {
               dispatch(gameActions.setGameStatus('language-select'));
             }}
@@ -58,10 +77,9 @@ const OptionsHomepage = () => {
                 zIndex: 1000,
               }}
             >
-              <EnSvg height={44} width={44} />
+              {(() => drawFlagComponent(getFlagFromLanguage(language.selected), 44,  44))()}
             </View>
-            
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
 
         <View style={{ width: 48 }} >
@@ -70,9 +88,13 @@ const OptionsHomepage = () => {
 
         <View style={{ flex: 1 }}/>
         
-        <View style={{ width: 48 }} >
-          <SettingsButton width={36} />
-        </View>
+        {
+          !isDeviceATablet(Platform.isPad) && (
+            <View style={{ width: 48 }} >
+              <SettingsButton width={36} />
+            </View>
+          )
+        }
 
         <View style={{ width: 48 }} >
           <InfoButton width={36} />
