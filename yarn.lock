@@ -2813,6 +2813,13 @@
     "expo-modules-core" "~0.2.0"
     "uuid" "^3.3.2"
 
+"expo-device@~3.3.0":
+  "integrity" "sha512-kZ6HZpxGp3T3GrgbpW4VSFvH6SQZVD/dwPN+I3tlRPezaZ3LUj64kSZDKLgOi1H/9VCuUQdxjItoVZZuIWTX1A=="
+  "resolved" "https://registry.npmjs.org/expo-device/-/expo-device-3.3.0.tgz"
+  "version" "3.3.0"
+  dependencies:
+    "ua-parser-js" "^0.7.19"
+
 "expo-error-recovery@~2.2.0":
   "integrity" "sha512-HKbu6VHAlfhoP7y+HaGJwJizoUTY2eBTBHAi1RE7l/r4sc+cAegTmwwqf/3AOR8C7VntDvuQKtW7NZIyA+62KQ=="
   "resolved" "https://registry.npmjs.org/expo-error-recovery/-/expo-error-recovery-2.2.0.tgz"
@@ -5057,10 +5064,10 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
-"react-native-device-info@^8.4.1":
-  "integrity" "sha512-O+G0wUXAc3196CUAs/C/ugIvIUvTMPvw7gixStZyXOpOGwGQKWx6if1YV1qLD5oPldxSvg17CdgB91yOLniKEA=="
-  "resolved" "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-8.4.1.tgz"
-  "version" "8.4.1"
+"react-native-device-info@^8.4.6":
+  "integrity" "sha512-T2x3B2zij+nnTGQU+WIjCk5cb3C+jAW7YqruxRTevM+NMaFwvBVMQ+IU8VPpXM9GyFahvVoCSdAb/wuCUUVlTw=="
+  "resolved" "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-8.4.6.tgz"
+  "version" "8.4.6"
 
 "react-native-safe-area-context@^3.2.0", "react-native-safe-area-context@3.2.0":
   "integrity" "sha512-k2Nty4PwSnrg9HwrYeeE+EYqViYJoOFwEy9LxL5RIRfoqxAq/uQXNGwpUg2/u4gnKpBbEPa9eRh15KKMe/VHkA=="
@@ -5958,7 +5965,7 @@
   "resolved" "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
 
-"ua-parser-js@^0.7.18":
+"ua-parser-js@^0.7.18", "ua-parser-js@^0.7.19":
   "integrity" "sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g=="
   "resolved" "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.28.tgz"
   "version" "0.7.28"
