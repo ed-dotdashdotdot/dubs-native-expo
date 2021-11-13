@@ -10,11 +10,21 @@ const setChangeLocale = locale => ({
   type: 'SET_LOCALE',
   payload: locale,
 });
+const setChangePreferredFlag = preferredFlag => ({
+  type: 'SET_PREFERRED_FLAG',
+  payload: language,
+});
+const setChangePreferredLanguage = preferredLanguage => ({
+  type: 'SET_PREFERRED_LANGUAGE',
+  payload: language,
+});
 
 const exportedLanguageObject = {
   setChangeFlag,
   setChangeLanguage,
   setChangeLocale,
+  setChangePreferredFlag,
+  setChangePreferredLanguage,
 };
 
 export default exportedLanguageObject;

@@ -1,6 +1,9 @@
 const defaultLanguageState = {
   preferred: 'de-DE', // user can over-ride the selection made by the app
-  selected: 'en-GB', // app calculates this by device region
+  preferredFlag: '', 
+  preferredLanguage: '', 
+  selected: 'en-GB', 
+  locale: '', 
 };
 
 const language = (state = defaultLanguageState, action) => {
@@ -24,6 +27,20 @@ const language = (state = defaultLanguageState, action) => {
         ...state,
         ...{
           locale: action.payload,
+        }
+      };
+    case 'SET_PREFERRED_FLAG':
+      return {
+        ...state,
+        ...{
+          preferredFlag: action.payload,
+        }
+      };
+    case 'SET_PREFERRED_LANGUAGE':
+      return {
+        ...state,
+        ...{
+          preferredLanguage: action.payload,
         }
       };
     default: return state;
