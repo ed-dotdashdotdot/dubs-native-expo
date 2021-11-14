@@ -10,7 +10,6 @@ import Header from '../Header';
 import GameOnHeader from '../GameOnHeader';
 import GameOptions from '../GameOptions';
 import Info from '../Info';
-import LanguageSelector from '../LanguageSelector';
 import Options from '../Options';
 import OptionsHomepage from '../OptionsHomepage';
 import Mesh from '../Mesh';
@@ -71,10 +70,8 @@ const Container = () => {
           <Header />
         }
         <Info />
-        {/* {game.status === 'game-home' && <LanguageSelector width={width} />} */}
         {
           game.status === 'game-home'
-            // ? <LanguageSelector selectedLanguage={language.selected} width={width} />
             ? <OptionsHomepage selectedLanguage={language.selected} width={width} />
             : game.status === 'game-on' 
               ? <GameOptions />
