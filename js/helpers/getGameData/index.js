@@ -26,4 +26,3 @@ export const getGameData = level => {
   // gameEntries.map(value => gameEntriesFinal = [...gameEntriesFinal, `${value}B`]);
   // return gameEntriesFinal;
 };
-
