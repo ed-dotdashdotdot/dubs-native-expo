@@ -57,7 +57,7 @@ const ImageDetail = props => {
             <Text
               accessible={false}
               style={{
-                color: 'white',
+                color: colours.white,
                 fontSize: 24,
                 textAlign: 'center',
               }}
