@@ -151,23 +151,20 @@ const GameBoard = props => {
                 drawGameBoardBorderRadius('topLeft', val, index === 0, cornerRadius, game.bossMode),
                 drawGameBoardBorderRadius('topRight', val, index === topRightSquare, cornerRadius, game.bossMode),
                 {
-                  // backgroundColor: isButtonFound(val, game.found) ? '#003300' : 'black',
+                  overflow: 'hidden',
+                },
+                {
                   height: gameSpecs.height / gameSpecs.rows,
                   opacity: isButtonFound(val, game.found) ? 1: 1,
-                  overflow: 'hidden',
-                  width: gameSpecs.width / gameSpecs.cols,
-                  // borderBottomLeftRadius: index === bottomLeftSquare ? cornerRadius : 0,
-                  // borderBottomRightRadius: index === gameArray.length - 1 ? cornerRadius : 0,
-                  // borderTopLeftRadius: index === 0 ? cornerRadius : 0,
-                  // borderTopRightRadius: index === topRightSquare ? cornerRadius : 0,
                   transform: [
                     { 
                       scale: getGameGridPositionsBossMode(
                         val,
                         game.bossMode,
-                      ).scaleFactor, 
-                    }
-                  ],
+                        ).scaleFactor, 
+                      }
+                    ],
+                  width: gameSpecs.width / gameSpecs.cols,
                 }
               ]}
             >
