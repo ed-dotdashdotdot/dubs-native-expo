@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 
 import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
@@ -31,6 +31,8 @@ const DrawFlag = props => {
         style={[
           {
             borderRadius: (maxWidth / flagsPerRow) / 2,
+            height: (maxWidth / flagsPerRow) - 12 - 12,
+            width: (maxWidth / flagsPerRow) - 12 - 12,
           },
           globalStyles.border,
         ]}
@@ -40,6 +42,12 @@ const DrawFlag = props => {
           (maxWidth / flagsPerRow) - 12 - 12 - 4, 
           (maxWidth / flagsPerRow) - 12 - 12 - 4,
         ))()}
+        {/* <Text
+          style={{
+            fontSize: 64,
+            textAlign: 'center',
+          }}
+        >🇬🇧</Text> */}
       </TouchableOpacity>
     </View>
   );
