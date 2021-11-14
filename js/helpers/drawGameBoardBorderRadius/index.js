@@ -21,12 +21,12 @@ export const drawGameBoardBorderRadius = (
     if (bossMode) {
       if (val.indexOf('B') !== -1) {
         return {
-          borderTopLeftRadius: squareMatches ? cornerRadius * 2 : 0,
+          borderTopLeftRadius: squareMatches ? cornerRadius : 0,
         }
       }
     }
     return {
-      borderBottomRightRadius: squareMatches ? cornerRadius * 2 : 0,
+      borderBottomRightRadius: squareMatches ? cornerRadius : 0,
     };
   }
   if (position === 'topLeft') {
