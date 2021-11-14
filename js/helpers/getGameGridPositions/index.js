@@ -1,98 +1,106 @@
-export const getGameGridPositions = (position, level, portrait, gameWidth, gameHeight, rows, cols) => {
+export const getGameGridPositions = (
+  position, 
+  level, 
+  portrait, 
+  gameWidth, 
+  gameHeight, 
+  rows, 
+  cols
+) => {
   if (level === 'easy') {
     if (portrait) {
       switch (position) {
         case '001A' : case '001B': return {
-          x: ((gameWidth / cols) * 1) * -1,
-          y: ((gameHeight / rows) * 0) * -1,
+          x: 0 - ((gameWidth / cols) * 1),
+          y: 0 - ((gameHeight / rows) * 0),
         };
         case '002A' : case '002B': return {
-          x: ((gameWidth / cols) * 2) * -1,
-          y: ((gameHeight / rows) * 0) * -1,
+          x: 0 - ((gameWidth / cols) * 2),
+          y: 0 - ((gameHeight / rows) * 0),
         };
         case '003A' : case '003B': return {
-          x: ((gameWidth / cols) * 3) * -1,
-          y: ((gameHeight / rows) * 0) * -1,
+          x: 0 - ((gameWidth / cols) * 3),
+          y: 0 - ((gameHeight / rows) * 0),
         };
         case '004A' : case '004B': return {
-          x: ((gameWidth / cols) * 0) * -1,
-          y: ((gameHeight / rows) * 1) * -1,
+          x: 0 - ((gameWidth / cols) * 0),
+          y: 0 - ((gameHeight / rows) * 1),
         };
         case '005A' : case '005B': return {
-          x: ((gameWidth / cols) * 1) * -1,
-          y: ((gameHeight / rows) * 1) * -1,
+          x: 0 - ((gameWidth / cols) * 1),
+          y: 0 - ((gameHeight / rows) * 1),
         };
         case '006A' : case '006B': return {
-          x: ((gameWidth / cols) * 2) * -1,
-          y: ((gameHeight / rows) * 1) * -1,
+          x: 0 - ((gameWidth / cols) * 2),
+          y: 0 - ((gameHeight / rows) * 1),
         };
         case '007A' : case '007B': return {
-          x: ((gameWidth / cols) * 3) * -1,
-          y: ((gameHeight / rows) * 1) * -1,
+          x: 0 - ((gameWidth / cols) * 3),
+          y: 0 - ((gameHeight / rows) * 1),
         };
         case '008A' : case '008B': return {
-          x: ((gameWidth / cols) * 0) * -1,
-          y: ((gameHeight / rows) * 2) * -1,
+          x: 0 - ((gameWidth / cols) * 0),
+          y: 0 - ((gameHeight / rows) * 2),
         };
         case '009A' : case '009B': return {
-          x: ((gameWidth / cols) * 1) * -1,
-          y: ((gameHeight / rows) * 2) * -1,
+          x: 0 - ((gameWidth / cols) * 1),
+          y: 0 - ((gameHeight / rows) * 2),
         };
         case '010A' : case '010B': return {
-          x: ((gameWidth / cols) * 2) * -1,
-          y: ((gameHeight / rows) * 2) * -1,
+          x: 0 - ((gameWidth / cols) * 2),
+          y: 0 - ((gameHeight / rows) * 2),
         };
         case '011A' : case '011B': return {
-          x: ((gameWidth / cols) * 3) * -1,
-          y: ((gameHeight / rows) * 2) * -1,
+          x: 0 - ((gameWidth / cols) * 3),
+          y: 0 - ((gameHeight / rows) * 2),
         };
         case '012A' : case '012B': return {
-          x: ((gameWidth / cols) * 0) * -1,
-          y: ((gameHeight / rows) * 3) * -1,
+          x: 0 - ((gameWidth / cols) * 0),
+          y: 0 - ((gameHeight / rows) * 3),
         };
         case '013A' : case '013B': return {
-          x: ((gameWidth / cols) * 1) * -1,
-          y: ((gameHeight / rows) * 3) * -1,
+          x: 0 - ((gameWidth / cols) * 1),
+          y: 0 - ((gameHeight / rows) * 3),
         };
         case '014A' : case '014B': return {
-          x: ((gameWidth / cols) * 2) * -1,
-          y: ((gameHeight / rows) * 3) * -1,
+          x: 0 - ((gameWidth / cols) * 2),
+          y: 0 - ((gameHeight / rows) * 3),
         };
         case '015A' : case '015B': return {
-          x: ((gameWidth / cols) * 3) * -1,
-          y: ((gameHeight / rows) * 3) * -1,
+          x: 0 - ((gameWidth / cols) * 3),
+          y: 0 - ((gameHeight / rows) * 3),
         };
         case '016A' : case '016B': return {
-          x: ((gameWidth / cols) * 0) * -1,
-          y: ((gameHeight / rows) * 4) * -1,
+          x: 0 - ((gameWidth / cols) * 0),
+          y: 0 - ((gameHeight / rows) * 4),
         };
         case '017A' : case '017B': return {
-          x: ((gameWidth / cols) * 1) * -1,
-          y: ((gameHeight / rows) * 4) * -1,
+          x: 0 - ((gameWidth / cols) * 1),
+          y: 0 - ((gameHeight / rows) * 4),
         };
         case '018A' : case '018B': return {
-          x: ((gameWidth / cols) * 2) * -1,
-          y: ((gameHeight / rows) * 4) * -1,
+          x: 0 - ((gameWidth / cols) * 2),
+          y: 0 - ((gameHeight / rows) * 4),
         };
         case '019A' : case '019B': return {
-          x: ((gameWidth / cols) * 3) * -1,
-          y: ((gameHeight / rows) * 4) * -1,
+          x: 0 - ((gameWidth / cols) * 3),
+          y: 0 - ((gameHeight / rows) * 4),
         };
         case '020A' : case '020B': return {
-          x: ((gameWidth / cols) * 0) * -1,
-          y: ((gameHeight / rows) * 5) * -1,
+          x: 0 - ((gameWidth / cols) * 0),
+          y: 0 - ((gameHeight / rows) * 5),
         };
         case '021A' : case '021B': return {
-          x: ((gameWidth / cols) * 1) * -1,
-          y: ((gameHeight / rows) * 5) * -1,
+          x: 0 - ((gameWidth / cols) * 1),
+          y: 0 - ((gameHeight / rows) * 5),
         };
         case '022A' : case '022B': return {
-          x: ((gameWidth / cols) * 2) * -1,
-          y: ((gameHeight / rows) * 5) * -1,
+          x: 0 - ((gameWidth / cols) * 2),
+          y: 0 - ((gameHeight / rows) * 5),
         };
         case '023A' : case '023B': return {
-          x: ((gameWidth / cols) * 3) * -1,
-          y: ((gameHeight / rows) * 5) * -1,
+          x: 0 - ((gameWidth / cols) * 3),
+          y: 0 - ((gameHeight / rows) * 5),
         };
         default: return {
           x: 0,
@@ -102,96 +110,96 @@ export const getGameGridPositions = (position, level, portrait, gameWidth, gameH
     }
     switch (position) {
       case '001A' : case '001B': return {
-        x: ((gameWidth / cols) * 1) * -1,
-        y: ((gameHeight / rows) * 0) * -1,
+        x: 0 - ((gameWidth / cols) * 1),
+        y: 0 - ((gameHeight / rows) * 0),
       };
       case '002A' : case '002B': return {
-        x: ((gameWidth / cols) * 2) * -1,
-        y: ((gameHeight / rows) * 0) * -1,
+        x: 0 - ((gameWidth / cols) * 2),
+        y: 0 - ((gameHeight / rows) * 0),
       };
       case '003A' : case '003B': return {
-        x: ((gameWidth / cols) * 3) * -1,
-        y: ((gameHeight / rows) * 0) * -1,
+        x: 0 - ((gameWidth / cols) * 3),
+        y: 0 - ((gameHeight / rows) * 0),
       };
       case '004A' : case '004B': return {
-        x: ((gameWidth / cols) * 4) * -1,
-        y: ((gameHeight / rows) * 0) * -1,
+        x: 0 - ((gameWidth / cols) * 4),
+        y: 0 - ((gameHeight / rows) * 0),
       };
       case '005A' : case '005B': return {
-        x: ((gameWidth / cols) * 5) * -1,
-        y: ((gameHeight / rows) * 0) * -1,
+        x: 0 - ((gameWidth / cols) * 5),
+        y: 0 - ((gameHeight / rows) * 0),
       };
       case '006A' : case '006B': return {
-        x: ((gameWidth / cols) * 0) * -1,
-        y: ((gameHeight / rows) * 1) * -1,
+        x: 0 - ((gameWidth / cols) * 0),
+        y: 0 - ((gameHeight / rows) * 1),
       };
       case '007A' : case '007B': return {
-        x: ((gameWidth / cols) * 1) * -1,
-        y: ((gameHeight / rows) * 1) * -1,
+        x: 0 - ((gameWidth / cols) * 1),
+        y: 0 - ((gameHeight / rows) * 1),
       };
       case '008A' : case '008B': return {
-        x: ((gameWidth / cols) * 2) * -1,
-        y: ((gameHeight / rows) * 1) * -1,
+        x: 0 - ((gameWidth / cols) * 2),
+        y: 0 - ((gameHeight / rows) * 1),
       };
       case '009A' : case '009B': return {
-        x: ((gameWidth / cols) * 3) * -1,
-        y: ((gameHeight / rows) * 1) * -1,
+        x: 0 - ((gameWidth / cols) * 3),
+        y: 0 - ((gameHeight / rows) * 1),
       };
       case '010A' : case '010B': return {
-        x: ((gameWidth / cols) * 4) * -1,
-        y: ((gameHeight / rows) * 1) * -1,
+        x: 0 - ((gameWidth / cols) * 4),
+        y: 0 - ((gameHeight / rows) * 1),
       };
       case '011A' : case '011B': return {
-        x: ((gameWidth / cols) * 5) * -1,
-        y: ((gameHeight / rows) * 1) * -1,
+        x: 0 - ((gameWidth / cols) * 5),
+        y: 0 - ((gameHeight / rows) * 1),
       };
       case '012A' : case '012B': return {
-        x: ((gameWidth / cols) * 0) * -1,
-        y: ((gameHeight / rows) * 2) * -1,
+        x: 0 - ((gameWidth / cols) * 0),
+        y: 0 - ((gameHeight / rows) * 2),
       };
       case '013A' : case '013B': return {
-        x: ((gameWidth / cols) * 1) * -1,
-        y: ((gameHeight / rows) * 2) * -1,
+        x: 0 - ((gameWidth / cols) * 1),
+        y: 0 - ((gameHeight / rows) * 2),
       };
       case '014A' : case '014B': return {
-        x: ((gameWidth / cols) * 2) * -1,
-        y: ((gameHeight / rows) * 2) * -1,
+        x: 0 - ((gameWidth / cols) * 2),
+        y: 0 - ((gameHeight / rows) * 2),
       };
       case '015A' : case '015B': return {
-        x: ((gameWidth / cols) * 3) * -1,
-        y: ((gameHeight / rows) * 2) * -1,
+        x: 0 - ((gameWidth / cols) * 3),
+        y: 0 - ((gameHeight / rows) * 2),
       };
       case '016A' : case '016B': return {
-        x: ((gameWidth / cols) * 4) * -1,
-        y: ((gameHeight / rows) * 2) * -1,
+        x: 0 - ((gameWidth / cols) * 4),
+        y: 0 - ((gameHeight / rows) * 2),
       };
       case '017A' : case '017B': return {
-        x: ((gameWidth / cols) * 5) * -1,
-        y: ((gameHeight / rows) * 2) * -1,
+        x: 0 - ((gameWidth / cols) * 5),
+        y: 0 - ((gameHeight / rows) * 2),
       };
       case '018A' : case '018B': return {
-        x: ((gameWidth / cols) * 0) * -1,
-        y: ((gameHeight / rows) * 3) * -1,
+        x: 0 - ((gameWidth / cols) * 0),
+        y: 0 - ((gameHeight / rows) * 3),
       };
       case '019A' : case '019B': return {
-        x: ((gameWidth / cols) * 1) * -1,
-        y: ((gameHeight / rows) * 3) * -1,
+        x: 0 - ((gameWidth / cols) * 1),
+        y: 0 - ((gameHeight / rows) * 3),
       };
       case '020A' : case '020B': return {
-        x: ((gameWidth / cols) * 2) * -1,
-        y: ((gameHeight / rows) * 3) * -1,
+        x: 0 - ((gameWidth / cols) * 2),
+        y: 0 - ((gameHeight / rows) * 3),
       };
       case '021A' : case '021B': return {
-        x: ((gameWidth / cols) * 3) * -1,
-        y: ((gameHeight / rows) * 3) * -1,
+        x: 0 - ((gameWidth / cols) * 3),
+        y: 0 - ((gameHeight / rows) * 3),
       };
       case '022A' : case '022B': return {
-        x: ((gameWidth / cols) * 4) * -1,
-        y: ((gameHeight / rows) * 3) * -1,
+        x: 0 - ((gameWidth / cols) * 4),
+        y: 0 - ((gameHeight / rows) * 3),
       };
       case '023A' : case '023B': return {
-        x: ((gameWidth / cols) * 5) * -1,
-        y: ((gameHeight / rows) * 3) * -1,
+        x: 0 - ((gameWidth / cols) * 5),
+        y: 0 - ((gameHeight / rows) * 3),
       };
       default: return {
         x: 0,

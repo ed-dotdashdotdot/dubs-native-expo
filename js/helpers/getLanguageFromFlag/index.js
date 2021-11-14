@@ -1,4 +1,4 @@
-export const getLanguageFromFlag = flag => {
+export const getLanguageFromFlag = (flag = 'En') => {
   switch (flag) {
     case 'Cn' : return 'zh-CN';
     case 'De' : return 'de-DE';

@@ -1,4 +1,4 @@
-export const getCorners = (level, portrait) => {
+export const getCorners = (level='easy', portrait=false) => {
   if (level === 'easy') {
     if (portrait) {
       return {
