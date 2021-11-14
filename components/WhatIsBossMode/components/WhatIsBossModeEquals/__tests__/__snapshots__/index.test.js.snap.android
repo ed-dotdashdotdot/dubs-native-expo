@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhatIsBossModeCardEquals renders correctly 1`] = `
+<Text
+  accessible={false}
+  style={
+    Object {
+      "color": "#ffffff",
+      "fontFamily": "Courier New",
+      "fontSize": 48,
+      "fontWeight": "bold",
+      "textAlign": "center",
+      "width": 72,
+    }
+  }
+>
+  =
+</Text>
+`;

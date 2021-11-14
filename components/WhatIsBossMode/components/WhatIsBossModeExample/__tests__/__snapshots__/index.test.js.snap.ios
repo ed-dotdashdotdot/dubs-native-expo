@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly in boss mode 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 2,
+      }
+    }
+  >
+    <SmileyFaceSvg
+      colourFace="#f3e600"
+      colourFeatures="#000000"
+      height={48}
+      width={48}
+    />
+  </View>
+  <WhatIsBossModeCardEquals />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 2,
+        "transform": Array [
+          Object {
+            "scale": -1,
+          },
+        ],
+      }
+    }
+  >
+    <SmileyFaceSvg
+      colourFace="#f3e600"
+      colourFeatures="#000000"
+      height={48}
+      width={48}
+    />
+  </View>
+</View>
+`;
+
+exports[`renders correctly in normal mode 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "flex": 2,
+      }
+    }
+  >
+    <SmileyFaceSvg
+      colourFace="#f3e600"
+      colourFeatures="#000000"
+      height={48}
+      width={48}
+    />
+  </View>
+  <WhatIsBossModeCardEquals />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flex": 2,
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+      }
+    }
+  >
+    <SmileyFaceSvg
+      colourFace="#f3e600"
+      colourFeatures="#000000"
+      height={48}
+      width={48}
+    />
+  </View>
+</View>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#ffffff",
+      "fontFamily": "Courier New",
+      "fontSize": 20,
+      "fontWeight": "bold",
+      "marginTop": 12,
+      "textAlign": "center",
+    }
+  }
+>
+  <Translate
+    textKey="TEXT-KEY-STRING"
+  />
+</Text>
+`;
