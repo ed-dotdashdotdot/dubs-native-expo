@@ -3,12 +3,10 @@ import { shallow } from "enzyme";
 
 import Component from '../';
 
-describe('Component', () => {
-
+describe('InfoInner->Component', () => {
   const props = {
     styles: { backgroundColor: 'red' }
   };
-
   it(`renders correctly with 0 children`, () => {
     const component = shallow(<Component />);
     expect(component).toMatchSnapshot();

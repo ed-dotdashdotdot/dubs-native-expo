@@ -2,10 +2,11 @@ import { drawStopwatch } from '../';
 
 describe('drawStopwatch() - null values', () => {
   it.each`
-    durationMs | expected
-    ${null}    | ${'00:00'}
-    ${false}   | ${'00:00'}
-    ${0}       | ${'00:00'}
+    durationMs   | expected
+    ${null}      | ${'00:00'}
+    ${undefined} | ${'00:00'}
+    ${false}     | ${'00:00'}
+    ${0}         | ${'00:00'}
   `(
     'should return \'$expected\' value when durationMs is $durationMs',
     ({ durationMs, expected }) => {
@@ -15,7 +16,6 @@ describe('drawStopwatch() - null values', () => {
     }
   );
 });
-
 describe('drawStopwatch() - under a minute', () => {
   it.each`
     durationMs | expected
@@ -48,7 +48,6 @@ describe('drawStopwatch() - under a minute', () => {
     }
   );
 });
-
 describe('drawStopwatch() - under ten minutes', () => {
   it.each`
     durationMs | expected
@@ -84,7 +83,6 @@ describe('drawStopwatch() - under ten minutes', () => {
     }
   );
 });
-
 describe('drawStopwatch() - under an hour', () => {
   it.each`
     durationMs | expected
@@ -106,7 +104,6 @@ describe('drawStopwatch() - under an hour', () => {
     }
   );
 });
-
 describe('drawStopwatch()- over an hour', () => {
   it.each`
     durationMs | expected
@@ -123,7 +120,6 @@ describe('drawStopwatch()- over an hour', () => {
     }
   );
 });
-
 describe('drawStopwatch()- over a day', () => {
   it.each`
     durationMs | expected

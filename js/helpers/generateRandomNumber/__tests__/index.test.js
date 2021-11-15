@@ -1,6 +1,6 @@
 import { generateRandomNumber } from '../';
 
-describe('generateRandomNumber', () => {
+describe('generateRandomNumber()', () => {
   it.each`
     random    | min          | max          | output
     ${1}      | ${0}         | ${1}         | ${1}

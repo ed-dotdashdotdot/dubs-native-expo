@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import GameOnHeader from '../';
 
-describe('GameOnHeader', () => {
+describe('GameOnHeader component', () => {
   it.each`
     bossMode | level 
     ${true}  | ${'easy'}

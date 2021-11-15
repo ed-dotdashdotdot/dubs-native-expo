@@ -5,7 +5,7 @@ import configureStore from 'redux-mock-store'
 
 import ContinueGameButton from '../';
 
-describe('ContinueGameButton', () => {
+describe('ContinueGameButton component', () => {
   it(`renders correctly`, () => {
     const initialState = { 
       game: {},

@@ -1,6 +1,6 @@
 import { drawGameBoardBorderRadius } from '../';
 
-describe('drawGameBoardBorderRadius() - null values', () => {
+describe('drawGameBoardBorderRadius()', () => {
   it.each`
     position         | val       | squareMatches | cornerRadius | bossMode | expected
     ${'bottomLeft'}  | ${'000A'} | ${false}      | ${10}        | ${false} | ${{borderBottomLeftRadius: 0}}

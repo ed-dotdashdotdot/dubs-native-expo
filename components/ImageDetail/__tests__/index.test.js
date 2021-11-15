@@ -5,7 +5,7 @@ import configureStore from 'redux-mock-store'
 
 import ImageDetail from '../';
 
-describe('ImageDetail', () => {
+describe('ImageDetail component', () => {
   describe('when level is easy', () => {
     describe('when bossMode is off', () => {
       it(`renders correctly on small phones`, () => {

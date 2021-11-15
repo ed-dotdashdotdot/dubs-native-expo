@@ -3,10 +3,12 @@ import { shallow } from "enzyme";
 
 import WhatIsBossModeDescription from '../';
 
-it(`renders correctly`, () => {
-  const props = {
-    textKey: 'TEXT-KEY-STRING'
-  };
-  const component = shallow(<WhatIsBossModeDescription {...props} />);
-  expect(component).toMatchSnapshot();
+describe('WhatIsBossModeDescription component', () => {
+  it(`renders correctly`, () => {
+    const props = {
+      textKey: 'TEXT-KEY-STRING'
+    };
+    const component = shallow(<WhatIsBossModeDescription {...props} />);
+    expect(component).toMatchSnapshot();
+  });
 });
