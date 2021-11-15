@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ImageDetail renders correctly on large phones 1`] = `
+exports[`ImageDetail when level is easy when bossMode is off renders correctly on large phones 1`] = `
 <ContextProvider
   value={
     Object {
@@ -33,6 +33,7 @@ exports[`ImageDetail renders correctly on large phones 1`] = `
   }
 >
   <ImageDetail
+    bossMode={false}
     dimensions={
       Object {
         "height": 812,
@@ -40,11 +41,12 @@ exports[`ImageDetail renders correctly on large phones 1`] = `
       }
     }
     image="2"
+    level="easy"
   />
 </ContextProvider>
 `;
 
-exports[`ImageDetail renders correctly on large tablets (landscape) 1`] = `
+exports[`ImageDetail when level is easy when bossMode is off renders correctly on large tablets (landscape) 1`] = `
 <ContextProvider
   value={
     Object {
@@ -77,6 +79,7 @@ exports[`ImageDetail renders correctly on large tablets (landscape) 1`] = `
   }
 >
   <ImageDetail
+    bossMode={false}
     dimensions={
       Object {
         "height": 1024,
@@ -84,11 +87,12 @@ exports[`ImageDetail renders correctly on large tablets (landscape) 1`] = `
       }
     }
     image="2"
+    level="easy"
   />
 </ContextProvider>
 `;
 
-exports[`ImageDetail renders correctly on large tablets (portrait) 1`] = `
+exports[`ImageDetail when level is easy when bossMode is off renders correctly on large tablets (portrait) 1`] = `
 <ContextProvider
   value={
     Object {
@@ -121,6 +125,7 @@ exports[`ImageDetail renders correctly on large tablets (portrait) 1`] = `
   }
 >
   <ImageDetail
+    bossMode={false}
     dimensions={
       Object {
         "height": 1366,
@@ -128,11 +133,12 @@ exports[`ImageDetail renders correctly on large tablets (portrait) 1`] = `
       }
     }
     image="2"
+    level="easy"
   />
 </ContextProvider>
 `;
 
-exports[`ImageDetail renders correctly on medium phones 1`] = `
+exports[`ImageDetail when level is easy when bossMode is off renders correctly on medium phones 1`] = `
 <ContextProvider
   value={
     Object {
@@ -165,6 +171,7 @@ exports[`ImageDetail renders correctly on medium phones 1`] = `
   }
 >
   <ImageDetail
+    bossMode={false}
     dimensions={
       Object {
         "height": 667,
@@ -172,11 +179,12 @@ exports[`ImageDetail renders correctly on medium phones 1`] = `
       }
     }
     image="2"
+    level="easy"
   />
 </ContextProvider>
 `;
 
-exports[`ImageDetail renders correctly on small phones 1`] = `
+exports[`ImageDetail when level is easy when bossMode is off renders correctly on small phones 1`] = `
 <ContextProvider
   value={
     Object {
@@ -209,6 +217,7 @@ exports[`ImageDetail renders correctly on small phones 1`] = `
   }
 >
   <ImageDetail
+    bossMode={false}
     dimensions={
       Object {
         "height": 320,
@@ -216,11 +225,12 @@ exports[`ImageDetail renders correctly on small phones 1`] = `
       }
     }
     image="1"
+    level="easy"
   />
 </ContextProvider>
 `;
 
-exports[`ImageDetail renders correctly on small tablets (landscape) 1`] = `
+exports[`ImageDetail when level is easy when bossMode is off renders correctly on small tablets (landscape) 1`] = `
 <ContextProvider
   value={
     Object {
@@ -253,6 +263,7 @@ exports[`ImageDetail renders correctly on small tablets (landscape) 1`] = `
   }
 >
   <ImageDetail
+    bossMode={false}
     dimensions={
       Object {
         "height": 768,
@@ -260,11 +271,12 @@ exports[`ImageDetail renders correctly on small tablets (landscape) 1`] = `
       }
     }
     image="2"
+    level="easy"
   />
 </ContextProvider>
 `;
 
-exports[`ImageDetail renders correctly on small tablets (portrait) 1`] = `
+exports[`ImageDetail when level is easy when bossMode is off renders correctly on small tablets (portrait) 1`] = `
 <ContextProvider
   value={
     Object {
@@ -297,6 +309,7 @@ exports[`ImageDetail renders correctly on small tablets (portrait) 1`] = `
   }
 >
   <ImageDetail
+    bossMode={false}
     dimensions={
       Object {
         "height": 1024,
@@ -304,6 +317,1617 @@ exports[`ImageDetail renders correctly on small tablets (portrait) 1`] = `
       }
     }
     image="2"
+    level="easy"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is easy when bossMode is on renders correctly on large phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 812,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="easy"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is easy when bossMode is on renders correctly on large tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 1366,
+      }
+    }
+    image="2"
+    level="easy"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is easy when bossMode is on renders correctly on large tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 1366,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="easy"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is easy when bossMode is on renders correctly on medium phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 667,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="easy"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is easy when bossMode is on renders correctly on small phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 320,
+        "width": 568,
+      }
+    }
+    image="1"
+    level="easy"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is easy when bossMode is on renders correctly on small tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="easy"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is easy when bossMode is on renders correctly on small tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    image="2"
+    level="easy"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is off renders correctly on large phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 812,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is off renders correctly on large tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 1366,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is off renders correctly on large tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 1366,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is off renders correctly on medium phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 667,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is off renders correctly on small phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 320,
+        "width": 568,
+      }
+    }
+    image="1"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is off renders correctly on small tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is off renders correctly on small tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is on renders correctly on large phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 812,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is on renders correctly on large tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 1366,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is on renders correctly on large tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 1366,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is on renders correctly on medium phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 667,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is on renders correctly on small phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 320,
+        "width": 568,
+      }
+    }
+    image="1"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is on renders correctly on small tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is hard when bossMode is on renders correctly on small tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    image="2"
+    level="hard"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is off renders correctly on large phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 812,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is off renders correctly on large tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 1366,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is off renders correctly on large tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 1366,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is off renders correctly on medium phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 667,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is off renders correctly on small phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 320,
+        "width": 568,
+      }
+    }
+    image="1"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is off renders correctly on small tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is off renders correctly on small tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={false}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is on renders correctly on large phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 812,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is on renders correctly on large tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 1366,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is on renders correctly on large tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 1366,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is on renders correctly on medium phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 667,
+        "width": 375,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is on renders correctly on small phones 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 320,
+        "width": 568,
+      }
+    }
+    image="1"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is on renders correctly on small tablets (landscape) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    image="2"
+    level="normal"
+  />
+</ContextProvider>
+`;
+
+exports[`ImageDetail when level is normal when bossMode is on renders correctly on small tablets (portrait) 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <ImageDetail
+    bossMode={true}
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    image="2"
+    level="normal"
   />
 </ContextProvider>
 `;
