@@ -1,6 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InfoInner component renders correctly with multiple children 1`] = `
+exports[`Component renders correctly with 0 children 1`] = `
+<Component
+  styles={
+    Object {
+      "paddingBottom": 0,
+      "paddingLeft": 12,
+      "paddingRight": 12,
+      "paddingTop": 24,
+    }
+  }
+/>
+`;
+
+exports[`Component renders correctly with 1 child 1`] = `
+<Component
+  content={
+    <Text>
+      Child
+    </Text>
+  }
+  styles={
+    Object {
+      "paddingBottom": 0,
+      "paddingLeft": 12,
+      "paddingRight": 12,
+      "paddingTop": 24,
+    }
+  }
+/>
+`;
+
+exports[`Component renders correctly with 2 children 1`] = `
 <Component
   content={
     Array [
@@ -11,37 +42,6 @@ exports[`InfoInner component renders correctly with multiple children 1`] = `
         Another child
       </Text>,
     ]
-  }
-  styles={
-    Object {
-      "paddingBottom": 0,
-      "paddingLeft": 12,
-      "paddingRight": 12,
-      "paddingTop": 24,
-    }
-  }
-/>
-`;
-
-exports[`InfoInner component renders correctly with no children 1`] = `
-<Component
-  styles={
-    Object {
-      "paddingBottom": 0,
-      "paddingLeft": 12,
-      "paddingRight": 12,
-      "paddingTop": 24,
-    }
-  }
-/>
-`;
-
-exports[`InfoInner component renders correctly with one child 1`] = `
-<Component
-  content={
-    <Text>
-      Child
-    </Text>
   }
   styles={
     Object {

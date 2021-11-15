@@ -1,19 +1,17 @@
 import React from 'react';
-import { View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import Component from './component';
 
 import globalStyles from '../../css/style.js';
 
 const InfoInner = props => {
   const { children } = { ...props };
   return (
-    <View 
-      style={[
-        globalStyles.infoInner,
-      ]}
-    >
-      { children }
-    </View>
+    <Component
+      content={children}
+      styles={globalStyles.infoInner}
+    />
   );
 };
 
@@ -21,7 +19,7 @@ InfoInner.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ]).isRequired,
+  ]).isRequired
 };
 
 export default InfoInner;
