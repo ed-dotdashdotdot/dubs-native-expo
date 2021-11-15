@@ -64,11 +64,13 @@ const Info = () => {
                   case 'image-detail':
                     return (
                       <ImageDetail 
+                        bossMode={game.bossMode}
                         dimensions={{
                           height: infoHeight,
                           width: infoWidth,
                         }}
-                        image={images.detail} 
+                        image={images.detail}
+                        level={game.level}
                       />
                     );
                   case 'choose-image':

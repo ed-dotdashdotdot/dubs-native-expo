@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import ExpoFastImage from 'expo-fast-image';
@@ -18,15 +18,17 @@ import { colours, fontFamily, ipAddress } from '../../configuration/config.json'
 import globalStyles from '../../css/style.js';
 
 const ImageDetail = props => {
-  const { dimensions, image, } = { ...props };
-
-  const game = useSelector(state => state.game);
-  const images = useSelector(state => state.images);
-
+  const { 
+    bossMode, 
+    dimensions, 
+    image, 
+    level 
+  } = { ...props };
+    
   const { gameActions, imagesActions } = { ...allActions };
   const dispatch = useDispatch();
-  const gameData = getGameData(game.level);
-  const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${images.detail}.jpg&size=medium`;
+  const gameData = getGameData(level);
+  const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${image}.jpg&size=medium`;
   const imageWidth = dimensions.width > 999 ? 440 : dimensions.width > 600 ? 512 : '100%'
 
   return (
@@ -72,7 +74,7 @@ const ImageDetail = props => {
             <ExpoFastImage 
               accessible={true}
               accessibilityRole='image'
-              cacheKey={`image-${images.detail}-medium`}
+              cacheKey={`image-${image}-medium`}
               style={{
                 height: '100%',
                 width: '100%',
@@ -93,7 +95,7 @@ const ImageDetail = props => {
           ]}
         >
           <TurnOnBossModeButton
-            bossMode={game.bossMode}
+            bossMode={bossMode}
           />
         </View>
         <View 
@@ -140,8 +142,10 @@ const ImageDetail = props => {
 };
 
 ImageDetail.propTypes = {
+  bossMode: PropTypes.bool.isRequired,
   dimensions: PropTypes.object.isRequired,
   image: PropTypes.string.isRequired,
+  level: PropTypes.string.isRequired,
 };
 
 export default ImageDetail;
