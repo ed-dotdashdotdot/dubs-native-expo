@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly at 768 x 1024 1`] = `
+<View
+  style={
+    Object {
+      "borderColor": "#ffffff",
+      "borderRadius": 8,
+      "borderStyle": "solid",
+      "borderTopLeftRadius": 0,
+      "borderTopRightRadius": 0,
+      "borderTopWidth": 0,
+      "borderWidth": 2,
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+      "justifyContent": "flex-start",
+      "marginTop": 0,
+      "padding": 12,
+      "paddingTop": 0,
+    }
+  }
+>
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="1"
+    key="1"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="2"
+    key="2"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="3"
+    key="3"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="4"
+    key="4"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="5"
+    key="5"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="6"
+    key="6"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="7"
+    key="7"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="8"
+    key="8"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="9"
+    key="9"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="10"
+    key="10"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="11"
+    key="11"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    imageRef="12"
+    key="12"
+  />
+</View>
+`;
+
+exports[`renders correctly at 1024 x 768 1`] = `
+<View
+  style={
+    Object {
+      "borderColor": "#ffffff",
+      "borderRadius": 8,
+      "borderStyle": "solid",
+      "borderTopLeftRadius": 0,
+      "borderTopRightRadius": 0,
+      "borderTopWidth": 0,
+      "borderWidth": 2,
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+      "justifyContent": "flex-start",
+      "marginTop": 0,
+      "padding": 12,
+      "paddingTop": 0,
+    }
+  }
+>
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    imageRef="1"
+    key="1"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    imageRef="2"
+    key="2"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    imageRef="3"
+    key="3"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    imageRef="4"
+    key="4"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    imageRef="5"
+    key="5"
+  />
+  <DrawThumb
+    dimensions={
+      Object {
+        "height": 1024,
+        "width": 768,
+      }
+    }
+    imageRef="6"
+    key="6"
+  />
+</View>
+`;
