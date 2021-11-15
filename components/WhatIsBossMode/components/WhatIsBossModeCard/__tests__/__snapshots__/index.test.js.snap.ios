@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly in boss mode 1`] = `
+exports[`WhatIsBossModeCard component renders correctly in boss mode 1`] = `
 <View
   style={
     Object {
@@ -26,7 +26,7 @@ exports[`renders correctly in boss mode 1`] = `
 </View>
 `;
 
-exports[`renders correctly in normal mode 1`] = `
+exports[`WhatIsBossModeCard component renders correctly in normal mode 1`] = `
 <View
   style={
     Object {

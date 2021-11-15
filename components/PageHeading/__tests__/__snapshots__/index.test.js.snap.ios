@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly with a colour amber background 1`] = `
+exports[`PageHeading component renders correctly with a colour amber background 1`] = `
 <View
   accessibilityRole="header"
   accessible={true}
@@ -37,7 +37,7 @@ exports[`renders correctly with a colour amber background 1`] = `
 </View>
 `;
 
-exports[`renders correctly with a colour green background 1`] = `
+exports[`PageHeading component renders correctly with a colour green background 1`] = `
 <View
   accessibilityRole="header"
   accessible={true}
@@ -74,7 +74,7 @@ exports[`renders correctly with a colour green background 1`] = `
 </View>
 `;
 
-exports[`renders correctly with a colour red background 1`] = `
+exports[`PageHeading component renders correctly with a colour red background 1`] = `
 <View
   accessibilityRole="header"
   accessible={true}
@@ -111,7 +111,7 @@ exports[`renders correctly with a colour red background 1`] = `
 </View>
 `;
 
-exports[`renders correctly with no background colour (black) 1`] = `
+exports[`PageHeading component renders correctly with no background colour (black) 1`] = `
 <View
   accessibilityRole="header"
   accessible={true}
@@ -148,7 +148,7 @@ exports[`renders correctly with no background colour (black) 1`] = `
 </View>
 `;
 
-exports[`renders correctly with subTextKeys 1`] = `
+exports[`PageHeading component renders correctly with subTextKeys 1`] = `
 <View
   accessibilityRole="header"
   accessible={true}

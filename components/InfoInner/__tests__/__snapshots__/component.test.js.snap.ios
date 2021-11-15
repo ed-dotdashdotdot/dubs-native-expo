@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component renders correctly with 0 children 1`] = `
+exports[`InfoInner->Component renders correctly with 0 children 1`] = `
 <Component
   styles={
     Object {
@@ -13,7 +13,7 @@ exports[`Component renders correctly with 0 children 1`] = `
 />
 `;
 
-exports[`Component renders correctly with 1 child 1`] = `
+exports[`InfoInner->Component renders correctly with 1 child 1`] = `
 <Component
   content={
     <Text>
@@ -31,7 +31,7 @@ exports[`Component renders correctly with 1 child 1`] = `
 />
 `;
 
-exports[`Component renders correctly with 2 children 1`] = `
+exports[`InfoInner->Component renders correctly with 2 children 1`] = `
 <Component
   content={
     Array [

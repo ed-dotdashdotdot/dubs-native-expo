@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GameOnHeader should render correctly when 'bossMode' is 'false' and 'level' is 'easy' 1`] = `
+exports[`GameOnHeader component should render correctly when 'bossMode' is 'false' and 'level' is 'easy' 1`] = `
 <View
   style={
     Object {
@@ -31,7 +31,7 @@ exports[`GameOnHeader should render correctly when 'bossMode' is 'false' and 'le
 </View>
 `;
 
-exports[`GameOnHeader should render correctly when 'bossMode' is 'false' and 'level' is 'hard' 1`] = `
+exports[`GameOnHeader component should render correctly when 'bossMode' is 'false' and 'level' is 'hard' 1`] = `
 <View
   style={
     Object {
@@ -62,7 +62,7 @@ exports[`GameOnHeader should render correctly when 'bossMode' is 'false' and 'le
 </View>
 `;
 
-exports[`GameOnHeader should render correctly when 'bossMode' is 'false' and 'level' is 'normal' 1`] = `
+exports[`GameOnHeader component should render correctly when 'bossMode' is 'false' and 'level' is 'normal' 1`] = `
 <View
   style={
     Object {
@@ -93,7 +93,7 @@ exports[`GameOnHeader should render correctly when 'bossMode' is 'false' and 'le
 </View>
 `;
 
-exports[`GameOnHeader should render correctly when 'bossMode' is 'true' and 'level' is 'easy' 1`] = `
+exports[`GameOnHeader component should render correctly when 'bossMode' is 'true' and 'level' is 'easy' 1`] = `
 <View
   style={
     Object {
@@ -131,7 +131,7 @@ exports[`GameOnHeader should render correctly when 'bossMode' is 'true' and 'lev
 </View>
 `;
 
-exports[`GameOnHeader should render correctly when 'bossMode' is 'true' and 'level' is 'hard' 1`] = `
+exports[`GameOnHeader component should render correctly when 'bossMode' is 'true' and 'level' is 'hard' 1`] = `
 <View
   style={
     Object {
@@ -169,7 +169,7 @@ exports[`GameOnHeader should render correctly when 'bossMode' is 'true' and 'lev
 </View>
 `;
 
-exports[`GameOnHeader should render correctly when 'bossMode' is 'true' and 'level' is 'normal' 1`] = `
+exports[`GameOnHeader component should render correctly when 'bossMode' is 'true' and 'level' is 'normal' 1`] = `
 <View
   style={
     Object {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly in boss mode 1`] = `
+exports[`WhatIsBossMode component renders correctly in boss mode 1`] = `
 <ScrollView>
   <InfoInner>
     <PageHeading
@@ -19,7 +19,7 @@ exports[`renders correctly in boss mode 1`] = `
 </ScrollView>
 `;
 
-exports[`renders correctly in normal mode 1`] = `
+exports[`WhatIsBossMode component renders correctly in normal mode 1`] = `
 <ScrollView>
   <InfoInner>
     <PageHeading

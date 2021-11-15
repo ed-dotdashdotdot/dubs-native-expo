@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`WhatIsBossModeTitle component renders correctly 1`] = `
 <Text
   accessibilityRole="header"
   accessible={true}

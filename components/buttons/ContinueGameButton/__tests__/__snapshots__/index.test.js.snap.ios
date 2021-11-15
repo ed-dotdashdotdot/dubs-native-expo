@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContinueGameButton renders correctly 1`] = `
+exports[`ContinueGameButton component renders correctly 1`] = `
 <ContextProvider
   value={
     Object {
