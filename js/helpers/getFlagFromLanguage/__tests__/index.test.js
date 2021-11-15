@@ -14,7 +14,7 @@ describe('getFlagFromLanguage()', () => {
     ${'en-EN'}   | ${'En'}
     ${undefined} | ${'En'}
     `(
-    "should return expected value when 'language' is $language",
+    "should return '$expected' when 'language' is '$language'",
     ({ language, expected }) => {
       expect(
         getFlagFromLanguage(language)
