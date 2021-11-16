@@ -12,17 +12,17 @@ import { whichLevelColour } from '../../js/helpers/whichLevelColour';
 
 const GamePaused = () => {
   const game = useSelector(state => state.game);
-  const timer = useSelector(state => state.timer);
-  const { timerActions } = { ...allActions };
+  const duration = useSelector(state => state.duration);
+  const { durationActions } = { ...allActions };
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (timer.saved === 0) {
+    if (duration.saved === 0) {
       const endTime = new Date().getTime();
-      const timeDifference = (endTime - timer.start);
+      const timeDifference = (endTime - duration.start);
       const timeInMilliseconds = timeDifference;
-      dispatch(timerActions.setTimerPaused(timeInMilliseconds));
-      dispatch(timerActions.setTimerStatus('game-paused'));
+      dispatch(durationActions.setDurationPaused(timeInMilliseconds));
+      dispatch(durationActions.setDurationStatus('game-paused'));
     }
   }, []);
 

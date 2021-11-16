@@ -11,7 +11,7 @@ import { colours, fontFamily } from '../../configuration/config.json';
 const GameOptions = () => {
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
-  const timer = useSelector(state => state.timer);
+  const duration = useSelector(state => state.duration);
   return (
     <View 
       style={{
@@ -52,10 +52,10 @@ const GameOptions = () => {
             }}
           >
             {
-              game.status === 'game-on' && timer.start && (
+              game.status === 'game-on' && duration.start && (
                 <Stopwatch 
                   lang={language.selected} 
-                  start={timer.start} 
+                  start={duration.start} 
                 />
               )
             }

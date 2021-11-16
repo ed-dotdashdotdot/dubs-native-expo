@@ -1,4 +1,4 @@
-const defaultTimerState = {
+const defaultDurationState = {
   start: '',
   end: '',
   paused: 0,
@@ -6,25 +6,25 @@ const defaultTimerState = {
   status: '', // 'game-on', 'game-paused'
 };
 
-const timer = (state = defaultTimerState, action) => {
+const duration = (state = defaultDurationState, action) => {
   switch (action.type) {
-    case 'SET_TIMER_START': return {
+    case 'SET_DURATION_START': return {
       ...state,
       start: action.payload,
     };
-    case 'SET_TIMER_END': return {
+    case 'SET_DURATION_END': return {
       ...state,
       end: action.payload,
     };
-    case 'SET_TIMER_PAUSED': return {
+    case 'SET_DURATION_PAUSED': return {
       ...state,
       paused: action.payload,
     };
-    case 'SET_TIMER_SAVED': return {
+    case 'SET_DURATION_SAVED': return {
       ...state,
       saved: action.payload,
     };
-    case 'SET_TIMER_STATUS': return {
+    case 'SET_DURATION_STATUS': return {
       ...state,
       status: action.payload,
     };
@@ -32,4 +32,4 @@ const timer = (state = defaultTimerState, action) => {
   }
 };
 
-export default timer;
+export default duration;

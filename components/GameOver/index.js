@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
 import DrawGameDuration from '../DrawGameDuration';
+import HighScoreSummary from '../HighScoreSummary';
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../buttons/NewGameButtons';
@@ -21,11 +22,11 @@ import globalStyles from '../../css/style.js';
 const GameOver = () => {
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
-  const timer = useSelector(state => state.timer);
-  const { timerActions } = { ...allActions };
+  const duration = useSelector(state => state.duration);
+  const { durationActions } = { ...allActions };
   const dispatch = useDispatch();
 
-  const duration = ((timer.end - timer.start) / 1000).toFixed(2) * 1000;
+  const gameDuration = ((duration.end - duration.start) / 1000).toFixed(2) * 1000;
 
   let subTextKeys = `${game.level}Level`;
   if (game.bossMode) {
@@ -34,10 +35,10 @@ const GameOver = () => {
 
   useEffect(() => {
     const endTime = new Date().getTime();
-    const timeDifference = (endTime - timer.start) / 1000;
+    const timeDifference = (endTime - duration.start) / 1000;
     const timeInSeconds = timeDifference;
-    dispatch(timerActions.setTimerEnd(endTime));
-    dispatch(timerActions.setTimerSaved(timeInSeconds));
+    dispatch(durationActions.setDurationEnd(endTime));
+    dispatch(durationActions.setDurationSaved(timeInSeconds));
   }, []);
 
   return (
@@ -71,9 +72,9 @@ const GameOver = () => {
             }}
           >
             {
-              duration < wowMessageAfterMs ? (
+              gameDuration < wowMessageAfterMs ? (
                 <DrawGameDuration
-                  duration={duration}
+                  gameDuration={gameDuration}
                   lang={language.selected}
                 />
               ) : (
@@ -82,6 +83,7 @@ const GameOver = () => {
             }
           </Text>
         </View>
+        <HighScoreSummary />
         <NewGameButtons section="game-over" />
       </InfoInner>
     </ScrollView>

@@ -1,4 +1,4 @@
-export const timerStartDate = existingPaused => {
+export const durationStartDate = existingPaused => {
   if (existingPaused === '') {
     return new Date().getTime();
   }

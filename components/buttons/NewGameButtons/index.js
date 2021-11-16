@@ -17,7 +17,7 @@ const NewGameButtons = props => {
   const {
     section
   } = { ...props };
-  const { gameActions, imagesActions, timerActions } = { ...allActions };
+  const { gameActions, imagesActions, durationActions } = { ...allActions };
   const dispatch = useDispatch();
   const newGameDispatches = level => {
     dispatch(gameActions.injectGameFound([]));
@@ -29,11 +29,11 @@ const NewGameButtons = props => {
     dispatch(gameActions.setGameStatus('game-ready'));;
     dispatch(imagesActions.setImagesLoaded(false));
     dispatch(imagesActions.setImagesSelected(''));
-    dispatch(timerActions.setTimerEnd(''));
-    dispatch(timerActions.setTimerPaused(0));
-    dispatch(timerActions.setTimerSaved(0));
-    dispatch(timerActions.setTimerStart(''));
-    dispatch(timerActions.setTimerStatus(''));
+    dispatch(durationActions.setDurationEnd(''));
+    dispatch(durationActions.setDurationPaused(0));
+    dispatch(durationActions.setDurationSaved(0));
+    dispatch(durationActions.setDurationStart(''));
+    dispatch(durationActions.setDurationStatus(''));
   };
   return (
     <View

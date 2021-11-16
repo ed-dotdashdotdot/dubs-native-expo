@@ -9,7 +9,7 @@ import ExpoFastImage from 'expo-fast-image';
 
 import Translate from '../Translate';
 
-import { timerStartDate } from '../../js/helpers/timerStartDate';
+import { durationStartDate } from '../../js/helpers/durationStartDate';
 
 import { colours, defaultImages, ipAddress } from '../../configuration/config.json';
 
@@ -19,8 +19,8 @@ const LoadingImage = props => {
     imageToUse = defaultImages[Math.floor(Math.random() * defaultImages.length)];
   }
 
-  const timer = useSelector(state => state.timer);
-  const { gameActions, imagesActions, timerActions } = { ...allActions };
+  const duration = useSelector(state => state.duration);
+  const { gameActions, imagesActions, durationActions } = { ...allActions };
   const dispatch = useDispatch();
   
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`;
@@ -48,11 +48,11 @@ const LoadingImage = props => {
           dispatch(gameActions.setGameStatus('game-on'));
           dispatch(imagesActions.setImagesLoaded(true));
           dispatch(imagesActions.setImagesSelected(imageToUse));
-          dispatch(timerActions.setTimerStart(timerStartDate(timer.paused)));
-          dispatch(timerActions.setTimerEnd(''));
-          dispatch(timerActions.setTimerPaused(0));
-          dispatch(timerActions.setTimerSaved(0));
-          dispatch(timerActions.setTimerStatus('game-on'));
+          dispatch(durationActions.setDurationStart(durationStartDate(duration.paused)));
+          dispatch(durationActions.setDurationEnd(''));
+          dispatch(durationActions.setDurationPaused(0));
+          dispatch(durationActions.setDurationSaved(0));
+          dispatch(durationActions.setDurationStatus('game-on'));
         }}
         // onLoadEnd={() => {}}
         uri={imageSrc}
