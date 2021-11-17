@@ -9,7 +9,7 @@ import { colours, fontFamily } from '../../configuration/config.json';
 import globalStyles from '../../css/style.js';
 
 const PageHeading = props => {
-  const { colour, textKey, subTextKeys } = { ...props };
+  const { colour, subTextKeys, textKey } = { ...props };
 
   // compose subKeys - used for game-over screen
   let subTextKeysSplit = [];
@@ -53,27 +53,38 @@ const PageHeading = props => {
         <Translate textKey={textKey} />
       </Text>
       {!!subTextKeysSplit.length && (
-        <Text
-          style={{
-            color: colours.white,
-            fontFamily: fontFamily,
-            fontSize: 20,
-            fontWeight: 'bold',
-            marginTop: 8,
-            padding: 0,
-            textAlign: 'center',
-            width: '100%',
-          }}
-        >
-          <Translate textKey={subTextKeysSplit[0]} />
+        <>
+          <Text
+            style={{
+              color: colours.white,
+              fontFamily: fontFamily,
+              fontSize: 20,
+              fontWeight: 'bold',
+              marginTop: 8,
+              padding: 0,
+              textAlign: 'center',
+              width: '100%',
+            }}
+          >
+            <Translate textKey={subTextKeysSplit[0]} />
+          </Text>
           {subTextKeysSplit[1] && (
-            <>
-              {" ("}
-                <Translate textKey={subTextKeysSplit[1]} />
-              {")"}
-            </>
+            <Text
+              style={{
+                color: colours.white,
+                fontFamily: fontFamily,
+                fontSize: 20,
+                fontWeight: 'bold',
+                marginTop: 8,
+                padding: 0,
+                textAlign: 'center',
+                width: '100%',
+              }}
+            >
+              <Translate textKey={subTextKeysSplit[1]} />
+            </Text>
           )}
-        </Text>
+        </>
       )}
     </View>
   );

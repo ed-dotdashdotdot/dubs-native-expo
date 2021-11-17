@@ -18,6 +18,10 @@ const setDurationStatus = data => ({
   type: 'SET_DURATION_STATUS',
   payload: data,
 });
+const setDurationHighScores = data => ({
+  type: 'SET_DURATION_HIGHSCORES',
+  payload: data,
+});
 
 const exportedDurationObject = {
   setDurationEnd,
@@ -25,6 +29,7 @@ const exportedDurationObject = {
   setDurationSaved,
   setDurationStart,
   setDurationStatus,
+  setDurationHighScores,
 };
 
 export default exportedDurationObject;

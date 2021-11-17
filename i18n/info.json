@@ -1,25 +1,58 @@
 {
+  "highScore": {
+    "zh-CN": "CN-High score:",
+    "de-DE": "DE-High score:",
+    "en-GB": "High score:",
+    "es-ES": "ES-High score:",
+    "fr-FR": "FR-High score:",
+    "it-IT": "IT-High score:",
+    "ja-JP": "JP-High score:",
+    "pt-PT": "PT-High score:",
+    "ru-RU": "RU-High score:"
+  },
+  "newHighScore": {
+    "zh-CN": "CN-New high score!",
+    "de-DE": "DE-New high score!",
+    "en-GB": "New high score!",
+    "es-ES": "ES-New high score!",
+    "fr-FR": "FR-New high score!",
+    "it-IT": "IT-New high score!",
+    "ja-JP": "JP-New high score!",
+    "pt-PT": "PT-New high score!",
+    "ru-RU": "RU-New high score!"
+  },
+  "highScores": {
+    "zh-CN": "CN-High scores",
+    "de-DE": "DE-High scores",
+    "en-GB": "High scores",
+    "es-ES": "ES-High scores",
+    "fr-FR": "FR-High scores",
+    "it-IT": "IT-High scores",
+    "ja-JP": "JP-High scores",
+    "pt-PT": "PT-High scores",
+    "ru-RU": "RU-High scores"
+  },
   "appInfo": {
-    "zh-CN": "App info",
-    "de-DE": "App info",
+    "zh-CN": "CN-App info",
+    "de-DE": "DE-App info",
     "en-GB": "App info",
-    "es-ES": "App info",
-    "fr-FR": "App info",
-    "it-IT": "App info",
-    "ja-JP": "App info",
-    "pt-PT": "App info",
-    "ru-RU": "App info"
+    "es-ES": "ES-App info",
+    "fr-FR": "FR-App info",
+    "it-IT": "IT-App info",
+    "ja-JP": "JP-App info",
+    "pt-PT": "PT-App info",
+    "ru-RU": "RU-App info"
   },
   "appSettings": {
-    "zh-CN": "App settings",
-    "de-DE": "App settings",
+    "zh-CN": "CN-App settings",
+    "de-DE": "DE-App settings",
     "en-GB": "App settings",
-    "es-ES": "App settings",
-    "fr-FR": "App settings",
-    "it-IT": "App settings",
-    "ja-JP": "App settings",
-    "pt-PT": "App settings",
-    "ru-RU": "App settings"
+    "es-ES": "ES-App settings",
+    "fr-FR": "FR-App settings",
+    "it-IT": "IT-App settings",
+    "ja-JP": "JP-App settings",
+    "pt-PT": "PT-App settings",
+    "ru-RU": "RU-App settings"
   },
   "selectLanguage": {
     "zh-CN": "选择语言",
@@ -76,6 +109,17 @@
     "pt-PT": "Fácil",
     "ru-RU": "Легкий"
   },
+  "easyBossMode": {
+    "zh-CN": "CN-Easy (Boss mode)",
+    "de-DE": "DE-Easy (Boss mode)",
+    "en-GB": "Easy (Boss mode)",
+    "es-ES": "ES-Easy (Boss mode)",
+    "fr-FR": "FR-Easy (Boss mode)",
+    "it-IT": "IT-Easy (Boss mode)",
+    "ja-JP": "JP-Easy (Boss mode)",
+    "pt-PT": "PT-Easy (Boss mode)",
+    "ru-RU": "RU-Easy (Boss mode)"
+  },
   "hard": {
     "zh-CN": "难的",
     "de-DE": "Schwer",
@@ -87,6 +131,17 @@
     "pt-PT": "Duro",
     "ru-RU": "Жесткий"
   },
+  "hardBossMode": {
+    "zh-CN": "CN-Hard (Boss mode)",
+    "de-DE": "DE-Hard (Boss mode)",
+    "en-GB": "Hard (Boss mode)",
+    "es-ES": "ES-Hard (Boss mode)",
+    "fr-FR": "FR-Hard (Boss mode)",
+    "it-IT": "IT-Hard (Boss mode)",
+    "ja-JP": "JP-Hard (Boss mode)",
+    "pt-PT": "PT-Hard (Boss mode)",
+    "ru-RU": "RU-Hard (Boss mode)"
+  },
   "normal": {
     "zh-CN": "普通的",
     "de-DE": "Normal",
@@ -97,6 +152,17 @@
     "ja-JP": "普通",
     "pt-PT": "Normal",
     "ru-RU": "Обычный"
+  },
+  "normalBossMode": {
+    "zh-CN": "CN-Normal (Boss mode)",
+    "de-DE": "DE-Normal (Boss mode)",
+    "en-GB": "Normal (Boss mode)",
+    "es-ES": "ES-Normal (Boss mode)",
+    "fr-FR": "FR-Normal (Boss mode)",
+    "it-IT": "IT-Normal (Boss mode)",
+    "ja-JP": "JP-Normal (Boss mode)",
+    "pt-PT": "PT-Normal (Boss mode)",
+    "ru-RU": "RU-Normal (Boss mode)"
   },
   "easyGame": {
     "zh-CN": "简单的游戏",

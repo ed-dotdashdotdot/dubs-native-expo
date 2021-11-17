@@ -1,5 +1,5 @@
 import React from 'react';
-import {Platform, TouchableOpacity, View } from 'react-native';
+import {Platform, Text, TouchableOpacity, View } from 'react-native';
 
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
@@ -75,6 +75,22 @@ const OptionsHomepage = () => {
             flex: 1,
           }}
         />
+
+        <View 
+          style={{ 
+            backgroundColor: '#69c',
+            width: 48,
+          }}
+        >
+          <TouchableOpacity
+            onPress={() => {
+              dispatch(gameActions.setGameStatus('high-scores'));
+            }}
+          >
+            <Text>High scores</Text>
+          </TouchableOpacity>
+        </View>
+
         {!isDeviceATablet(Platform.isPad) && (
           <View 
             style={{ 
