@@ -26,6 +26,7 @@ const defaultGameState = {
   level: '', // easy, normal, hard
   selected: '',
   status: 'game-home', // null, game-ready, game-on, game-over, game-paused, what-is-boss-mode
+  highScore: 0, // null, game-ready, game-on, game-over, game-paused, what-is-boss-mode
 };
 
 const game = (state = defaultGameState, action) => {
@@ -98,6 +99,12 @@ const game = (state = defaultGameState, action) => {
       ...state,
       ...{
         status: action.payload,
+      }
+    };
+    case 'SET_GAME_HIGHSCORE': return {
+      ...state,
+      ...{
+        highScore: action.payload,
       }
     };
     default: return state;

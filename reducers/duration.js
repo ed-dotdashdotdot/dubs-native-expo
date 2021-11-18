@@ -20,10 +20,10 @@ const defaultDurationState = {
     "123.00--hardBossMode--10123",
   ],
   highScores: [
-    "20.00--easy--1",
-    "20.00--easy--2",
-    "20.00--easy--3",
-    "20.00--easy--4",
+    "21.20--easy--1",
+    "22.00--easy--2",
+    "23.00--easy--3",
+    "24.00--easy--4",
   ],
   status: '', // 'game-on', 'game-paused'
 };

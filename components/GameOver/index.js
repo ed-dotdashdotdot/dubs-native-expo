@@ -6,6 +6,7 @@ import allActions from '../../actions';
 
 import DrawGameDuration from '../DrawGameDuration';
 import HighScoreSummary from '../HighScoreSummary';
+import HighScoreMessage from '../HighScoreMessage';
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 import NewGameButtons from '../buttons/NewGameButtons';
@@ -32,6 +33,23 @@ const GameOver = () => {
   const dispatch = useDispatch();
 
   const gameDuration = ((duration.end - duration.start) / 1000).toFixed(2) * 1000;
+  
+  console.log('--- === --- === ---');
+  console.log('game.highScore:');
+  console.log(game.highScore);
+  console.log(typeof Number(game.highScore));
+  console.log('gameDuration:');
+  console.log(gameDuration / 1000);
+  console.log(typeof Number(gameDuration / 1000));
+  console.log('--- === --- === ---');
+
+  const currentHighScore = Number(game.highScore);
+  const gameScore = Number(gameDuration / 1000);
+
+  const haveWeGotAHighScore = gameScore < currentHighScore ? true : false;
+
+  console.log('haveWeGotAHighScore:')
+  console.log(haveWeGotAHighScore)
 
   let subTextKeys = `${game.level}Level`;
   if (game.bossMode) {
@@ -101,16 +119,16 @@ const GameOver = () => {
   // }, []);
 
   const currentHighScoreForThisLevel = duration.highScores.filter(val => val.indexOf(`--${game.level}--${images.selected}`) !== -1);
-  console.log('currentHighScoreForThisLevel:')
-  console.log(currentHighScoreForThisLevel)
-  console.log(currentHighScoreForThisLevel.length)
+  // console.log('currentHighScoreForThisLevel:')
+  // console.log(currentHighScoreForThisLevel)
+  // console.log(currentHighScoreForThisLevel.length)
   // if (currentHighScoreForThisLevel.length) {
     const currentHighScoreForThisLevelValue = currentHighScoreForThisLevel[0].split('--')[0]
   // }
-  console.log('currentHighScoreForThisLevelValue:');
-  console.log(currentHighScoreForThisLevelValue);
-  console.log('getEndTimeObject.timeInSeconds:');
-  console.log(getEndTimeObject.timeInSeconds);
+  // console.log('currentHighScoreForThisLevelValue:');
+  // console.log(currentHighScoreForThisLevelValue);
+  // console.log('getEndTimeObject.timeInSeconds:');
+  // console.log(getEndTimeObject.timeInSeconds);
 
   return (
     <ScrollView>
@@ -172,6 +190,10 @@ const GameOver = () => {
               bossMode={game.bossMode}
               image={images.selected}
             /> */}
+            <HighScoreMessage  
+              isHighScore={haveWeGotAHighScore}
+              currentHighScore={currentHighScore.toFixed(2)}
+            />
           </Text>
         </View>
         {/* <HighScoreSummary

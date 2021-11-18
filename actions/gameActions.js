@@ -46,6 +46,10 @@ const setGameStatus = data => ({
   type: 'SET_GAME_STATUS',
   payload: data,
 });
+const setGameHighScore = data => ({
+  type: 'SET_GAME_HIGHSCORE',
+  payload: data,
+});
 
 const exportedGameObject = {
   setGameBossMode,
@@ -60,6 +64,7 @@ const exportedGameObject = {
   setGameLevel,
   setGameSelected,
   setGameStatus,
+  setGameHighScore,
 };
 
 export default exportedGameObject;
