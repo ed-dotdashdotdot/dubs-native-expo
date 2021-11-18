@@ -34,7 +34,8 @@ const ImageGrid = props => {
       {imageList.map(val => (
         <DrawThumb 
           dimensions={dimensions}
-          imageRef={`${val}`} key={val} 
+          imageRef={`${val}`} 
+          key={val} 
         />
       ))}
     </View>
