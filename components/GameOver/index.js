@@ -60,21 +60,21 @@ const GameOver = () => {
   // console.log(duration.highScores);
   // console.log('--');
 
-  const isThisGameAHighScore = isHighScore(
-    getGameHighScoreKey(
-      getEndTimeObject.timeInSeconds.toFixed(2),
-      game.bossMode,
-      images.selected,
-      game.level,
-    ),
-    duration.highScores
-  );
-  const gameHighScoreKey = getGameHighScoreKey(
-    getEndTimeObject.timeInSeconds.toFixed(2),
-    game.bossMode,
-    images.selected,
-    game.level,
-  );
+  // const isThisGameAHighScore = isHighScore(
+  //   getGameHighScoreKey(
+  //     getEndTimeObject.timeInSeconds.toFixed(2),
+  //     game.bossMode,
+  //     images.selected,
+  //     game.level,
+  //   ),
+  //   duration.highScores
+  // );
+  // const gameHighScoreKey = getGameHighScoreKey(
+  //   getEndTimeObject.timeInSeconds.toFixed(2),
+  //   game.bossMode,
+  //   images.selected,
+  //   game.level,
+  // );
   // console.log('gameHighScoreKey:::')
   // console.log(gameHighScoreKey)
 
@@ -99,6 +99,18 @@ const GameOver = () => {
   //     // console.log('leave state alone');
   //   }
   // }, []);
+
+  const currentHighScoreForThisLevel = duration.highScores.filter(val => val.indexOf(`--${game.level}--${images.selected}`) !== -1);
+  console.log('currentHighScoreForThisLevel:')
+  console.log(currentHighScoreForThisLevel)
+  console.log(currentHighScoreForThisLevel.length)
+  // if (currentHighScoreForThisLevel.length) {
+    const currentHighScoreForThisLevelValue = currentHighScoreForThisLevel[0].split('--')[0]
+  // }
+  console.log('currentHighScoreForThisLevelValue:');
+  console.log(currentHighScoreForThisLevelValue);
+  console.log('getEndTimeObject.timeInSeconds:');
+  console.log(getEndTimeObject.timeInSeconds);
 
   return (
     <ScrollView>
@@ -149,17 +161,17 @@ const GameOver = () => {
               textAlign: 'center',
             }}
           >
-            <HighScoreSummary
+            {/* <HighScoreSummary
               gameDuration={duration.saved.toFixed(2)}
-              gameDuration123={duration.saved}
-              isHighScore={isThisGameAHighScore}
+              // gameDuration123={duration.saved}
+              // isHighScore={isThisGameAHighScore}
               highScoreKey={`${duration.saved.toFixed(2)}--${game.level}--${images.selected}`}
               highScores={duration.highScores}
               levelImage={`--${game.level}--${images.selected}`}
               level={game.level}
               bossMode={game.bossMode}
               image={images.selected}
-            />
+            /> */}
           </Text>
         </View>
         {/* <HighScoreSummary

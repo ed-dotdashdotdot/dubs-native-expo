@@ -18,9 +18,9 @@ import { isHighScore } from '../../js/helpers/isHighScore';
 const HighScoreSummary = props => {
   const { 
     gameDuration, 
-    gameDuration123, 
+    // gameDuration123, 
     highScoreKey, 
-    isHighScore, 
+    // isHighScore, 
     highScores, 
     levelImage, 
     level, 
@@ -67,21 +67,21 @@ const HighScoreSummary = props => {
   // console.log('levelImage:');
       // console.log(levelImage);
 
-  console.log('DURATION.SAVED-1:')
-  console.log(duration.saved)
-  console.log(duration.highScores)
-  console.log(level, 
-    bossMode,
-    image 
-  );
+  // console.log('DURATION.SAVED-1:')
+  // console.log(duration.saved)
+  // console.log(duration.highScores)
+  // console.log(level, 
+  //   bossMode,
+  //   image 
+  // );
 
   const isThisAHighScore = (duration, key, highScores) => {
-    console.log('--')
-    console.log(isThisAHighScore)
-    console.log(duration)
-    console.log(key)
-    console.log(highScores)
-    console.log('--')
+    // console.log('--')
+    // console.log(isThisAHighScore)
+    // console.log(duration)
+    // console.log(key)
+    // console.log(highScores)
+    // console.log('--')
 
     // let currentScoreSplit = currentValues.split('--');
     // const currentScore = currentScoreSplit[0];
@@ -96,8 +96,8 @@ const HighScoreSummary = props => {
     if (highScoresFiltered.length === 1) {
       // compare times
       const highScore = highScoresFiltered[0].split('--')[0];
-      console.log('highScore:')
-      console.log(highScore)
+      // console.log('highScore:')
+      // console.log(highScore)
       if (Number(duration) < Number(highScore)) {
         returnValue = true;
       }
@@ -107,11 +107,11 @@ const HighScoreSummary = props => {
     }
     return returnValue;
   };
-  console.log(isThisAHighScore(
-    duration.saved,
-    levelImage,
-    duration.highScores
-  ));
+  // console.log(isThisAHighScore(
+  //   duration.saved,
+  //   levelImage,
+  //   duration.highScores
+  // ));
 
 
 
