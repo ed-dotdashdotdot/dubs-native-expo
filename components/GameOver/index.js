@@ -70,6 +70,32 @@ const GameOver = () => {
     }
   });
 
+  useEffect(() => {
+    // console.log('---haveWeGotAHighScore---');
+    // console.log(haveWeGotAHighScore);
+    if (haveWeGotAHighScore) {
+      // console.log('update state');
+      // console.log(duration.highScores);
+      // console.log(game.level);
+      // console.log(images.selected)
+      const highScoreKey = `--${game.level}--${images.selected}`;
+      // console.log(highScoreKey);
+      const highScoresFiltered = duration.highScores.filter(val => {
+        return val.indexOf(highScoreKey) === -1
+      });
+      const highScoresUpdateValue = [ ...highScoresFiltered, `${getEndTimeObject.timeInSeconds}${highScoreKey}` ];
+      console.log('highScoresUpdateValue:');
+      console.log(highScoresUpdateValue);
+      // console.log('highScoresFiltered:');
+      // console.log(highScoresFiltered);
+
+      dispatch(durationActions.setDurationHighScores(highScoresUpdateValue));
+      
+    } else {
+      console.log('leave state alone');
+    }
+  }, []);
+
   // console.log('--');
   // console.log(duration.saved?.toFixed(2));
   // console.log(game.bossMode);

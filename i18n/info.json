@@ -11,15 +11,15 @@
     "ru-RU": "RU-High score:"
   },
   "newHighScore": {
-    "zh-CN": "CN-New high score!",
-    "de-DE": "DE-New high score!",
+    "zh-CN": "新高分！",
+    "de-DE": "Neuer Highscore!",
     "en-GB": "New high score!",
-    "es-ES": "ES-New high score!",
-    "fr-FR": "FR-New high score!",
-    "it-IT": "IT-New high score!",
-    "ja-JP": "JP-New high score!",
-    "pt-PT": "PT-New high score!",
-    "ru-RU": "RU-New high score!"
+    "es-ES": "¡Nuevo record!",
+    "fr-FR": "Nouveau record!",
+    "it-IT": "Nuovo record!",
+    "ja-JP": "新ハイスコア！",
+    "pt-PT": "Novo recorde!",
+    "ru-RU": "Новый рекорд!"
   },
   "highScores": {
     "zh-CN": "CN-High scores",
