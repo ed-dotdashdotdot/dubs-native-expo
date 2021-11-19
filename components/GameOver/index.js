@@ -33,23 +33,26 @@ const GameOver = () => {
   const dispatch = useDispatch();
 
   const gameDuration = ((duration.end - duration.start) / 1000).toFixed(2) * 1000;
-  
-  console.log('--- === --- === ---');
-  console.log('game.highScore:');
-  console.log(game.highScore);
-  console.log(typeof Number(game.highScore));
-  console.log('gameDuration:');
-  console.log(gameDuration / 1000);
-  console.log(typeof Number(gameDuration / 1000));
-  console.log('--- === --- === ---');
+  // console.log(`gameDuration: ${gameDuration / 1000}`);
+  // console.log('--- === --- === ---');
+  // console.log('game.highScore:');
+  // console.log(game.highScore);
+  // console.log(typeof Number(game.highScore));
+  // console.log('gameDuration:');
+  // console.log(gameDuration / 1000);
+  // console.log(typeof Number(gameDuration / 1000));
+  // console.log('--- === --- === ---');
 
   const currentHighScore = Number(game.highScore);
   const gameScore = Number(gameDuration / 1000);
 
+  // console.log(`gameScore: ${gameScore}`);
+  // console.log(`currentHighScore: ${currentHighScore}`);
+
   const haveWeGotAHighScore = gameScore < currentHighScore ? true : false;
 
-  console.log('haveWeGotAHighScore:')
-  console.log(haveWeGotAHighScore)
+  // console.log('haveWeGotAHighScore:')
+  // console.log(haveWeGotAHighScore)
 
   let subTextKeys = `${game.level}Level`;
   if (game.bossMode) {
@@ -60,19 +63,22 @@ const GameOver = () => {
   // console.log('getEndTimeObject:')
   // console.log(getEndTimeObject)
 
-  useEffect(() => {
-    if (duration.saved === 0) {
-      // const endTime = new Date().getTime();
-      // const timeDifference = (endTime - duration.start) / 1000;
-      // const timeInSeconds = timeDifference;
-      dispatch(durationActions.setDurationEnd(getEndTimeObject.endTime));
-      dispatch(durationActions.setDurationSaved(getEndTimeObject.timeInSeconds));
-    }
-  });
+  // useEffect(() => {
+  //   if (duration.saved === 0) {
+  //     const endTime = new Date().getTime();
+  //     const timeDifference = (endTime - duration.start) / 1000;
+  //     const timeInSeconds = timeDifference;
+  //     // dispatch(durationActions.setDurationEnd(getEndTimeObject.endTime));
+  //     // dispatch(durationActions.setDurationSaved(getEndTimeObject.timeInSeconds));
+  //   }
+  // });
 
   useEffect(() => {
-    // console.log('---haveWeGotAHighScore---');
-    // console.log(haveWeGotAHighScore);
+    console.log('---haveWeGotAHighScore---');
+    console.log(haveWeGotAHighScore);
+    console.log(duration.saved);
+    console.log((duration.saved / 1000).toFixed(2));
+    console.log(typeof duration.saved);
     if (haveWeGotAHighScore) {
       // console.log('update state');
       // console.log(duration.highScores);
@@ -83,16 +89,16 @@ const GameOver = () => {
       const highScoresFiltered = duration.highScores.filter(val => {
         return val.indexOf(highScoreKey) === -1
       });
-      const highScoresUpdateValue = [ ...highScoresFiltered, `${getEndTimeObject.timeInSeconds}${highScoreKey}` ];
-      console.log('highScoresUpdateValue:');
-      console.log(highScoresUpdateValue);
+      const highScoresUpdateValue = [ ...highScoresFiltered, `${(duration.saved / 1000).toFixed(2)}${highScoreKey}` ];
+      // console.log('highScoresUpdateValue:');
+      // console.log(highScoresUpdateValue);
       // console.log('highScoresFiltered:');
       // console.log(highScoresFiltered);
 
       dispatch(durationActions.setDurationHighScores(highScoresUpdateValue));
       
     } else {
-      console.log('leave state alone');
+      // console.log('leave state alone');
     }
   }, []);
 
@@ -189,7 +195,7 @@ const GameOver = () => {
             {
               gameDuration < wowMessageAfterMs ? (
                 <DrawGameDuration
-                  gameDuration={1000 * duration.saved.toFixed(2)}
+                  gameDuration={Number(duration.saved).toFixed(2) * 1000}
                   lang={language.selected}
                 />
               ) : (
@@ -218,7 +224,7 @@ const GameOver = () => {
             /> */}
             <HighScoreMessage  
               isHighScore={haveWeGotAHighScore}
-              currentHighScore={currentHighScore.toFixed(2)}
+              currentHighScore={(currentHighScore * 1000).toFixed(2)}
             />
           </Text>
         </View>

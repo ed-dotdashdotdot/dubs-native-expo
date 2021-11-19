@@ -33,10 +33,10 @@ const LoadingImage = props => {
 
   const getCurrentHighScoreVal = getCurrentHighScore(`${game.level}--${imageToUse}`, duration.highScores);
 
-  console.log(':::::-----:::::');
-  console.log('getCurrentHighScoreVal:');
-  console.log(getCurrentHighScoreVal);
-  console.log(':::::-----:::::');
+  // console.log(':::::-----:::::');
+  // console.log('getCurrentHighScoreVal:');
+  // console.log(getCurrentHighScoreVal);
+  // console.log(':::::-----:::::');
 
   return (
     <View

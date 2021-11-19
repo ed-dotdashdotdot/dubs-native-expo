@@ -3,8 +3,6 @@ import { Text } from 'react-native';
 
 import Translate from '../Translate';
 
-// import globalStyles from '../../css/style.js';
-
 import { colours } from '../../configuration/config.json';
 
 const HighScoreMessage = props => {
@@ -16,12 +14,16 @@ const HighScoreMessage = props => {
         fontSize: 24,
       }}
     >
-      {
-        isHighScore ? 
-          <Translate textKey='newHighScore' /> :
-          `High score: ${currentHighScore}`
+      {isHighScore ? 
+        <Translate textKey='newHighScore' /> : 
+        (
+          <>
+            <Translate textKey='highScore' /> 
+            {": "}
+            {currentHighScore}
+          </>
+        )
       }
-      
     </Text>
   );
 };

@@ -1,14 +1,14 @@
 {
   "highScore": {
-    "zh-CN": "CN-High score:",
-    "de-DE": "DE-High score:",
-    "en-GB": "High score:",
-    "es-ES": "ES-High score:",
-    "fr-FR": "FR-High score:",
-    "it-IT": "IT-High score:",
-    "ja-JP": "JP-High score:",
-    "pt-PT": "PT-High score:",
-    "ru-RU": "RU-High score:"
+    "zh-CN": "高分",
+    "de-DE": "Hohe Punktzahl",
+    "en-GB": "High score",
+    "es-ES": "Puntuación alta",
+    "fr-FR": "Note élevée\u2009",
+    "it-IT": "Punteggio alto",
+    "ja-JP": "ハイスコ​​ア",
+    "pt-PT": "Pontuação alta",
+    "ru-RU": "Высокая оценка"
   },
   "newHighScore": {
     "zh-CN": "新高分！",

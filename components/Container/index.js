@@ -19,9 +19,10 @@ import { isGameOver } from '../../js/helpers/isGameOver';
 import { colours } from '../../configuration/config.json';
 
 const Container = () => {
+  const duration = useSelector(state => state.duration);
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
-  const { gameActions } = { ...allActions };
+  const { durationActions, gameActions } = { ...allActions };
   const dispatch = useDispatch();
   const { 
     height,
@@ -30,6 +31,14 @@ const Container = () => {
 
   useEffect(() => {
     if (isGameOver(game.status, game.data.length, game.found.length)) {
+      const newDate = new Date().getTime();
+      const gameDuration = newDate - duration.start;
+      console.log('gameDuration');
+      console.log(gameDuration);
+      console.log((gameDuration / 1000).toFixed(2));
+      console.log('---');
+      dispatch(durationActions.setDurationEnd(newDate));
+      dispatch(durationActions.setDurationSaved((gameDuration / 1000).toFixed(2)));
       dispatch(gameActions.setGameStatus('game-over'));
     }
   }, [game.found.length]);
