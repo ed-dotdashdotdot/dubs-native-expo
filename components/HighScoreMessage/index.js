@@ -6,12 +6,12 @@ import Translate from '../Translate';
 import { colours } from '../../configuration/config.json';
 
 const HighScoreMessage = props => {
-  const { isHighScore, currentHighScore } = { ...props };
+  const { currentHighScore, isHighScore } = { ...props };
   return (
     <Text
       style={{
         color: colours.white,
-        fontSize: 24,
+        fontSize: 20,
       }}
     >
       {isHighScore ? 

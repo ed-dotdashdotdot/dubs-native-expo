@@ -33,12 +33,8 @@ const Container = () => {
     if (isGameOver(game.status, game.data.length, game.found.length)) {
       const newDate = new Date().getTime();
       const gameDuration = newDate - duration.start;
-      console.log('gameDuration');
-      console.log(gameDuration);
-      console.log((gameDuration / 1000).toFixed(2));
-      console.log('---');
       dispatch(durationActions.setDurationEnd(newDate));
-      dispatch(durationActions.setDurationSaved((gameDuration / 1000).toFixed(2)));
+      dispatch(durationActions.setDurationSaved((gameDuration).toFixed(2) / 1000));
       dispatch(gameActions.setGameStatus('game-over'));
     }
   }, [game.found.length]);

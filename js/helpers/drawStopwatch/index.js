@@ -1,7 +1,7 @@
-export const drawStopwatch = (durationMs) => {
-  if (!durationMs) return '00:00';
+export const drawStopwatch = duration => {
+  if (!duration) return '00:00';
 
-  const duration = Math.round(durationMs / 1000);
+  // const duration = Math.round(duration);
 
   // const d = Number(duration);
   let d = Math.floor(duration / (3600 * 24));

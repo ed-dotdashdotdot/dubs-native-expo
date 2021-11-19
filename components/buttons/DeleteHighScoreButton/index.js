@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import allActions from '../../../actions';
 
-import PlayAgainButtonSvg from './components/PlayAgainButtonSvg';
+import DeleteHighScoreButtonSvg from './components/DeleteHighScoreButtonSvg';
 
-const PlayAgainButton = props => {
+const DeleteHighScoreButton = props => {
   const { width } = { ...props };
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
@@ -24,18 +24,18 @@ const PlayAgainButton = props => {
           width,
         }}
       >
-        <PlayAgainButtonSvg />
+        <DeleteHighScoreButtonSvg />
       </View>
     </TouchableOpacity>
   );
 };
 
-PlayAgainButton.defaultProps = {
+DeleteHighScoreButton.defaultProps = {
   width: 48,
 };
 
-PlayAgainButton.propTypes = {
+DeleteHighScoreButton.propTypes = {
   width: PropTypes.number.isRequired,
 };
 
-export default PlayAgainButton;
+export default DeleteHighScoreButton;

@@ -6,7 +6,7 @@ export const isHighScore = (currentValues, highScores) => {
   const currentLevel = currentScoreSplit[1];
   const currentImage = currentScoreSplit[2];
 
-  const highScoresFiltered = highScores.filter(val => val.indexOf(`${currentLevel}--${currentImage}`) !== -1);
+  const highScoresFiltered = highScores.filter(val => val.indexOf(`${currentLevel}--${currentImage}--`) !== -1);
 
   let returnValue = false;
   

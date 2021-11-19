@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { colours } from '../../../../../configuration/config.json';
 
-const InfoButtonSvg = props => {
+const PlayAgainButtonSvg = props => {
   const { 
     colour
   } = { ...props };
@@ -26,12 +26,12 @@ const InfoButtonSvg = props => {
   );
 };
 
-InfoButtonSvg.defaultProps = {
+PlayAgainButtonSvg.defaultProps = {
   colour: colours.white,
 };
 
-InfoButtonSvg.propTypes = {
+PlayAgainButtonSvg.propTypes = {
   colour: PropTypes.string.isRequired,
 };
 
-export default InfoButtonSvg;
+export default PlayAgainButtonSvg;

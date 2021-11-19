@@ -6,18 +6,19 @@ import humanizeDuration from 'humanize-duration';
   if decimal points are '.00' don't show them at all
   if decimal points are '.10' etc : only show 1 decimal point
 ### */
-export const drawGameDuration = (durationMs, lang) => {
-  if (!durationMs) return '-';
-  if (durationMs < 180000) { // 180000 = 3 minutes
-    return humanizeDuration(durationMs, {
-      language: lang,
-      fallbacks: ['en'],
-      units: ['s']
-    });
-  }
-  return humanizeDuration(Math.floor((durationMs / 1000).toFixed(0) * 1000), {
+export const drawGameDuration = (duration, lang) => {
+  if (!duration) return '-';
+  const durationMs = duration * 1000;
+  // if (durationMs < 180000) { // 180000 = 3 minutes
+  return humanizeDuration(durationMs, {
     language: lang,
     fallbacks: ['en'],
-    units: ['d', 'h', 'm', 's']
+    units: ['s']
   });
+  // }
+  // return humanizeDuration(Math.floor((durationMs).toFixed(0)), {
+  //   language: lang,
+  //   fallbacks: ['en'],
+  //   units: ['d', 'h', 'm', 's']
+  // });
 };

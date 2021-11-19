@@ -8,6 +8,7 @@ import allActions from '../../../../actions';
 import ExpoFastImage from 'expo-fast-image';
 import DrawThumb from '../DrawThumb';
 import PlayAgainButton from '../../../buttons/PlayAgainButton';
+import DeleteHighScoreButton from '../../../buttons/DeleteHighScoreButton';
 
 import { colours, fontFamily, ipAddress } from '../../../../configuration/config.json';
 
@@ -57,6 +58,7 @@ const DrawEntry = props => {
           imageRef={imageRef} 
         />
       </View>
+      {/* <View style={{width: 60}} /> */}
       <View
         style={{
           flex: 1,
@@ -77,15 +79,16 @@ const DrawEntry = props => {
         </Text>
       </View>
       <View
-        style={{
-          width: 48,
-        }}
+        style={{width: 48}}
       />
       <View
-        style={{
-          // backgroundColor: '#00ffff',
-          width: 48,
-        }}
+        style={{width: 48}}
+      >
+        <DeleteHighScoreButton />
+      </View>
+      <View style={{width: 12}} />
+      <View
+        style={{width: 48}}
       >
         <PlayAgainButton />
       </View>
