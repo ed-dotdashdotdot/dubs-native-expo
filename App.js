@@ -18,8 +18,8 @@ const App = () => {
     rootReducer
   );
 
-  console.log(Localization.locale);
-  console.log(Localization.locales);
+  // console.log(Localization.locale);
+  // console.log(Localization.locales);
   // console.log(Localization.isoCurrencyCodes);
 
   return (

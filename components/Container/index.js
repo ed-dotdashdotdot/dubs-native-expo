@@ -14,13 +14,17 @@ import Options from '../Options';
 import OptionsHomepage from '../OptionsHomepage';
 import Mesh from '../Mesh';
 
+import { getHighScoreKeyHERE } from '../../js/helpers/getHighScoreKeyHERE';
 import { isGameOver } from '../../js/helpers/isGameOver';
+import { getExistingHighScoreValueHERE } from '../../js/helpers/getExistingHighScoreValueHERE';
+import { whatIsTheHighScoreHERE } from '../../js/helpers/whatIsTheHighScoreHERE';
 
 import { colours } from '../../configuration/config.json';
 
 const Container = () => {
   const duration = useSelector(state => state.duration);
   const game = useSelector(state => state.game);
+  const images = useSelector(state => state.images);
   const language = useSelector(state => state.language);
   const { durationActions, gameActions } = { ...allActions };
   const dispatch = useDispatch();
@@ -31,10 +35,62 @@ const Container = () => {
 
   useEffect(() => {
     if (isGameOver(game.status, game.data.length, game.found.length)) {
+
       const newDate = new Date().getTime();
       const gameDuration = newDate - duration.start;
+
+      const currentHighScoreStatusHERE = getExistingHighScoreValueHERE(
+        game.level,
+        game.bossMode,
+        images.selected,
+        duration.highScoresHERE,
+      );
+      const whatIsTheHighScoreHEREValue = whatIsTheHighScoreHERE(
+        currentHighScoreStatusHERE.time,
+        gameDuration / 1000
+      );
+
+      if (currentHighScoreStatusHERE.time === 0) {
+        console.log("NO EXISTING HIGH SCORE EXISTS - ADD IT TO HIGH SCORE ARRAY");
+        const updateKey = getHighScoreKeyHERE(
+          game.level,
+          game.bossMode,
+          images.selected
+        );
+        const updateValue = `${whatIsTheHighScoreHEREValue.time}${updateKey}`;
+        const highScoreUpdateValueHERE = [ ...duration.highScoresHERE, updateValue ];
+        console.log('highScoreUpdateValueHERE1:');
+        console.log(highScoreUpdateValueHERE);
+        dispatch(durationActions.setDurationHighScores(highScoreUpdateValueHERE));
+      } else {
+        if (whatIsTheHighScoreHEREValue.highScore === true) {
+          console.log("UPDATE HIGH SCORE ARRAY WITH THIS VALUE");
+          const updateKey = getHighScoreKeyHERE(
+            game.level,
+            game.bossMode,
+            images.selected
+          );
+          const updateValue = `${whatIsTheHighScoreHEREValue.time}${updateKey}`;
+
+          console.log('updateValue:');
+          console.log(updateValue);
+
+          const existingHighScoresFiltered = duration.highScoresHERE.filter(val => {
+            return val.indexOf(updateKey) === -1
+          });
+          
+          const highScoreUpdateValueHERE = [ ...existingHighScoresFiltered, updateValue ];
+          console.log('highScoreUpdateValueHERE:');
+          console.log(highScoreUpdateValueHERE);
+          dispatch(durationActions.setDurationHighScores(highScoreUpdateValueHERE));
+        } else {
+          console.log("LEAVE HIGH SCORE ARRAY ALONE");
+          console.log(duration.highScoresHERE);
+        }
+      }
+      
       dispatch(durationActions.setDurationEnd(newDate));
-      dispatch(durationActions.setDurationSaved((gameDuration).toFixed(2) / 1000));
+      dispatch(durationActions.setDurationSaved(gameDuration.toFixed(2) / 1000));
       dispatch(gameActions.setGameStatus('game-over'));
     }
   }, [game.found.length]);

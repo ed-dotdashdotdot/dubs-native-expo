@@ -33,12 +33,29 @@ const GameOver = () => {
   const dispatch = useDispatch();
 
   const gameDuration = ((duration.end - duration.start) / 1000).toFixed(2) * 1000;
-  console.log(gameDuration)
+  // console.log(gameDuration)
 
   const currentHighScore = Number(game.highScore);
   const gameScore = Number(gameDuration / 1000);
 
   const haveWeGotAHighScore = gameScore < currentHighScore ? true : false;
+  const isThereAHighScoreEntry = (highScoreKey, highScores) => {
+    const highScoreFilter = highScores.filter(val => {
+      return val.indexOf(highScoreKey) !== -1;
+    });
+    // console.log('highScoreFilter:')
+    // console.log(highScoreFilter)
+    // console.log(highScoreFilter.length);
+    return highScoreFilter.length === 1 ? true : false;
+  }
+  const isThereAHighScoreEntryValue = isThereAHighScoreEntry( // move to a helper file
+    `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`,
+    duration.highScores
+  );
+  // console.log('\n');
+  // console.log('isThereAHighScoreEntryValue:');
+  // console.log(isThereAHighScoreEntryValue);
+  // console.log('\n');
 
   let subTextKeys = `${game.level}Level`;
   if (game.bossMode) {
@@ -48,22 +65,26 @@ const GameOver = () => {
   // const getEndTimeObject = getEndTimes(new Date().getTime(), duration.start);
 
   useEffect(() => {
-    if (haveWeGotAHighScore) {
+    if (!isThereAHighScoreEntryValue) {
+      const highScoreKey = `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`;
+      const highScoresUpdateValue = [ ...duration.highScores, `${(duration.saved).toFixed(2)}${highScoreKey}--` ];
+      // dispatch(durationActions.setDurationHighScores(highScoresUpdateValue));
+    } else if (haveWeGotAHighScore) {
       // console.log('haveWeGotAHighScore')
       // console.log(haveWeGotAHighScore)
-      const highScoreKey = `--${game.level}--${images.selected}--`;
+      const highScoreKey = `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`;
       const highScoresFiltered = duration.highScores.filter(val => {
         return val.indexOf(highScoreKey) === -1
       });
       const highScoresUpdateValue = [ ...highScoresFiltered, `${(duration.saved).toFixed(2)}${highScoreKey}--` ];
-      dispatch(durationActions.setDurationHighScores(highScoresUpdateValue));
+      // dispatch(durationActions.setDurationHighScores(highScoresUpdateValue));
     }
   }, []);
 
-  console.log('duration:');
-  console.log(duration);
-  console.log('game:');
-  console.log(game);
+  // console.log('duration:');
+  // console.log(duration);
+  // console.log('game:');
+  // console.log(game);
 
   return (
     <ScrollView>

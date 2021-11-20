@@ -37,8 +37,9 @@ const LoadingImage = props => {
   );
 
   // console.log(':::::-----:::::');
-  // console.log('getCurrentHighScoreVal:');
+  // console.log('getCurrentHighScoreVal:'); // THIS IS IT !!!
   // console.log(getCurrentHighScoreVal);
+  // console.log(typeof getCurrentHighScoreVal);
   // console.log(':::::-----:::::');
 
   return (

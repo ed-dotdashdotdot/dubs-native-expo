@@ -26,7 +26,7 @@ const defaultGameState = {
   level: '', // easy, normal, hard
   selected: '',
   status: 'game-home', // null, game-ready, game-on, game-over, game-paused, what-is-boss-mode
-  highScore: 0, // null, game-ready, game-on, game-over, game-paused, what-is-boss-mode
+  highScore: 0, 
 };
 
 const game = (state = defaultGameState, action) => {

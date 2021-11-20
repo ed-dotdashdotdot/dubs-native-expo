@@ -13,7 +13,7 @@ const AppSettings = () => {
   const device = useSelector(state => state.device);
   const { deviceActions } = { ...allActions };
   const dispatch = useDispatch();
-  console.log(device);
+  // console.log(device);
   return (
     <ScrollView>
       <InfoInner>
@@ -31,7 +31,7 @@ const AppSettings = () => {
 
         <Button
         onPress={() => {
-          console.log("HERE");
+          // console.log("HERE");
           dispatch(deviceActions.setDeviceVibration(!device.vibration));
         }}
           title={device.vibration ? "Turn off" : "Turn on"}

@@ -7,9 +7,9 @@ import { sanitiseDeviceLocale } from '../../js/helpers/sanitiseDeviceLocale';
 
 const Config = props => {
   let { deviceLocale } = { ...props };
-  console.log('---');
-  console.log(deviceLocale);
-  console.log('---');
+  // console.log('---');
+  // console.log(deviceLocale);
+  // console.log('---');
   const deviceLanguage = sanitiseDeviceLocale(deviceLocale).language;
   const deviceFlag = sanitiseDeviceLocale(deviceLocale).flag;
   const { languageActions } = { ...allActions };
