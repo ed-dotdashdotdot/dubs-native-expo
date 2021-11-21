@@ -38,6 +38,7 @@ const Container = () => {
 
       const newDate = new Date().getTime();
       const gameDuration = newDate - duration.start;
+      const gameDurationHumanise = `${(gameDuration / 1000).toFixed(2)}`;
 
       const currentHighScoreStatusHERE = getExistingHighScoreValueHERE(
         game.level,
@@ -49,6 +50,8 @@ const Container = () => {
         currentHighScoreStatusHERE.time,
         gameDuration / 1000
       );
+      console.log('whatIsTheHighScoreHEREValue:')
+      console.log(whatIsTheHighScoreHEREValue)
 
       if (currentHighScoreStatusHERE.time === 0) {
         console.log("NO EXISTING HIGH SCORE EXISTS - ADD IT TO HIGH SCORE ARRAY");
@@ -90,7 +93,8 @@ const Container = () => {
       }
       
       dispatch(durationActions.setDurationEnd(newDate));
-      dispatch(durationActions.setDurationSaved(gameDuration.toFixed(2) / 1000));
+      dispatch(durationActions.setDurationSaved(gameDurationHumanise));
+      dispatch(durationActions.setDurationIsHighScoreHERE(whatIsTheHighScoreHEREValue.highScore));
       dispatch(gameActions.setGameStatus('game-over'));
     }
   }, [game.found.length]);

@@ -22,6 +22,10 @@ const setDurationHighScores = data => ({
   type: 'SET_DURATION_HIGHSCORES',
   payload: data,
 });
+const setDurationIsHighScoreHERE = data => ({
+  type: 'SET_DURATION_ISHIGHSCORE',
+  payload: data,
+});
 
 const exportedDurationObject = {
   setDurationEnd,
@@ -30,6 +34,7 @@ const exportedDurationObject = {
   setDurationStart,
   setDurationStatus,
   setDurationHighScores,
+  setDurationIsHighScoreHERE,
 };
 
 export default exportedDurationObject;

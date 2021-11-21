@@ -1,4 +1,26 @@
 {
+  "secondsLong": {
+    "zh-CN": "秒",
+    "de-DE": "Sekunden",
+    "en-GB": "seconds",
+    "es-ES": "segundos",
+    "fr-FR": "secondes",
+    "it-IT": "secondi",
+    "ja-JP": "秒",
+    "pt-PT": "segundos",
+    "ru-RU": "секунды"
+  },
+  "secondsShort": {
+    "zh-CN": "cn-s",
+    "de-DE": "S",
+    "en-GB": "s",
+    "es-ES": "s",
+    "fr-FR": "s",
+    "it-IT": "s",
+    "ja-JP": "s",
+    "pt-PT": "s",
+    "ru-RU": "s"
+  },
   "highScore": {
     "zh-CN": "高分",
     "de-DE": "Hohe Punktzahl",

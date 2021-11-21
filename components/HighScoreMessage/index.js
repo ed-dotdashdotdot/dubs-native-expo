@@ -3,10 +3,12 @@ import { Text } from 'react-native';
 
 import Translate from '../Translate';
 
+import { localiseDurationSeconds } from '../../js/helpers/localiseDurationSeconds';
+
 import { colours } from '../../configuration/config.json';
 
 const HighScoreMessage = props => {
-  const { currentHighScore, isHighScore } = { ...props };
+  const { currentHighScore, isHighScore, lang } = { ...props };
   return (
     <Text
       style={{
@@ -20,7 +22,9 @@ const HighScoreMessage = props => {
           <>
             <Translate textKey='highScore' /> 
             {": "}
-            {currentHighScore}
+            {localiseDurationSeconds(currentHighScore, lang)}
+            {"\u00A0"}
+            <Translate textKey='secondsLong' /> 
           </>
         )
       }

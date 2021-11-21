@@ -16,6 +16,8 @@ import Translate from '../Translate';
 // import { getEndTimes } from '../../js/helpers/getEndTimes';
 // import { isHighScore } from '../../js/helpers/isHighScore';
 
+import { localiseDurationSeconds } from '../../js/helpers/localiseDurationSeconds';
+
 import {
   colours,
   fontFamily,
@@ -35,23 +37,23 @@ const GameOver = () => {
   const gameDuration = ((duration.end - duration.start) / 1000).toFixed(2) * 1000;
   // console.log(gameDuration)
 
-  const currentHighScore = Number(game.highScore);
-  const gameScore = Number(gameDuration / 1000);
+  // const currentHighScore = Number(game.highScore);
+  // const gameScore = Number(gameDuration / 1000);
 
-  const haveWeGotAHighScore = gameScore < currentHighScore ? true : false;
-  const isThereAHighScoreEntry = (highScoreKey, highScores) => {
-    const highScoreFilter = highScores.filter(val => {
-      return val.indexOf(highScoreKey) !== -1;
-    });
-    // console.log('highScoreFilter:')
-    // console.log(highScoreFilter)
-    // console.log(highScoreFilter.length);
-    return highScoreFilter.length === 1 ? true : false;
-  }
-  const isThereAHighScoreEntryValue = isThereAHighScoreEntry( // move to a helper file
-    `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`,
-    duration.highScores
-  );
+  // const haveWeGotAHighScore = gameScore < currentHighScore ? true : false;
+  // const isThereAHighScoreEntry = (highScoreKey, highScores) => {
+  //   const highScoreFilter = highScores.filter(val => {
+  //     return val.indexOf(highScoreKey) !== -1;
+  //   });
+  //   // console.log('highScoreFilter:')
+  //   // console.log(highScoreFilter)
+  //   // console.log(highScoreFilter.length);
+  //   return highScoreFilter.length === 1 ? true : false;
+  // }
+  // const isThereAHighScoreEntryValue = isThereAHighScoreEntry( // move to a helper file
+  //   `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`,
+  //   duration.highScores
+  // );
   // console.log('\n');
   // console.log('isThereAHighScoreEntryValue:');
   // console.log(isThereAHighScoreEntryValue);
@@ -65,26 +67,45 @@ const GameOver = () => {
   // const getEndTimeObject = getEndTimes(new Date().getTime(), duration.start);
 
   useEffect(() => {
-    if (!isThereAHighScoreEntryValue) {
-      const highScoreKey = `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`;
-      const highScoresUpdateValue = [ ...duration.highScores, `${(duration.saved).toFixed(2)}${highScoreKey}--` ];
-      // dispatch(durationActions.setDurationHighScores(highScoresUpdateValue));
-    } else if (haveWeGotAHighScore) {
-      // console.log('haveWeGotAHighScore')
-      // console.log(haveWeGotAHighScore)
-      const highScoreKey = `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`;
-      const highScoresFiltered = duration.highScores.filter(val => {
-        return val.indexOf(highScoreKey) === -1
-      });
-      const highScoresUpdateValue = [ ...highScoresFiltered, `${(duration.saved).toFixed(2)}${highScoreKey}--` ];
-      // dispatch(durationActions.setDurationHighScores(highScoresUpdateValue));
-    }
+    // if (!isThereAHighScoreEntryValue) {
+    //   const highScoreKey = `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`;
+    //   const highScoresUpdateValue = [ ...duration.highScores, `${duration.saved}${highScoreKey}--` ];
+    //   // dispatch(durationActions.setDurationHighScores(highScoresUpdateValue));
+    // } else if (haveWeGotAHighScore) {
+    //   // console.log('haveWeGotAHighScore')
+    //   // console.log(haveWeGotAHighScore)
+    //   const highScoreKey = `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`;
+    //   const highScoresFiltered = duration.highScores.filter(val => {
+    //     return val.indexOf(highScoreKey) === -1
+    //   });
+    //   const highScoresUpdateValue = [ ...highScoresFiltered, `${duration.saved}${highScoreKey}--` ];
+    //   // dispatch(durationActions.setDurationHighScores(highScoresUpdateValue));
+    // }
   }, []);
 
   // console.log('duration:');
   // console.log(duration);
   // console.log('game:');
   // console.log(game);
+
+  const gameKey = `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`
+  console.log('gameKey');
+  console.log(gameKey);
+
+  const highScoreForThisGameFunction = (gameKey, highScores) => {
+    const highScoresFiltered = highScores.filter(val => {
+      return val.indexOf(gameKey) !== -1;
+    });
+    return highScoresFiltered.length === 1 ? highScoresFiltered[0].split('--')[0] : null;
+  };
+  const highScoreForThisGame = highScoreForThisGameFunction(
+    gameKey,
+    duration.highScoresHERE
+  );
+  console.log('\n--\n')
+  console.log('highScoreForThisGame')
+  console.log(highScoreForThisGame);
+  console.log('\n--\n')
 
   return (
     <ScrollView>
@@ -106,7 +127,7 @@ const GameOver = () => {
             globalStyles.borderRadius8,
           ]}
         >
-          <Text
+          {/* <Text
             style={{
               alignSelf: 'center',
               color: colours.white,
@@ -119,13 +140,29 @@ const GameOver = () => {
             {
               gameDuration < wowMessageAfterMs ? (
                 <DrawGameDuration
-                  gameDuration={Number(duration.saved.toFixed(2))}
+                  gameDuration={duration.saved}
                   lang={language.selected}
                 />
               ) : (
                 <Translate textKey="wowThatTookAReallyLongTime" />
               )
             }
+          </Text> */}
+          <Text
+            style={{
+              alignSelf: 'center',
+              color: colours.white,
+              fontFamily: fontFamily,
+              fontSize: 28,
+              fontWeight: 'bold',
+              textAlign: 'center',
+            }}
+          >
+            {
+              localiseDurationSeconds(duration.saved, language.selected)
+            }
+            {" "}
+            <Translate textKey='secondsLong' />
           </Text>
           <Text
             style={{
@@ -136,12 +173,13 @@ const GameOver = () => {
             }}
           >
             <HighScoreMessage  
-              currentHighScore={currentHighScore.toFixed(2)}
-              isHighScore={haveWeGotAHighScore}
+              currentHighScore={highScoreForThisGame}
+              isHighScore={duration.isHighScoreHERE}
+              lang={language.selected}
             />
           </Text>
         </View>
-        <Text
+        {/* <Text
           style={{
             alignSelf: 'center',
             color: colours.white,
@@ -155,9 +193,9 @@ const GameOver = () => {
             `Image: ${images.selected}`
           }
           {
-            `duration.saved: ${duration.saved.toString()}`
+            `duration.saved: ${duration.saved}`
           }
-        </Text>
+        </Text> */}
         <NewGameButtons section="game-over" />
       </InfoInner>
     </ScrollView>

@@ -22,6 +22,7 @@ const defaultDurationState = {
     "21.21--easy--1--",
     "22.22--easy--2--",
   ],
+  isHighScoreHERE: false,
   status: '', // 'game-on', 'game-paused'
 };
 
@@ -54,6 +55,10 @@ const duration = (state = defaultDurationState, action) => {
     case 'SET_DURATION_HIGHSCORES': return {
       ...state,
       highScoresHERE: action.payload,
+    };
+    case 'SET_DURATION_ISHIGHSCORE': return {
+      ...state,
+      isHighScoreHERE: action.payload,
     };
     default: return state;
   }

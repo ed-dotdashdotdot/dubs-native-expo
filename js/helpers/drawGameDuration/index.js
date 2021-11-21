@@ -8,12 +8,18 @@ import humanizeDuration from 'humanize-duration';
 ### */
 export const drawGameDuration = (duration, lang) => {
   if (!duration) return '-';
-  const durationMs = duration * 1000;
+  // console.log(duration.slice(-1))
+  if (duration.slice(-1) === '0') { duration = `${duration}1`; }
+  duration = `${duration}000001`
+  const durationMs = Number(duration * 1000).toFixed(2);
   // if (durationMs < 180000) { // 180000 = 3 minutes
   return humanizeDuration(durationMs, {
     language: lang,
-    fallbacks: ['en'],
-    units: ['s']
+    fallbacks: [ 'en' ],
+    units: [ 's' ],
+    maxDecimalPoints: 2,
+    // minDecimalPoints: 2,
+    // decimal: " point ",
   });
   // }
   // return humanizeDuration(Math.floor((durationMs).toFixed(0)), {

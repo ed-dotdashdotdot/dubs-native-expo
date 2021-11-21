@@ -11,7 +11,7 @@ const DrawGameDuration = props => {
 };
 
 DrawGameDuration.propTypes = {
-  gameDuration: PropTypes.number.isRequired,
+  gameDuration: PropTypes.string.isRequired,
   lang: PropTypes.string.isRequired,
 };
 
