@@ -31,7 +31,6 @@ const AppSettings = () => {
 
         <Button
         onPress={() => {
-          // console.log("HERE");
           dispatch(deviceActions.setDeviceVibration(!device.vibration));
         }}
           title={device.vibration ? "Turn off" : "Turn on"}

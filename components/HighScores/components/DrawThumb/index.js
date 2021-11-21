@@ -16,9 +16,6 @@ const DrawThumb = props => {
     dimensions, 
     imageRef 
   } = { ...props };
-  // console.log(`THERE: ${imageRef}`);
-
-  // console.log(imageRef)
 
   const maxHeight = dimensions.height - 24 - 24 - 8;
   const maxWidth = dimensions.width - 24 - 24 - 8;

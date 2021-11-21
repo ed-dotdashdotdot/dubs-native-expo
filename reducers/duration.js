@@ -4,25 +4,8 @@ const defaultDurationState = {
   paused: 0,
   saved: 0,
   // highScore: true,
-  highScores123123123: [
-    "21.21--easy--1--",
-    "22.22--easy--2--",
-    "31.31--easyBossMode--1--",
-    "41.41--normal--1--",
-    "51.51--normalBossMode--1--",
-    "61.61--hard--1--",
-    "62.62--hard--2--",
-    "71.71--hardBossMode--1--",
-    "72.72--hardBossMode--2--",
-  ],
-  highScores: [
-    "21.21--easy--1--",
-  ],
-  highScoresHERE: [
-    "21.21--easy--1--",
-    "22.22--easy--2--",
-  ],
-  isHighScoreHERE: false,
+  highScores: [],
+  isHighScore: false,
   status: '', // 'game-on', 'game-paused'
 };
 
@@ -54,11 +37,11 @@ const duration = (state = defaultDurationState, action) => {
     };
     case 'SET_DURATION_HIGHSCORES': return {
       ...state,
-      highScoresHERE: action.payload,
+      highScores: action.payload,
     };
     case 'SET_DURATION_ISHIGHSCORE': return {
       ...state,
-      isHighScoreHERE: action.payload,
+      isHighScore: action.payload,
     };
     default: return state;
   }

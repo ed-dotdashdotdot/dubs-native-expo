@@ -89,8 +89,8 @@ const GameOver = () => {
   // console.log(game);
 
   const gameKey = `--${game.level}${game.bossMode ? "BossMode" : ""}--${images.selected}--`
-  console.log('gameKey');
-  console.log(gameKey);
+  // console.log('gameKey');
+  // console.log(gameKey);
 
   const highScoreForThisGameFunction = (gameKey, highScores) => {
     const highScoresFiltered = highScores.filter(val => {
@@ -100,12 +100,12 @@ const GameOver = () => {
   };
   const highScoreForThisGame = highScoreForThisGameFunction(
     gameKey,
-    duration.highScoresHERE
+    duration.highScores
   );
-  console.log('\n--\n')
-  console.log('highScoreForThisGame')
-  console.log(highScoreForThisGame);
-  console.log('\n--\n')
+  // console.log('\n--\n')
+  // console.log('highScoreForThisGame')
+  // console.log(highScoreForThisGame);
+  // console.log('\n--\n')
 
   return (
     <ScrollView>
@@ -174,7 +174,7 @@ const GameOver = () => {
           >
             <HighScoreMessage  
               currentHighScore={highScoreForThisGame}
-              isHighScore={duration.isHighScoreHERE}
+              isHighScore={duration.isHighScore}
               lang={language.selected}
             />
           </Text>

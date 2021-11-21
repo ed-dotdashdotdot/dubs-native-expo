@@ -1,4 +1,4 @@
-export const getHighScoreKeyHERE = (
+export const getHighScoreKey = (
   level,
   bossMode,
   image

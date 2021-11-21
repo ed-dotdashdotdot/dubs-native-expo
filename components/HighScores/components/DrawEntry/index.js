@@ -20,8 +20,6 @@ const DrawEntry = props => {
     duration, 
     imageRef 
   } = { ...props };
-  // console.log(`HERE: ${imageRef}`);
-  // console.log(duration);
 
   // const maxHeight = dimensions.height - 24 - 24 - 8;
   // const maxWidth = dimensions.width - 24 - 24 - 8;

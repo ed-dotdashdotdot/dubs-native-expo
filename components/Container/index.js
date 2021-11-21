@@ -14,10 +14,10 @@ import Options from '../Options';
 import OptionsHomepage from '../OptionsHomepage';
 import Mesh from '../Mesh';
 
-import { getHighScoreKeyHERE } from '../../js/helpers/getHighScoreKeyHERE';
+import { getHighScoreKey } from '../../js/helpers/getHighScoreKey';
 import { isGameOver } from '../../js/helpers/isGameOver';
-import { getExistingHighScoreValueHERE } from '../../js/helpers/getExistingHighScoreValueHERE';
-import { whatIsTheHighScoreHERE } from '../../js/helpers/whatIsTheHighScoreHERE';
+import { getExistingHighScoreValue } from '../../js/helpers/getExistingHighScoreValue';
+import { whatIsTheHighScore } from '../../js/helpers/whatIsTheHighScore';
 
 import { colours } from '../../configuration/config.json';
 
@@ -40,61 +40,59 @@ const Container = () => {
       const gameDuration = newDate - duration.start;
       const gameDurationHumanise = `${(gameDuration / 1000).toFixed(2)}`;
 
-      const currentHighScoreStatusHERE = getExistingHighScoreValueHERE(
+      const currentHighScoreStatus = getExistingHighScoreValue(
         game.level,
         game.bossMode,
         images.selected,
-        duration.highScoresHERE,
+        duration.highScores,
       );
-      const whatIsTheHighScoreHEREValue = whatIsTheHighScoreHERE(
-        currentHighScoreStatusHERE.time,
+      const whatIsTheHighScoreValue = whatIsTheHighScore(
+        currentHighScoreStatus.time,
         gameDuration / 1000
       );
-      console.log('whatIsTheHighScoreHEREValue:')
-      console.log(whatIsTheHighScoreHEREValue)
 
-      if (currentHighScoreStatusHERE.time === 0) {
-        console.log("NO EXISTING HIGH SCORE EXISTS - ADD IT TO HIGH SCORE ARRAY");
-        const updateKey = getHighScoreKeyHERE(
+      if (currentHighScoreStatus.time === 0) {
+        // console.log("NO EXISTING HIGH SCORE EXISTS - ADD IT TO HIGH SCORE ARRAY");
+        const updateKey = getHighScoreKey(
           game.level,
           game.bossMode,
           images.selected
         );
-        const updateValue = `${whatIsTheHighScoreHEREValue.time}${updateKey}`;
-        const highScoreUpdateValueHERE = [ ...duration.highScoresHERE, updateValue ];
-        console.log('highScoreUpdateValueHERE1:');
-        console.log(highScoreUpdateValueHERE);
-        dispatch(durationActions.setDurationHighScores(highScoreUpdateValueHERE));
+        const updateValue = `${whatIsTheHighScoreValue.time}${updateKey}`;
+        const highScoreUpdateValue = [ ...duration.highScores, updateValue ];
+        // console.log('highScoreUpdateValue1:');
+        // console.log(highScoreUpdateValue);
+        dispatch(durationActions.setDurationHighScores(highScoreUpdateValue));
       } else {
-        if (whatIsTheHighScoreHEREValue.highScore === true) {
-          console.log("UPDATE HIGH SCORE ARRAY WITH THIS VALUE");
-          const updateKey = getHighScoreKeyHERE(
+        if (whatIsTheHighScoreValue.highScore === true) {
+          // console.log("UPDATE HIGH SCORE ARRAY WITH THIS VALUE");
+          const updateKey = getHighScoreKey(
             game.level,
             game.bossMode,
             images.selected
           );
-          const updateValue = `${whatIsTheHighScoreHEREValue.time}${updateKey}`;
+          const updateValue = `${whatIsTheHighScoreValue.time}${updateKey}`;
 
-          console.log('updateValue:');
-          console.log(updateValue);
+          // console.log('updateValue:');
+          // console.log(updateValue);
 
-          const existingHighScoresFiltered = duration.highScoresHERE.filter(val => {
+          const existingHighScoresFiltered = duration.highScores.filter(val => {
             return val.indexOf(updateKey) === -1
           });
           
-          const highScoreUpdateValueHERE = [ ...existingHighScoresFiltered, updateValue ];
-          console.log('highScoreUpdateValueHERE:');
-          console.log(highScoreUpdateValueHERE);
-          dispatch(durationActions.setDurationHighScores(highScoreUpdateValueHERE));
+          const highScoreUpdateValue = [ ...existingHighScoresFiltered, updateValue ];
+          // console.log('highScoreUpdateValue:');
+          // console.log(highScoreUpdateValue);
+          dispatch(durationActions.setDurationHighScores(highScoreUpdateValue));
         } else {
-          console.log("LEAVE HIGH SCORE ARRAY ALONE");
-          console.log(duration.highScoresHERE);
+          // console.log("LEAVE HIGH SCORE ARRAY ALONE");
+          // console.log(duration.highScores);
         }
       }
       
       dispatch(durationActions.setDurationEnd(newDate));
       dispatch(durationActions.setDurationSaved(gameDurationHumanise));
-      dispatch(durationActions.setDurationIsHighScoreHERE(whatIsTheHighScoreHEREValue.highScore));
+      dispatch(durationActions.setDurationIsHighScore(whatIsTheHighScoreValue.highScore));
       dispatch(gameActions.setGameStatus('game-over'));
     }
   }, [game.found.length]);

@@ -1,9 +1,9 @@
-export const whatIsTheHighScoreHERE = (
+export const whatIsTheHighScore = (
   currentHighScoreTime, 
   gameDuration
 ) => {
   // console.log('\n');
-  // console.log('whatIsTheHighScoreHERE');
+  // console.log('whatIsTheHighScore');
   // console.log(currentHighScoreTime);
   // console.log(typeof currentHighScoreTime);
   // console.log(typeof +currentHighScoreTime);
@@ -13,7 +13,7 @@ export const whatIsTheHighScoreHERE = (
   // console.log(currentHighScoreTimeSeconds);
   // console.log(gameDurationSeconds);
   // console.log(typeof gameDuration);
-  // console.log('/whatIsTheHighScoreHERE');
+  // console.log('/whatIsTheHighScore');
   // console.log('\n');
   if (currentHighScoreTimeSeconds === 0) { 
     return {
