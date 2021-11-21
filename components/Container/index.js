@@ -50,9 +50,7 @@ const Container = () => {
         currentHighScoreStatus.time,
         gameDuration / 1000
       );
-
       if (currentHighScoreStatus.time === 0) {
-        // console.log("NO EXISTING HIGH SCORE EXISTS - ADD IT TO HIGH SCORE ARRAY");
         const updateKey = getHighScoreKey(
           game.level,
           game.bossMode,
@@ -60,36 +58,22 @@ const Container = () => {
         );
         const updateValue = `${whatIsTheHighScoreValue.time}${updateKey}`;
         const highScoreUpdateValue = [ ...duration.highScores, updateValue ];
-        // console.log('highScoreUpdateValue1:');
-        // console.log(highScoreUpdateValue);
         dispatch(durationActions.setDurationHighScores(highScoreUpdateValue));
       } else {
         if (whatIsTheHighScoreValue.highScore === true) {
-          // console.log("UPDATE HIGH SCORE ARRAY WITH THIS VALUE");
           const updateKey = getHighScoreKey(
             game.level,
             game.bossMode,
             images.selected
           );
           const updateValue = `${whatIsTheHighScoreValue.time}${updateKey}`;
-
-          // console.log('updateValue:');
-          // console.log(updateValue);
-
           const existingHighScoresFiltered = duration.highScores.filter(val => {
             return val.indexOf(updateKey) === -1
           });
-          
           const highScoreUpdateValue = [ ...existingHighScoresFiltered, updateValue ];
-          // console.log('highScoreUpdateValue:');
-          // console.log(highScoreUpdateValue);
           dispatch(durationActions.setDurationHighScores(highScoreUpdateValue));
-        } else {
-          // console.log("LEAVE HIGH SCORE ARRAY ALONE");
-          // console.log(duration.highScores);
         }
       }
-      
       dispatch(durationActions.setDurationEnd(newDate));
       dispatch(durationActions.setDurationSaved(gameDurationHumanise));
       dispatch(durationActions.setDurationIsHighScore(whatIsTheHighScoreValue.highScore));

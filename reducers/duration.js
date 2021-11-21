@@ -1,12 +1,11 @@
 const defaultDurationState = {
-  start: '',
   end: '',
-  paused: 0,
-  saved: 0,
-  // highScore: true,
   highScores: [],
   isHighScore: false,
-  status: '', // 'game-on', 'game-paused'
+  paused: 0,
+  saved: 0,
+  start: '',
+  status: '', // 'game-on', 'game-paused' ...
 };
 
 const duration = (state = defaultDurationState, action) => {

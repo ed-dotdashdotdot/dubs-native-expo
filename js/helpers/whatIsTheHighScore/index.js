@@ -2,19 +2,8 @@ export const whatIsTheHighScore = (
   currentHighScoreTime, 
   gameDuration
 ) => {
-  // console.log('\n');
-  // console.log('whatIsTheHighScore');
-  // console.log(currentHighScoreTime);
-  // console.log(typeof currentHighScoreTime);
-  // console.log(typeof +currentHighScoreTime);
-  // console.log(gameDuration / 1000);
   const currentHighScoreTimeSeconds = +currentHighScoreTime;
   const gameDurationSeconds = +gameDuration;
-  // console.log(currentHighScoreTimeSeconds);
-  // console.log(gameDurationSeconds);
-  // console.log(typeof gameDuration);
-  // console.log('/whatIsTheHighScore');
-  // console.log('\n');
   if (currentHighScoreTimeSeconds === 0) { 
     return {
       highScore: true,

@@ -27,20 +27,10 @@ const LoadingImage = props => {
   
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageToUse}.jpg&size=large`;
 
-  // console.log('---');
-  // console.log(imageToUse, level);
-  // console.log('---');
-
   const getCurrentHighScoreVal = getCurrentHighScore(
     `${game.level}--${imageToUse}--`, 
     duration.highScores
   );
-
-  // console.log(':::::-----:::::');
-  // console.log('getCurrentHighScoreVal:'); // THIS IS IT !!!
-  // console.log(getCurrentHighScoreVal);
-  // console.log(typeof getCurrentHighScoreVal);
-  // console.log(':::::-----:::::');
 
   return (
     <View

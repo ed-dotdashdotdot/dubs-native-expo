@@ -8,7 +8,6 @@ import humanizeDuration from 'humanize-duration';
 ### */
 export const drawGameDuration = (duration, lang) => {
   if (!duration) return '-';
-  // console.log(duration.slice(-1))
   if (duration.slice(-1) === '0') { duration = `${duration}1`; }
   duration = `${duration}000001`
   const durationMs = Number(duration * 1000).toFixed(2);
