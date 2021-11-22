@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
 
-import { colours } from '../configuration/config.json';
+import { 
+  colours 
+} from '../configuration/config.json';
 
 const globalStyles = StyleSheet.create({
   bodyText: {

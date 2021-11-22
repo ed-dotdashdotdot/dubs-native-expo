@@ -1,7 +1,10 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-import { colours, fontFamily } from '../../../../configuration/config.json';
+import { 
+  colours, 
+  fontFamily 
+} from '../../../../configuration/config.json';
 
 const WhatIsBossModeCardEquals = () => (
   <Text 

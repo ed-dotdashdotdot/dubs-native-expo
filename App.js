@@ -11,7 +11,9 @@ import Config from './components/Config';
 
 import Container from './components/Container';
 
-import { colours } from './configuration/config.json';
+import { 
+  colours 
+} from './configuration/config.json';
 
 const App = () => {
   const store = createStore(

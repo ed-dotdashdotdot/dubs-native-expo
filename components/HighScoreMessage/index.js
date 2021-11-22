@@ -5,7 +5,9 @@ import Translate from '../Translate';
 
 import { localiseDurationSeconds } from '../../js/helpers/localiseDurationSeconds';
 
-import { colours } from '../../configuration/config.json';
+import { 
+  colours 
+} from '../../configuration/config.json';
 
 const HighScoreMessage = props => {
   const { currentHighScore, isHighScore, lang } = { ...props };

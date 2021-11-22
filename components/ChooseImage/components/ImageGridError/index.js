@@ -1,8 +1,5 @@
 import React from 'react';
-// import classnames from 'classnames';
 import Translate from '../../../Translate';
-
-// import './css/index.scss';
 
 const ImageGridError = props => {
   const {

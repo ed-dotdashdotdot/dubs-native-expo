@@ -4,7 +4,10 @@ import { Text, View } from 'react-native';
 
 import Translate from '../Translate';
 
-import { colours, fontFamily } from '../../configuration/config.json';
+import { 
+  colours, 
+  fontFamily 
+} from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 
@@ -59,7 +62,6 @@ const PageHeading = props => {
               color: colours.white,
               fontFamily: fontFamily,
               fontSize: 20,
-              // fontWeight: 'bold',
               marginTop: 4,
               padding: 0,
               textAlign: 'center',

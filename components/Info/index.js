@@ -18,7 +18,9 @@ import LanguageSelect from '../LanguageSelect';
 import LoadingImage from '../LoadingImage';
 import WhatIsBossMode from '../WhatIsBossMode';
 
-import { colours } from '../../configuration/config.json';
+import { 
+  colours 
+} from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 

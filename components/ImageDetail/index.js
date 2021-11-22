@@ -13,7 +13,11 @@ import Translate from '../Translate';
 
 import { getGameData } from '../../js/helpers/getGameData';
 
-import { colours, fontFamily, ipAddress } from '../../configuration/config.json';
+import { 
+  colours, 
+  fontFamily, 
+  ipAddress 
+} from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 

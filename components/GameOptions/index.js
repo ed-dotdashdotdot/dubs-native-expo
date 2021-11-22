@@ -6,7 +6,10 @@ import { useSelector } from 'react-redux';
 import PauseButton from '../buttons/PauseButton';
 import Stopwatch from '../Stopwatch';
 
-import { colours, fontFamily } from '../../configuration/config.json';
+import { 
+  colours, 
+  fontFamily 
+} from '../../configuration/config.json';
 
 const GameOptions = () => {
   const game = useSelector(state => state.game);

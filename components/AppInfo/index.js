@@ -4,7 +4,9 @@ import { ScrollView, Text } from 'react-native';
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 
-import { fontFamily } from '../../configuration/config.json';
+import { 
+  fontFamily 
+} from '../../configuration/config.json';
 
 import styles from '../../css/style.js';
 

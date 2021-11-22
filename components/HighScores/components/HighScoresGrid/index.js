@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import DrawEntry from '../DrawEntry';
-// import DrawThumb from '../DrawThumb';
 
 import globalStyles from '../../../../css/style';
 
@@ -13,11 +12,6 @@ const HighScoresGrid = props => {
     highScoresList,
     section,
   } = { ...props };
-
-  // console.log('highScoresList:');
-  // console.log(highScoresList);
-  // console.log('---');
-
   return (
     <View
       style={[

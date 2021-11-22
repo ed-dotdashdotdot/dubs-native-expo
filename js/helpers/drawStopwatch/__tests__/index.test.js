@@ -16,7 +16,7 @@ describe('drawStopwatch() - null values', () => {
     }
   );
 });
-describe('drawStopwatch() - under a minute', () => {
+describe('drawStopwatch() - up to a minute', () => {
   it.each`
     durationMs | expected
     ${1000}    | ${'00:01'}
@@ -48,7 +48,7 @@ describe('drawStopwatch() - under a minute', () => {
     }
   );
 });
-describe('drawStopwatch() - under ten minutes', () => {
+describe('drawStopwatch() - between one and ten minutes', () => {
   it.each`
     durationMs | expected
     ${60000}   | ${'01:00'}
@@ -83,7 +83,7 @@ describe('drawStopwatch() - under ten minutes', () => {
     }
   );
 });
-describe('drawStopwatch() - under an hour', () => {
+describe('drawStopwatch() - between ten minutes and an hour', () => {
   it.each`
     durationMs | expected
     

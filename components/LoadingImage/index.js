@@ -12,7 +12,11 @@ import Translate from '../Translate';
 import { durationStartDate } from '../../js/helpers/durationStartDate';
 import { getCurrentHighScore } from '../../js/helpers/getCurrentHighScore';
 
-import { colours, defaultImages, ipAddress } from '../../configuration/config.json';
+import { 
+  colours, 
+  defaultImages, 
+  ipAddress 
+} from '../../configuration/config.json';
 
 const LoadingImage = props => {
   let { imageToUse } = { ...props };

@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 
 import Translate from '../../../Translate';
 
-import { colours, fontFamily } from '../../../../configuration/config.json';
+import { 
+  colours, 
+  fontFamily 
+} from '../../../../configuration/config.json';
 
 const WhatIsBossModeTitle = props => {
   const { textKey } = { ...props };

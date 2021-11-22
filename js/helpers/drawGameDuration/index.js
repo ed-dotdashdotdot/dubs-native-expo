@@ -7,7 +7,7 @@ import humanizeDuration from 'humanize-duration';
   if decimal points are '.10' etc : only show 1 decimal point
 ### */
 export const drawGameDuration = (duration, lang) => {
-  if (!duration) return '-';
+  if (!duration) { return '-'; }
   if (duration.slice(-1) === '0') { duration = `${duration}1`; }
   duration = `${duration}000001`
   const durationMs = Number(duration * 1000).toFixed(2);

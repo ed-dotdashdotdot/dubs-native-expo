@@ -14,7 +14,10 @@ import Translate from '../Translate';
 import { getGameData } from '../../js/helpers/getGameData';
 import { whichLevelColour } from '../../js/helpers/whichLevelColour';
 
-import { colours, fontFamily } from '../../configuration/config.json';
+import { 
+  colours, 
+  fontFamily 
+} from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 

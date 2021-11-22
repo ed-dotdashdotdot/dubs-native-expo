@@ -2,7 +2,9 @@ import React from 'react';
 import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
+
+import { highScoresSections } from '../../js/helpers/getHighScoresSections';
 
 import HighScoresDrawSection from './components/HighScoresDrawSection';
 import InfoInner from '../InfoInner';
@@ -10,15 +12,15 @@ import PageHeading from '../PageHeading';
 
 const HighScores = props => {
   const { dimensions } = { ...props };
-  const images = useSelector(state => state.images);
-  const highScoresSections = [
-    "easy",
-    "normal",
-    "hard",
-    "easyBossMode",
-    "normalBossMode",
-    "hardBossMode",
-  ];
+  // const images = useSelector(state => state.images);
+  // const highScoresSections = [
+  //   "easy",
+  //   "normal",
+  //   "hard",
+  //   "easyBossMode",
+  //   "normalBossMode",
+  //   "hardBossMode",
+  // ];
   return (
     <ScrollView>
       <InfoInner>

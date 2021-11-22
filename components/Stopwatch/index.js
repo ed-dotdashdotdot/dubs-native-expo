@@ -30,8 +30,6 @@ const Stopwatch = props => {
   return (
     <DrawGameStopwatch
       duration={timeDifference(start, new Date().getTime()) / 1000}
-      // lang={lang}
-      // section="stopwatch"
     />
   );
 };

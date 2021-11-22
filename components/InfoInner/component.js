@@ -2,19 +2,13 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-// import globalStyles from '../../css/style.js';
-
 const Component = props => {
   const { 
     content,
     styles
   } = { ...props };
   return (
-    <View 
-      style={[
-        styles,
-      ]}
-    >
+    <View style={[styles]}>
       { content }
     </View>
   );

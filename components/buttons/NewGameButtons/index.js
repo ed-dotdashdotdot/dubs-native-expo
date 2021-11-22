@@ -9,7 +9,10 @@ import ContinueGameButton from '../../buttons/ContinueGameButton';
 import PlayThisGameAgainButton from '../../buttons/PlayThisGameAgainButton';
 import Translate from '../../Translate';
 
-import { colours, fontFamily } from '../../../configuration/config.json';
+import { 
+  colours, 
+  fontFamily 
+} from '../../../configuration/config.json';
 
 import globalStyles from '../../../css/style.js';
 

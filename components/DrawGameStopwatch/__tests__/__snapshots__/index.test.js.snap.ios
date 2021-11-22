@@ -1,219 +1,219 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DrawGameDuration() renders correctly 1`] = `"00:01"`;
+exports[`DrawGameDuration() renders correctly 1`] = `"16:40"`;
 
 exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 0 1`] = `"00:00"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 500 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 500 1`] = `"08:20"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 1000 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 1000 1`] = `"16:40"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 2000 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 2000 1`] = `"33:20"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 2050 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 2050 1`] = `"34:10"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 179000 1`] = `"02:59"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 179000 1`] = `"02:01:43:20"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 179500 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 179500 1`] = `"02:01:51:40"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 180000 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 180000 1`] = `"02:02:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 1199000 1`] = `"19:59"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 1199000 1`] = `"13:21:03:20"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 1200000 1`] = `"20:00"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 1200000 1`] = `"13:21:20:00"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 3600000 1`] = `"01:00:00"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 3600000 1`] = `"41:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 5400000 1`] = `"01:30:00"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 5400000 1`] = `"62:12:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 7200000 1`] = `"02:00:00"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 7200000 1`] = `"83:08:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 86400000 1`] = `"01:00:00:00"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 86400000 1`] = `"1000:00:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 86401000 1`] = `"01:00:00:01"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 86401000 1`] = `"1000:00:16:40"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 90000000 1`] = `"01:01:00:00"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 90000000 1`] = `"1041:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 90001000 1`] = `"01:01:00:01"`;
+exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is 90001000 1`] = `"1041:16:16:40"`;
 
 exports[`DrawGameDuration() when lang is \`de\` should renders correctly value when duration is null 1`] = `"00:00"`;
 
 exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 0 1`] = `"00:00"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 500 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 500 1`] = `"08:20"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 1000 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 1000 1`] = `"16:40"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 2000 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 2000 1`] = `"33:20"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 2050 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 2050 1`] = `"34:10"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 179000 1`] = `"02:59"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 179000 1`] = `"02:01:43:20"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 179500 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 179500 1`] = `"02:01:51:40"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 180000 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 180000 1`] = `"02:02:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 1199000 1`] = `"19:59"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 1199000 1`] = `"13:21:03:20"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 1200000 1`] = `"20:00"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 1200000 1`] = `"13:21:20:00"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 3600000 1`] = `"01:00:00"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 3600000 1`] = `"41:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 5400000 1`] = `"01:30:00"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 5400000 1`] = `"62:12:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 7200000 1`] = `"02:00:00"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 7200000 1`] = `"83:08:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 86400000 1`] = `"01:00:00:00"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 86400000 1`] = `"1000:00:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 86401000 1`] = `"01:00:00:01"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 86401000 1`] = `"1000:00:16:40"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 90000000 1`] = `"01:01:00:00"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 90000000 1`] = `"1041:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 90001000 1`] = `"01:01:00:01"`;
+exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is 90001000 1`] = `"1041:16:16:40"`;
 
 exports[`DrawGameDuration() when lang is \`en\` should renders correctly value when duration is null 1`] = `"00:00"`;
 
 exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 0 1`] = `"00:00"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 500 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 500 1`] = `"08:20"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 1000 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 1000 1`] = `"16:40"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 2000 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 2000 1`] = `"33:20"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 2050 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 2050 1`] = `"34:10"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 179000 1`] = `"02:59"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 179000 1`] = `"02:01:43:20"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 179500 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 179500 1`] = `"02:01:51:40"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 180000 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 180000 1`] = `"02:02:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 1199000 1`] = `"19:59"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 1199000 1`] = `"13:21:03:20"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 1200000 1`] = `"20:00"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 1200000 1`] = `"13:21:20:00"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 3600000 1`] = `"01:00:00"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 3600000 1`] = `"41:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 5400000 1`] = `"01:30:00"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 5400000 1`] = `"62:12:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 7200000 1`] = `"02:00:00"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 7200000 1`] = `"83:08:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 86400000 1`] = `"01:00:00:00"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 86400000 1`] = `"1000:00:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 86401000 1`] = `"01:00:00:01"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 86401000 1`] = `"1000:00:16:40"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 90000000 1`] = `"01:01:00:00"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 90000000 1`] = `"1041:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 90001000 1`] = `"01:01:00:01"`;
+exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is 90001000 1`] = `"1041:16:16:40"`;
 
 exports[`DrawGameDuration() when lang is \`es\` should renders correctly value when duration is null 1`] = `"00:00"`;
 
 exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 0 1`] = `"00:00"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 500 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 500 1`] = `"08:20"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 1000 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 1000 1`] = `"16:40"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 2000 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 2000 1`] = `"33:20"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 2050 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 2050 1`] = `"34:10"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 179000 1`] = `"02:59"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 179000 1`] = `"02:01:43:20"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 179500 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 179500 1`] = `"02:01:51:40"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 180000 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 180000 1`] = `"02:02:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 1199000 1`] = `"19:59"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 1199000 1`] = `"13:21:03:20"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 1200000 1`] = `"20:00"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 1200000 1`] = `"13:21:20:00"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 3600000 1`] = `"01:00:00"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 3600000 1`] = `"41:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 5400000 1`] = `"01:30:00"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 5400000 1`] = `"62:12:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 7200000 1`] = `"02:00:00"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 7200000 1`] = `"83:08:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 86400000 1`] = `"01:00:00:00"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 86400000 1`] = `"1000:00:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 86401000 1`] = `"01:00:00:01"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 86401000 1`] = `"1000:00:16:40"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 90000000 1`] = `"01:01:00:00"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 90000000 1`] = `"1041:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 90001000 1`] = `"01:01:00:01"`;
+exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is 90001000 1`] = `"1041:16:16:40"`;
 
 exports[`DrawGameDuration() when lang is \`fr\` should renders correctly value when duration is null 1`] = `"00:00"`;
 
 exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 0 1`] = `"00:00"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 500 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 500 1`] = `"08:20"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 1000 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 1000 1`] = `"16:40"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 2000 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 2000 1`] = `"33:20"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 2050 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 2050 1`] = `"34:10"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 179000 1`] = `"02:59"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 179000 1`] = `"02:01:43:20"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 179500 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 179500 1`] = `"02:01:51:40"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 180000 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 180000 1`] = `"02:02:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 1199000 1`] = `"19:59"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 1199000 1`] = `"13:21:03:20"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 1200000 1`] = `"20:00"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 1200000 1`] = `"13:21:20:00"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 3600000 1`] = `"01:00:00"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 3600000 1`] = `"41:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 5400000 1`] = `"01:30:00"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 5400000 1`] = `"62:12:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 7200000 1`] = `"02:00:00"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 7200000 1`] = `"83:08:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 86400000 1`] = `"01:00:00:00"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 86400000 1`] = `"1000:00:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 86401000 1`] = `"01:00:00:01"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 86401000 1`] = `"1000:00:16:40"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 90000000 1`] = `"01:01:00:00"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 90000000 1`] = `"1041:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 90001000 1`] = `"01:01:00:01"`;
+exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is 90001000 1`] = `"1041:16:16:40"`;
 
 exports[`DrawGameDuration() when lang is \`it\` should renders correctly value when duration is null 1`] = `"00:00"`;
 
 exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 0 1`] = `"00:00"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 500 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 500 1`] = `"08:20"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 1000 1`] = `"00:01"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 1000 1`] = `"16:40"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 2000 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 2000 1`] = `"33:20"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 2050 1`] = `"00:02"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 2050 1`] = `"34:10"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 179000 1`] = `"02:59"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 179000 1`] = `"02:01:43:20"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 179500 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 179500 1`] = `"02:01:51:40"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 180000 1`] = `"03:00"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 180000 1`] = `"02:02:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 1199000 1`] = `"19:59"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 1199000 1`] = `"13:21:03:20"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 1200000 1`] = `"20:00"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 1200000 1`] = `"13:21:20:00"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 3600000 1`] = `"01:00:00"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 3600000 1`] = `"41:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 5400000 1`] = `"01:30:00"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 5400000 1`] = `"62:12:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 7200000 1`] = `"02:00:00"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 7200000 1`] = `"83:08:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 86400000 1`] = `"01:00:00:00"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 86400000 1`] = `"1000:00:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 86401000 1`] = `"01:00:00:01"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 86401000 1`] = `"1000:00:16:40"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 90000000 1`] = `"01:01:00:00"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 90000000 1`] = `"1041:16:00:00"`;
 
-exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 90001000 1`] = `"01:01:00:01"`;
+exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is 90001000 1`] = `"1041:16:16:40"`;
 
 exports[`DrawGameDuration() when lang is \`pt\` should renders correctly value when duration is null 1`] = `"00:00"`;

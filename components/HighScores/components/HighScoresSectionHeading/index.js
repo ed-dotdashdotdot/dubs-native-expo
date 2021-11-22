@@ -3,7 +3,10 @@ import { Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Translate from '../../../Translate';
-import { colours, fontFamily } from '../../../../configuration/config.json';
+import { 
+  colours, 
+  fontFamily 
+} from '../../../../configuration/config.json';
 
 import globalStyles from '../../../../css/style.js';
 
@@ -11,7 +14,6 @@ const HighScoresSectionHeading = props => {
   const {
     textKey,
   } = { ...props };
-
   return (
     <View
       style={[

@@ -19,7 +19,9 @@ import { isGameOver } from '../../js/helpers/isGameOver';
 import { getExistingHighScoreValue } from '../../js/helpers/getExistingHighScoreValue';
 import { whatIsTheHighScore } from '../../js/helpers/whatIsTheHighScore';
 
-import { colours } from '../../configuration/config.json';
+import { 
+  colours 
+} from '../../configuration/config.json';
 
 const Container = () => {
   const duration = useSelector(state => state.duration);

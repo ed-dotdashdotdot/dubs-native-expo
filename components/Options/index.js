@@ -6,8 +6,12 @@ import allActions from '../../actions';
 
 import Translate from '../Translate';
 
-import { colours, fontFamily } from '../../configuration/config.json';
 import { getBackButtonText } from '../../js/helpers/getBackButtonText';
+
+import { 
+  colours, 
+  fontFamily 
+} from '../../configuration/config.json';
 
 import globalStyles from '../../css/style.js';
 
@@ -15,7 +19,6 @@ const Options = () => {
   const game = useSelector(state => state.game);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-
   const getBackButtonDispatches = section => {
     if (
       section === 'game-over' ||
@@ -35,73 +38,8 @@ const Options = () => {
       dispatch(gameActions.setGameStatus('choose-image'));
     } else {
       dispatch(gameActions.setGameStatus('game-home'));
-      // section === 'app-info'
-      // section === 'app-settings'
-      // section === 'language-select'
     }
-
-    // if (section === 'game-over') {
-    //   dispatch(gameActions.setGameLevel(''));
-    //   dispatch(gameActions.setGameStatus('game-home'));
-    // }
-    // if (section === 'game-paused') {
-    //   dispatch(gameActions.setGameLevel(''));
-    //   dispatch(gameActions.setGameStatus('game-home'));
-    // }
-    // if (section === 'game-ready') {
-    //   dispatch(gameActions.setGameLevel(''));
-    //   dispatch(gameActions.setGameStatus('game-home'));
-    // }
-    // if (section === 'choose-image') {
-    //   dispatch(gameActions.setGameStatus('game-ready'));
-    // }
-    // if (section === 'image-detail') {
-    //   dispatch(gameActions.setGameStatus('choose-image'));
-    // }
-    // if (section === 'what-is-boss-mode') {
-    //   dispatch(gameActions.setGameStatus('game-ready'));
-    // }
-    // if (section === 'app-info') {
-    //   dispatch(gameActions.setGameStatus('game-home'));
-    // }
-    // if (section === 'app-settings') {
-    //   dispatch(gameActions.setGameStatus('game-home'));
-    // }
-    // if (section === 'language-select') {
-    //   dispatch(gameActions.setGameStatus('game-home'));
-    // }
   }
-  // const buttonText = section => {
-  //   if (section === 'game-over') {
-  //     return 'backToHome';
-  //   }
-  //   if (section === 'game-paused') {
-  //     return 'backToHome';
-  //   }
-  //   if (section === 'game-ready') {
-  //     return 'backToHome';
-  //   }
-  //   if (section === 'choose-image') {
-  //     return 'back';
-  //   }
-  //   if (section === 'image-detail') {
-  //     return 'back';
-  //   }
-  //   if (section === 'what-is-boss-mode') {
-  //     return 'back';
-  //   }
-  //   if (section === 'app-info') {
-  //     return 'back';
-  //   }
-  //   if (section === 'app-settings') {
-  //     return 'back';
-  //   }
-  //   if (section === 'language-select') {
-  //     return 'back';
-  //   }
-  //   return 'backToHome'
-  // }
-
   return (  
     <TouchableOpacity 
       accessible={true}

@@ -9,7 +9,7 @@ import PlayAgainButtonSvg from './components/PlayAgainButtonSvg';
 
 const PlayAgainButton = props => {
   const { width } = { ...props };
-  const { gameActions } = { ...allActions };
+  // const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   return (
     <TouchableOpacity

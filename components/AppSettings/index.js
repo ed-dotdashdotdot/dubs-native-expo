@@ -7,7 +7,9 @@ import allActions from '../../actions';
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 
-import { colours } from '../../configuration/config.json';
+import { 
+  colours 
+} from '../../configuration/config.json';
 
 const AppSettings = () => {
   const device = useSelector(state => state.device);

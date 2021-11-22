@@ -1,7 +1,10 @@
 import { generateRandomNumber } from '../generateRandomNumber';
 import { sliceValue } from '../sliceValue';
 
-import { gameArray, gameSize } from '../../../configuration/config.json';
+import { 
+  gameArray, 
+  gameSize 
+} from '../../../configuration/config.json';
 
 export const getGameData = level => {
   // SHUFFLE

@@ -6,7 +6,9 @@ import WhatIsBossModeDescription from '../WhatIsBossModeDescription';
 import WhatIsBossModeExample from '../WhatIsBossModeExample';
 import WhatIsBossModeTitle from '../WhatIsBossModeTitle';
 
-import { colours } from '../../../../configuration/config.json';
+import { 
+  colours 
+} from '../../../../configuration/config.json';
 
 import globalStyles from '../../../../css/style.js';
 

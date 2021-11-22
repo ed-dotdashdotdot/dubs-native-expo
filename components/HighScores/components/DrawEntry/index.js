@@ -5,14 +5,18 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
-import ExpoFastImage from 'expo-fast-image';
+// import ExpoFastImage from 'expo-fast-image';
 import DrawThumb from '../DrawThumb';
 import PlayAgainButton from '../../../buttons/PlayAgainButton';
 import DeleteHighScoreButton from '../../../buttons/DeleteHighScoreButton';
 
-import { colours, fontFamily, ipAddress } from '../../../../configuration/config.json';
+import { 
+  // colours, 
+  fontFamily, 
+  // ipAddress 
+} from '../../../../configuration/config.json';
 
-import globalStyles from '../../../../css/style';
+// import globalStyles from '../../../../css/style';
 
 const DrawEntry = props => {
   const { 
