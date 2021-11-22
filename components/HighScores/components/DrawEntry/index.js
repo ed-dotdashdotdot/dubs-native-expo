@@ -9,6 +9,7 @@ import allActions from '../../../../actions';
 import DrawThumb from '../DrawThumb';
 import PlayAgainButton from '../../../buttons/PlayAgainButton';
 import DeleteHighScoreButton from '../../../buttons/DeleteHighScoreButton';
+import Translate from '../../../Translate';
 
 import { 
   // colours, 
@@ -49,18 +50,13 @@ const DrawEntry = props => {
         }
       ]}
     >
-      <View
-        style={{
-          backgroundColor: '#0000ff',
-          width: 96,
-        }}
-      >
+      <View style={{ width: 96 }}>
         <DrawThumb 
           dimensions={dimensions}
           imageRef={imageRef} 
         />
       </View>
-      {/* <View style={{width: 60}} /> */}
+      <View style={{width: 60}} />
       <View
         style={{
           flex: 1,
@@ -72,12 +68,14 @@ const DrawEntry = props => {
             alignSelf: 'center',
             color: 'white',
             fontFamily: fontFamily,
-            fontSize: 20,
+            fontSize: 32,
             fontWeight: 'bold',
           }}
         >
           {duration}
-          {" seconds"}
+          {/* {" seconds"} */}
+          {""}
+          <Translate textKey='secondsShort' />
         </Text>
       </View>
       <View

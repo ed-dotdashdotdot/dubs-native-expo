@@ -11,15 +11,15 @@
     "ru-RU": "секунды"
   },
   "secondsShort": {
-    "zh-CN": "cn-s",
-    "de-DE": "S",
+    "zh-CN": "秒",
+    "de-DE": "sek.",
     "en-GB": "s",
     "es-ES": "s",
     "fr-FR": "s",
     "it-IT": "s",
-    "ja-JP": "s",
-    "pt-PT": "s",
-    "ru-RU": "s"
+    "ja-JP": "秒",
+    "pt-PT": "PT-s",
+    "ru-RU": "RU-s"
   },
   "highScore": {
     "zh-CN": "高分",
