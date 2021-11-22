@@ -22,6 +22,8 @@ const HighScoresDrawSection = props => {
     dimensions,
     section,
   } = { ...props };
+  console.log('section:')
+  console.log(section)
   const duration = useSelector(state => state.duration);
   const dispatch = useDispatch();
   const highScoresFilter = duration.highScores.filter(val => {
@@ -46,6 +48,7 @@ const HighScoresDrawSection = props => {
     <View 
       style={{
         marginBottom: 12,
+        backgroundColor: '#00000080',
       }}
     >
       <HighScoresSectionHeading 

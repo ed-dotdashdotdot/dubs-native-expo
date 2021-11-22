@@ -37,6 +37,7 @@ const HighScoresGrid = props => {
           duration={val.duration}
           imageRef={`${val.image}`} 
           key={`${section}-${val.image}`} 
+          section={section}
         />
       ))}
     </View>
