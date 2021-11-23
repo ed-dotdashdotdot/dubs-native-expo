@@ -1,7 +1,7 @@
 import React from 'react';
 import Translate from '../../../Translate';
 
-const ImageGridError = props => {
+const ChooseImageGridError = props => {
   const {
     title,
   } = { ...props };
@@ -18,4 +18,4 @@ const ImageGridError = props => {
   );
 };
 
-export default ImageGridError;
+export default ChooseImageGridError;

@@ -2,11 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import DrawThumb from '../DrawThumb';
+import ChooseImageDrawThumb from '../ChooseImageDrawThumb';
 
 import globalStyles from '../../../../css/style';
 
-const ImageGrid = props => {
+const ChooseImageDrawGrid = props => {
   const {
     dimensions,
     imageList,
@@ -32,7 +32,7 @@ const ImageGrid = props => {
       ]}
     >
       {imageList.map(val => (
-        <DrawThumb 
+        <ChooseImageDrawThumb 
           dimensions={dimensions}
           imageRef={`${val}`} 
           key={val} 
@@ -42,9 +42,9 @@ const ImageGrid = props => {
   );
 };
 
-ImageGrid.propTypes = {
+ChooseImageDrawGrid.propTypes = {
   dimensions: PropTypes.object.isRequired,
   imageList: PropTypes.array.isRequired,
 };
 
-export default ImageGrid;
+export default ChooseImageDrawGrid;

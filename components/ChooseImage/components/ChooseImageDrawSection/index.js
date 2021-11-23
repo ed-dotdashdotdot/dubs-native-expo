@@ -5,9 +5,9 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
-import SectionHeading from '../SectionHeading';
-import ImageGrid from '../ImageGrid';
-import ImageGridError from '../ImageGridError';
+import ChooseImageSectionHeading from '../ChooseImageSectionHeading';
+import ChooseImageDrawGrid from '../ChooseImageDrawGrid';
+import ChooseImageGridError from '../ChooseImageGridError';
 import Translate from '../../../Translate';
 
 import { ucFirst } from '../../../../js/helpers/ucFirst';
@@ -19,7 +19,7 @@ import { ucFirst } from '../../../../js/helpers/ucFirst';
 // use loading animation for each section
 // can images get loaded into app - this way, if conection goes offline they can still be used
 
-const DrawSection = props => {
+const ChooseImageDrawSection = props => {
   const {
     dimensions,
     section,
@@ -125,21 +125,21 @@ const DrawSection = props => {
           </Text>
         </TouchableOpacity>
       ) : (
-        <SectionHeading 
+        <ChooseImageSectionHeading 
           textKey={`chooseACategory.${imagesValue.name}`} 
         />
       )}
       {
         imagesValue.loaded && (
-          <ImageGrid 
+          <ChooseImageDrawGrid 
             dimensions={dimensions}
             imageList={imagesValue.images} 
           />
         )
       }
-      {/* {imagesValue.error && <ImageGridError title={imagesValue.name} />} */}
+      {/* {imagesValue.error && <ChooseImageGridError title={imagesValue.name} />} */}
     </View>
   );
 };
 
-export default DrawSection;
+export default ChooseImageDrawSection;

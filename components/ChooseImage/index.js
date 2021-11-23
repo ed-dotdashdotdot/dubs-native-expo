@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { useSelector } from 'react-redux';
 
-import DrawSection from './components/DrawSection';
+import ChooseImageDrawSection from './components/ChooseImageDrawSection';
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 
@@ -18,7 +18,7 @@ const ChooseImage = props => {
           textKey={'chooseAnImageToPlayWith'}
         />
         {images.sections.map(val => (
-          <DrawSection
+          <ChooseImageDrawSection
             dimensions={dimensions}
             key={val.name} 
             section={val.name} 
