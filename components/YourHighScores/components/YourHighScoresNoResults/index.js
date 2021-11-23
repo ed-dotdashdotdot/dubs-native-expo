@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 
 import NewGameButtons from '../../../buttons/NewGameButtons';
 
-const NoHighScores = () => (
+const YourHighScoresNoResults = () => (
   <>
     <Text style={{ color: 'white', fontSize: 24 }}>
       • No high scores
@@ -12,9 +12,9 @@ const NoHighScores = () => (
       • Draw new game buttons
     </Text>
     <NewGameButtons 
-      section='high-scores'
+      section='your-high-scores'
     />
   </>
 );
 
-export default NoHighScores;
+export default YourHighScoresNoResults;

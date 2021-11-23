@@ -7,8 +7,8 @@ import allActions from '../../../../actions';
 
 // import ExpoFastImage from 'expo-fast-image';
 import DrawFastestTime from '../../../DrawFastestTime';
-import DrawThumb from '../DrawThumb';
-import HighScoresDrawEntryButtons from '../HighScoresDrawEntryButtons';
+import YourHighScoresDrawThumb from '../YourHighScoresDrawThumb';
+import YourHighScoresDrawEntryButtons from '../YourHighScoresDrawEntryButtons';
 import PlayAgainButton from '../../../buttons/PlayAgainButton';
 import DeleteHighScoreButton from '../../../buttons/DeleteHighScoreButton';
 import Translate from '../../../Translate';
@@ -23,7 +23,7 @@ import {
 
 // import globalStyles from '../../../../css/style';
 
-const DrawEntry = props => {
+const YourHighScoresDrawEntry = props => {
   const { 
     dimensions,
     duration,
@@ -70,7 +70,7 @@ const DrawEntry = props => {
       ]}
     >
       <View style={{ width: 96 }}>
-        <DrawThumb 
+        <YourHighScoresDrawThumb 
           dimensions={dimensions}
           imageRef={imageRef} 
         />
@@ -156,7 +156,7 @@ const DrawEntry = props => {
         </View>
       </View> */}
 
-      <HighScoresDrawEntryButtons 
+      <YourHighScoresDrawEntryButtons 
         entryKey={entryKey}
         isPhone={dimensions.width < 600 ? true : false}
         highScoreKey={getHighScoreKey(
@@ -171,10 +171,10 @@ const DrawEntry = props => {
   );
 };
 
-DrawEntry.propTypes = {
+YourHighScoresDrawEntry.propTypes = {
   dimensions: PropTypes.object.isRequired,
   imageRef: PropTypes.string.isRequired,
   section: PropTypes.string.isRequired,
 };
 
-export default DrawEntry;
+export default YourHighScoresDrawEntry;

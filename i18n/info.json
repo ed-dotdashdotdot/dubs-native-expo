@@ -43,16 +43,16 @@
     "pt-PT": "Novo recorde!",
     "ru-RU": "Новый рекорд!"
   },
-  "highScores": {
-    "zh-CN": "CN-High scores",
-    "de-DE": "DE-High scores",
-    "en-GB": "High scores",
-    "es-ES": "ES-High scores",
-    "fr-FR": "FR-High scores",
-    "it-IT": "IT-High scores",
-    "ja-JP": "JP-High scores",
-    "pt-PT": "PT-High scores",
-    "ru-RU": "RU-High scores"
+  "yourHighScores": {
+    "zh-CN": "CN-Your high scores",
+    "de-DE": "DE-Your high scores",
+    "en-GB": "Your high scores",
+    "es-ES": "ES-Your high scores",
+    "fr-FR": "FR-Your high scores",
+    "it-IT": "IT-Your high scores",
+    "ja-JP": "JP-Your high scores",
+    "pt-PT": "PT-Your high scores",
+    "ru-RU": "RU-Your high scores"
   },
   "appInfo": {
     "zh-CN": "CN-App info",

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import PlayAgainButton from '../../../buttons/PlayAgainButton';
 import DeleteHighScoreButton from '../../../buttons/DeleteHighScoreButton';
 
-const HighScoresDrawEntryButtons = props => {
+const YourHighScoresDrawEntryButtons = props => {
   const {
     entryKey,
     isPhone,
@@ -29,7 +29,6 @@ const HighScoresDrawEntryButtons = props => {
       }}
     >
       <View
-        id='button1'
         style={{
           alignItems: isPhone ? 'flex-end' : 'flex-start',
           alignSelf: 'flex-end',
@@ -44,7 +43,6 @@ const HighScoresDrawEntryButtons = props => {
         />
       </View>
       <View
-        id='button2'
         style={{
           alignItems: 'flex-end',
           height: 48,
@@ -62,10 +60,10 @@ const HighScoresDrawEntryButtons = props => {
   );
 };
 
-HighScoresDrawEntryButtons.propTypes = {
+YourHighScoresDrawEntryButtons.propTypes = {
   isPhone: PropTypes.bool.isRequired,
   highScoreKey: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
 };
 
-export default HighScoresDrawEntryButtons;
+export default YourHighScoresDrawEntryButtons;

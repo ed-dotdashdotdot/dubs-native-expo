@@ -84,10 +84,10 @@ const OptionsHomepage = () => {
         >
           <TouchableOpacity
             onPress={() => {
-              dispatch(gameActions.setGameStatus('high-scores'));
+              dispatch(gameActions.setGameStatus('your-high-scores'));
             }}
           >
-            <Text>High scores</Text>
+            <Text>Your high scores</Text>
           </TouchableOpacity>
         </View>
 

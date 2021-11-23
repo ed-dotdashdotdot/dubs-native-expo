@@ -10,7 +10,7 @@ import {
 
 import globalStyles from '../../../../css/style.js';
 
-const HighScoresSectionHeading = props => {
+const YourHighScoresSectionHeading = props => {
   const {
     textKey,
   } = { ...props };
@@ -44,8 +44,8 @@ const HighScoresSectionHeading = props => {
   );
 };
 
-HighScoresSectionHeading.propTypes = {
+YourHighScoresSectionHeading.propTypes = {
   textKey: PropTypes.string.isRequired,
 };
 
-export default HighScoresSectionHeading;
+export default YourHighScoresSectionHeading;

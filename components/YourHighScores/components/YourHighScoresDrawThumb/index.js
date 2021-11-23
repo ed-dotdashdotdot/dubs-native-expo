@@ -14,7 +14,7 @@ import {
 
 import globalStyles from '../../../../css/style';
 
-const DrawThumb = props => {
+const YourHighScoresDrawThumb = props => {
   const { 
     dimensions, 
     imageRef 
@@ -80,9 +80,9 @@ const DrawThumb = props => {
   );
 };
 
-DrawThumb.propTypes = {
+YourHighScoresDrawThumb.propTypes = {
   dimensions: PropTypes.object.isRequired,
   imageRef: PropTypes.string.isRequired,
 };
 
-export default DrawThumb;
+export default YourHighScoresDrawThumb;

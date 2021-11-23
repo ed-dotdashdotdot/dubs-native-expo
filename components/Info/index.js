@@ -12,7 +12,7 @@ import GameOn from '../GameOn';
 import GameOver from '../GameOver';
 import GamePaused from '../GamePaused';
 import GameReady from '../GameReady';
-import HighScores from '../HighScores';
+import YourHighScores from '../YourHighScores';
 import ImageDetail from '../ImageDetail';
 import LanguageSelect from '../LanguageSelect';
 import LoadingImage from '../LoadingImage';
@@ -127,8 +127,8 @@ const Info = () => {
                         }}
                       />
                     );
-                    case 'high-scores': return (
-                      <HighScores
+                    case 'your-high-scores': return (
+                      <YourHighScores
                         dimensions={{
                           height: infoHeight,
                           width: infoWidth,

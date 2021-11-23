@@ -2,11 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import DrawEntry from '../DrawEntry';
+import YourHighScoresDrawEntry from '../YourHighScoresDrawEntry';
 
 import globalStyles from '../../../../css/style';
 
-const HighScoresGrid = props => {
+const YourHighScoresGrid = props => {
   const {
     dimensions,
     highScoresList,
@@ -37,7 +37,7 @@ const HighScoresGrid = props => {
       ]}
     >
       {highScoresList.map(val => (
-        <DrawEntry 
+        <YourHighScoresDrawEntry 
           dimensions={dimensions}
           duration={val.duration}
           entryKey={`--${section}--${val.image}--`} 
@@ -50,9 +50,9 @@ const HighScoresGrid = props => {
   );
 };
 
-HighScoresGrid.propTypes = {
+YourHighScoresGrid.propTypes = {
   dimensions: PropTypes.object.isRequired,
   highScoresList: PropTypes.array.isRequired,
 };
 
-export default HighScoresGrid;
+export default YourHighScoresGrid;

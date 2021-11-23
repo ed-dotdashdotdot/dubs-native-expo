@@ -8,10 +8,10 @@ import PropTypes from 'prop-types';
 // import { highScoresSections } from '../../js/helpers/getHighScoresSections';
 import { highScoresSections } from '../../configuration/config.json';
 
-import HighScoresDrawSection from './components/HighScoresDrawSection';
 import InfoInner from '../InfoInner';
-import NoHighScores from './components/NoHighScores';
 import PageHeading from '../PageHeading';
+import YourHighScoresDrawSection from './components/YourHighScoresDrawSection';
+import YourHighScoresNoResults from './components/YourHighScoresNoResults';
 
 const HighScores = props => {
   const { dimensions } = { ...props };
@@ -21,15 +21,15 @@ const HighScores = props => {
     <ScrollView>
       <InfoInner>
         <PageHeading 
-          textKey={'highScores'}
+          textKey={'yourHighScores'}
         />
         {
           !duration.highScores.length ? (
-            <NoHighScores />
+            <YourHighScoresNoResults />
           ) : 
         highScoresSections.map(val => { 
           return (
-            <HighScoresDrawSection
+            <YourHighScoresDrawSection
               dimensions={dimensions}
               key={val} 
               section={val} 

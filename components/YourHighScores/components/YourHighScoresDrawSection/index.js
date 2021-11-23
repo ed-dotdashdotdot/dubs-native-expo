@@ -5,8 +5,8 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../../../actions';
 
-import HighScoresSectionHeading from '../HighScoresSectionHeading';
-import HighScoresGrid from '../HighScoresGrid';
+import YourHighScoresSectionHeading from '../YourHighScoresSectionHeading';
+import YourHighScoresGrid from '../YourHighScoresGrid';
 
 import { ucFirst } from '../../../../js/helpers/ucFirst';
 
@@ -17,7 +17,7 @@ import { ucFirst } from '../../../../js/helpers/ucFirst';
 // use loading animation for each section
 // can images get loaded into app - this way, if conection goes offline they can still be used
 
-const HighScoresDrawSection = props => {
+const YourHighScoresDrawSection = props => {
   const {
     dimensions,
     section,
@@ -54,10 +54,10 @@ const HighScoresDrawSection = props => {
         backgroundColor: '#00000080',
       }}
     >
-      <HighScoresSectionHeading 
+      <YourHighScoresSectionHeading 
         textKey={section} 
       />
-      <HighScoresGrid 
+      <YourHighScoresGrid 
         dimensions={dimensions}
         highScoresList={highScoresList} 
         section={section}
@@ -66,4 +66,4 @@ const HighScoresDrawSection = props => {
   ) : null;
 };
 
-export default HighScoresDrawSection;
+export default YourHighScoresDrawSection;
