@@ -96,7 +96,7 @@ const Container = () => {
           paddingRight: 12,
         }}
       >
-        <ImageBackground 
+        <ImageBackground
           style={[
             {
               height: height,
