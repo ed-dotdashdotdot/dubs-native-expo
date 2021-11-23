@@ -15,6 +15,7 @@ import { getCurrentHighScore } from '../../js/helpers/getCurrentHighScore';
 import { 
   colours, 
   defaultImages, 
+  fontFamily,
   ipAddress 
 } from '../../configuration/config.json';
 
@@ -46,6 +47,7 @@ const LoadingImage = props => {
       <Text
         style={{
           color: colours.white,
+          fontFamily: fontFamily,
           fontSize: 24,
           textAlign: 'center',
         }}  
@@ -54,8 +56,11 @@ const LoadingImage = props => {
       </Text>
       <ExpoFastImage
         // onLoad={() => {}}
-        // onLoadStart={() => {}}
+        onLoadStart={() => {
+          // console.log('onLoadStart');
+        }}
         onLoad={() => {
+          console.log('onLoad-a');
           dispatch(gameActions.setGameStatus('game-on'));
           if (getCurrentHighScoreVal !== 0) { 
             dispatch(gameActions.setGameHighScore(getCurrentHighScoreVal));
@@ -67,8 +72,11 @@ const LoadingImage = props => {
           dispatch(durationActions.setDurationPaused(0));
           dispatch(durationActions.setDurationSaved(0));
           dispatch(durationActions.setDurationStatus('game-on'));
+          console.log('onLoad-b');
         }}
-        // onLoadEnd={() => {}}
+        onLoadEnd={() => {
+          console.log('onLoadEnd');
+        }}
         uri={imageSrc}
         cacheKey={`image-${imageToUse}-large`}
         style={{

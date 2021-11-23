@@ -64,6 +64,7 @@ const ImageDetail = props => {
               accessible={false}
               style={{
                 color: colours.white,
+                fontFamily: fontFamily,
                 fontSize: 24,
                 textAlign: 'center',
               }}
