@@ -186,7 +186,7 @@ const GameBoard = props => {
                     //   // headers: { Authorization: 'someAuthToken' },
                     //   // priority: FastImage.priority.normal,
                     // }}
-                    cacheKey={`image-${images.selected}`}
+                    cacheKey={`image-${images.selected}-large`}
                     resizeMode='stretch'
                     style={[
                       {
