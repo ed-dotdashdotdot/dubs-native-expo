@@ -22,7 +22,7 @@ const YourHighScoresButtonSvg = props => {
       />
       <Path
         d="M240 82.8l39 120.1h126.3l-102.2 74.2 39.1 120.1L240 323l-102.2 74.2 39.1-120.1-102.2-74.2H201z"
-        fill="#ffd700"
+        fill={colours.gold}
       />
     </Svg>
   );
