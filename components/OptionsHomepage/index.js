@@ -1,5 +1,5 @@
 import React from 'react';
-import {Platform, Text, TouchableOpacity, View } from 'react-native';
+import {Platform, TouchableOpacity, View } from 'react-native';
 
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
@@ -8,6 +8,7 @@ import DrawSelectedFlag from './components/DrawSelectedFlag';
 import InfoButton from '../buttons/InfoButton';
 import MoreButton from '../buttons/MoreButton';
 import SettingsButton from '../buttons/SettingsButton';
+import YourHighScoresButton from '../buttons/YourHighScoresButton';
 
 import { getFlagFromLanguage } from '../../js/helpers/getFlagFromLanguage';
 
@@ -70,43 +71,22 @@ const OptionsHomepage = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <View 
-          style={{ 
-            flex: 1,
-          }}
-        />
+        <View style={{ flex: 1 }} />
 
-        <View 
-          style={{ 
-            backgroundColor: '#69c',
-            width: 48,
-          }}
-        >
-          <TouchableOpacity
-            onPress={() => {
-              dispatch(gameActions.setGameStatus('your-high-scores'));
-            }}
-          >
-            <Text>Your high scores</Text>
-          </TouchableOpacity>
+        <View style={{ width: 48 }}>
+          <YourHighScoresButton 
+           width={36}
+          />
         </View>
 
         {!isDeviceATablet(Platform.isPad) && (
-          <View 
-            style={{ 
-              width: 48,
-            }}
-          >
+          <View style={{ width: 48 }}>
             <SettingsButton
               width={36}
             />
           </View>
         )}
-        <View 
-          style={{ 
-            width: 48,
-          }}
-        >
+        <View style={{ width: 48 }}>
           <InfoButton
             width={36}
           />
