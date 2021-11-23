@@ -22,8 +22,10 @@ const HighScoresDrawSection = props => {
     dimensions,
     section,
   } = { ...props };
-  console.log('section:')
-  console.log(section)
+  // console.log('\n--') 
+  // console.log('section:');
+  // console.log(section);
+  // console.log('--\n') 
   const duration = useSelector(state => state.duration);
   const dispatch = useDispatch();
   const highScoresFilter = duration.highScores.filter(val => {
@@ -39,6 +41,7 @@ const HighScoresDrawSection = props => {
     highScoresList = highScoresFilter.map(val => {
       return {
         duration: val.split('--')[0],
+        // entryKey: val,
         image: val.split('--')[2],
       };
     });

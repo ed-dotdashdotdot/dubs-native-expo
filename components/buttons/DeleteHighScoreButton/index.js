@@ -2,19 +2,26 @@ import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../../actions';
 
 import DeleteHighScoreButtonSvg from './components/DeleteHighScoreButtonSvg';
 
 const DeleteHighScoreButton = props => {
-  const { width } = { ...props };
-  const { gameActions } = { ...allActions };
+  const { entryKey, width } = { ...props };
+  const duration = useSelector(state => state.duration);
+  console.log('ENTRYKEY');
+  console.log(entryKey);
+  const { durationActions } = { ...allActions };
   const dispatch = useDispatch();
+  const highScoresFiltered = duration.highScores.filter(val => {
+    return val.indexOf(entryKey) === -1;
+  });
+  console.log(highScoresFiltered)
   return (
     <TouchableOpacity
       onPress={() => {
-        // dispatch(gameActions.setGameStatus('app-info'));
+        dispatch(durationActions.setDurationHighScores(highScoresFiltered));
       }}
     >
       <View

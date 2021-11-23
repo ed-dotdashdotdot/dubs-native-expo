@@ -7,13 +7,14 @@ import DeleteHighScoreButton from '../../../buttons/DeleteHighScoreButton';
 
 const HighScoresDrawEntryButtons = props => {
   const {
+    entryKey,
     isPhone,
     highScoreKey,
     image,
   } = { ...props };
 
-  console.log(highScoreKey)
-  // console.log(image)
+  // console.log('entryKey:')
+  // console.log(entryKey)
 
   return (
     <View
@@ -51,6 +52,7 @@ const HighScoresDrawEntryButtons = props => {
         }}
       >
         <DeleteHighScoreButton 
+          entryKey={entryKey}
           height={isPhone ? 40 : 48} 
           highScoreKey={highScoreKey}
           width={isPhone ? 40 : 48}  

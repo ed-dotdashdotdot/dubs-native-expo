@@ -16,29 +16,26 @@ import PageHeading from '../PageHeading';
 const HighScores = props => {
   const { dimensions } = { ...props };
   const duration = useSelector(state => state.duration);
-  // const images = useSelector(state => state.images);
-  // const highScoresSections = [
-  //   "easy",
-  //   "normal",
-  //   "hard",
-  //   "easyBossMode",
-  //   "normalBossMode",
-  //   "hardBossMode",
-  // ];
+  console.log(duration.highScores)
   return (
     <ScrollView>
       <InfoInner>
         <PageHeading 
           textKey={'highScores'}
         />
-        {!duration.highScores.length && <NoHighScores />}
-        {duration.highScores.length && highScoresSections.map(val => (
-          <HighScoresDrawSection
-            dimensions={dimensions}
-            key={val} 
-            section={val} 
-          />
-        ))}
+        {
+          !duration.highScores.length ? (
+            <NoHighScores />
+          ) : 
+        highScoresSections.map(val => { 
+          return (
+            <HighScoresDrawSection
+              dimensions={dimensions}
+              key={val} 
+              section={val} 
+            />
+          )
+        })}
       </InfoInner>
     </ScrollView>
   );

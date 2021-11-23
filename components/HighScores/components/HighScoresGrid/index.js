@@ -12,6 +12,11 @@ const HighScoresGrid = props => {
     highScoresList,
     section,
   } = { ...props };
+  // console.log(section)
+  // console.log('highScoresList.entryKey:');
+  // console.log(highScoresList);
+  // console.log(highScoresList[0].entryKey);
+  // console.log('--');
   return (
     <View
       style={[
@@ -35,6 +40,7 @@ const HighScoresGrid = props => {
         <DrawEntry 
           dimensions={dimensions}
           duration={val.duration}
+          entryKey={`--${section}--${val.image}--`} 
           imageRef={`${val.image}`} 
           key={`${section}-${val.image}`} 
           section={section}

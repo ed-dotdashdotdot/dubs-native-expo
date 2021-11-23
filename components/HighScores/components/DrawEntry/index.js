@@ -25,11 +25,17 @@ import {
 
 const DrawEntry = props => {
   const { 
-    dimensions, 
-    duration, 
+    dimensions,
+    duration,
+    entryKey,
     imageRef,
     section,
   } = { ...props };
+
+  console.log('\n--');
+  console.log('entryKey');
+  console.log(entryKey);
+  console.log('--\n');
 
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);
@@ -151,6 +157,7 @@ const DrawEntry = props => {
       </View> */}
 
       <HighScoresDrawEntryButtons 
+        entryKey={entryKey}
         isPhone={dimensions.width < 600 ? true : false}
         highScoreKey={getHighScoreKey(
           game.level,
