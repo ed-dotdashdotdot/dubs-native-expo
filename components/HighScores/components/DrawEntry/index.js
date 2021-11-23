@@ -32,10 +32,10 @@ const DrawEntry = props => {
     section,
   } = { ...props };
 
-  console.log('\n--');
-  console.log('entryKey');
-  console.log(entryKey);
-  console.log('--\n');
+  // console.log('\n--');
+  // console.log('entryKey');
+  // console.log(entryKey);
+  // console.log('--\n');
 
   const game = useSelector(state => state.game);
   const language = useSelector(state => state.language);

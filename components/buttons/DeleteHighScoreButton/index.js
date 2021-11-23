@@ -10,14 +10,14 @@ import DeleteHighScoreButtonSvg from './components/DeleteHighScoreButtonSvg';
 const DeleteHighScoreButton = props => {
   const { entryKey, width } = { ...props };
   const duration = useSelector(state => state.duration);
-  console.log('ENTRYKEY');
-  console.log(entryKey);
+  // console.log('ENTRYKEY');
+  // console.log(entryKey);
   const { durationActions } = { ...allActions };
   const dispatch = useDispatch();
   const highScoresFiltered = duration.highScores.filter(val => {
     return val.indexOf(entryKey) === -1;
   });
-  console.log(highScoresFiltered)
+  // console.log(highScoresFiltered)
   return (
     <TouchableOpacity
       onPress={() => {

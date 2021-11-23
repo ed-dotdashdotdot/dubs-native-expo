@@ -16,7 +16,7 @@ import PageHeading from '../PageHeading';
 const HighScores = props => {
   const { dimensions } = { ...props };
   const duration = useSelector(state => state.duration);
-  console.log(duration.highScores)
+  // console.log(duration.highScores)
   return (
     <ScrollView>
       <InfoInner>
