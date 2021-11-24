@@ -16,6 +16,13 @@ const YourHighScoresDrawEntryButtons = props => {
   // console.log('entryKey:')
   // console.log(entryKey)
 
+  // console.log(
+  //   entryKey,
+  //   isPhone,
+  //   highScoreKey,
+  //   image
+  // );
+
   return (
     <View
       id='buttonsColumn'
@@ -37,8 +44,8 @@ const YourHighScoresDrawEntryButtons = props => {
         }}
         >
         <PlayAgainButton 
+          entryKey={entryKey}
           height={isPhone ? 40 : 48} 
-          highScoreKey={highScoreKey}
           width={isPhone ? 40 : 48}  
         />
       </View>
@@ -52,7 +59,7 @@ const YourHighScoresDrawEntryButtons = props => {
         <DeleteHighScoreButton 
           entryKey={entryKey}
           height={isPhone ? 40 : 48} 
-          highScoreKey={highScoreKey}
+          // highScoreKey={highScoreKey}
           width={isPhone ? 40 : 48}  
         />
       </View>

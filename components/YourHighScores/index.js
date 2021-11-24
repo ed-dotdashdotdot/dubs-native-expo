@@ -23,19 +23,16 @@ const HighScores = props => {
         <PageHeading 
           textKey={'yourHighScores'}
         />
-        {
-          !duration.highScores.length ? (
-            <YourHighScoresNoResults />
-          ) : 
-        highScoresSections.map(val => { 
-          return (
+        {!duration.highScores.length ? 
+          <YourHighScoresNoResults /> : 
+          highScoresSections.map(val => (
             <YourHighScoresDrawSection
               dimensions={dimensions}
               key={val} 
               section={val} 
             />
-          )
-        })}
+          ))
+        }
       </InfoInner>
     </ScrollView>
   );
