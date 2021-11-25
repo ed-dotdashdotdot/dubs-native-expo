@@ -15,6 +15,12 @@ const YourHighScoresDrawSection = ({ dimensions, section }) => {
   let highScoresList;
 
   if (highScoresFilter.length !== 0) {
+
+    // natural sort
+    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+    // var myArray = [highScoresFilter];
+    console.log(highScoresFilter.sort(collator.compare));
+
     // build object
     highScoresList = highScoresFilter.map(val => {
       return {
