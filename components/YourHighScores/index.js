@@ -7,7 +7,6 @@ import InfoInner from '../InfoInner';
 import NewGameButtons from '../buttons/NewGameButtons';
 import PageHeading from '../PageHeading';
 import YourHighScoresDrawSection from './components/YourHighScoresDrawSection';
-// import YourHighScoresNoResults from './components/YourHighScoresNoResults';
 
 import { highScoresSections } from '../../configuration/config.json';
 
