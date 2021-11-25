@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import allActions from '../../actions';
 
-const AppStateManager = props => {
-  const { status, children  } = { ...props };
+const AppStateManager = ({ status, children }) => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   const handleAppStateChange = state => {

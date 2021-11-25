@@ -11,8 +11,7 @@ import {
 
 import globalStyles from '../../css/style.js';
 
-const PageHeading = props => {
-  const { colour, subTextKeys, textKey } = { ...props };
+const PageHeading = ({ colour, subTextKeys, textKey }) => {
 
   // compose subKeys - used for game-over screen
   let subTextKeysSplit = [];

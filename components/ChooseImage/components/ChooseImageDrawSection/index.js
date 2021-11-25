@@ -2,12 +2,12 @@ import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 // import axios from 'axios';
 
-import { useSelector, useDispatch } from 'react-redux';
-import allActions from '../../../../actions';
+import { useSelector } from 'react-redux';
+// import allActions from '../../../../actions';
 
 import ChooseImageSectionHeading from '../ChooseImageSectionHeading';
 import ChooseImageDrawGrid from '../ChooseImageDrawGrid';
-import ChooseImageGridError from '../ChooseImageGridError';
+// import ChooseImageGridError from '../ChooseImageGridError';
 import Translate from '../../../Translate';
 
 import { ucFirst } from '../../../../js/helpers/ucFirst';
@@ -19,16 +19,10 @@ import { ucFirst } from '../../../../js/helpers/ucFirst';
 // use loading animation for each section
 // can images get loaded into app - this way, if conection goes offline they can still be used
 
-const ChooseImageDrawSection = props => {
-  const {
-    dimensions,
-    section,
-  } = { ...props };
-
+const ChooseImageDrawSection = ({ dimensions, section }) => {
   const images = useSelector(state => state.images);
-
-  const { imagesActions } = { ...allActions };
-  const dispatch = useDispatch();
+  // const { imagesActions } = { ...allActions };
+  // const dispatch = useDispatch();
 
   const imagesValue = images[`section${ucFirst(section)}`];
 

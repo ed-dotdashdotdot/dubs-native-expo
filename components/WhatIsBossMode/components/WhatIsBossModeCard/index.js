@@ -12,32 +12,29 @@ import {
 
 import globalStyles from '../../../../css/style.js';
 
-const WhatIsBossModeCard = props => {
-  const { display } = { ...props };
-  return (
-    <View
-      style={[
-        {
-          backgroundColor: colours.black,
-          marginBottom: 12,
-        },
-        globalStyles.border,
-        globalStyles.borderRadius8,
-        globalStyles.padding12,
-      ]}
-    >
-      <WhatIsBossModeTitle 
-        textKey={`whatIsBossMode_title_${display}_mode`} 
-      />
-      <WhatIsBossModeExample 
-        display={display} 
-      />
-      <WhatIsBossModeDescription 
-        textKey={`whatIsBossMode_description_${display}_mode`} 
-      />
-    </View>
-  );
-};
+const WhatIsBossModeCard = ({ display }) => (
+  <View
+    style={[
+      {
+        backgroundColor: colours.black,
+        marginBottom: 12,
+      },
+      globalStyles.border,
+      globalStyles.borderRadius8,
+      globalStyles.padding12,
+    ]}
+  >
+    <WhatIsBossModeTitle 
+      textKey={`whatIsBossMode_title_${display}_mode`} 
+    />
+    <WhatIsBossModeExample 
+      display={display} 
+    />
+    <WhatIsBossModeDescription 
+      textKey={`whatIsBossMode_description_${display}_mode`} 
+    />
+  </View>
+);
 
 WhatIsBossModeCard.propTypes = {
   display: PropTypes.string.isRequired,

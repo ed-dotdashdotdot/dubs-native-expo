@@ -1,38 +1,16 @@
 import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
-// import axios from 'axios';
+import { View } from 'react-native';
 
-import { useSelector, useDispatch } from 'react-redux';
-import allActions from '../../../../actions';
+import { useSelector } from 'react-redux';
 
 import YourHighScoresSectionHeading from '../YourHighScoresSectionHeading';
 import YourHighScoresGrid from '../YourHighScoresGrid';
 
-import { ucFirst } from '../../../../js/helpers/ucFirst';
-
-// axios load images into each area
-// build backend to handle requests
-// handle no connection
-// store a number of images locally in-case there's no connection
-// use loading animation for each section
-// can images get loaded into app - this way, if conection goes offline they can still be used
-
-const YourHighScoresDrawSection = props => {
-  const {
-    dimensions,
-    section,
-  } = { ...props };
-  // console.log('\n--') 
-  // console.log('section:');
-  // console.log(section);
-  // console.log('--\n') 
+const YourHighScoresDrawSection = ({ dimensions, section }) => {
   const duration = useSelector(state => state.duration);
-  const dispatch = useDispatch();
-  const highScoresFilter = duration.highScores.filter(val => {
-    return val.indexOf(`${section}--`) !== -1;
-  });
+  const highScoresFilter = duration.highScores.filter(val => val.indexOf(`${section}--`) !== -1);
 
-  const collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+  // const collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
 
   let highScoresList;
 
@@ -41,7 +19,6 @@ const YourHighScoresDrawSection = props => {
     highScoresList = highScoresFilter.map(val => {
       return {
         duration: val.split('--')[0],
-        // entryKey: val,
         image: val.split('--')[2],
       };
     });

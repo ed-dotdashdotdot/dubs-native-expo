@@ -16,10 +16,7 @@ import {
 
 import globalStyles from '../../../css/style.js';
 
-const NewGameButtons = props => {
-  const {
-    section
-  } = { ...props };
+const NewGameButtons = ({ section }) => {
   const { gameActions, imagesActions, durationActions } = { ...allActions };
   const dispatch = useDispatch();
   const newGameDispatches = level => {

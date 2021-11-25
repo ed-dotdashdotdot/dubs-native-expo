@@ -14,11 +14,7 @@ import {
 
 import globalStyles from '../../../css/style.js';
 
-const StartButton = props => {
-  const {
-    gameData,
-    textKey,
-  } = { ...props };
+const StartButton = ({ gameData, textKey }) => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   return (

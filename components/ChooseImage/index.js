@@ -8,8 +8,7 @@ import ChooseImageDrawSection from './components/ChooseImageDrawSection';
 import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 
-const ChooseImage = props => {
-  const { dimensions } = { ...props };
+const ChooseImage = ({ dimensions }) => {
   const images = useSelector(state => state.images);
   return (
     <ScrollView>

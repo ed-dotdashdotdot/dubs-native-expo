@@ -39,8 +39,6 @@ import NewGameButtons from '../buttons/NewGameButtons';
 import { sanitiseDeviceLocale } from '../../js/helpers/sanitiseDeviceLocale';
 
 const GameHome = () => {
-  // const language = useSelector(state => state.language);
-
   // console.log(sanitiseDeviceLocale(language.selected).language)
   // console.log(DeviceInfo?.isTablet());
   // const type = () => { await Device.getDeviceTypeAsync()}

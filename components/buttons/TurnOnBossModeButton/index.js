@@ -14,14 +14,9 @@ import {
 
 import globalStyles from '../../../css/style.js';
 
-const TurnOnBossModeButton = props => {
-  const { 
-    bossMode, 
-  } = { ...props };
-
+const TurnOnBossModeButton = ({ bossMode }) => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
-
   return (
     <View
       style={[

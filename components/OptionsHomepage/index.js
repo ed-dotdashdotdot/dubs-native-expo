@@ -75,7 +75,7 @@ const OptionsHomepage = () => {
 
         <View style={{ width: 48 }}>
           <YourHighScoresButton 
-           width={36}
+            width={36}
           />
         </View>
 

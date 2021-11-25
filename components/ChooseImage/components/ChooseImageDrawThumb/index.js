@@ -14,12 +14,7 @@ import {
 
 import globalStyles from '../../../../css/style';
 
-const DrawThumb = props => {
-  const { 
-    dimensions, 
-    imageRef 
-  } = { ...props };
-
+const DrawThumb = ({ dimensions, imageRef }) => {
   // const maxHeight = dimensions.height - 24 - 24 - 8;
   const maxWidth = dimensions.width - 24 - 24 - 8;
   const imagesPerRow = dimensions.width > 999 ? 6 : dimensions.width > 600 ? 4 : 2;

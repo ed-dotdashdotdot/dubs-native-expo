@@ -10,40 +10,34 @@ import {
 
 import globalStyles from '../../../../css/style.js';
 
-const SectionHeading = props => {
-  const {
-    textKey,
-  } = { ...props };
-
-  return (
-    <View
-      style={[
-        {
-          borderBottomWidth: 0,
-          borderBottomLeftRadius: 0,
-          borderBottomRightRadius: 0,
-        },
-        globalStyles.border,
-        globalStyles.borderRadius8,
-        globalStyles.padding12,
-      ]}
+const SectionHeading = ({ textKey }) => (
+  <View
+    style={[
+      {
+        borderBottomWidth: 0,
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+      },
+      globalStyles.border,
+      globalStyles.borderRadius8,
+      globalStyles.padding12,
+    ]}
+  >
+    <Text
+      accessible={true}
+      accessibilityRole='header'
+      style={{
+        color: colours.white,
+        fontFamily: fontFamily,
+        fontSize: 24,
+        fontWeight: 'bold',
+        textAlign: 'center',
+      }}
     >
-      <Text
-        accessible={true}
-        accessibilityRole='header'
-        style={{
-          color: colours.white,
-          fontFamily: fontFamily,
-          fontSize: 24,
-          fontWeight: 'bold',
-          textAlign: 'center',
-        }}
-      >
-        <Translate textKey={textKey} />
-      </Text>
-    </View>
-  );
-};
+      <Translate textKey={textKey} />
+    </Text>
+  </View>
+);
 
 SectionHeading.propTypes = {
   textKey: PropTypes.string.isRequired,

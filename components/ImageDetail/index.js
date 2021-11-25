@@ -21,14 +21,7 @@ import {
 
 import globalStyles from '../../css/style.js';
 
-const ImageDetail = props => {
-  const { 
-    bossMode, 
-    dimensions, 
-    image, 
-    level 
-  } = { ...props };
-    
+const ImageDetail = ({ bossMode, dimensions, image, level }) => {    
   const { gameActions, imagesActions } = { ...allActions };
   const dispatch = useDispatch();
   const gameData = getGameData(level);

@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 
 import GameBoard from '../GameBoard';
 
-const GameOn = props => {
-  const { dimensions, level } = { ...props };
-  return (
-    <GameBoard
-      dimensions={dimensions}
-      level={level}
-    />
-  );
-};
+const GameOn = ({ dimensions, level }) => (
+  <GameBoard
+    dimensions={dimensions}
+    level={level}
+  />
+);
 
 GameOn.propTypes = {
   dimensions: PropTypes.object.isRequired,

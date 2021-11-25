@@ -3,20 +3,13 @@ import PropTypes from 'prop-types';
 
 import Translate from '../Translate';
 
-const DrawFastestTime = props => {
-  const { 
-    lang,
-    time,
-  } = { ...props };
-
-  return (
-    <>
-      {time}
-      {lang === 'de-DE' && " "}
-      <Translate textKey='secondsShort' />
-    </>
-  );
-};
+const DrawFastestTime = ({ lang, time }) => (
+  <>
+    {time}
+    {lang === 'de-DE' && " "}
+    <Translate textKey='secondsShort' />
+  </>
+);
 
 DrawFastestTime.propTypes = {
   lang: PropTypes.string.isRequired,

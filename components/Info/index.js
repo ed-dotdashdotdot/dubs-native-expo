@@ -25,8 +25,7 @@ import {
 import globalStyles from '../../css/style.js';
 
 const Info = () => {
-  const game = useSelector(state => state.game);
-  const images = useSelector(state => state.images);
+  const { game, images } = useSelector(state => state);
   const { 
     height, 
     width,

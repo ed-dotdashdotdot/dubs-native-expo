@@ -6,27 +6,24 @@ import { drawFlagComponent } from '../../../../js/helpers/drawFlagComponent';
 
 import globalStyles from '../../../../css/style';
 
-const DrawSelectedFlag = props => {
-  const { flag } = { ...props };
-  return (
-    <View
-      style={[
-        {
-          borderRadius: 24,
-          height: 48,
-          width: 48,
-        },
-        globalStyles.border,
-      ]}
-    >
-      {(() => drawFlagComponent(
-        flag,
-        44, 
-        44,
-      ))()}
-    </View>
-  );
-};
+const DrawSelectedFlag = ({ flag }) => (
+  <View
+    style={[
+      {
+        borderRadius: 24,
+        height: 48,
+        width: 48,
+      },
+      globalStyles.border,
+    ]}
+  >
+    {(() => drawFlagComponent(
+      flag,
+      44, 
+      44,
+    ))()}
+  </View>
+);
 
 DrawSelectedFlag.defaultProps = {
   flag: 'En',

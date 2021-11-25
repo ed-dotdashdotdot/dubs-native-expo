@@ -21,8 +21,7 @@ import {
 
 import globalStyles from '../../css/style.js';
 
-const GameReady = props => {
-  const { level } = { ...props };
+const GameReady = ({ level }) => {
   const game = useSelector(state => state.game);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();

@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 
 import { sanitiseDeviceLocale } from '../../js/helpers/sanitiseDeviceLocale';
 
-const Config = props => {
-  let { deviceLocale } = { ...props };
+const Config = ({ deviceLocale }) => {
   // console.log('---');
   // console.log(deviceLocale);
   // console.log('---');

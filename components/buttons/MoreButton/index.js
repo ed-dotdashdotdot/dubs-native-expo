@@ -4,20 +4,17 @@ import PropTypes from 'prop-types';
 
 import MoreButtonSvg from './components/MoreButtonSvg';
 
-const MoreButton = props => {
-  const { width } = { ...props };
-  return (
-    <View
-      style={{
-        alignSelf: 'center',
-        justifyContent: 'center',
-        width,
-      }}
-    >
-      <MoreButtonSvg />
-    </View>
-  );
-};
+const MoreButton = ({ width }) => (
+  <View
+    style={{
+      alignSelf: 'center',
+      justifyContent: 'center',
+      width,
+    }}
+  >
+    <MoreButtonSvg />
+  </View>
+);
 
 MoreButton.defaultProps = {
   width: 36,

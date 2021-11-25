@@ -9,23 +9,20 @@ import {
   fontFamily 
 } from '../../../../configuration/config.json';
 
-const WhatIsBossModeDescription = props => {
-  const { textKey } = { ...props };
-  return (
-    <Text
-      style={{
-        color: colours.white,
-        fontFamily: fontFamily,
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginTop: 12,
-        textAlign: 'center',
-      }}
-    >
-      <Translate textKey={textKey} />
-    </Text>
-  );
-};
+const WhatIsBossModeDescription = ({ textKey }) => (
+  <Text
+    style={{
+      color: colours.white,
+      fontFamily: fontFamily,
+      fontSize: 20,
+      fontWeight: 'bold',
+      marginTop: 12,
+      textAlign: 'center',
+    }}
+  >
+    <Translate textKey={textKey} />
+  </Text>
+);
 
 WhatIsBossModeDescription.propTypes = {
   textKey: PropTypes.string.isRequired,

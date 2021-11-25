@@ -5,39 +5,36 @@ import PropTypes from 'prop-types';
 import SmileyFaceSvg from '../../components/SmileyFaceSvg';
 import WhatIsBossModeCardEquals from '../WhatIsBossModeEquals';
 
-const WhatIsBossModeExample = props => {
-  const { display } = { ...props };
-  return (
+const WhatIsBossModeExample = ({ display }) => (
+  <View 
+    style={{
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'row',
+    }}
+  >
     <View 
       style={{
-        alignItems: 'center',
-        display: 'flex',
-        flexDirection: 'row',
+        alignItems: 'flex-end',
+        flex: 2,
       }}
     >
-      <View 
-        style={{
-          alignItems: 'flex-end',
-          flex: 2,
-        }}
-      >
-        <SmileyFaceSvg />
-      </View>
-      <WhatIsBossModeCardEquals />
-      <View
-        style={{
-          alignItems: display === 'normal' ? 'flex-start' : 'flex-end',
-          flex: 2,
-          transform: [{
-            scale: display === 'normal' ? 1 : -1,
-          }]
-        }}
-      >
-        <SmileyFaceSvg />
-      </View>
+      <SmileyFaceSvg />
     </View>
-  );
-};
+    <WhatIsBossModeCardEquals />
+    <View
+      style={{
+        alignItems: display === 'normal' ? 'flex-start' : 'flex-end',
+        flex: 2,
+        transform: [{
+          scale: display === 'normal' ? 1 : -1,
+        }]
+      }}
+    >
+      <SmileyFaceSvg />
+    </View>
+  </View>
+);
 
 WhatIsBossModeExample.propTypes = {
   display: PropTypes.string.isRequired,

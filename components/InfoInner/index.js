@@ -5,15 +5,12 @@ import Component from './component';
 
 import globalStyles from '../../css/style.js';
 
-const InfoInner = props => {
-  const { children } = { ...props };
-  return (
-    <Component
-      content={children}
-      styles={globalStyles.infoInner}
-    />
-  );
-};
+const InfoInner = ({ children }) => (
+  <Component
+    content={children}
+    styles={globalStyles.infoInner}
+  />
+);
 
 InfoInner.propTypes = {
   children: PropTypes.oneOfType([

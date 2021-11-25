@@ -7,8 +7,7 @@ import allActions from '../../../actions';
 
 import SettingsButtonSvg from './components/SettingsButtonSvg';
 
-const SettingsButton = props => {
-  const { width } = { ...props };
+const SettingsButton = ({ width }) => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   return (

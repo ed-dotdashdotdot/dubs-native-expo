@@ -2,17 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-const Component = props => {
-  const { 
-    content,
-    styles
-  } = { ...props };
-  return (
-    <View style={[styles]}>
-      { content }
-    </View>
-  );
-};
+const Component = ({ content, styles }) => (
+  <View style={[styles]}>
+    { content }
+  </View>
+);
 
 Component.propTypes = {
   content: PropTypes.oneOfType([

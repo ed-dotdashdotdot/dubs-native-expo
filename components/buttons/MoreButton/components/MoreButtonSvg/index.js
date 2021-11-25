@@ -6,37 +6,32 @@ import {
   colours 
 } from '../../../../../configuration/config.json';
 
-const MoreButtonSvg = props => {
-  const { 
-    colour
-  } = { ...props };
-  return (
-    <Svg
-      viewBox="0 0 480 480"
-      xmlns="http://www.w3.org/2000/svg"
-      { ...props }
-    >
-      <Circle 
-        cx={240} 
-        cy={240} 
-        fill={colour} 
-        r={36} 
-      />
-      <Circle 
-        cx={114} 
-        cy={240} 
-        fill={colour} 
-        r={36} 
-      />
-      <Circle 
-        cx={366} 
-        cy={240} 
-        fill={colour} 
-        r={36} 
-      />
-    </Svg>
-  );
-};
+const MoreButtonSvg = ({ colour, ...props }) => (
+  <Svg
+    viewBox="0 0 480 480"
+    xmlns="http://www.w3.org/2000/svg"
+    { ...props }
+  >
+    <Circle 
+      cx={240} 
+      cy={240} 
+      fill={colour} 
+      r={36} 
+    />
+    <Circle 
+      cx={114} 
+      cy={240} 
+      fill={colour} 
+      r={36} 
+    />
+    <Circle 
+      cx={366} 
+      cy={240} 
+      fill={colour} 
+      r={36} 
+    />
+  </Svg>
+);
 
 MoreButtonSvg.defaultProps = {
   colour: colours.white,

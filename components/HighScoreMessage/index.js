@@ -9,29 +9,26 @@ import {
   colours 
 } from '../../configuration/config.json';
 
-const HighScoreMessage = props => {
-  const { currentHighScore, isHighScore, lang } = { ...props };
-  return (
-    <Text
-      style={{
-        color: colours.white,
-        fontSize: 20,
-      }}
-    >
-      {isHighScore ? 
-        <Translate textKey='newHighScore' /> : 
-        (
-          <>
-            <Translate textKey='highScore' /> 
-            {": "}
-            {localiseDurationSeconds(currentHighScore, lang)}
-            {"\u00A0"}
-            <Translate textKey='secondsLong' /> 
-          </>
-        )
-      }
-    </Text>
-  );
-};
+const HighScoreMessage = ({ currentHighScore, isHighScore, lang }) => (
+  <Text
+    style={{
+      color: colours.white,
+      fontSize: 20,
+    }}
+  >
+    {isHighScore ? 
+      <Translate textKey='newHighScore' /> : 
+      (
+        <>
+          <Translate textKey='highScore' /> 
+          {": "}
+          {localiseDurationSeconds(currentHighScore, lang)}
+          {"\u00A0"}
+          <Translate textKey='secondsLong' /> 
+        </>
+      )
+    }
+  </Text>
+);
 
 export default HighScoreMessage;

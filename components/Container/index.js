@@ -25,9 +25,7 @@ import {
 
 const Container = () => {
   const duration = useSelector(state => state.duration);
-  const game = useSelector(state => state.game);
-  const images = useSelector(state => state.images);
-  const language = useSelector(state => state.language);
+  const { game, images, language } = useSelector(state => state);
   const { durationActions, gameActions } = { ...allActions };
   const dispatch = useDispatch();
   const { 
@@ -37,11 +35,9 @@ const Container = () => {
 
   useEffect(() => {
     if (isGameOver(game.status, game.data.length, game.found.length)) {
-
       const newDate = new Date().getTime();
       const gameDuration = newDate - duration.start;
       const gameDurationHumanise = `${(gameDuration / 1000).toFixed(2)}`;
-
       const currentHighScoreStatus = getExistingHighScoreValue(
         game.level,
         game.bossMode,

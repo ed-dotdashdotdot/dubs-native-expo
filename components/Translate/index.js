@@ -4,8 +4,7 @@ import { useSelector } from 'react-redux';
 import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
-const Translate = props => {
-  const { textKey } = props;
+const Translate = ({ textKey }) => {
   const language = useSelector(state => state.language);
   const polyglot = new Polyglot();
   polyglot.extend(i18n());

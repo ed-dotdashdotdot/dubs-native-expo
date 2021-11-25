@@ -24,11 +24,8 @@ import {
   ipAddress,
 } from '../../configuration/config.json';
 
-const GameBoard = props => {
-  const { dimensions, level } = { ...props };
-  const device = useSelector(state => state.device);
-  const game = useSelector(state => state.game);
-  const images = useSelector(state => state.images);
+const GameBoard = ({ dimensions, level }) => {
+  const { device, game, images } = useSelector(state => state);
   const { gameActions, imagesActions, durationActions } = { ...allActions };
   const dispatch = useDispatch();
 

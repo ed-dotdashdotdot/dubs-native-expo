@@ -19,14 +19,11 @@ import {
   ipAddress 
 } from '../../configuration/config.json';
 
-const LoadingImage = props => {
-  let { imageToUse } = { ...props };
+const LoadingImage = ({ imageToUse }) => {
   if (imageToUse == '') {
     imageToUse = defaultImages[Math.floor(Math.random() * defaultImages.length)];
   }
-
-  const game = useSelector(state => state.game);
-  const duration = useSelector(state => state.duration);
+  const { duration, game } = useSelector(state => state);
   const { gameActions, imagesActions, durationActions } = { ...allActions };
   const dispatch = useDispatch();
   

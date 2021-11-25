@@ -19,10 +19,7 @@ import {
 import globalStyles from '../../css/style.js';
 
 const GameOver = () => {
-  const duration = useSelector(state => state.duration);
-  const game = useSelector(state => state.game);
-  const images = useSelector(state => state.images);
-  const language = useSelector(state => state.language);
+  const { duration, game, images, language } = useSelector(state => state);
 
   let subTextKeys = `${game.level}Level`;
   if (game.bossMode) {

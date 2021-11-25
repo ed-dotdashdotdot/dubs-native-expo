@@ -9,8 +9,7 @@ import { drawFlagComponent } from '../../../../js/helpers/drawFlagComponent';
 
 import globalStyles from '../../../../css/style.js';
 
-const DrawFlag = props => {
-  const { dimensions, flag } = { ...props };
+const DrawFlag = ({ dimensions, flag }) => {
   const { gameActions, languageActions } = { ...allActions };
   const dispatch = useDispatch();
 

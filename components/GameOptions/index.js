@@ -12,9 +12,7 @@ import {
 } from '../../configuration/config.json';
 
 const GameOptions = () => {
-  const game = useSelector(state => state.game);
-  const language = useSelector(state => state.language);
-  const duration = useSelector(state => state.duration);
+  const { duration, game, language } = useSelector(state => state);
   return (
     <View 
       style={{

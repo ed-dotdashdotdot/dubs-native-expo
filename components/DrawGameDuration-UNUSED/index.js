@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { drawGameDuration } from '../../js/helpers/drawGameDuration';
 import { getDurationLanguage } from '../../js/helpers/getDurationLanguage';
 
-const DrawGameDuration = props => {
-  const { gameDuration, lang } = { ...props };
+const DrawGameDuration = ({ gameDuration, lang }) => {
   const durationLanguage = getDurationLanguage(lang);
   return drawGameDuration(gameDuration, durationLanguage);
 };

@@ -11,8 +11,7 @@ import NewGameButtons from '../buttons/NewGameButtons';
 import { whichLevelColour } from '../../js/helpers/whichLevelColour';
 
 const GamePaused = () => {
-  const game = useSelector(state => state.game);
-  const duration = useSelector(state => state.duration);
+  const { duration, game } = useSelector(state => state);
   const { durationActions } = { ...allActions };
   const dispatch = useDispatch();
 

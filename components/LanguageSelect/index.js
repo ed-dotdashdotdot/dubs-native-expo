@@ -7,8 +7,7 @@ import PageHeading from '../PageHeading';
 
 import { isPortrait } from '../../js/helpers/isPortrait';
 
-const LanguageSelect = props => {
-  const { dimensions } = { ...props };
+const LanguageSelect = ({ dimensions }) => {
 
   const { height, width } = useWindowDimensions();
   const isDevicePortrait = isPortrait(height, width);
