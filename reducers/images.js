@@ -22,28 +22,7 @@ const defaultImagesState = {
     loaded: true,
     error: false,
     total: 0,
-    images: [
-      '1',
-      '2',
-      '3',
-      '4',
-      '5',
-      '6',
-      '7',
-      '8',
-      '9',
-      '10',
-      '20',
-      '21',
-      '22',
-      '23',
-      '14',
-      '15',
-      '16',
-      '17',
-      '18',
-      '19',
-    ]
+    images: ['1', '2', '3', '4', '5', '10', '20', '21']
   },
   sectionNature: {
     name: 'nature',
@@ -51,7 +30,7 @@ const defaultImagesState = {
     loaded: true,
     error: false,
     total: 0,
-    images: ['1', '2', '6', '7', '8', '9']
+    images: ['6', '7', '8', '9']
   },
   sectionPatterns: {
     name: 'patterns',
@@ -59,7 +38,7 @@ const defaultImagesState = {
     loaded: true,
     error: false,
     total: 0,
-    images: ['22', '23']
+    images: ['11', '12', '22', '23']
   },
   sectionTechnology: {
     name: 'technology',
