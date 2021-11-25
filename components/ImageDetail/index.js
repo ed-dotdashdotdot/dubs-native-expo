@@ -8,6 +8,7 @@ import allActions from '../../actions';
 import ExpoFastImage from 'expo-fast-image';
 
 import InfoInner from '../InfoInner';
+import LoadingAnimation from '../LoadingAnimation';
 import TurnOnBossModeButton from '../buttons/TurnOnBossModeButton';
 import Translate from '../Translate';
 
@@ -56,7 +57,7 @@ const ImageDetail = ({ bossMode, dimensions, image, level }) => {
             <Text
               accessible={false}
               style={{
-                color: colours.white,
+                color: colours.green,
                 fontFamily: fontFamily,
                 fontSize: 24,
                 textAlign: 'center',
@@ -64,18 +65,27 @@ const ImageDetail = ({ bossMode, dimensions, image, level }) => {
             >
               <Translate textKey='loading' />
             </Text>
+            <LoadingAnimation />
+            <LoadingAnimation />
           </View>
           <View
             accessible={true}
             accessibilityRole='image'
           >
-            <ExpoFastImage 
+            <ExpoFastImage
+              onLoadStart={() => console.log('onLoadStart')}
+              onLoad={() => console.log('onLoad')}
+              onLoadEnd={() => console.log('onLoadEnd')}
               accessible={true}
               accessibilityRole='image'
               cacheKey={`image-${image}-medium`}
               style={{
                 height: '100%',
                 width: '100%',
+                // height: 200,
+                // width: 200,
+                // display: 'none',
+                // opacity: 0.5,
               }}
               uri={imageSrc}
             />
