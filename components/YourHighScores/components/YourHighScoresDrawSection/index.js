@@ -10,16 +10,13 @@ const YourHighScoresDrawSection = ({ dimensions, section }) => {
   const duration = useSelector(state => state.duration);
   const highScoresFilter = duration.highScores.filter(val => val.indexOf(`${section}--`) !== -1);
 
-  // const collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
-
   let highScoresList;
 
   if (highScoresFilter.length !== 0) {
 
     // natural sort
     var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
-    // var myArray = [highScoresFilter];
-    console.log(highScoresFilter.sort(collator.compare));
+    highScoresFilter.sort(collator.compare);
 
     // build object
     highScoresList = highScoresFilter.map(val => {

@@ -4,22 +4,27 @@ import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 
 import InfoInner from '../InfoInner';
+import NewGameButtons from '../buttons/NewGameButtons';
 import PageHeading from '../PageHeading';
 import YourHighScoresDrawSection from './components/YourHighScoresDrawSection';
-import YourHighScoresNoResults from './components/YourHighScoresNoResults';
+// import YourHighScoresNoResults from './components/YourHighScoresNoResults';
 
 import { highScoresSections } from '../../configuration/config.json';
 
 const HighScores = ({ dimensions }) => {
   const duration = useSelector(state => state.duration);
+  const pageTitleKey = duration.highScores.length ? 'yourHighScores' : 'youHaveNoHighScoresSaved'
   return (
     <ScrollView>
       <InfoInner>
         <PageHeading 
-          textKey={'yourHighScores'}
+          textKey={pageTitleKey}
         />
-        {!duration.highScores.length ? 
-          <YourHighScoresNoResults /> : 
+        {!duration.highScores.length ? (
+          <NewGameButtons 
+            section='your-high-scores'
+          />
+         ) : 
           highScoresSections.map(val => (
             <YourHighScoresDrawSection
               dimensions={dimensions}

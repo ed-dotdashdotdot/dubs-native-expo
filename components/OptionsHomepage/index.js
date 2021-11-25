@@ -17,7 +17,7 @@ const isDeviceATablet = isPad => { // needs to be extended for android
 }
 
 const OptionsHomepage = () => {
-  const language = useSelector(state => state.language);
+  const { duration, language } = useSelector(state => state);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   return (  
@@ -72,13 +72,14 @@ const OptionsHomepage = () => {
           </View>
         </TouchableOpacity>
         <View style={{ flex: 1 }} />
-
-        <View style={{ width: 48 }}>
-          <YourHighScoresButton 
-            width={36}
-          />
-        </View>
-
+        
+        {!!duration.highScores.length && (
+          <View style={{ width: 48 }}>
+            <YourHighScoresButton 
+              width={36}
+            />
+          </View>
+        )}
         {!isDeviceATablet(Platform.isPad) && (
           <View style={{ width: 48 }}>
             <SettingsButton
@@ -86,11 +87,11 @@ const OptionsHomepage = () => {
             />
           </View>
         )}
-        <View style={{ width: 48 }}>
+        {/* <View style={{ width: 48 }}>
           <InfoButton
             width={36}
           />
-        </View>
+        </View> */}
       </View>
     </View>
   );
