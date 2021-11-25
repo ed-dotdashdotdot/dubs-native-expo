@@ -1,141 +1,139 @@
 import { drawStopwatch } from '../';
 
-describe('drawStopwatch() - null values', () => {
+describe.only('drawStopwatch() - null values', () => {
   it.each`
-    durationMs   | expected
+    duration     | expected
     ${null}      | ${'00:00'}
     ${undefined} | ${'00:00'}
     ${false}     | ${'00:00'}
     ${0}         | ${'00:00'}
   `(
-    'should return \'$expected\' value when durationMs is $durationMs',
-    ({ durationMs, expected }) => {
+    'should return \'$expected\' value when duration is $duration',
+    ({ duration, expected }) => {
       expect(
-        drawStopwatch(durationMs)
+        drawStopwatch(duration)
       ).toBe(expected);
     }
   );
 });
-describe('drawStopwatch() - up to a minute', () => {
+describe.only('drawStopwatch() - up to a minute', () => {
   it.each`
-    durationMs | expected
-    ${1000}    | ${'00:01'}
-    ${2000}    | ${'00:02'}
-    ${2400}    | ${'00:02'}
-    ${2500}    | ${'00:03'}
-    ${2600}    | ${'00:03'}
-    ${3000}    | ${'00:03'}
-    ${9000}    | ${'00:09'}
-    ${9250}    | ${'00:09'}
-    ${9500}    | ${'00:10'}
-    ${9800}    | ${'00:10'}
-    ${9900}    | ${'00:10'}
-    ${20000}   | ${'00:20'}
-    ${30000}   | ${'00:30'}
-    ${40000}   | ${'00:40'}
-    ${50000}   | ${'00:50'}
-    ${59000}   | ${'00:59'}
-    ${59100}   | ${'00:59'}
-    ${59400}   | ${'00:59'}
-    ${59500}   | ${'01:00'}
-    ${59700}   | ${'01:00'}
+    duration | expected
+    ${1}     | ${'00:01'}
+    ${2}     | ${'00:02'}
+    ${2.4}   | ${'00:02'}
+    ${2.5}   | ${'00:02'}
+    ${2.6}   | ${'00:02'}
+    ${3}     | ${'00:03'}
+    ${9}     | ${'00:09'}
+    ${9.25}  | ${'00:09'}
+    ${9.5}   | ${'00:09'}
+    ${9.8}   | ${'00:09'}
+    ${9.9}   | ${'00:09'}
+    ${20}    | ${'00:20'}
+    ${30}    | ${'00:30'}
+    ${40}    | ${'00:40'}
+    ${50}    | ${'00:50'}
+    ${59}    | ${'00:59'}
+    ${59.1}  | ${'00:59'}
+    ${59.4}  | ${'00:59'}
+    ${59.5}  | ${'00:59'}
+    ${59.7}  | ${'00:59'}
   `(
-    'should return \'$expected\' value when durationMs is $durationMs',
-    ({ durationMs, expected }) => {
+    'should return \'$expected\' value when duration is $duration',
+    ({ duration, expected }) => {
       expect(
-        drawStopwatch(durationMs)
+        drawStopwatch(duration)
       ).toBe(expected);
     }
   );
 });
-describe('drawStopwatch() - between one and ten minutes', () => {
+describe.only('drawStopwatch() - between one and ten minutes', () => {
   it.each`
-    durationMs | expected
-    ${60000}   | ${'01:00'}
-    ${61000}   | ${'01:01'}
-    ${62000}   | ${'01:02'}
-    ${68000}   | ${'01:08'}
-    ${68100}   | ${'01:08'}
-    ${68500}   | ${'01:09'}
-    ${69000}   | ${'01:09'}
-    ${70000}   | ${'01:10'}
-    ${90000}   | ${'01:30'}
-    ${100000}  | ${'01:40'}
-    ${110000}  | ${'01:50'}
-    ${119000}  | ${'01:59'}
-    ${120000}  | ${'02:00'}
-    ${121000}  | ${'02:01'}
-    ${179000}  | ${'02:59'}
-    ${180000}  | ${'03:00'}
-    ${240000}  | ${'04:00'}
-    ${300000}  | ${'05:00'}
-    ${360000}  | ${'06:00'}
-    ${420000}  | ${'07:00'}
-    ${480000}  | ${'08:00'}
-    ${540000}  | ${'09:00'}
-    ${599000}  | ${'09:59'}
+    duration | expected
+    ${60}    | ${'01:00'}
+    ${61}    | ${'01:01'}
+    ${62}    | ${'01:02'}
+    ${68}    | ${'01:08'}
+    ${68.1}  | ${'01:08'}
+    ${68.5}  | ${'01:08'}
+    ${69}    | ${'01:09'}
+    ${70}    | ${'01:10'}
+    ${90}    | ${'01:30'}
+    ${100}   | ${'01:40'}
+    ${110}   | ${'01:50'}
+    ${120}   | ${'02:00'}
+    ${121}   | ${'02:01'}
+    ${179}   | ${'02:59'}
+    ${180}   | ${'03:00'}
+    ${240}   | ${'04:00'}
+    ${300}   | ${'05:00'}
+    ${360}   | ${'06:00'}
+    ${420}   | ${'07:00'}
+    ${480}   | ${'08:00'}
+    ${540}   | ${'09:00'}
+    ${599}   | ${'09:59'}
   `(
-    'should return \'$expected\' value when durationMs is $durationMs',
-    ({ durationMs, expected }) => {
+    'should return \'$expected\' value when duration is $duration',
+    ({ duration, expected }) => {
       expect(
-        drawStopwatch(durationMs)
+        drawStopwatch(duration)
       ).toBe(expected);
     }
   );
 });
-describe('drawStopwatch() - between ten minutes and an hour', () => {
+describe.only('drawStopwatch() - between ten minutes and an hour', () => {
   it.each`
-    durationMs | expected
-    
-    ${600000}  | ${'10:00'}
-    ${601000}  | ${'10:01'}
-    ${900000}  | ${'15:00'}
-    ${1140000} | ${'19:00'}
-    ${1199000} | ${'19:59'}
-    ${1200000} | ${'20:00'}
-    ${3590000} | ${'59:50'}
-    ${3599000} | ${'59:59'}
+    duration | expected
+    ${600}   | ${'10:00'}
+    ${601}   | ${'10:01'}
+    ${900}   | ${'15:00'}
+    ${1140}  | ${'19:00'}
+    ${1199}  | ${'19:59'}
+    ${1200}  | ${'20:00'}
+    ${3590}  | ${'59:50'}
+    ${3599}  | ${'59:59'}
   `(
-    'should return \'$expected\' value when durationMs is $durationMs',
-    ({ durationMs, expected }) => {
+    'should return \'$expected\' value when duration is $duration',
+    ({ duration, expected }) => {
       expect(
-        drawStopwatch(durationMs)
+        drawStopwatch(duration)
       ).toBe(expected);
     }
   );
 });
-describe('drawStopwatch()- over an hour', () => {
+describe.only('drawStopwatch()- over an hour', () => {
   it.each`
-    durationMs | expected
-    ${3600000} | ${'01:00:00'}
-    ${7200000} | ${'02:00:00'}
-    ${14400000} | ${'04:00:00'}
-    ${28800000} | ${'08:00:00'}
+    duration | expected
+    ${3600}  | ${'01:00:00'}
+    ${7200}  | ${'02:00:00'}
+    ${14400} | ${'04:00:00'}
+    ${28800} | ${'08:00:00'}
   `(
-    'should return \'$expected\' value when durationMs is $durationMs',
-    ({ durationMs, expected }) => {
+    'should return \'$expected\' value when duration is $duration',
+    ({ duration, expected }) => {
       expect(
-        drawStopwatch(durationMs)
+        drawStopwatch(duration)
       ).toBe(expected);
     }
   );
 });
-describe('drawStopwatch()- over a day', () => {
+describe.only('drawStopwatch()- over a day', () => {
   it.each`
-    durationMs | expected
-    ${86400000} | ${'01:00:00:00'}
-    ${86401000} | ${'01:00:00:01'}
-    ${86400000 + (3600 * 1000)} | ${'01:01:00:00'}
-    ${86400000 + (3600 * 1000) + (60 * 1000)} | ${'01:01:01:00'}
-    ${86400000 + (3600 * 1000) + (60 * 1000) + 1000} | ${'01:01:01:01'}
-    ${(86400000 * 12) + (3600 * 1000) + (60 * 1000) + 1000} | ${'12:01:01:01'}
-    ${(86400000 * 1000) + (3600 * 1000) + (60 * 1000) + 1000} | ${'1000:01:01:01'}
-    ${86400000 * 3} | ${'03:00:00:00'}
+    duration                          | expected
+    ${86400}                          | ${'01:00:00:00'}
+    ${86401}                          | ${'01:00:00:01'}
+    ${86400 + 3600}                   | ${'01:01:00:00'}
+    ${86400 + 3600 + 60}              | ${'01:01:01:00'}
+    ${86400 + 3600 + 60 + 1}          | ${'01:01:01:01'}
+    ${(86400 * 12) + 3600 + 60 + 1}   | ${'12:01:01:01'}
+    ${(86400 * 1000) + 3600 + 60 + 1} | ${'1000:01:01:01'}
+    ${86400 * 3}                      | ${'03:00:00:00'}
   `(
-    'should return \'$expected\' value when durationMs is $durationMs',
-    ({ durationMs, expected }) => {
+    'should return \'$expected\' value when duration is $duration',
+    ({ duration, expected }) => {
       expect(
-        drawStopwatch(durationMs)
+        drawStopwatch(duration)
       ).toBe(expected);
     }
   );
