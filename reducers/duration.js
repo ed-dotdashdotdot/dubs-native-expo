@@ -2,7 +2,8 @@ const defaultDurationState = {
   end: '',
   highScores: [
     '12.34--easy--1--',
-    '23.45--easy--2--',
+    '22.45--easy--4--',
+    '2.45--easy--2--',
     '123.45--easyBossMode--2--',
     '235.56--normal--3--',
     '1235.56--normalBossMode--3--',
