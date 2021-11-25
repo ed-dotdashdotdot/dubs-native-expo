@@ -1,4 +1,15 @@
 {
+  "youHaveNoHighScoresSaved": {
+    "zh-CN": "CN-You have no high scores saved",
+    "de-DE": "DE-You have no high scores saved",
+    "en-GB": "You have no high scores saved",
+    "es-ES": "ES-You have no high scores saved",
+    "fr-FR": "FR-You have no high scores saved",
+    "it-IT": "IT-You have no high scores saved",
+    "ja-JP": "JP-You have no high scores saved",
+    "pt-PT": "PT-You have no high scores saved",
+    "ru-RU": "RU-You have no high scores saved"
+  },
   "secondsLong": {
     "zh-CN": "秒",
     "de-DE": "Sekunden",
