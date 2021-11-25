@@ -15,11 +15,14 @@ const PlayAgainButton = ({ height, entryKey, width }) => {
   const gameDetails = getGameDataFromEntryKey(entryKey);
   const gameData = getGameData(gameDetails.level);
 
-  const { gameActions, imagesActions } = { ...allActions };
+  const { durationActions, gameActions, imagesActions } = { ...allActions };
   const dispatch = useDispatch();
   return (
     <TouchableOpacity
       onPress={() => {
+        dispatch(durationActions.setDurationEnd(''));
+        dispatch(durationActions.setDurationPaused(0));
+        dispatch(durationActions.setDurationSaved(0));
         dispatch(gameActions.injectGameFound([]));
         dispatch(gameActions.setGameBossMode(gameDetails.bossMode));
         dispatch(gameActions.setGameData(gameData));
