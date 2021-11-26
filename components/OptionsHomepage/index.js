@@ -51,7 +51,7 @@ const OptionsHomepage = () => {
             flexDirection: 'row',
             width: 96, 
           }}>
-            <View 
+            <View
               style={{ 
                 flex: 1,
                 width: 48, 
@@ -59,7 +59,7 @@ const OptionsHomepage = () => {
             >
               <DrawSelectedFlag flag={getFlagFromLanguage(language.selected)} />
             </View>
-            <View 
+            <View
               style={{ 
                 flex: 1,
                 width: 48,

@@ -32,7 +32,7 @@ const ImageDetail = ({ bossMode, dimensions, image, level }) => {
   return (
     <ScrollView>
       <InfoInner>
-        <View 
+        <View
           accessible={true}
           style={[
             {
@@ -106,7 +106,7 @@ const ImageDetail = ({ bossMode, dimensions, image, level }) => {
             bossMode={bossMode}
           />
         </View>
-        <View 
+        <View
           style={[
             {
               alignSelf: 'center',

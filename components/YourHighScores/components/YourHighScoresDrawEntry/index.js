@@ -17,7 +17,7 @@ import {
 const YourHighScoresDrawEntry = ({ dimensions, duration, entryKey, imageRef, section }) => {
   const { game, language } = useSelector(state => state);
   return (
-    <View 
+    <View
       style={{
         flexDirection: 'row',
         height: 96,
@@ -30,7 +30,7 @@ const YourHighScoresDrawEntry = ({ dimensions, duration, entryKey, imageRef, sec
           imageRef={imageRef} 
         />
       </View>
-      <View 
+      <View
         style={{ 
           width: 12,
         }} 

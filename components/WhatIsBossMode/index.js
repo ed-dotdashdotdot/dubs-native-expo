@@ -10,17 +10,17 @@ import WhatIsBossModeCard from './components/WhatIsBossModeCard';
 const WhatIsBossMode = ({ bossMode }) => (
   <ScrollView>
     <InfoInner>
-      <PageHeading 
+      <PageHeading
         textKey='whatIsBossMode'
       />
-      <WhatIsBossModeCard 
-        display='normal' 
+      <WhatIsBossModeCard
+        display='normal'
       />
-      <WhatIsBossModeCard 
-        display='boss' 
+      <WhatIsBossModeCard
+        display='boss'
       />
-      <TurnOnBossModeButton 
-        bossMode={bossMode} 
+      <TurnOnBossModeButton
+        bossMode={bossMode}
       />
     </InfoInner>
   </ScrollView>

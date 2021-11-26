@@ -20,7 +20,7 @@ const PageHeading = ({ colour, subTextKeys, textKey }) => {
   }
 
   return (
-    <View 
+    <View
       accessible={true}
       accessibilityRole='header'
       style={[

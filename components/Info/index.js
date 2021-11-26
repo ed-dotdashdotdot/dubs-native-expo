@@ -37,7 +37,7 @@ const Info = () => {
         const infoHeight = height - 48 - 72 - insets.top - insets.bottom;
         const infoWidth = width - (12 * 2);
         return (
-          <View 
+          <View
             style={{
               backgroundColor: colours.black050,
               borderRadius: 10,
@@ -47,7 +47,7 @@ const Info = () => {
               width: '100%',
             }}
           >
-            <View 
+            <View
               style={[
                 {
                   borderRadius: 12,

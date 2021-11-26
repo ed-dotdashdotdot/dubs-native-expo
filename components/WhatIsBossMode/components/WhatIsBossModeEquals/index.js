@@ -7,7 +7,7 @@ import {
 } from '../../../../configuration/config.json';
 
 const WhatIsBossModeCardEquals = () => (
-  <Text 
+  <Text
     accessible={false}
     style={{
       color: colours.white,

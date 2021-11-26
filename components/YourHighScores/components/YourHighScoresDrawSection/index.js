@@ -28,7 +28,7 @@ const YourHighScoresDrawSection = ({ dimensions, section }) => {
   }
 
   return highScoresFilter.length !== 0 ? (
-    <View 
+    <View
       style={{
         marginBottom: 12,
         backgroundColor: '#00000080',

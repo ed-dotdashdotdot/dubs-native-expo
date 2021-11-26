@@ -125,7 +125,7 @@ const GameBoard = ({ dimensions, level }) => {
   const cornerRadius = gameBoardCornerRadius;
 
   return (
-    <View 
+    <View
       style={[
         {
           display: 'flex',
@@ -140,7 +140,7 @@ const GameBoard = ({ dimensions, level }) => {
       {
         gameArray.map((val, index) => {
           return (
-            <View 
+            <View
               key={`${val} - ${index}`}
               style={[
                 drawGameBoardBorderRadius('bottomLeft', val, index === bottomLeftSquare, cornerRadius, game.bossMode),

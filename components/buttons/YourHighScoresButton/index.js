@@ -8,7 +8,6 @@ import allActions from '../../../actions';
 import YourHighScoresButtonSvg from './components/YourHighScoresButtonSvg';
 
 const YourHighScoresButton = ({ width }) => {
-  // const { width } = { ...props };
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   return (

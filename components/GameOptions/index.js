@@ -14,7 +14,7 @@ import {
 const GameOptions = () => {
   const { duration, game, language } = useSelector(state => state);
   return (
-    <View 
+    <View
       style={{
         bottom: 12,
         height: 48,
@@ -22,13 +22,13 @@ const GameOptions = () => {
         width: '100%',
       }}
     >
-      <View 
+      <View
         style={{
           flexDirection: 'row',
           height: 48,
         }}
       >
-        <View 
+        <View
           style={{ 
             height: 48, 
             width: 48 
@@ -54,7 +54,7 @@ const GameOptions = () => {
           >
             {
               game.status === 'game-on' && duration.start && (
-                <Stopwatch 
+                <Stopwatch
                   lang={language.selected} 
                   start={duration.start} 
                 />

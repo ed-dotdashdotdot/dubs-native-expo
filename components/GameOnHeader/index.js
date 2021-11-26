@@ -10,7 +10,7 @@ import {
 } from '../../configuration/config.json';
 
 const GameOnHeader = ({ bossMode, level }) => (
-  <View 
+  <View
     style={{
       flex: 1,
       height: 24,
@@ -20,7 +20,7 @@ const GameOnHeader = ({ bossMode, level }) => (
       width: '100%',
     }}
   >
-    <Text 
+    <Text
       style={{
         color: colours.white,
         fontFamily: fontFamily,

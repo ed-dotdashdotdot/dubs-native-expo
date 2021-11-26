@@ -6,14 +6,14 @@ import SmileyFaceSvg from '../../components/SmileyFaceSvg';
 import WhatIsBossModeCardEquals from '../WhatIsBossModeEquals';
 
 const WhatIsBossModeExample = ({ display }) => (
-  <View 
+  <View
     style={{
       alignItems: 'center',
       display: 'flex',
       flexDirection: 'row',
     }}
   >
-    <View 
+    <View
       style={{
         alignItems: 'flex-end',
         flex: 2,

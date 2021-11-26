@@ -10,9 +10,9 @@ import Header from '../Header';
 import GameOnHeader from '../GameOnHeader';
 import GameOptions from '../GameOptions';
 import Info from '../Info';
+import Mesh from '../Mesh';
 import Options from '../Options';
 import OptionsHomepage from '../OptionsHomepage';
-import Mesh from '../Mesh';
 
 import { getHighScoreKey } from '../../js/helpers/getHighScoreKey';
 import { isGameOver } from '../../js/helpers/isGameOver';
@@ -83,7 +83,7 @@ const Container = () => {
     <AppStateManager
       status={game.status}
     >
-      <View 
+      <View
         style={{
           alignItems: 'center',
           backgroundColor: game.highlight.length ? colours.red025 : colours.black050,

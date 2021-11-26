@@ -33,7 +33,7 @@ const GameReady = ({ level }) => {
           colour={whichLevelColour(level)}
           textKey={`${level}Level`} 
         />
-        <View 
+        <View
           style={[
             {
               backgroundColor: colours.black,

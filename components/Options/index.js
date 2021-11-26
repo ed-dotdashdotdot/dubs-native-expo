@@ -41,7 +41,7 @@ const Options = () => {
     }
   }
   return (  
-    <TouchableOpacity 
+    <TouchableOpacity
       accessible={true}
       accessibilityRole='button'
       style={[

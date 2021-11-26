@@ -105,7 +105,7 @@ const ChooseImageDrawSection = ({ dimensions, section }) => {
   // }, []);
 
   return (
-    <View 
+    <View
       style={{
         marginBottom: 12,
       }}

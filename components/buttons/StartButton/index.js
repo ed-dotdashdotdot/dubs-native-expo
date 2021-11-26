@@ -18,7 +18,7 @@ const StartButton = ({ gameData, textKey }) => {
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   return (
-    <View 
+    <View
       style={[
         {
           alignSelf: 'center',

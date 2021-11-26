@@ -14,7 +14,7 @@ import globalStyles from '../../../../css/style';
 const YourHighScoresDrawThumb = ({ imageRef }) => {
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageRef}.jpg&size=small`;
   return (
-    <View 
+    <View
       style={{
         height: 96,
         width: 96,
