@@ -12,7 +12,7 @@ import {
   ipAddress 
 } from '../../../../configuration/config.json';
 
-import globalStyles from '../../../../css/style';
+import globalStyles from '../../../../css/globalStyles.js';
 
 const DrawThumb = ({ dimensions, imageRef }) => {
   // const maxHeight = dimensions.height - 24 - 24 - 8;

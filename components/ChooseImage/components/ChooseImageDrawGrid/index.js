@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import ChooseImageDrawThumb from '../ChooseImageDrawThumb';
 
-import globalStyles from '../../../../css/style';
+import globalStyles from '../../../../css/globalStyles.js';
 
 const ChooseImageDrawGrid = ({ dimensions, imageList }) => (
   <View

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import YourHighScoresDrawEntry from '../YourHighScoresDrawEntry';
 
-import globalStyles from '../../../../css/style';
+import globalStyles from '../../../../css/globalStyles.js';
 
 const YourHighScoresGrid = ({ dimensions, highScoresList, section }) => (
   <View

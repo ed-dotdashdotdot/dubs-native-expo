@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { drawFlagComponent } from '../../../../js/helpers/drawFlagComponent';
 
-import globalStyles from '../../../../css/style';
+import globalStyles from '../../../../css/globalStyles.js';
 
 const DrawSelectedFlag = ({ flag }) => (
   <View

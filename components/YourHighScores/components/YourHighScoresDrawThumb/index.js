@@ -9,7 +9,7 @@ import {
   ipAddress 
 } from '../../../../configuration/config.json';
 
-import globalStyles from '../../../../css/style';
+import globalStyles from '../../../../css/globalStyles.js';
 
 const YourHighScoresDrawThumb = ({ imageRef }) => {
   const imageSrc = `http://${ipAddress.server}/dubs-cdn/image/?image=${imageRef}.jpg&size=small`;
