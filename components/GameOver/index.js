@@ -16,7 +16,7 @@ import {
   fontFamily,
 } from '../../configuration/config.json';
 
-import globalStyles from '../../css/style.js';
+import globalStyles from '../../css/globalStyles.js';
 
 const GameOver = () => {
   const { duration, game, images, language } = useSelector(state => state);

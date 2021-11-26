@@ -7,7 +7,7 @@ import allActions from '../../../../actions';
 import { getLanguageFromFlag } from '../../../../js/helpers/getLanguageFromFlag';
 import { drawFlagComponent } from '../../../../js/helpers/drawFlagComponent';
 
-import globalStyles from '../../../../css/style.js';
+import globalStyles from '../../../../css/globalStyles.js';
 
 const DrawFlag = ({ dimensions, flag }) => {
   const { gameActions, languageActions } = { ...allActions };

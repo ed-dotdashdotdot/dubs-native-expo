@@ -11,7 +11,7 @@ import {
   fontFamily 
 } from '../../../configuration/config.json';
 
-import globalStyles from '../../../css/style.js';
+import globalStyles from '../../../css/globalStyles.js';
 
 const ChooseAnImageButton = () => {
   const { gameActions } = { ...allActions };

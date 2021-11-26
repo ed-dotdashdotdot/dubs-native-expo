@@ -20,7 +20,7 @@ import {
   ipAddress 
 } from '../../configuration/config.json';
 
-import globalStyles from '../../css/style.js';
+import globalStyles from '../../css/globalStyles.js';
 
 const ImageDetail = ({ bossMode, dimensions, image, level }) => {    
   const { gameActions, imagesActions } = { ...allActions };

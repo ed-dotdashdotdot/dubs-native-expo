@@ -8,7 +8,7 @@ import {
   fontFamily 
 } from '../../configuration/config.json';
 
-import styles from '../../css/style.js';
+import styles from '../../css/globalStyles.js';
 
 const AppInfo = () => (
   <ScrollView>

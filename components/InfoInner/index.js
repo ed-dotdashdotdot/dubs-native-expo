@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Component from './component';
 
-import globalStyles from '../../css/style.js';
+import globalStyles from '../../css/globalStyles.js';
 
 const InfoInner = ({ children }) => (
   <Component

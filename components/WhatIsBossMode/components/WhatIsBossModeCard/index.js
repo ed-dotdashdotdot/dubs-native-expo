@@ -10,7 +10,7 @@ import {
   colours 
 } from '../../../../configuration/config.json';
 
-import globalStyles from '../../../../css/style.js';
+import globalStyles from '../../../../css/globalStyles.js';
 
 const WhatIsBossModeCard = ({ display }) => (
   <View
