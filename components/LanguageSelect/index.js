@@ -8,19 +8,9 @@ import PageHeading from '../PageHeading';
 import { isPortrait } from '../../js/helpers/isPortrait';
 
 const LanguageSelect = ({ dimensions }) => {
-
   const { height, width } = useWindowDimensions();
   const isDevicePortrait = isPortrait(height, width);
-
-  // console.log(`height: ${height}`);
-  // console.log(`dimensions.height: ${dimensions.height}`);
-  // console.log(`width: ${width}`);
-  // console.log(`dimensions.width: ${dimensions.width}`);
-  // console.log(`isDevicePortrait: ${isDevicePortrait}`);
-  
   const flagsPerRow = dimensions.width > 999 ? 6 : dimensions.width > 600 ? 4 : 2;
-  // console.log(`flagsPerRow: ${flagsPerRow}`);
-
   return (
     <ScrollView>
       <InfoInner>

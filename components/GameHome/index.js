@@ -38,29 +38,15 @@ import PageHeading from '../PageHeading';
 import NewGameButtons from '../buttons/NewGameButtons';
 import { sanitiseDeviceLocale } from '../../js/helpers/sanitiseDeviceLocale';
 
-const GameHome = () => {
-  // console.log(sanitiseDeviceLocale(language.selected).language)
-  // console.log(DeviceInfo?.isTablet());
-  // const type = () => { await Device.getDeviceTypeAsync()}
-  // console.log('Device:');
-  // console.log(Device);
-  // let asd = Device.getDeviceTypeAsync();
-  // const isTablet = Device;
-  // console.log(isTablet);
-  // console.log(asd);
-  // console.log(type);
-  // console.log('Platform.isPad')
-  // console.log(Platform.isPad)
-  return (
-    <ScrollView>
-      <InfoInner>
-        <PageHeading 
-          textKey='howToPlay' 
-        />
-        <NewGameButtons section="game-home" />
-      </InfoInner>
-    </ScrollView>
-  );
-};
+const GameHome = () => (
+  <ScrollView>
+    <InfoInner>
+      <PageHeading 
+        textKey='howToPlay' 
+      />
+      <NewGameButtons section="game-home" />
+    </InfoInner>
+  </ScrollView>
+);
 
 export default GameHome;
