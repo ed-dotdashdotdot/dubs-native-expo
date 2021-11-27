@@ -54,7 +54,7 @@ const ImageDetail = ({ bossMode, dimensions, image, level }) => {
               width: '100%',
             }}
           >
-            <Text
+            {/* <Text
               accessible={false}
               style={{
                 color: colours.green,
@@ -64,8 +64,7 @@ const ImageDetail = ({ bossMode, dimensions, image, level }) => {
               }}
             >
               <Translate textKey='loading' />
-            </Text>
-            <LoadingAnimation />
+            </Text> */}
             <LoadingAnimation />
           </View>
           <View
