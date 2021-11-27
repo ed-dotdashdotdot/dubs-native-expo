@@ -68,7 +68,8 @@ const defaultImagesState = {
     }, {
       name: 'typography',
     }
-  ]
+  ],
+  fetch: '',
 };
 
 const images = (state = defaultImagesState, action) => {
@@ -132,6 +133,12 @@ const images = (state = defaultImagesState, action) => {
       ...state,
       ...{
         selected: action.payload,
+      }
+    };
+    case 'SET_IMAGES_FETCH': return {
+      ...state,
+      ...{
+        fetch: action.payload,
       }
     };
     // case 'SET_GAME_DATA': return {

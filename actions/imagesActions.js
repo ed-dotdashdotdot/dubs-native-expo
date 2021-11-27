@@ -38,6 +38,10 @@ const setImagesSelected = data => ({
   type: 'SET_IMAGES_SELECTED',
   payload: data,
 });
+const setImagesFetch = data => ({
+  type: 'SET_IMAGES_FETCH',
+  payload: data,
+});
 
 const exportedGameObject = {
   setImagesDetail,
@@ -50,6 +54,7 @@ const exportedGameObject = {
   setImagesSectionTechnology,
   setImagesSectionTypography,
   setImagesSelected,
+  setImagesFetch,
 };
 
 export default exportedGameObject;
