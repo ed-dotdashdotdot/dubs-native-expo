@@ -26,14 +26,6 @@ const setGameHighlight = data => ({
   type: 'SET_GAME_HIGHLIGHT',
   payload: data,
 });
-// const setGameInvert = data => ({
-//   type: 'SET_GAME_INVERT',
-//   payload: data,
-// });
-// const setGameLastMove = data => ({
-//   type: 'SET_GAME_LASTMOVE',
-//   payload: data,
-// });
 const setGameLevel = data => ({
   type: 'SET_GAME_LEVEL',
   payload: data,
@@ -59,8 +51,6 @@ const exportedGameObject = {
   injectGameFound,
   // setGameId,
   setGameHighlight,
-  // setGameInvert,
-  // setGameLastMove,
   setGameLevel,
   setGameSelected,
   setGameStatus,

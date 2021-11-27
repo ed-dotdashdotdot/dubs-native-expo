@@ -141,58 +141,6 @@ const images = (state = defaultImagesState, action) => {
         fetch: action.payload,
       }
     };
-    // case 'SET_GAME_DATA': return {
-    //   ...state,
-    //   ...{
-    //     data: action.payload,
-    //   }
-    // };
-    // case 'SET_GAME_FOUND': return {
-    //   ...state,
-    //   ...{
-    //     found: [...state.found, ...action.payload],
-    //   }
-    // };
-    // case 'INJECT_GAME_FOUND': return {
-    //   ...state,
-    //   found: action.payload,
-    // };
-    // case 'SET_GAME_ID': return {
-    //   ...state,
-    //   ...{
-    //     id: action.payload,
-    //   }
-    // };
-    // case 'SET_GAME_HIGHLIGHT': return {
-    //   ...state,
-    //   ...{
-    //     highlight: action.payload,
-    //   }
-    // };
-    // case 'SET_GAME_INVERT': return {
-    //   ...state,
-    //   ...{
-    //     invert: action.payload,
-    //   }
-    // };
-    // case 'SET_GAME_LEVEL': return {
-    //   ...state,
-    //   ...{
-    //     level: action.payload,
-    //   }
-    // };
-    // case 'SET_GAME_SELECTED': return {
-    //   ...state,
-    //   ...{
-    //     selected: action.payload,
-    //   }
-    // };
-    // case 'SET_GAME_STATUS': return {
-    //   ...state,
-    //   ...{
-    //     status: action.payload,
-    //   }
-    // };
     default: return state;
   }
 };
