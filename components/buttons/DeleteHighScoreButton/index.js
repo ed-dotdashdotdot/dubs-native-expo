@@ -8,7 +8,7 @@ import allActions from '../../../actions';
 import DeleteHighScoreButtonSvg from './components/DeleteHighScoreButtonSvg';
 
 const DeleteHighScoreButton = ({ entryKey, width }) => {
-  const duration = useSelector(state => state.duration);
+  const { duration } = useSelector(state => state);
   const { durationActions } = { ...allActions };
   const dispatch = useDispatch();
   const highScoresFiltered = duration.highScores.filter(val => {

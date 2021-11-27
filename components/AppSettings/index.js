@@ -12,7 +12,7 @@ import {
 } from '../../configuration/config.json';
 
 const AppSettings = () => {
-  const device = useSelector(state => state.device);
+  const { device } = useSelector(state => state);
   const { deviceActions } = { ...allActions };
   const dispatch = useDispatch();
   // console.log(device);

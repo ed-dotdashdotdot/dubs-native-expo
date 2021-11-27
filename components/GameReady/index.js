@@ -22,7 +22,7 @@ import {
 import globalStyles from '../../css/globalStyles.js';
 
 const GameReady = ({ level }) => {
-  const game = useSelector(state => state.game);
+  const { game }  = useSelector(state => state);
   const { gameActions } = { ...allActions };
   const dispatch = useDispatch();
   const gameData = getGameData(level);

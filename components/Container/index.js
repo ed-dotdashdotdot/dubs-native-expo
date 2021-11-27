@@ -24,8 +24,7 @@ import {
 } from '../../configuration/config.json';
 
 const Container = () => {
-  const duration = useSelector(state => state.duration);
-  const { game, images, language } = useSelector(state => state);
+  const { duration, game, images, language } = useSelector(state => state);
   const { durationActions, gameActions } = { ...allActions };
   const dispatch = useDispatch();
   const { 

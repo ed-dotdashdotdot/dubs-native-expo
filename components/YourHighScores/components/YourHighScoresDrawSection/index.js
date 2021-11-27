@@ -7,7 +7,7 @@ import YourHighScoresSectionHeading from '../YourHighScoresSectionHeading';
 import YourHighScoresGrid from '../YourHighScoresGrid';
 
 const YourHighScoresDrawSection = ({ dimensions, section }) => {
-  const duration = useSelector(state => state.duration);
+  const { duration } = useSelector(state => state);
   const highScoresFilter = duration.highScores.filter(val => val.indexOf(`${section}--`) !== -1);
 
   let highScoresList;

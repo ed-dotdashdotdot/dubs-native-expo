@@ -5,7 +5,7 @@ import Polyglot from 'node-polyglot';
 import i18n from '../../i18n';
 
 const Translate = ({ textKey }) => {
-  const language = useSelector(state => state.language);
+  const { language }  = useSelector(state => state);
   const polyglot = new Polyglot();
   polyglot.extend(i18n());
   const lang = language.selected || 'en-GB';

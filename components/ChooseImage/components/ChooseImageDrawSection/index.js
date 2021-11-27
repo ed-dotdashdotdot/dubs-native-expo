@@ -20,7 +20,7 @@ import { ucFirst } from '../../../../js/helpers/ucFirst';
 // can images get loaded into app - this way, if conection goes offline they can still be used
 
 const ChooseImageDrawSection = ({ dimensions, section }) => {
-  const images = useSelector(state => state.images);
+  const { images } = useSelector(state => state);
   // const { imagesActions } = { ...allActions };
   // const dispatch = useDispatch();
 

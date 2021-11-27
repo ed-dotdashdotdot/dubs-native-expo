@@ -11,7 +11,7 @@ import YourHighScoresDrawSection from './components/YourHighScoresDrawSection';
 import { highScoresSections } from '../../configuration/config.json';
 
 const HighScores = ({ dimensions }) => {
-  const duration = useSelector(state => state.duration);
+  const { duration } = useSelector(state => state);
   const pageTitleKey = duration.highScores.length ? 'yourHighScores' : 'youHaveNoHighScoresSaved'
   return (
     <ScrollView>

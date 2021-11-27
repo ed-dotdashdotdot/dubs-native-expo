@@ -13,8 +13,7 @@ import {
 } from '../../configuration/config.json';
 
 const Axios = ({ imageRef }) => {
-
-  const images = useSelector(state => state.images);
+  const { images } = useSelector(state => state);
   const { imagesActions } = { ...allActions };
   const dispatch = useDispatch();
 

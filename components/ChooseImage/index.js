@@ -9,7 +9,7 @@ import InfoInner from '../InfoInner';
 import PageHeading from '../PageHeading';
 
 const ChooseImage = ({ dimensions }) => {
-  const images = useSelector(state => state.images);
+  const { images } = useSelector(state => state);
   return (
     <ScrollView>
       <InfoInner>
