@@ -2,11 +2,12 @@ import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../../actions';
 
 import ContinueGameButton from '../../buttons/ContinueGameButton';
 import PlayThisGameAgainButton from '../../buttons/PlayThisGameAgainButton';
+import PlayThisGameAgainWithBossModeButton from '../../buttons/PlayThisGameAgainWithBossModeButton';
 import Translate from '../../Translate';
 
 import { 
@@ -17,6 +18,7 @@ import {
 import globalStyles from '../../../css/globalStyles.js';
 
 const NewGameButtons = ({ section }) => {
+  const { game } = useSelector(state => state);
   const { gameActions, imagesActions, durationActions } = { ...allActions };
   const dispatch = useDispatch();
   const newGameDispatches = level => {
@@ -44,6 +46,7 @@ const NewGameButtons = ({ section }) => {
       }}
     >
       {section === 'game-over' && <PlayThisGameAgainButton />}
+      {section === 'game-over' && !game.bossMode && <PlayThisGameAgainWithBossModeButton />}
       {section === 'game-paused' && <ContinueGameButton />}
       <View
         style={[
