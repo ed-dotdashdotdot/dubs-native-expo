@@ -34,7 +34,7 @@ const LanguageSelect = ({ dimensions }) => {
           <DrawFlag dimensions={dimensions} flag="Pt" />
           <DrawFlag dimensions={dimensions} flag="Ru" />
         </View>
-        <View
+        {/* <View
           style={{
             flexDirection: 'row',
             flexWrap: 'wrap',
@@ -77,7 +77,7 @@ const LanguageSelect = ({ dimensions }) => {
           <DrawFlag dimensions={dimensions} flag="Us" />
           <DrawFlag dimensions={dimensions} flag="Vn" />
           <DrawFlag dimensions={dimensions} flag="Za" />
-        </View>
+        </View> */}
       </InfoInner>
     </ScrollView>
   );
