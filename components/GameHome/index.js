@@ -47,12 +47,12 @@ const GameHome = () => (
         textKey='howToPlay' 
       />
       <NewGameButtons section="game-home" />
-      <Axios 
-        imageRef="11" 
+      {/* <Axios 
+        imageRef="5" 
       />
       <Axios 
         imageRef="12" 
-      />
+      /> */}
     </InfoInner>
   </ScrollView>
 );

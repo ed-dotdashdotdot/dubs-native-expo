@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Text, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 
 import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../actions';
@@ -117,13 +117,13 @@ const Axios = ({ imageRef }) => {
           width: 100,
         }}
       > */}
-        <ExpoFastImage
-          cacheKey={`image-${imageRef}-a12tgtggt3ttasd-small`}
+        <Image
+          cacheKey={`image-${imageRef}-a12tgtggtqwe3ttasd-small`}
           style={{
             height: 50,
             width: 50,
           }}
-          uri={ images.fetch }
+          source={{ uri: images.fetch }}
         />
         <ExpoFastImage
           cacheKey={`image-${imageRef}-e12tt3tgtgtgrg-small`}
