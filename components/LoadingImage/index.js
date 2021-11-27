@@ -53,11 +53,11 @@ const LoadingImage = ({ imageToUse }) => {
       </Text>
       <ExpoFastImage
         // onLoad={() => {}}
-        onLoadStart={() => {
-          // console.log('onLoadStart');
-        }}
+        // onLoadStart={() => {
+        //   // console.log('onLoadStart');
+        // }}
         onLoad={() => {
-          console.log('onLoad-a');
+          // console.log('onLoad-a');
           dispatch(gameActions.setGameStatus('game-on'));
           if (getCurrentHighScoreVal !== 0) { 
             dispatch(gameActions.setGameHighScore(getCurrentHighScoreVal));
@@ -69,11 +69,11 @@ const LoadingImage = ({ imageToUse }) => {
           dispatch(durationActions.setDurationPaused(0));
           dispatch(durationActions.setDurationSaved(0));
           dispatch(durationActions.setDurationStatus('game-on'));
-          console.log('onLoad-b');
+          // console.log('onLoad-b');
         }}
-        onLoadEnd={() => {
-          console.log('onLoadEnd');
-        }}
+        // onLoadEnd={() => {
+        //   console.log('onLoadEnd');
+        // }}
         uri={imageSrc}
         cacheKey={`image-${imageToUse}-large`}
         style={{

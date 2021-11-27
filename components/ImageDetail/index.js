@@ -72,9 +72,9 @@ const ImageDetail = ({ bossMode, dimensions, image, level }) => {
             accessibilityRole='image'
           >
             <ExpoFastImage
-              onLoadStart={() => console.log('onLoadStart')}
-              onLoad={() => console.log('onLoad')}
-              onLoadEnd={() => console.log('onLoadEnd')}
+              // onLoadStart={() => console.log('onLoadStart')}
+              // onLoad={() => console.log('onLoad')}
+              // onLoadEnd={() => console.log('onLoadEnd')}
               accessible={true}
               accessibilityRole='image'
               cacheKey={`image-${image}-medium`}
