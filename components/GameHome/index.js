@@ -1,6 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { Platform, ScrollView, Text } from 'react-native';
+import { Platform, ScrollView } from 'react-native';
+
+import Axios from '../Axios';
+
 // import allActions from '../../actions';
 // import { useWindowDimensions } from 'react-native';
 // import DeviceInfo from 'react-native-device-info';
@@ -45,6 +47,12 @@ const GameHome = () => (
         textKey='howToPlay' 
       />
       <NewGameButtons section="game-home" />
+      <Axios 
+        imageRef="11" 
+      />
+      <Axios 
+        imageRef="12" 
+      />
     </InfoInner>
   </ScrollView>
 );
