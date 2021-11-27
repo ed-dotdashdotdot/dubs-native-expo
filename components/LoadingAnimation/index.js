@@ -13,7 +13,7 @@ const LoadingAnimation = () => (
     style={{
       color: colours.white,
       fontFamily: fontFamily,
-      fontSize: 48,
+      fontSize: 24,
       textAlign: 'center',
     }}
   >
