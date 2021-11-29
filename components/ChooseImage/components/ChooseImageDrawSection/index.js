@@ -21,8 +21,6 @@ import { ucFirst } from '../../../../js/helpers/ucFirst';
 
 const ChooseImageDrawSection = ({ dimensions, section }) => {
   const { images } = useSelector(state => state);
-  // const { imagesActions } = { ...allActions };
-  // const dispatch = useDispatch();
 
   const imagesValue = images[`section${ucFirst(section)}`];
 
