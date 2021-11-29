@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello component should render Hello correctly when no props are passed 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 24,
+      }
+    }
+  >
+    Hello, World!
+  </Text>
+</View>
+`;
+
+exports[`Hello component should render Hello correctly when props are passed 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 24,
+      }
+    }
+  >
+    Hello, Ed
+  </Text>
+</View>
+`;

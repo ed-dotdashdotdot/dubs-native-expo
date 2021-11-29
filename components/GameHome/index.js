@@ -2,6 +2,7 @@ import React from 'react';
 import { Platform, ScrollView } from 'react-native';
 
 import Axios from '../Axios';
+import Hello from '../Hello';
 
 // import allActions from '../../actions';
 // import { useWindowDimensions } from 'react-native';
@@ -45,6 +46,7 @@ const GameHome = () => (
     <InfoInner>
       <PageHeading 
         textKey='howToPlay' 
+        subTextKeys='howToPlay|whatIsBossMode_description_normal_mode' 
       />
       <NewGameButtons section="game-home" />
       {/* <Axios 
@@ -53,6 +55,8 @@ const GameHome = () => (
       <Axios 
         imageRef="12" 
       /> */}
+      <Hello name='Ed' />
+      <Hello />
     </InfoInner>
   </ScrollView>
 );
