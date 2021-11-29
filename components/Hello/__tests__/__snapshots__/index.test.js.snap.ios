@@ -29,3 +29,33 @@ exports[`Hello component should render Hello correctly when props are passed 1`]
   </Text>
 </View>
 `;
+
+exports[`Hello component should render the default name when no props are passed 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 24,
+      }
+    }
+  >
+    Hello, World!
+  </Text>
+</View>
+`;
+
+exports[`Hello component should render the name when it's passed in the props 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 24,
+      }
+    }
+  >
+    Hello, Ed
+  </Text>
+</View>
+`;
