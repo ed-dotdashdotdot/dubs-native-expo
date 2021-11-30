@@ -47,8 +47,7 @@ const PlayThisGameAgainWithBossModeButton = () => {
             textAlign: 'center',
           }}
         >
-          <Translate textKey="playThisGameAgain" />
-          With boss mode
+          <Translate textKey="playThisGameAgainWithBossMode" />
         </Text>
       </TouchableOpacity>
     </View>
