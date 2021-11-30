@@ -3,7 +3,7 @@ const defaultDurationState = {
   highScores123: [
     '12.34--easy--1--',
   ],
-  highScores: [],
+  highScores: ['12.00--easy--1--'],
   isHighScore: false,
   paused: 0,
   saved: 0,
