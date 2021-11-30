@@ -1,16 +1,23 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 
 import DrawGameDuration from '../';
 
 describe('DrawGameDuration()', () => {
   it('renders correctly', () => {
-    const tree = renderer
-      .create(<DrawGameDuration duration="1000" lang="en" />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const tree = render(<DrawGameDuration duration="1000" lang="en" />);
+    // console.log(typeof tree)
+    // console.log(tree)
+    // expect(tree.toJSON()).toStrictEqual('16:40');
+    // tree.getByText('"16:40"');
+    expect(tree.toJSON()).toMatchSnapshot();
+    // const tree = renderer
+    //   .create(<DrawGameDuration duration="1000" lang="en" />)
+    //   .toJSON();
+    // expect(tree).toMatchSnapshot();
   });
-  describe('when lang is `de`', () => {
+  describe(`when lang is 'de'`, () => {
     it.each`
       duration    | lang    
       ${null}     | ${'de'} 
@@ -32,16 +39,18 @@ describe('DrawGameDuration()', () => {
       ${90000000} | ${'de'} 
       ${90001000} | ${'de'} 
     `(
-      'should renders correctly value when duration is $duration',
+      `should render correctly value when duration is '$duration'`,
       ({ duration, lang }) => {
-        const tree = renderer
-          .create(<DrawGameDuration duration={duration} lang={lang} />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
+        // const tree = renderer
+        //   .create(<DrawGameDuration duration={duration} lang={lang} />)
+        //   .toJSON();
+        // expect(tree).toMatchSnapshot();
+        const tree = render(<DrawGameDuration duration={duration} lang={lang} />);
+        expect(tree.toJSON()).toMatchSnapshot();
       }
     );
   });
-  describe('when lang is `en`', () => {
+  describe(`when lang is 'en'`, () => {
     it.each`
       duration    | lang    
       ${null}     | ${'en'} 
@@ -63,16 +72,18 @@ describe('DrawGameDuration()', () => {
       ${90000000} | ${'en'} 
       ${90001000} | ${'en'} 
     `(
-      'should renders correctly value when duration is $duration',
+      `should render correctly value when duration is '$duration'`,
       ({ duration, lang }) => {
-        const tree = renderer
-          .create(<DrawGameDuration duration={duration} lang={lang} />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
+        // const tree = renderer
+        //   .create(<DrawGameDuration duration={duration} lang={lang} />)
+        //   .toJSON();
+        // expect(tree).toMatchSnapshot();
+        const tree = render(<DrawGameDuration duration={duration} lang={lang} />);
+        expect(tree.toJSON()).toMatchSnapshot();
       }
     );
   });
-  describe('when lang is `es`', () => {
+  describe(`when lang is 'es'`, () => {
     it.each`
       duration    | lang    
       ${null}     | ${'es'} 
@@ -94,16 +105,18 @@ describe('DrawGameDuration()', () => {
       ${90000000} | ${'es'} 
       ${90001000} | ${'es'} 
     `(
-      'should renders correctly value when duration is $duration',
+      `should render correctly value when duration is '$duration'`,
       ({ duration, lang }) => {
-        const tree = renderer
-          .create(<DrawGameDuration duration={duration} lang={lang} />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
+        // const tree = renderer
+        //   .create(<DrawGameDuration duration={duration} lang={lang} />)
+        //   .toJSON();
+        // expect(tree).toMatchSnapshot();
+        const tree = render(<DrawGameDuration duration={duration} lang={lang} />);
+        expect(tree.toJSON()).toMatchSnapshot();
       }
     );
   });
-  describe('when lang is `fr`', () => {
+  describe(`when lang is 'fr'`, () => {
     it.each`
       duration    | lang    
       ${null}     | ${'fr'} 
@@ -125,16 +138,18 @@ describe('DrawGameDuration()', () => {
       ${90000000} | ${'fr'} 
       ${90001000} | ${'fr'} 
     `(
-      'should renders correctly value when duration is $duration',
+      `should render correctly value when duration is '$duration'`,
       ({ duration, lang }) => {
-        const tree = renderer
-          .create(<DrawGameDuration duration={duration} lang={lang} />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
+        // const tree = renderer
+        //   .create(<DrawGameDuration duration={duration} lang={lang} />)
+        //   .toJSON();
+        // expect(tree).toMatchSnapshot();
+        const tree = render(<DrawGameDuration duration={duration} lang={lang} />);
+        expect(tree.toJSON()).toMatchSnapshot();
       }
     );
   });
-  describe('when lang is `it`', () => {
+  describe(`when lang is 'it'`, () => {
     it.each`
       duration    | lang    
       ${null}     | ${'it'} 
@@ -156,16 +171,18 @@ describe('DrawGameDuration()', () => {
       ${90000000} | ${'it'} 
       ${90001000} | ${'it'} 
     `(
-      'should renders correctly value when duration is $duration',
+      `should render correctly value when duration is '$duration'`,
       ({ duration, lang }) => {
-        const tree = renderer
-          .create(<DrawGameDuration duration={duration} lang={lang} />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
+        // const tree = renderer
+        //   .create(<DrawGameDuration duration={duration} lang={lang} />)
+        //   .toJSON();
+        // expect(tree).toMatchSnapshot();
+        const tree = render(<DrawGameDuration duration={duration} lang={lang} />);
+        expect(tree.toJSON()).toMatchSnapshot();
       }
     );
   });
-  describe('when lang is `pt`', () => {
+  describe(`when lang is 'pt'`, () => {
     it.each`
       duration    | lang    
       ${null}     | ${'pt'} 
@@ -187,12 +204,14 @@ describe('DrawGameDuration()', () => {
       ${90000000} | ${'pt'} 
       ${90001000} | ${'pt'} 
     `(
-      'should renders correctly value when duration is $duration',
+      `should render correctly value when duration is '$duration'`,
       ({ duration, lang }) => {
-        const tree = renderer
-          .create(<DrawGameDuration duration={duration} lang={lang} />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
+        // const tree = renderer
+        //   .create(<DrawGameDuration duration={duration} lang={lang} />)
+        //   .toJSON();
+        // expect(tree).toMatchSnapshot();
+        const tree = render(<DrawGameDuration duration={duration} lang={lang} />);
+        expect(tree.toJSON()).toMatchSnapshot();
       }
     );
   });
