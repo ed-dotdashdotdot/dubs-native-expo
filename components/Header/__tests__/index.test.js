@@ -1,11 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 
 import Header from '../';
 
 describe('Header component', () => {
-  it('renders correctly', () => {
-    const tree = renderer.create(<Header />).toJSON();
-    expect(tree).toMatchSnapshot();
+  it(`should render correctly`, () => {
+    const tree = render(<Header />);
+    expect(tree.toJSON()).toMatchSnapshot();
   });
 });
