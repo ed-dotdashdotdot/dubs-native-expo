@@ -91,7 +91,7 @@ const Container = () => {
           paddingRight: 12,
         }}
       >
-        <ImageBackground
+        {/* <ImageBackground
           style={[
             {
               height: height,
@@ -104,7 +104,7 @@ const Container = () => {
             height={height}
             width={width}
           />
-        </ImageBackground>
+        </ImageBackground> */}
         {game.status === 'game-on' ? (
           <GameOnHeader 
             bossMode={game.bossMode} 
