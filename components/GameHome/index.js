@@ -55,8 +55,8 @@ const GameHome = () => (
       <Axios 
         imageRef="12" 
       /> */}
-      <Hello name='Ed' />
-      <Hello />
+      {/* <Hello name='Ed' />
+      <Hello /> */}
     </InfoInner>
   </ScrollView>
 );
