@@ -340,7 +340,7 @@
     "pt-PT": "Nível difícil",
     "ru-RU": "Жесткий уровень"
   },
-  "howToPlay": {
+  "howToPlayHeader": {
     "zh-CN": "选择难度，找到双打...",
     "de-DE": "Wählen Sie den Schwierigkeitsgrad, finden Sie die\u00A0Doppel...",
     "en-GB": "Select the difficulty, find the\u00A0doubles...",
@@ -350,6 +350,17 @@
     "ja-JP": "難易度を選択し、ダブルスを見つけてください...",
     "pt-PT": "Selecione a dificuldade, encontre as duplas\u00A0...",
     "ru-RU": "Выберите сложность, найдите двойников\u00A0..."
+  },
+  "howToPlay": {
+    "zh-CN": "怎么玩",
+    "de-DE": "Spielanleitung",
+    "en-GB": "How to play",
+    "es-ES": "Cómo jugar",
+    "fr-FR": "Comment jouer",
+    "it-IT": "Come giocare",
+    "ja-JP": "遊び方",
+    "pt-PT": "Como jogar",
+    "ru-RU": "Как играть"
   },
   "bossMode": {
     "zh-CN": "老板模式",
