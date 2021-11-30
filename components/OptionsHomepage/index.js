@@ -76,17 +76,17 @@ const OptionsHomepage = () => {
         {!!duration.highScores.length && (
           <View style={{ width: 48 }}>
             <YourHighScoresButton 
-              width={36}
+              width={48}
             />
           </View>
         )}
-        {!isDeviceATablet(Platform.isPad) && (
+        {/* {!isDeviceATablet(Platform.isPad) && (
           <View style={{ width: 48 }}>
             <SettingsButton
               width={36}
             />
           </View>
-        )}
+        )} */}
         {/* <View style={{ width: 48 }}>
           <InfoButton
             width={36}
