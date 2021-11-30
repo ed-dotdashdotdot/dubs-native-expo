@@ -45,8 +45,8 @@ const GameHome = () => (
   <ScrollView>
     <InfoInner>
       <PageHeading 
-        textKey='howToPlay' 
-        subTextKeys='howToPlay|whatIsBossMode_description_normal_mode' 
+        textKey='howToPlayHeader' 
+        // subTextKeys='howToPlay|whatIsBossMode_description_normal_mode' 
       />
       <NewGameButtons section="game-home" />
       {/* <Axios 

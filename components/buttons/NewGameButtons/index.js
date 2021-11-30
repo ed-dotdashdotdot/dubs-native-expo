@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import allActions from '../../../actions';
 
 import ContinueGameButton from '../../buttons/ContinueGameButton';
+import HowToPlayButton from '../../buttons/HowToPlayButton';
 import PlayThisGameAgainButton from '../../buttons/PlayThisGameAgainButton';
 import PlayThisGameAgainWithBossModeButton from '../../buttons/PlayThisGameAgainWithBossModeButton';
 import Translate from '../../Translate';
@@ -45,6 +46,7 @@ const NewGameButtons = ({ section }) => {
         width: '100%',
       }}
     >
+      {section === 'game-home' && <HowToPlayButton />}
       {section === 'game-over' && <PlayThisGameAgainButton />}
       {section === 'game-over' && !game.bossMode && <PlayThisGameAgainWithBossModeButton />}
       {section === 'game-paused' && <ContinueGameButton />}

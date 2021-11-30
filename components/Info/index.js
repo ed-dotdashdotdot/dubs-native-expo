@@ -12,6 +12,7 @@ import GameOn from '../GameOn';
 import GameOver from '../GameOver';
 import GamePaused from '../GamePaused';
 import GameReady from '../GameReady';
+import HowToPlay from '../HowToPlay';
 import YourHighScores from '../YourHighScores';
 import ImageDetail from '../ImageDetail';
 import LanguageSelect from '../LanguageSelect';
@@ -63,6 +64,10 @@ const Info = () => {
             >
               {(() => {
                 switch (game.status) {
+                  case 'how-to-play':
+                    return (
+                      <HowToPlay />
+                    );
                   case 'image-detail':
                     return (
                       <ImageDetail 
