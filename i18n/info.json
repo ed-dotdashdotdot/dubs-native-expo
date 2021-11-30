@@ -1,14 +1,47 @@
 {
+  "deleteThisHighScore": {
+    "zh-CN": "删除这个高分？",
+    "de-DE": "Diesen Highscore löschen?",
+    "en-GB": "Delete this high score?",
+    "es-ES": "¿Eliminar esta puntuación alta?",
+    "fr-FR": "Supprimer ce score élevé\u2009?",
+    "it-IT": "Eliminare questo punteggio elevato?",
+    "ja-JP": "このハイスコアを削除しますか？",
+    "pt-PT": "Eliminar esta pontuação elevada?",
+    "ru-RU": "Удалить этот рекорд?"
+  },
+  "okay": {
+    "zh-CN": "好的",
+    "de-DE": "OK",
+    "en-GB": "OK",
+    "es-ES": "OK",
+    "fr-FR": "d'accord",
+    "it-IT": "ok",
+    "ja-JP": "わかった",
+    "pt-PT": "OK",
+    "ru-RU": "Ok"
+  },
+  "cancel": {
+    "zh-CN": "取消",
+    "de-DE": "Abbrechen",
+    "en-GB": "Cancel",
+    "es-ES": "Cancelar",
+    "fr-FR": "Annuler",
+    "it-IT": "Annulla",
+    "ja-JP": "キャンセル",
+    "pt-PT": "Cancelar",
+    "ru-RU": "Отмена"
+  },
   "youHaveNoHighScoresSaved": {
-    "zh-CN": "CN-You have no high scores saved",
-    "de-DE": "DE-You have no high scores saved",
+    "zh-CN": "您没有保存高分",
+    "de-DE": "Du hast keine Highscores gespeichert",
     "en-GB": "You have no high scores saved",
-    "es-ES": "ES-You have no high scores saved",
-    "fr-FR": "FR-You have no high scores saved",
-    "it-IT": "IT-You have no high scores saved",
-    "ja-JP": "JP-You have no high scores saved",
-    "pt-PT": "PT-You have no high scores saved",
-    "ru-RU": "RU-You have no high scores saved"
+    "es-ES": "No tienes puntuaciones altas guardadas",
+    "fr-FR": "Vous n'avez enregistré aucun score élevé",
+    "it-IT": "Non hai punteggi alti salvati",
+    "ja-JP": "ハイスコアは保存されていません",
+    "pt-PT": "Você não tem pontuações altas salvas",
+    "ru-RU": "У вас нет сохраненных рекордов"
   },
   "secondsLong": {
     "zh-CN": "秒",
@@ -29,8 +62,8 @@
     "fr-FR": "s",
     "it-IT": "s",
     "ja-JP": "秒",
-    "pt-PT": "PT-s",
-    "ru-RU": "RU-s"
+    "pt-PT": "s",
+    "ru-RU": "s"
   },
   "highScore": {
     "zh-CN": "高分",
@@ -55,37 +88,37 @@
     "ru-RU": "Новый рекорд!"
   },
   "yourHighScores": {
-    "zh-CN": "CN-Your high scores",
-    "de-DE": "DE-Your high scores",
+    "zh-CN": "你的高分",
+    "de-DE": "Ihre Highscores",
     "en-GB": "Your high scores",
-    "es-ES": "ES-Your high scores",
-    "fr-FR": "FR-Your high scores",
-    "it-IT": "IT-Your high scores",
-    "ja-JP": "JP-Your high scores",
-    "pt-PT": "PT-Your high scores",
-    "ru-RU": "RU-Your high scores"
+    "es-ES": "Tus puntuaciones más altas",
+    "fr-FR": "Vos meilleurs scores",
+    "it-IT": "I tuoi punteggi più alti",
+    "ja-JP": "あなたのハイスコア",
+    "pt-PT": "Suas pontuações mais altas",
+    "ru-RU": "Ваши рекорды"
   },
-  "appInfo": {
-    "zh-CN": "CN-App info",
-    "de-DE": "DE-App info",
+  "appInfo123": {
+    "zh-CN": "应用信息",
+    "de-DE": "App-Information",
     "en-GB": "App info",
-    "es-ES": "ES-App info",
-    "fr-FR": "FR-App info",
-    "it-IT": "IT-App info",
-    "ja-JP": "JP-App info",
-    "pt-PT": "PT-App info",
-    "ru-RU": "RU-App info"
+    "es-ES": "Informacion de la applicacion",
+    "fr-FR": "Informations sur l'application",
+    "it-IT": "Informazioni sull'app",
+    "ja-JP": "アプリ情報",
+    "pt-PT": "Informações do aplicativo",
+    "ru-RU": "Информация о приложении"
   },
-  "appSettings": {
-    "zh-CN": "CN-App settings",
-    "de-DE": "DE-App settings",
+  "appSettings123": {
+    "zh-CN": "应用设置",
+    "de-DE": "App Einstellungen",
     "en-GB": "App settings",
-    "es-ES": "ES-App settings",
-    "fr-FR": "FR-App settings",
-    "it-IT": "IT-App settings",
-    "ja-JP": "JP-App settings",
-    "pt-PT": "PT-App settings",
-    "ru-RU": "RU-App settings"
+    "es-ES": "Ajustes de Aplicacion",
+    "fr-FR": "Paramètres de l'application",
+    "it-IT": "Impostazioni dell'app",
+    "ja-JP": "アプリの設定",
+    "pt-PT": "Configurações do aplicativo",
+    "ru-RU": "Настройки приложения"
   },
   "selectLanguage": {
     "zh-CN": "选择语言",
@@ -143,15 +176,15 @@
     "ru-RU": "Легкий"
   },
   "easyBossMode": {
-    "zh-CN": "CN-Easy (Boss mode)",
-    "de-DE": "DE-Easy (Boss mode)",
+    "zh-CN": "简单（老板模式）",
+    "de-DE": "Einfach (Boss-Modus)",
     "en-GB": "Easy (Boss mode)",
-    "es-ES": "ES-Easy (Boss mode)",
-    "fr-FR": "FR-Easy (Boss mode)",
-    "it-IT": "IT-Easy (Boss mode)",
-    "ja-JP": "JP-Easy (Boss mode)",
-    "pt-PT": "PT-Easy (Boss mode)",
-    "ru-RU": "RU-Easy (Boss mode)"
+    "es-ES": "Fácil (modo jefe)",
+    "fr-FR": "Facile (mode Boss)",
+    "it-IT": "Facile (modalità Boss)",
+    "ja-JP": "簡単（ボスモード）",
+    "pt-PT": "Fácil (modo Boss)",
+    "ru-RU": "Легко (режим босса)"
   },
   "hard": {
     "zh-CN": "难的",
@@ -165,15 +198,15 @@
     "ru-RU": "Жесткий"
   },
   "hardBossMode": {
-    "zh-CN": "CN-Hard (Boss mode)",
-    "de-DE": "DE-Hard (Boss mode)",
+    "zh-CN": "困难（老板模式）",
+    "de-DE": "Schwer (Boss-Modus)",
     "en-GB": "Hard (Boss mode)",
-    "es-ES": "ES-Hard (Boss mode)",
-    "fr-FR": "FR-Hard (Boss mode)",
-    "it-IT": "IT-Hard (Boss mode)",
-    "ja-JP": "JP-Hard (Boss mode)",
-    "pt-PT": "PT-Hard (Boss mode)",
-    "ru-RU": "RU-Hard (Boss mode)"
+    "es-ES": "Difícil (modo jefe)",
+    "fr-FR": "Difficile (mode Boss)",
+    "it-IT": "Difficile (modalità Boss)",
+    "ja-JP": "ハード（ボスモード）",
+    "pt-PT": "Hard (modo Boss)",
+    "ru-RU": "Hard (режим босса)"
   },
   "normal": {
     "zh-CN": "普通的",
@@ -187,15 +220,15 @@
     "ru-RU": "Обычный"
   },
   "normalBossMode": {
-    "zh-CN": "CN-Normal (Boss mode)",
-    "de-DE": "DE-Normal (Boss mode)",
+    "zh-CN": "普通（老板模式）",
+    "de-DE": "Normal (Boss-Modus)",
     "en-GB": "Normal (Boss mode)",
-    "es-ES": "ES-Normal (Boss mode)",
-    "fr-FR": "FR-Normal (Boss mode)",
-    "it-IT": "IT-Normal (Boss mode)",
-    "ja-JP": "JP-Normal (Boss mode)",
-    "pt-PT": "PT-Normal (Boss mode)",
-    "ru-RU": "RU-Normal (Boss mode)"
+    "es-ES": "Normal (modo jefe)",
+    "fr-FR": "Normal (mode Boss)",
+    "it-IT": "Normale (modalità Boss)",
+    "ja-JP": "通常（ボスモード）",
+    "pt-PT": "Normal (modo Boss)",
+    "ru-RU": "Нормальный (режим босса)"
   },
   "easyGame": {
     "zh-CN": "简单的游戏",
@@ -537,6 +570,17 @@
     "ja-JP": "このゲームをもう一度プレイする",
     "pt-PT": "Jogue este jogo novamente",
     "ru-RU": "Сыграй в эту игру снова"
+  },
+  "playThisGameAgainWithBossMode": {
+    "zh-CN": "再次玩这个游戏（带老板模式）",
+    "de-DE": "Spiele dieses Spiel noch einmal (mit Boss-Modus)",
+    "en-GB": "Play this game again (with boss mode)",
+    "es-ES": "Juega este juego de nuevo (con modo jefe)",
+    "fr-FR": "Rejouer à ce jeu (avec le mode boss)",
+    "it-IT": "Gioca di nuovo a questo gioco (con la modalità boss)",
+    "ja-JP": "このゲームをもう一度プレイする（ボスモードで",
+    "pt-PT": "Jogue este jogo novamente (com modo de chefe)",
+    "ru-RU": "Сыграйте в эту игру снова (с режимом босса)"
   },
   "found": {
     "zh-CN": "成立",
